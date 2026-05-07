@@ -64,6 +64,12 @@
 
           <!-- Informational -->
           <url>
+                      <loc>https://itw.aetaspartners.com/whats-next.html</loc>
+                      <lastmod>2026-05-07</lastmod>
+                      <changefreq>monthly</changefreq>
+                      <priority>0.6</priority>
+          </url>
+          <url>
                       <loc>https://itw.aetaspartners.com/privacy.html</loc>
                       <lastmod>2026-05-01</lastmod>
                       <changefreq>yearly</changefreq>
