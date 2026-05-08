@@ -91,6 +91,21 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3vw,2.6rem);fon
 .practical-val{background:var(--white);padding:1rem 1.25rem;font-size:0.9rem;color:var(--text-body);line-height:1.65;}
 
 /* CONTACT */
+
+/* BEFORE CONVERSATION TWO */
+.before-two{padding:5rem 2rem;background:var(--cream);}
+.before-two-inner{max-width:860px;margin:0 auto;}
+.form-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;margin-top:2rem;}
+.form-card{background:var(--white);border:0.5px solid var(--border);border-radius:4px;padding:2rem 1.75rem;display:flex;flex-direction:column;gap:0;}
+.form-card-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:0.75rem;}
+.form-card-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:500;color:var(--navy);margin-bottom:0.5rem;}
+.form-card-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.5rem;flex:1;}
+.form-card-note{font-size:0.78rem;color:var(--text-muted);padding:0.75rem 1rem;background:var(--navy-xlight);border-radius:3px;margin-bottom:1.25rem;line-height:1.6;}
+.btn-form-link{display:inline-block;padding:11px 22px;background:var(--navy);color:var(--white);font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background 0.2s;align-self:flex-start;}
+.btn-form-link:hover{background:var(--navy-mid);}
+.before-two-note{margin-top:1.5rem;font-size:0.85rem;color:var(--text-muted);line-height:1.75;padding:1.25rem 1.5rem;background:var(--gold-pale);border:0.5px solid rgba(184,147,74,0.3);border-radius:4px;}
+@media(max-width:640px){.form-cards{grid-template-columns:1fr;}}
+
 .contact-band{background:var(--navy);padding:4rem 2rem;}
 .contact-inner{max-width:900px;margin:0 auto;}
 .contact-band .eyebrow{color:var(--gold-light);}
@@ -287,6 +302,40 @@ footer a:hover{color:var(--gold-light);}
         <div class="practical-val">Matthew will be in touch to arrange conversation two after the first session — typically within 10 days, at a time that suits you.</div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- BEFORE CONVERSATION TWO -->
+<section class="before-two">
+  <div class="before-two-inner">
+    <div class="fade-in">
+      <div class="eyebrow">After conversation one</div>
+      <h2>Two short things to complete before we speak again.</h2>
+      <p class="lead" style="margin-bottom:0;">Following your first session, Matthew will be in touch to arrange conversation two. Before that second session, there are two short forms to complete — they take around ten minutes in total and mean the findings conversation can go straight to substance.</p>
+    </div>
+
+    <div class="form-cards fade-in">
+
+      <div class="form-card">
+        <div class="form-card-num">01</div>
+        <div class="form-card-title">Data Processing Agreement</div>
+        <div class="form-card-desc">A standard UK GDPR agreement covering how Aetas Partners Limited handles the data you share as part of the review. Required before any employee-level information is exchanged.</div>
+        <div class="form-card-note">Takes around two minutes to read and sign electronically. You will receive a countersigned copy by email.</div>
+        <a href="/data-processing-agreement.html" class="btn-form-link">Sign the agreement →</a>
+      </div>
+
+      <div class="form-card">
+        <div class="form-card-num">02</div>
+        <div class="form-card-title">Employee Benefits Data Capture</div>
+        <div class="form-card-desc">A structured form covering your current pension, group risk and health benefits, and existing adviser arrangements — the information Matthew needs to analyse your arrangements ahead of conversation two.</div>
+        <div class="form-card-note">Takes around five to ten minutes. Supporting documents (pension schedules, member data) can be uploaded here or emailed separately.</div>
+        <a href="/benefits-review.html" class="btn-form-link">Complete the form →</a>
+      </div>
+
+    </div>
+
+    <p class="before-two-note fade-in">Matthew will send you direct links to both of these after your first conversation. There is no need to complete them now — this section is here so you know what to expect.</p>
   </div>
 </section>
 
