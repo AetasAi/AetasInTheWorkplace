@@ -192,6 +192,12 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   .form-section{page-break-inside:avoid;}
 }
 
+
+/* ── PRINT NAME UPPERCASE ────────────────────────────────────────── */
+#print_name, #client_print_name {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
 /* ── SIGNATURE FONT ─────────────────────────────────────────────── */
 .sig-input, input.sig-input {
   font-family: 'Great Vibes', cursive !important;
@@ -532,7 +538,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
             </div>
             <div class="field" id="f-print">
               <label for="print_name" class="required">Print Name</label>
-              <input id="print_name" name="print_name" type="text" required>
+              <input id="print_name" name="print_name" type="text" required oninput="this.value=this.value.toUpperCase()">
               <span class="error-msg">Please print your name</span>
             </div>
             <div class="field">
@@ -541,7 +547,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
             </div>
             <div class="field" id="f-sig-date">
               <label for="signature_date" class="required">Date</label>
-              <input id="signature_date" name="signature_date" type="date" required>
+              <input id="signature_date" name="signature_date" type="text" required readonly>
               <span class="error-msg">Please enter a date</span>
             </div>
           </div>
@@ -601,6 +607,15 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   const EMAILJS_TEMPLATE_CONFIRM  = 'template_2hfklis';
 
   if (EMAILJS_PUBLIC_KEY !== 'T-OvAY8-q_r_P4tAA') emailjs.init(EMAILJS_PUBLIC_KEY);
+  // ── FONT PRELOAD ──────────────────────────────────────────────────────
+  if (document.fonts && document.fonts.load) {
+    document.fonts.load("1.6rem 'Great Vibes'").then(function() {
+      document.querySelectorAll('.sig-input').forEach(function(el) {
+        el.style.fontFamily = "'Great Vibes', cursive";
+      });
+    });
+  }
+
 
   // ── FORM REFERENCE ────────────────────────────────────────────────────
   const FORM_REF = (function(){
@@ -611,9 +626,8 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   // ── AUTO-DATE + DOCUMENT DETAILS ─────────────────────────────────────
   document.addEventListener('DOMContentLoaded', function() {
     const t = new Date().toISOString().split('T')[0];
-    ['date_completed','signature_date'].forEach(function(id){
-      var el=document.getElementById(id); if(el) el.value=t;
-    });
+    var el=document.getElementById('date_completed'); if(el) el.value=t;
+    var sd=document.getElementById('signature_date'); if(sd) sd.value=_fmtDate(new Date());
     // Populate document header table
     var dateDisplay = document.getElementById('form_date_display');
     var refDisplay  = document.getElementById('form_ref_display');

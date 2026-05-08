@@ -156,6 +156,12 @@ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);backgr
   .sig-field input{border:none;border-bottom:1px solid #999;border-radius:0;background:transparent!important;}
 }
 
+
+/* ── PRINT NAME UPPERCASE ────────────────────────────────────────── */
+#print_name, #client_print_name {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
 /* ── SIGNATURE FONT ─────────────────────────────────────────────── */
 .sig-input, input.sig-input {
   font-family: 'Great Vibes', cursive !important;
@@ -391,7 +397,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);backgr
             </div>
             <div class="sig-field" id="f-print">
               <label>Print Name <span style="color:var(--gold);">*</span></label>
-              <input type="text" id="client_print_name" name="client_print_name" required>
+              <input type="text" id="client_print_name" name="client_print_name" required oninput="this.value=this.value.toUpperCase()">
               <span class="error-msg">Please print your name</span>
             </div>
             <div class="sig-field" id="f-position">
@@ -455,6 +461,15 @@ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);backgr
   const EMAILJS_TEMPLATE_INTERNAL = 'template_q3dj6ti';
   const EMAILJS_TEMPLATE_CONFIRM  = 'template_2hfklis';
   if (EMAILJS_PUBLIC_KEY !== 'T-OvAY8-q_r_P4tAA') emailjs.init(EMAILJS_PUBLIC_KEY);
+  // ── FONT PRELOAD ──────────────────────────────────────────────────────
+  if (document.fonts && document.fonts.load) {
+    document.fonts.load("1.6rem 'Great Vibes'").then(function() {
+      document.querySelectorAll('.sig-input').forEach(function(el) {
+        el.style.fontFamily = "'Great Vibes', cursive";
+      });
+    });
+  }
+
 
   // ── AUTO-FILL ─────────────────────────────────────────────────────────
   (function(){
@@ -462,10 +477,10 @@ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);backgr
     var iso   = new Date().toISOString().split('T')[0];
     var ref   = 'APL-DPA-'+new Date().getFullYear()+String(new Date().getMonth()+1).padStart(2,'0')
                +'-'+Math.random().toString(36).substring(2,6).toUpperCase();
-    document.getElementById('agreement_date').value = today;
+    document.getElementById('agreement_date').value = _fmtDate(new Date());
     document.getElementById('agreement_ref').value  = ref;
-    document.getElementById('aetas_date').value      = today;
-    document.getElementById('client_date').value     = today;
+    document.getElementById('aetas_date').value      = _fmtDate(new Date());
+    document.getElementById('client_date').value     = _fmtDate(new Date());
     window._DPA_REF = ref;
   })();
 
