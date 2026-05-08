@@ -84,4 +84,47 @@
                       <priority>0.5</priority>
           </url>
 
+
+  <url>
+    <loc>https://itw.aetaspartners.com/case-studies/bristol-organisation.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/case-studies/uk-retail-group.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/insights/why-financial-wellbeing-is-a-business-issue.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/insights/when-everyday-life-stops-talking-back.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/insights/introducing-the-aetas-collective.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/insights/financial-wellbeing-in-the-workplace.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/insights/strengthening-your-team-through-financial-wellbeing.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
