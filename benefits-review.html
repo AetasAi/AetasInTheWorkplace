@@ -197,17 +197,8 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 </nav>
 
 <div class="page">
-
-  <!-- SUCCESS SCREEN (hidden until submit) -->
-  <div id="success-screen">
-    <div class="success-check">✓</div>
-    <h2>Form submitted successfully.</h2>
-    <p>Thank you — your information has been received. Matthew Steiner will review your details ahead of the Workplace Performance Review and will be in touch if anything further is needed before we speak.</p>
-    <a href="https://itw.aetaspartners.com/whats-next.html" class="success-next">Return to what happens next →</a>
-  </div>
-
   <!-- FORM CONTENT (hidden after submit) -->
-  <div id="form-content">
+  
 
     <div class="page-header">
       <div class="page-eyebrow">Workplace Performance Review</div>
@@ -225,7 +216,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
       Formspree:   https://formspree.io/f/YOUR_FORM_ID
       The form uses AJAX (fetch) — the action attribute is read by the JS below.
     -->
-    <form id="benefits-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID" enctype="multipart/form-data" novalidate>
+    <form id="benefits-form" method="POST" action="" enctype="multipart/form-data" novalidate>
 
       <!-- 1. ORGANISATION -->
       <div class="form-section" id="section-1">
@@ -517,7 +508,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 
     </form>
 
-  </div><!-- /form-content -->
+
 </div><!-- /page -->
 
 <footer class="page-footer">
@@ -526,146 +517,270 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   <a href="https://www.aetas-partners.com">aetas-partners.com</a>
 </footer>
 
-<script>
-// ── AUTO-DATE ─────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  const today = new Date().toISOString().split('T')[0];
-  document.getElementById('date_completed').value = today;
-  document.getElementById('signature_date').value = today;
-});
+  <!-- ── CDN LIBRARIES ──────────────────────────────────────────────── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-// ── FILE NAME DISPLAY ─────────────────────────────────────────────────
-function showFilename(input, targetId) {
-  const el = document.getElementById(targetId);
-  if (!el) return;
-  if (input.files && input.files.length > 0) {
-    const names = Array.from(input.files).map(f => f.name).join(', ');
-    el.textContent = names;
-  } else {
-    el.textContent = '';
-  }
-}
+  <script>
+  // ╔══════════════════════════════════════════════════════════════╗
+  // ║  EMAILJS CONFIGURATION                                       ║
+  // ║  1. Sign up free at emailjs.com                             ║
+  // ║  2. Connect your email service (Gmail / Outlook)            ║
+  // ║  3. Create two templates:                                    ║
+  // ║     INTERNAL: to matthew.steiner@aetas-partners.com         ║
+  // ║       Variables: {{ref}} {{org}} {{contact}} {{email}}      ║
+  // ║                  {{form_data}} {{submitted}}                 ║
+  // ║     CONFIRM: to client email                                 ║
+  // ║       Variables: {{ref}} {{org}} {{contact}} {{to_email}}   ║
+  // ║  4. Replace the four placeholders below                      ║
+  // ╚══════════════════════════════════════════════════════════════╝
+  const EMAILJS_PUBLIC_KEY        = 'YOUR_EMAILJS_PUBLIC_KEY';
+  const EMAILJS_SERVICE_ID        = 'YOUR_EMAILJS_SERVICE_ID';
+  const EMAILJS_TEMPLATE_INTERNAL = 'YOUR_TEMPLATE_ID_INTERNAL';
+  const EMAILJS_TEMPLATE_CONFIRM  = 'YOUR_TEMPLATE_ID_CONFIRM';
 
-// ── PROGRESS BAR ──────────────────────────────────────────────────────
-const sections = document.querySelectorAll('.form-section');
-const steps = document.querySelectorAll('.progress-step');
+  if (EMAILJS_PUBLIC_KEY !== 'YOUR_EMAILJS_PUBLIC_KEY') emailjs.init(EMAILJS_PUBLIC_KEY);
 
-function scrollToSection(n) {
-  const el = document.getElementById('section-' + n);
-  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
+  // ── FORM REFERENCE ────────────────────────────────────────────────────
+  const FORM_REF = (function(){
+    const d=new Date(), ym=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0');
+    return 'AEB-'+ym+'-'+Math.random().toString(36).substring(2,6).toUpperCase();
+  })();
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const id = e.target.id; // e.g. section-3
-      const num = id.split('-')[1];
-      steps.forEach(s => {
-        s.classList.remove('active');
-        if (parseInt(s.dataset.section) < parseInt(num)) s.classList.add('complete');
-        else s.classList.remove('complete');
-        if (s.dataset.section === num) s.classList.add('active');
-      });
-    }
-  });
-}, { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' });
-
-sections.forEach(s => observer.observe(s));
-
-// ── FORM SUBMISSION ───────────────────────────────────────────────────
-document.getElementById('benefits-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-
-  // Validate required fields
-  const requiredFields = [
-    { id: 'f-org-name', inputId: 'organisation_name' },
-    { id: 'f-contact',  inputId: 'contact_name' },
-    { id: 'f-email',    inputId: 'email' },
-    { id: 'f-signed',   inputId: 'signed_on_behalf' },
-    { id: 'f-print',    inputId: 'print_name' },
-    { id: 'f-sig-date', inputId: 'signature_date' },
-  ];
-
-  let valid = true;
-  requiredFields.forEach(f => {
-    const wrapper = document.getElementById(f.id);
-    const input   = document.getElementById(f.inputId);
-    if (wrapper && input && !input.value.trim()) {
-      wrapper.classList.add('has-error');
-      valid = false;
-    } else if (wrapper) {
-      wrapper.classList.remove('has-error');
-    }
-  });
-
-  // Email format check
-  const emailInput = document.getElementById('email');
-  if (emailInput && emailInput.value && !/\S+@\S+\.\S+/.test(emailInput.value)) {
-    document.getElementById('f-email').classList.add('has-error');
-    valid = false;
-  }
-
-  // Consent checkbox
-  const consent = document.getElementById('consent_confirmed');
-  if (!consent.checked) {
-    consent.closest('.checkbox-row').style.border = '1.5px solid var(--error)';
-    consent.closest('.checkbox-row').style.background = '#fef8f8';
-    valid = false;
-  } else {
-    consent.closest('.checkbox-row').style.border = '';
-    consent.closest('.checkbox-row').style.background = '';
-  }
-
-  if (!valid) {
-    // Scroll to first error
-    const firstError = document.querySelector('.has-error, [style*="var(--error)"]');
-    if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    return;
-  }
-
-  // Submit
-  const btn = document.getElementById('submit-btn');
-  btn.classList.add('loading');
-  btn.disabled = true;
-
-  const formData = new FormData(this);
-  const action = this.getAttribute('action');
-
-  try {
-    const res = await fetch(action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
+  // ── AUTO-DATE ─────────────────────────────────────────────────────────
+  document.addEventListener('DOMContentLoaded', function() {
+    const t = new Date().toISOString().split('T')[0];
+    ['date_completed','signature_date'].forEach(function(id){
+      var el=document.getElementById(id); if(el) el.value=t;
     });
+  });
 
-    if (res.ok) {
-      document.getElementById('form-content').style.display = 'none';
-      document.getElementById('success-screen').style.display = 'block';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      gtag('event', 'form_submit', { event_category: 'Benefits Data Capture', event_label: 'Submitted successfully' });
-    } else {
-      throw new Error('Server returned ' + res.status);
-    }
-  } catch (err) {
-    btn.classList.remove('loading');
-    btn.disabled = false;
-    alert('There was a problem submitting the form. Please try again, or email your details directly to matthew.steiner@aetas-partners.com');
+  // ── FILE NAME DISPLAY ─────────────────────────────────────────────────
+  function showFilename(input, targetId) {
+    var el=document.getElementById(targetId); if(!el) return;
+    el.textContent=input.files&&input.files.length>0
+      ? Array.from(input.files).map(function(f){return f.name;}).join(', ') : '';
   }
-});
 
-function resetForm() {
-  document.querySelectorAll('.has-error').forEach(el => el.classList.remove('has-error'));
-  document.querySelectorAll('.upload-filename').forEach(el => el.textContent = '');
-  // Re-set today's date
-  const today = new Date().toISOString().split('T')[0];
-  document.getElementById('date_completed').value = today;
-  document.getElementById('signature_date').value = today;
-}
+  // ── PROGRESS BAR ──────────────────────────────────────────────────────
+  var _sections = document.querySelectorAll('.form-section');
+  var _steps = document.querySelectorAll('.progress-step');
+  function scrollToSection(n){var el=document.getElementById('section-'+n);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+  var _obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var num=e.target.id.split('-')[1];_steps.forEach(function(s){s.classList.remove('active');if(parseInt(s.dataset.section)<parseInt(num))s.classList.add('complete');else s.classList.remove('complete');if(s.dataset.section===num)s.classList.add('active');});}});},{threshold:0.3,rootMargin:'-80px 0px -50% 0px'});
+  _sections.forEach(function(s){_obs.observe(s);});
 
-// ── INPUT TOUCHED STATE (for :invalid styling) ───────────────────────
-document.querySelectorAll('input, select, textarea').forEach(el => {
-  el.addEventListener('blur', () => el.classList.add('touched'));
-});
-</script>
+  // ── INPUT TOUCHED STATE ───────────────────────────────────────────────
+  document.querySelectorAll('input,select,textarea').forEach(function(el){
+    el.addEventListener('blur',function(){el.classList.add('touched');});
+  });
+
+  // ── GENERATE PDF ──────────────────────────────────────────────────────
+  function generateBenefitsPDF(fd) {
+    var jsPDF=window.jspdf.jsPDF;
+    var doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
+    var W=210, M=18, CW=W-M*2, y=20;
+
+    function chk(h){if(y+h>275){doc.addPage();y=20;}}
+    function secHead(t){
+      chk(12); doc.setFillColor(26,43,74); doc.rect(M,y,CW,8,'F');
+      doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(255,255,255);
+      doc.text(t.toUpperCase(),M+4,y+5.5); y+=11;
+    }
+    function row(label,val){
+      if(!val||val==='Please select'||val==='') return;
+      chk(9); doc.setFont('helvetica','bold'); doc.setFontSize(8.5); doc.setTextColor(26,43,74);
+      doc.text(label+':',M,y);
+      doc.setFont('helvetica','normal'); doc.setTextColor(60,60,60);
+      var lines=doc.splitTextToSize(String(val),CW-65); doc.text(lines,M+65,y);
+      y+=Math.max(6,lines.length*5);
+    }
+
+    // Header
+    doc.setFillColor(26,43,74); doc.rect(0,0,W,28,'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(13); doc.setTextColor(255,255,255);
+    doc.text('AETAS IN THE WORKPLACE',M,11);
+    doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(212,176,122);
+    doc.text('Employee Benefits Data Capture Form',M,19);
+    doc.setTextColor(180,180,180);
+    doc.text('Ref: '+FORM_REF+'  |  '+new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'long',year:'numeric'}),W-M,19,{align:'right'});
+    y=36;
+
+    secHead('1. Organisation Details');
+    row('Organisation',fd.organisation_name); row('Contact',fd.contact_name);
+    row('Job Title',fd.job_title); row('Email',fd.email);
+    row('Employees',fd.number_of_employees); row('Date',fd.date_completed);
+    y+=4;
+
+    secHead('2. Current Pension Provision');
+    row('Provider',fd.pension_provider);
+    row('Employer contribution',fd.employer_contribution?(fd.employer_contribution+'%'):'');
+    row('Employee contribution',fd.employee_contribution?(fd.employee_contribution+'%'):'');
+    row('Auto-enrolment',fd.auto_enrolment_compliant);
+    row('Re-enrolment date',fd.staging_reenrolment_date);
+    row('Salary exchange',fd.salary_exchange_in_place);
+    y+=4;
+
+    chk(20); secHead('3. Group Risk & Health Benefits');
+    var bRows=[
+      ['Group Life Assurance',fd.group_life_in_place,fd.group_life_provider,fd.group_life_renewal],
+      ['Group Income Protection',fd.group_ip_in_place,fd.group_ip_provider,fd.group_ip_renewal],
+      ['Group Critical Illness',fd.group_ci_in_place,fd.group_ci_provider,fd.group_ci_renewal],
+      ['Private Medical Insurance',fd.pmi_in_place,fd.pmi_provider,fd.pmi_renewal],
+      ['Dental / Cash Plans',fd.dental_in_place,fd.dental_provider,fd.dental_renewal],
+      ['Employee Assistance Programme',fd.eap_in_place,fd.eap_provider,fd.eap_renewal],
+    ].filter(function(r){return r[1]&&r[1]!=='Please select'&&r[1]!=='';});
+    if(bRows.length>0){
+      doc.autoTable({startY:y,head:[['Benefit','In Place?','Provider','Renewal']],body:bRows,margin:{left:M,right:M},headStyles:{fillColor:[26,43,74],textColor:255,fontStyle:'bold',fontSize:8},bodyStyles:{fontSize:8,cellPadding:3},alternateRowStyles:{fillColor:[240,243,248]},theme:'grid'});
+      y=doc.lastAutoTable.finalY+6;
+    }
+
+    chk(20); secHead('4. Current Adviser Arrangements');
+    row('Benefits Adviser',fd.benefits_adviser);
+    row('Pension Adviser',fd.pension_adviser);
+    row('Contract Renewal',fd.adviser_renewal_date);
+    y+=4;
+
+    secHead('5. Supporting Documents');
+    doc.setFont('helvetica','italic'); doc.setFontSize(8.5); doc.setTextColor(100,100,100);
+    doc.text('Documents to be emailed separately to matthew.steiner@aetas-partners.com',M,y); y+=6;
+    row('Attachment notes',fd.attachment_notes);
+    y+=4;
+
+    if(fd.additional_notes){
+      secHead('6. Additional Notes & Priorities');
+      doc.setFont('helvetica','normal'); doc.setFontSize(8.5); doc.setTextColor(60,60,60);
+      var nl=doc.splitTextToSize(fd.additional_notes,CW);
+      nl.forEach(function(l){chk(5);doc.text(l,M,y);y+=5;}); y+=4;
+    }
+
+    secHead('7. Consent and Authorisation');
+    row('Signed',fd.signed_on_behalf); row('Print Name',fd.print_name);
+    row('Position',fd.position_title); row('Date',fd.signature_date);
+    y+=4; chk(8);
+    doc.setFont('helvetica','bold'); doc.setFontSize(8); doc.setTextColor(26,43,74);
+    doc.text('Authorisation confirmed by submitter',M,y); y+=10;
+
+    // Page footers
+    var pc=doc.internal.getNumberOfPages();
+    for(var i=1;i<=pc;i++){
+      doc.setPage(i); doc.setFillColor(26,43,74); doc.rect(0,287,W,10,'F');
+      doc.setFont('helvetica','normal'); doc.setFontSize(7); doc.setTextColor(180,180,180);
+      doc.text('Aetas Partners Limited | aetas-partners.com | FCA reg 458421 | Page '+i+' of '+pc,W/2,293,{align:'center'});
+    }
+    return doc;
+  }
+
+  // ── RESET ─────────────────────────────────────────────────────────────
+  function resetForm(){
+    document.querySelectorAll('.has-error').forEach(function(el){el.classList.remove('has-error');});
+    document.querySelectorAll('.upload-filename').forEach(function(el){el.textContent='';});
+    var t=new Date().toISOString().split('T')[0];
+    ['date_completed','signature_date'].forEach(function(id){var el=document.getElementById(id);if(el)el.value=t;});
+  }
+
+  // ── FORM SUBMIT ───────────────────────────────────────────────────────
+  document.getElementById('benefits-form').addEventListener('submit', async function(e){
+    e.preventDefault();
+
+    // Validate
+    var req=[
+      {w:'f-org-name',i:'organisation_name'},{w:'f-contact',i:'contact_name'},
+      {w:'f-email',i:'email'},{w:'f-signed',i:'signed_on_behalf'},
+      {w:'f-print',i:'print_name'},{w:'f-sig-date',i:'signature_date'}
+    ];
+    var valid=true;
+    req.forEach(function(r){
+      var w=document.getElementById(r.w), inp=document.getElementById(r.i);
+      if(w&&inp&&!inp.value.trim()){w.classList.add('has-error');valid=false;}
+      else if(w) w.classList.remove('has-error');
+    });
+    var emailEl=document.getElementById('email');
+    if(emailEl&&emailEl.value&&!/\S+@\S+\.\S+/.test(emailEl.value)){
+      document.getElementById('f-email').classList.add('has-error');valid=false;
+    }
+    var consent=document.getElementById('consent_confirmed');
+    var cRow=consent.closest('.checkbox-row');
+    if(!consent.checked){cRow.style.border='1.5px solid var(--error)';cRow.style.background='#fef8f8';valid=false;}
+    else{cRow.style.border='';cRow.style.background='';}
+    if(!valid){
+      var fe=document.querySelector('.has-error');
+      if(fe) fe.scrollIntoView({behavior:'smooth',block:'center'});
+      return;
+    }
+
+    var btn=document.getElementById('submit-btn');
+    var btnText=btn.querySelector('.btn-text');
+    btn.classList.add('loading'); btn.disabled=true;
+    btnText.textContent='Generating PDF...';
+
+    var fd=Object.fromEntries(new FormData(this).entries());
+    fd._ref=FORM_REF;
+
+    try {
+      // Generate & download PDF
+      var doc=generateBenefitsPDF(fd);
+      var pdfBlob=doc.output('blob');
+      var pdfB64=doc.output('datauristring');
+      var fname='Aetas-Benefits-Capture-'+FORM_REF+'.pdf';
+      var dl=document.createElement('a');
+      dl.href=URL.createObjectURL(pdfBlob); dl.download=fname; dl.click();
+      URL.revokeObjectURL(dl.href);
+      sessionStorage.setItem('aetas_pdf_data',pdfB64);
+      sessionStorage.setItem('aetas_pdf_name',fname);
+
+      btnText.textContent='Sending confirmation...';
+
+      var summary=[
+        'Reference: '+FORM_REF,
+        'Organisation: '+(fd.organisation_name||'—'),
+        'Contact: '+(fd.contact_name||'—'),
+        'Email: '+(fd.email||'—'),
+        'Employees: '+(fd.number_of_employees||'—'),
+        '', 'PENSION',
+        'Provider: '+(fd.pension_provider||'—'),
+        'Employer: '+(fd.employer_contribution||'—')+'%',
+        'Employee: '+(fd.employee_contribution||'—')+'%',
+        'Auto-enrolled: '+(fd.auto_enrolment_compliant||'—'),
+        'Salary exchange: '+(fd.salary_exchange_in_place||'—'),
+        '', 'ADVISERS',
+        'Benefits: '+(fd.benefits_adviser||'None'),
+        'Pension: '+(fd.pension_adviser||'None'),
+        '', 'NOTES', fd.additional_notes||'(none)',
+        '', 'Signed: '+(fd.signed_on_behalf||'—')+' | '+(fd.signature_date||'—')
+      ].join('\n');
+
+      if(EMAILJS_PUBLIC_KEY!=='YOUR_EMAILJS_PUBLIC_KEY'){
+        await emailjs.send(EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_INTERNAL,{
+          ref:FORM_REF, org:fd.organisation_name||'—', contact:fd.contact_name||'—',
+          email:fd.email||'—', form_type:'Employee Benefits Data Capture',
+          form_data:summary, submitted:new Date().toLocaleString('en-GB'),
+          to_email:'matthew.steiner@aetas-partners.com'
+        });
+        if(fd.email){
+          await emailjs.send(EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_CONFIRM,{
+            ref:FORM_REF, org:fd.organisation_name||'—', contact:fd.contact_name||'—',
+            to_email:fd.email, form_type:'Employee Benefits Data Capture'
+          });
+        }
+      }
+
+      if(typeof gtag!=='undefined') gtag('event','form_submit',{event_category:'Benefits Capture',event_label:FORM_REF});
+
+      window.location.href='form-thankyou.html?form=benefits&org='
+        +encodeURIComponent(fd.organisation_name||'')+'&ref='+encodeURIComponent(FORM_REF);
+
+    } catch(err){
+      console.error(err);
+      btn.classList.remove('loading'); btn.disabled=false;
+      btnText.textContent='Submit form';
+      // PDF was already downloaded — go to thankyou anyway
+      window.location.href='form-thankyou.html?form=benefits&org='
+        +encodeURIComponent(document.getElementById('organisation_name').value||'')
+        +'&ref='+encodeURIComponent(FORM_REF);
+    }
+  });
+  </script>
+
 </body>
 </html>

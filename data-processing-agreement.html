@@ -188,7 +188,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);backgr
     </div>
 
     <!-- AGREEMENT DETAILS -->
-    <form id="dpa-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID" novalidate>
+    <form id="dpa-form" method="POST" action="" novalidate>
 
       <table class="agreement-table">
         <tr>
@@ -427,139 +427,255 @@ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);backgr
   <a href="https://itw.aetaspartners.com/privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
   <a href="https://www.aetas-partners.com">aetas-partners.com</a>
 </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<script>
-// ── AUTO-FILL DATES AND REFERENCE ─────────────────────────────────
-function generateRef() {
-  const now = new Date();
-  const y = now.getFullYear();
-  const m = String(now.getMonth()+1).padStart(2,'0');
-  const rand = Math.random().toString(36).substring(2,6).toUpperCase();
-  return `APL-DPA-${y}${m}-${rand}`;
-}
+  <script>
+  // ── EMAILJS CONFIG (same credentials as benefits form) ────────────────
+  const EMAILJS_PUBLIC_KEY        = 'YOUR_EMAILJS_PUBLIC_KEY';
+  const EMAILJS_SERVICE_ID        = 'YOUR_EMAILJS_SERVICE_ID';
+  const EMAILJS_TEMPLATE_INTERNAL = 'YOUR_TEMPLATE_ID_INTERNAL';
+  const EMAILJS_TEMPLATE_CONFIRM  = 'YOUR_TEMPLATE_ID_CONFIRM';
+  if (EMAILJS_PUBLIC_KEY !== 'YOUR_EMAILJS_PUBLIC_KEY') emailjs.init(EMAILJS_PUBLIC_KEY);
 
-const ref = generateRef();
-const today = new Date().toLocaleDateString('en-GB', { day:'2-digit', month:'long', year:'numeric' });
+  // ── AUTO-FILL ─────────────────────────────────────────────────────────
+  (function(){
+    var today = new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'long',year:'numeric'});
+    var iso   = new Date().toISOString().split('T')[0];
+    var ref   = 'APL-DPA-'+new Date().getFullYear()+String(new Date().getMonth()+1).padStart(2,'0')
+               +'-'+Math.random().toString(36).substring(2,6).toUpperCase();
+    document.getElementById('agreement_date').value = today;
+    document.getElementById('agreement_ref').value  = ref;
+    document.getElementById('aetas_date').value      = today;
+    document.getElementById('client_date').value     = today;
+    window._DPA_REF = ref;
+  })();
 
-document.getElementById('agreement_date').value = today;
-document.getElementById('agreement_ref').value = ref;
-document.getElementById('aetas_date').value = today;
-document.getElementById('client_date').value = today;
+  // ── DYNAMIC ORG NAME ──────────────────────────────────────────────────
+  document.getElementById('client_org').addEventListener('input', function(){
+    document.getElementById('client-party-name').textContent = this.value.trim() || 'Client Organisation';
+  });
 
-// ── DYNAMIC CLIENT ORG NAME IN SIGNATURE BLOCK ───────────────────
-document.getElementById('client_org').addEventListener('input', function(){
-  const val = this.value.trim();
-  document.getElementById('client-party-name').textContent = val || 'Client Organisation';
-});
-
-// ── SCROLL PROGRESS ───────────────────────────────────────────────
-const clauses = document.querySelectorAll('.clause, .sig-section');
-const progress = document.getElementById('scroll-progress');
-let maxSeen = 0;
-
-const clauseObserver = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const id = e.target.id;
-      const num = parseInt(id.replace('clause-',''));
-      if (num > maxSeen) {
-        maxSeen = num;
-        const total = 16;
-        const pct = Math.round((maxSeen / total) * 100);
-        if (pct >= 100) {
-          progress.textContent = 'All clauses reviewed ✓';
-          progress.style.color = 'var(--success)';
-        } else {
-          progress.textContent = `${pct}% reviewed — please continue scrolling.`;
+  // ── SCROLL PROGRESS ───────────────────────────────────────────────────
+  var _dpaProgress = document.getElementById('scroll-progress');
+  var _dpaClauses = document.querySelectorAll('.clause, .sig-section');
+  var _maxSeen = 0;
+  new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var n = parseInt(e.target.id.replace('clause-',''));
+        if(n > _maxSeen){
+          _maxSeen = n;
+          var pct = Math.min(100, Math.round((n/16)*100));
+          _dpaProgress.textContent = pct >= 100
+            ? 'All clauses reviewed \u2713'
+            : pct + '% reviewed \u2014 please continue scrolling.';
+          if(pct >= 100) _dpaProgress.style.color = 'var(--success)';
         }
       }
-    }
+    });
+  },{threshold:0.4}).observe || _dpaClauses.forEach(function(c){
+    new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var n=parseInt(e.target.id.replace('clause-',''));if(n>_maxSeen){_maxSeen=n;var p=Math.min(100,Math.round((n/16)*100));_dpaProgress.textContent=p>=100?'All clauses reviewed \u2713':p+'% reviewed \u2014 please continue scrolling.';if(p>=100)_dpaProgress.style.color='var(--success)';}}}},{threshold:0.4}).observe(c);
   });
-}, { threshold: 0.4 });
+  (function(){var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var n=parseInt(e.target.id.replace('clause-',''));if(n>_maxSeen){_maxSeen=n;var p=Math.min(100,Math.round((n/16)*100));_dpaProgress.textContent=p>=100?'All clauses reviewed \u2713':p+'% reviewed \u2014 please continue scrolling.';if(p>=100)_dpaProgress.style.color='var(--success)';}}}},{threshold:0.4});_dpaClauses.forEach(function(c){obs.observe(c);});})();
 
-clauses.forEach(c => clauseObserver.observe(c));
+  // ── GENERATE DPA PDF ──────────────────────────────────────────────────
+  function generateDPAPDF(clientOrg, clientSig, clientPrint, clientPos, clientEmail, clientDate, ref) {
+    var jsPDF = window.jspdf.jsPDF;
+    var doc = new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
+    var W=210, M=18, CW=W-M*2, y=20;
 
-// ── FORM SUBMISSION ───────────────────────────────────────────────
-document.getElementById('dpa-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-
-  // Validate required fields
-  const checks = [
-    { fieldId: 'f-sig',      inputId: 'client_signature', msg: 'Please type your name to sign' },
-    { fieldId: 'f-print',    inputId: 'client_print_name', msg: 'Please print your name' },
-    { fieldId: 'f-email',    inputId: 'client_email', msg: 'Please enter a valid email address' },
-  ];
-
-  // Must also have client org name
-  const orgInput = document.getElementById('client_org');
-  let valid = true;
-
-  if (!orgInput.value.trim()) {
-    orgInput.style.borderColor = 'var(--error)';
-    orgInput.focus();
-    valid = false;
-  } else {
-    orgInput.style.borderColor = '';
-  }
-
-  checks.forEach(c => {
-    const wrapper = document.getElementById(c.fieldId);
-    const input = document.getElementById(c.inputId);
-    if (!input.value.trim() || (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value))) {
-      wrapper.classList.add('has-error');
-      valid = false;
-    } else {
-      wrapper.classList.remove('has-error');
+    function chk(h){if(y+h>275){doc.addPage();y=20;}}
+    function para(txt,sz,col,bold){
+      sz=sz||9; col=col||[60,60,60];
+      doc.setFont('helvetica',bold?'bold':'normal');
+      doc.setFontSize(sz); doc.setTextColor(col[0],col[1],col[2]);
+      var lines=doc.splitTextToSize(txt,CW);
+      lines.forEach(function(l){chk(5);doc.text(l,M,y);y+=5;});
     }
-  });
+    function clauseHead(num,title){
+      chk(10); y+=3;
+      doc.setFont('helvetica','bold'); doc.setFontSize(9.5); doc.setTextColor(26,43,74);
+      doc.text(num+'. '+title,M,y);
+      doc.setDrawColor(184,147,74); doc.line(M,y+2,M+CW,y+2);
+      y+=7;
+    }
 
-  // Consent checkbox
-  const consent = document.getElementById('dpa_confirmed');
-  const consentRow = document.getElementById('consent-row');
-  if (!consent.checked) {
-    consentRow.style.color = 'var(--error)';
-    valid = false;
-  } else {
-    consentRow.style.color = '';
-  }
+    // Header
+    doc.setFillColor(26,43,74); doc.rect(0,0,W,34,'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(14); doc.setTextColor(255,255,255);
+    doc.text('AETAS PARTNERS LIMITED',W/2,12,{align:'center'});
+    doc.setFont('helvetica','normal'); doc.setFontSize(11); doc.setTextColor(212,176,122);
+    doc.text('Data Processing Agreement',W/2,21,{align:'center'});
+    doc.setFontSize(8); doc.setTextColor(180,180,180);
+    doc.text('Reference: '+ref+'  |  Date: '+new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'long',year:'numeric'}),W/2,29,{align:'center'});
+    y=42;
 
-  if (!valid) {
-    const firstErr = document.querySelector('.has-error, [style*="var(--error)"]');
-    if (firstErr) firstErr.scrollIntoView({ behavior:'smooth', block:'center' });
-    return;
-  }
+    // Agreement details box
+    doc.setDrawColor(200,200,200); doc.rect(M,y,CW,28);
+    var rows=[['Agreement Date',new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'long',year:'numeric'})],['Agreement Reference',ref],['Data Controller (Client)',clientOrg],['Data Processor','Aetas Partners Limited']];
+    var ry=y+5;
+    rows.forEach(function(r){
+      doc.setFont('helvetica','bold'); doc.setFontSize(8.5); doc.setTextColor(26,43,74);
+      doc.text(r[0]+':',M+4,ry);
+      doc.setFont('helvetica','normal'); doc.setTextColor(60,60,60);
+      doc.text(r[1]||'—',M+55,ry); ry+=6;
+    });
+    y+=34;
 
-  const btn = document.getElementById('submit-btn');
-  btn.classList.add('loading');
-  btn.disabled = true;
+    // All 15 clauses
+    var clauses=[
+      ['Purpose of this Agreement','This Agreement governs the processing of personal data by Aetas Partners Limited (the Processor) on behalf of the Client (the Controller) in connection with the provision of consultancy and advisory services under the Aetas in the Workplace programme. It is intended to ensure that all personal data is handled lawfully, securely, and in line with UK data protection legislation.\n\nThe Agreement is supplementary to any Letter of Engagement or Terms of Business in place between the parties and does not replace those documents.'],
+      ['Legal Framework','This Agreement is made in accordance with: the UK General Data Protection Regulation (UK GDPR); the Data Protection Act 2018; and any applicable guidance issued by the Information Commissioner\'s Office (ICO).\n\nThe Processor shall process personal data only in accordance with the Controller\'s documented instructions, as set out in this Agreement and in any associated engagement documentation.'],
+      ['Roles and Responsibilities','The Client is the Data Controller and determines the purposes and means of processing. Aetas Partners Limited acts as the Data Processor and processes personal data only on the instructions of the Controller.\n\nEach party shall comply with its respective obligations under the UK GDPR and the Data Protection Act 2018 in connection with its role.'],
+      ['Nature and Purpose of Processing','Personal data will be processed for the purpose of delivering the Aetas in the Workplace service, which is designed to review and improve the Client\'s employee benefits and payroll structure, support staff financial wellbeing, and enhance employee engagement and retention.\n\nProcessing will take the form of collection, review, analysis, storage, and reporting of data. It will not involve automated decision-making or profiling.'],
+      ['Categories of Data and Data Subjects','Data processed under this Agreement is limited to what is necessary for the purposes stated above. It may include: anonymised or aggregated employee data relating to benefits participation and contribution structures; pension and employee benefits scheme information; and payroll structure data, provided in anonymised or summary form wherever possible.\n\nWhere identifiable personal data is shared, this will be limited to the minimum necessary and handled in accordance with the data minimisation principle under Article 5(1)(c) UK GDPR. Data subjects covered by this Agreement are current and former employees of the Client organisation.'],
+      ['Confidentiality','Aetas Partners Limited acknowledges that all information shared under this Agreement is commercially sensitive. The Processor undertakes to apply the same standard of care to the Client\'s data as it applies to its own confidential information, and as a minimum to apply appropriate technical and organisational measures to protect it.\n\nOnly those individuals within Aetas Partners Limited who require access to the data in order to perform the services will be permitted to do so, and all such individuals are subject to binding confidentiality obligations.'],
+      ['Data Security','The Processor shall implement appropriate technical and organisational measures to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorised disclosure, or access. These measures shall take into account the nature, scope, context, and purposes of the processing, as well as the risks to individuals.\n\nSuch measures include, but are not limited to: access controls and password-protected systems; encrypted data transmission where applicable; restricted access on a need-to-know basis; and secure disposal of data when no longer required.'],
+      ['Personal Data Breach Notification','In the event of a personal data breach involving the Client\'s data, Aetas Partners Limited will notify the Client without undue delay and, where feasible, within 72 hours of becoming aware of the breach. The Controller remains responsible for any further notifications to the ICO or affected data subjects required under Articles 33 and 34 UK GDPR.'],
+      ['Data Subject Rights','The Processor shall assist the Controller in fulfilling its obligations to respond to data subject rights requests, including rights of access, rectification, erasure, restriction, portability, and objection, as provided under Chapter III of the UK GDPR.\n\nWhere a data subject contacts the Processor directly, the Processor shall promptly refer the request to the Controller and shall not respond substantively without the Controller\'s instruction, unless required to do so by law.'],
+      ['Sub-Processors','Aetas Partners Limited shall not engage any sub-processor in connection with the processing of the Client\'s personal data without the prior written consent of the Client. Where sub-processors are engaged with the Client\'s consent, the Processor shall impose equivalent data protection obligations on the sub-processor by way of a written contract.'],
+      ['International Data Transfers','The Processor shall not transfer personal data outside of the United Kingdom without the prior written consent of the Controller, and only where an appropriate transfer mechanism exists in accordance with Chapter V of the UK GDPR.'],
+      ['Data Retention and Deletion','Personal data will be retained by the Processor only for as long as is necessary for the purposes of this Agreement or as otherwise required by law. Upon termination of the engagement, the Processor shall, at the election of the Controller, either securely return or destroy all personal data processed on behalf of the Controller and confirm in writing that this has been done.'],
+      ['Audit and Inspection','The Processor shall make available to the Controller all information reasonably necessary to demonstrate compliance with this Agreement and with applicable data protection legislation. The Processor shall permit and contribute to audits or inspections conducted by the Controller or an auditor appointed by the Controller, on reasonable notice and at the Controller\'s cost.'],
+      ['Term and Termination','This Agreement shall come into force on the date first written above and shall remain in effect for the duration of the engagement between the parties, unless terminated earlier. Either party may terminate this Agreement on 30 days\' written notice.'],
+      ['Governing Law and Jurisdiction','This Agreement shall be governed by and construed in accordance with the laws of England and Wales. Any dispute arising under or in connection with this Agreement shall be subject to the exclusive jurisdiction of the courts of England and Wales.'],
+    ];
 
-  const formData = new FormData(this);
-  const action = this.getAttribute('action');
-
-  try {
-    const res = await fetch(action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
+    clauses.forEach(function(c,i){
+      clauseHead(i+1,c[0]);
+      para(c[1],8.5);
+      y+=3;
     });
 
-    if (res.ok) {
-      document.getElementById('doc-content').style.display = 'none';
-      document.getElementById('success-screen').style.display = 'block';
-      document.getElementById('success-ref-display').textContent = 'Agreement reference: ' + ref;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      if (typeof gtag !== 'undefined') {
-        gtag('event','form_submit',{event_category:'DPA',event_label:'Signed and submitted'});
-      }
-    } else {
-      throw new Error('Server error ' + res.status);
+    // Signature section
+    chk(60); y+=6;
+    doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.setTextColor(26,43,74);
+    doc.text('16. Signatures',M,y); y+=8;
+
+    // Two signature boxes
+    var bw=(CW-6)/2;
+    function sigBox(x,label,orgLabel,sig,name,pos,date){
+      var bh=45;
+      doc.setDrawColor(200,200,200); doc.rect(x,y,bw,bh);
+      doc.setFillColor(240,243,248); doc.rect(x,y,bw,8,'F');
+      doc.setFont('helvetica','bold'); doc.setFontSize(7.5); doc.setTextColor(26,43,74);
+      doc.text('For and on behalf of',x+4,y+4);
+      doc.setFontSize(9); doc.text(orgLabel,x+4,y+9);
+      var fy=y+16; var fh=7;
+      [['Signature',sig],['Print Name',name],['Position',pos],['Date',date]].forEach(function(r){
+        doc.setFont('helvetica','bold'); doc.setFontSize(7); doc.setTextColor(26,43,74);
+        doc.text(r[0]+':',x+4,fy);
+        doc.setFont('helvetica','normal'); doc.setTextColor(60,60,60);
+        if(r[1]) doc.text(r[1],x+28,fy);
+        else { doc.setDrawColor(180,180,180); doc.line(x+28,fy+1,x+bw-4,fy+1); }
+        fy+=fh;
+      });
     }
-  } catch(err) {
-    btn.classList.remove('loading');
-    btn.disabled = false;
-    alert('There was a problem submitting the agreement. Please try again or email matthew.steiner@aetas-partners.com directly.');
+    sigBox(M, 'Aetas Partners Limited', 'Aetas Partners Limited', 'Matthew Steiner', 'Matthew Steiner', 'Co-Founder and Managing Director', new Date().toLocaleDateString('en-GB'));
+    sigBox(M+bw+6, 'Client Organisation', clientOrg||'Client Organisation', clientSig, clientPrint, clientPos, clientDate);
+    y+=55;
+
+    // Important note
+    chk(30);
+    doc.setFillColor(240,243,248); doc.rect(M,y,CW,28,'F');
+    doc.setDrawColor(26,43,74); doc.rect(M,y,CW,28);
+    doc.setFont('helvetica','bold'); doc.setFontSize(8); doc.setTextColor(26,43,74);
+    doc.text('Important Note',M+4,y+6);
+    doc.setFont('helvetica','normal'); doc.setFontSize(7.5); doc.setTextColor(60,60,60);
+    var noteText='This Agreement relates solely to the processing of personal data in connection with the Aetas in the Workplace consultancy service provided by Aetas Partners Limited. Aetas Partners Limited is not authorised by the Financial Conduct Authority to provide regulated financial advice. Regulated financial planning and advice is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (FCA registration: 458421). This Agreement does not constitute a guarantee of outcome, a commitment to act, or a substitute for independent legal advice.';
+    var nl=doc.splitTextToSize(noteText,CW-8);
+    nl.forEach(function(l,i){doc.text(l,M+4,y+12+(i*4.5));});
+    y+=34;
+
+    // Page footers
+    var pc=doc.internal.getNumberOfPages();
+    for(var i=1;i<=pc;i++){
+      doc.setPage(i); doc.setFillColor(26,43,74); doc.rect(0,287,W,10,'F');
+      doc.setFont('helvetica','normal'); doc.setFontSize(7); doc.setTextColor(180,180,180);
+      doc.text('Aetas Partners Limited | Data Processing Agreement | '+ref+' | Page '+i+' of '+pc,W/2,293,{align:'center'});
+    }
+    return doc;
   }
-});
-</script>
+
+  // ── FORM SUBMIT ───────────────────────────────────────────────────────
+  document.getElementById('dpa-form').addEventListener('submit', async function(e){
+    e.preventDefault();
+    var ref = window._DPA_REF;
+
+    // Validate
+    var req=[
+      {w:'f-sig',i:'client_signature'},{w:'f-print',i:'client_print_name'},
+      {w:'f-email',i:'client_email'},{w:'f-date',i:'client_date'}
+    ];
+    var valid=true;
+    var orgInput=document.getElementById('client_org');
+    if(!orgInput.value.trim()){orgInput.style.borderColor='var(--error)';valid=false;}
+    else orgInput.style.borderColor='';
+
+    req.forEach(function(r){
+      var w=document.getElementById(r.w), inp=document.getElementById(r.i);
+      if(!inp.value.trim()||(inp.type==='email'&&!/\S+@\S+\.\S+/.test(inp.value))){
+        w.classList.add('has-error'); valid=false;
+      } else w.classList.remove('has-error');
+    });
+    var consent=document.getElementById('dpa_confirmed');
+    var cRow=document.getElementById('consent-row');
+    if(!consent.checked){cRow.style.color='var(--error)';valid=false;}
+    else cRow.style.color='';
+
+    if(!valid){
+      var fe=document.querySelector('.has-error');
+      if(fe) fe.scrollIntoView({behavior:'smooth',block:'center'});
+      return;
+    }
+
+    var btn=document.getElementById('submit-btn');
+    var btnText=btn.querySelector('.btn-text');
+    btn.classList.add('loading'); btn.disabled=true;
+    btnText.textContent='Generating PDF...';
+
+    var clientOrg   = document.getElementById('client_org').value;
+    var clientSig   = document.getElementById('client_signature').value;
+    var clientPrint = document.getElementById('client_print_name').value;
+    var clientPos   = document.getElementById('client_position').value;
+    var clientEmail = document.getElementById('client_email').value;
+    var clientDate  = document.getElementById('client_date').value;
+
+    try {
+      var doc = generateDPAPDF(clientOrg,clientSig,clientPrint,clientPos,clientEmail,clientDate,ref);
+      var pdfBlob = doc.output('blob');
+      var pdfB64  = doc.output('datauristring');
+      var fname   = 'Aetas-DPA-'+ref+'.pdf';
+      var dl=document.createElement('a'); dl.href=URL.createObjectURL(pdfBlob); dl.download=fname; dl.click(); URL.revokeObjectURL(dl.href);
+      sessionStorage.setItem('aetas_pdf_data',pdfB64);
+      sessionStorage.setItem('aetas_pdf_name',fname);
+
+      btnText.textContent='Sending confirmation...';
+
+      if(EMAILJS_PUBLIC_KEY!=='YOUR_EMAILJS_PUBLIC_KEY'){
+        await emailjs.send(EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_INTERNAL,{
+          ref:ref, org:clientOrg, contact:clientPrint, email:clientEmail,
+          form_type:'Data Processing Agreement', form_data:'Client: '+clientOrg+'\nSigned: '+clientSig+'\nDate: '+clientDate,
+          submitted:new Date().toLocaleString('en-GB'), to_email:'matthew.steiner@aetas-partners.com'
+        });
+        if(clientEmail){
+          await emailjs.send(EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_CONFIRM,{
+            ref:ref, org:clientOrg, contact:clientPrint, to_email:clientEmail, form_type:'Data Processing Agreement'
+          });
+        }
+      }
+
+      if(typeof gtag!=='undefined') gtag('event','form_submit',{event_category:'DPA',event_label:ref});
+      window.location.href='form-thankyou.html?form=dpa&org='+encodeURIComponent(clientOrg)+'&ref='+encodeURIComponent(ref);
+
+    } catch(err){
+      console.error(err);
+      btn.classList.remove('loading'); btn.disabled=false; btnText.textContent='Sign and submit agreement';
+      window.location.href='form-thankyou.html?form=dpa&org='+encodeURIComponent(clientOrg)+'&ref='+encodeURIComponent(ref);
+    }
+  });
+  </script>
+
 </body>
 </html>
