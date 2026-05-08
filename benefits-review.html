@@ -606,7 +606,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   const EMAILJS_TEMPLATE_INTERNAL = 'template_q3dj6ti';
   const EMAILJS_TEMPLATE_CONFIRM  = 'template_2hfklis';
 
-  if (EMAILJS_PUBLIC_KEY !== 'T-OvAY8-q_r_P4tAA') emailjs.init(EMAILJS_PUBLIC_KEY);
+  emailjs.init(EMAILJS_PUBLIC_KEY);
   // ── FONT PRELOAD ──────────────────────────────────────────────────────
   if (document.fonts && document.fonts.load) {
     document.fonts.load("1.6rem 'Great Vibes'").then(function() {
@@ -622,6 +622,14 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
     const d=new Date(), ym=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0');
     return 'AEB-'+ym+'-'+Math.random().toString(36).substring(2,6).toUpperCase();
   })();
+
+  
+  // ── DATE FORMATTER — always returns "DD Month YYYY" ─────────────────
+  function _fmtDate(d) {
+    var M = ['January','February','March','April','May','June',
+             'July','August','September','October','November','December'];
+    return String(d.getDate()).padStart(2,'0') + ' ' + M[d.getMonth()] + ' ' + d.getFullYear();
+  }
 
   // ── AUTO-DATE + DOCUMENT DETAILS ─────────────────────────────────────
   document.addEventListener('DOMContentLoaded', function() {

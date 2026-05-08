@@ -460,7 +460,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);backgr
   const EMAILJS_SERVICE_ID        = 'service_dztbuyl';
   const EMAILJS_TEMPLATE_INTERNAL = 'template_q3dj6ti';
   const EMAILJS_TEMPLATE_CONFIRM  = 'template_2hfklis';
-  if (EMAILJS_PUBLIC_KEY !== 'T-OvAY8-q_r_P4tAA') emailjs.init(EMAILJS_PUBLIC_KEY);
+  emailjs.init(EMAILJS_PUBLIC_KEY);
   // ── FONT PRELOAD ──────────────────────────────────────────────────────
   if (document.fonts && document.fonts.load) {
     document.fonts.load("1.6rem 'Great Vibes'").then(function() {
@@ -471,9 +471,17 @@ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);backgr
   }
 
 
+  
+  // ── DATE FORMATTER — always returns "DD Month YYYY" ─────────────────
+  function _fmtDate(d) {
+    var M = ['January','February','March','April','May','June',
+             'July','August','September','October','November','December'];
+    return String(d.getDate()).padStart(2,'0') + ' ' + M[d.getMonth()] + ' ' + d.getFullYear();
+  }
+
   // ── AUTO-FILL ─────────────────────────────────────────────────────────
   (function(){
-    var today = new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'long',year:'numeric'});
+    // today replaced by _fmtDate(new Date()) below
     var iso   = new Date().toISOString().split('T')[0];
     var ref   = 'APL-DPA-'+new Date().getFullYear()+String(new Date().getMonth()+1).padStart(2,'0')
                +'-'+Math.random().toString(36).substring(2,6).toUpperCase();
