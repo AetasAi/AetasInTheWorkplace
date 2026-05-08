@@ -43,14 +43,14 @@ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);backgr
 
 /* ── PROGRESS ────────────────────────────────────────────── */
 .progress-bar{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:0.5px solid var(--border);padding:0 2rem;overflow-x:auto;-webkit-overflow-scrolling:touch;}
-.progress-inner{display:flex;max-width:1000px;margin:0 auto;}
+.progress-inner{display:flex;max-width:920px;margin:0 auto;}
 .progress-step{flex:1;min-width:60px;padding:10px 8px;text-align:center;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);border-bottom:2px solid transparent;cursor:pointer;transition:color 0.2s,border-color 0.2s;white-space:nowrap;}
 .progress-step:hover{color:var(--navy);}
 .progress-step.active{color:var(--navy);border-bottom-color:var(--gold);font-weight:500;}
 .progress-step.complete{color:var(--gold);border-bottom-color:var(--gold-pale);}
 
 /* ── PAGE LAYOUT ─────────────────────────────────────────── */
-.page{max-width:1000px;margin:0 auto;padding:3rem 2rem 5rem;}
+.page{max-width:920px;margin:0 auto;padding:3rem 2rem 5rem;}
 
 /* ── PAGE HEADER ─────────────────────────────────────────── */
 .page-header{margin-bottom:2.5rem;}
@@ -168,6 +168,24 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   .benefits-table th:nth-child(3),.benefits-table td:nth-child(3){display:none;}
 }
 
+/* ── DOCUMENT HEADER (matching DPA form style) ───────────────────── */
+.doc-header{text-align:center;margin-bottom:2.5rem;padding-bottom:2.5rem;border-bottom:0.5px solid var(--border);}
+.doc-org{font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.doc-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:500;color:var(--navy);margin-bottom:0.25rem;}
+.doc-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.5rem);font-weight:300;font-style:italic;color:var(--gold);}
+
+/* ── DETAILS TABLE (ref, date, org) ──────────────────────────────── */
+.agreement-table{width:100%;border-collapse:collapse;margin:2rem 0;background:var(--white);border:0.5px solid var(--border);border-radius:4px;overflow:hidden;}
+.agreement-table tr{border-bottom:0.5px solid var(--border);}
+.agreement-table tr:last-child{border-bottom:none;}
+.agreement-table td{padding:11px 16px;vertical-align:middle;}
+.agreement-table td:first-child{background:var(--navy-xlight);font-size:0.82rem;font-weight:500;color:var(--navy);width:36%;white-space:nowrap;}
+.agreement-table td:last-child{font-size:0.9rem;}
+.agreement-table .editable-cell input{width:100%;border:none;padding:0;font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;color:var(--text-body);background:transparent;outline:none;}
+.agreement-table .editable-cell input:focus{background:var(--gold-pale);padding:0 4px;border-radius:2px;}
+.agreement-table .prefilled{color:var(--navy);font-weight:400;}
+.ref-code{font-family:monospace;font-size:0.85rem;color:var(--text-muted);}
+
 @media print{
   .topbar,.progress-bar,.form-actions,.btn-submit,.btn-reset{display:none!important;}
   body{background:#fff;}
@@ -200,12 +218,36 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   <!-- FORM CONTENT (hidden after submit) -->
   
 
-    <div class="page-header">
-      <div class="page-eyebrow">Workplace Performance Review</div>
-      <h1>Employee Benefits Data Capture</h1>
-      <div class="notice-box">
-        <strong>Data Protection Notice.</strong> Information provided will be processed by Aetas Partners Limited solely for the purpose of reviewing your employee benefits and pension arrangements, in line with our Data Processing Agreement and applicable UK data protection legislation (UK GDPR and the Data Protection Act 2018). Data will not be shared with third parties without your prior consent, except where required by law. Fields marked <span style="color:var(--gold);font-weight:500;">*</span> are required.
-      </div>
+    <!-- DOCUMENT HEADER -->
+    <div class="doc-header">
+      <div class="doc-org">Aetas in the Workplace</div>
+      <div class="doc-title">AETAS PARTNERS LIMITED</div>
+      <div class="doc-subtitle">Employee Benefits Data Capture Form</div>
+    </div>
+
+    <!-- FORM DETAILS TABLE -->
+    <table class="agreement-table">
+      <tr>
+        <td>Form Date</td>
+        <td><span class="prefilled" id="form_date_display">—</span></td>
+      </tr>
+      <tr>
+        <td>Form Reference</td>
+        <td><span class="prefilled ref-code" id="form_ref_display">—</span></td>
+      </tr>
+      <tr>
+        <td>Organisation</td>
+        <td><span class="prefilled" id="org_name_display" style="color:var(--text-muted);font-style:italic;">Completed in Section 1 below</span></td>
+      </tr>
+      <tr>
+        <td>Prepared by</td>
+        <td><span class="prefilled">Aetas in the Workplace &mdash; Workplace Performance Review</span></td>
+      </tr>
+    </table>
+
+    <!-- DATA PROTECTION NOTICE -->
+    <div class="notice-box" style="margin-bottom:2.5rem;">
+      <strong>Data Protection Notice.</strong> Information provided will be processed by Aetas Partners Limited solely for the purpose of reviewing your employee benefits and pension arrangements, in line with our Data Processing Agreement and applicable UK data protection legislation (UK GDPR and the Data Protection Act 2018). Data will not be shared with third parties without your prior consent, except where required by law. Fields marked <span style="color:var(--gold);font-weight:500;">*</span> are required.
     </div>
 
     <!-- ── FORM ─────────────────────────────────────────── -->
@@ -548,12 +590,33 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
     return 'AEB-'+ym+'-'+Math.random().toString(36).substring(2,6).toUpperCase();
   })();
 
-  // ── AUTO-DATE ─────────────────────────────────────────────────────────
+  // ── AUTO-DATE + DOCUMENT DETAILS ─────────────────────────────────────
   document.addEventListener('DOMContentLoaded', function() {
     const t = new Date().toISOString().split('T')[0];
     ['date_completed','signature_date'].forEach(function(id){
       var el=document.getElementById(id); if(el) el.value=t;
     });
+    // Populate document header table
+    var dateDisplay = document.getElementById('form_date_display');
+    var refDisplay  = document.getElementById('form_ref_display');
+    if(dateDisplay) dateDisplay.textContent = new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'long',year:'numeric'});
+    if(refDisplay)  refDisplay.textContent  = FORM_REF;
+    // Live-update org name in header table as user types
+    var orgInput   = document.getElementById('organisation_name');
+    var orgDisplay = document.getElementById('org_name_display');
+    if(orgInput && orgDisplay){
+      orgInput.addEventListener('input', function(){
+        if(this.value.trim()){
+          orgDisplay.textContent = this.value.trim();
+          orgDisplay.style.fontStyle = 'normal';
+          orgDisplay.style.color = 'var(--navy)';
+        } else {
+          orgDisplay.textContent = 'Completed in Section 1 below';
+          orgDisplay.style.fontStyle = 'italic';
+          orgDisplay.style.color = 'var(--text-muted)';
+        }
+      });
+    }
   });
 
   // ── FILE NAME DISPLAY ─────────────────────────────────────────────────
