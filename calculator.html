@@ -160,6 +160,48 @@ footer a:hover{color:var(--gold-light);}
 @media(max-width:600px){
   .roei-compare{grid-template-columns:1fr;}
 }
+
+/* ── INLINE FOLLOW-THROUGH CTA ──────────────────────────────────── */
+.inline-cta{
+  margin-top:1.5px;
+  background:var(--navy);
+  border-radius:0 0 6px 6px;
+  padding:1.75rem 1.5rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.5rem;
+  flex-wrap:wrap;
+}
+.inline-cta-text{display:flex;flex-direction:column;gap:0.4rem;flex:1;}
+.inline-cta-headline{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.1rem,2vw,1.35rem);
+  font-weight:400;
+  color:var(--white);
+  line-height:1.3;
+}
+.inline-cta-sub{font-size:0.83rem;color:rgba(255,255,255,0.55);line-height:1.6;}
+.inline-cta-btn{
+  display:inline-block;
+  padding:13px 26px;
+  background:var(--gold);
+  color:var(--navy);
+  font-family:'Jost',sans-serif;
+  font-size:0.78rem;
+  font-weight:500;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  text-decoration:none;
+  border-radius:2px;
+  white-space:nowrap;
+  flex-shrink:0;
+  transition:background 0.2s;
+}
+.inline-cta-btn:hover{background:var(--gold-light);}
+@media(max-width:640px){
+  .inline-cta{flex-direction:column;align-items:flex-start;}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -191,11 +233,11 @@ footer a:hover{color:var(--gold-light);}
   <div class="nav-links">
     <a href="limited-companies.html">Limited companies</a>
     <a href="llps.html">LLPs</a>
+    <a href="/investment.html">Pricing</a>
     <a href="/calculator.html">Calculator</a>
     <a href="/diagnostic.html">Diagnostic</a>
     <a href="/insights.html">Insights</a>
     <a href="/faqs.html">FAQs</a>
-    <a href="/investment.html">Fees</a>
     <a href="https://links.aetas-partners.com/widget/booking/IacdM2cW2bnLm0pK7Jty" target="_blank" class="nav-cta">Book a Review</a>
   </div>
 
@@ -325,6 +367,15 @@ footer a:hover{color:var(--gold-light);}
         <p class="roei-note" id="roei-note">Programme investment is indicative only, based on typical per-employee rates for a business of this size. Actual fees are confirmed in writing after your Workplace Performance Review — always before anything begins.</p>
       </div>
 
+      <!-- INLINE FOLLOW-THROUGH CTA -->
+      <div class="inline-cta">
+        <div class="inline-cta-text">
+          <span class="inline-cta-headline" id="inline-cta-headline">That's £248,000 per year — costing nothing to start addressing.</span>
+          <span class="inline-cta-sub">The Workplace Performance Review identifies the real figure for your specific business. Two 30-minute conversations, no cost, no obligation.</span>
+        </div>
+        <a href="https://links.aetas-partners.com/widget/booking/IacdM2cW2bnLm0pK7Jty" target="_blank" class="inline-cta-btn">Book the Review →</a>
+      </div>
+
     </div>
   </div>
 </div>
@@ -332,7 +383,7 @@ footer a:hover{color:var(--gold-light);}
 <div class="cta-band">
   <div class="cta-inner">
     <div class="cta-eyebrow">The next step</div>
-    <h2>These are estimates. Your Workplace Performance Review finds the real number.</h2>
+    <h2 id="cta-band-headline">These are estimates. Your Workplace Performance Review finds the real number.</h2>
     <p>The calculator is designed to give a sense of scale — not a precise figure. The Review identifies exactly where financial pressure is showing up in your specific business, what it is actually costing, and what a proportionate response looks like. No cost. No obligation. Two 30-minute conversations.</p>
     <a href="https://links.aetas-partners.com/widget/booking/IacdM2cW2bnLm0pK7Jty" target="_blank" class="btn-gold">Book a Workplace Performance Review</a>
     <p class="cta-note">No cost &nbsp;·&nbsp; No obligation &nbsp;·&nbsp; Two 30-minute conversations</p>
@@ -427,8 +478,15 @@ function calculate() {
   document.getElementById('benefits-value').textContent    = fmtK(benefitsWaste);
   document.getElementById('roei-cost').textContent         = fmtK(total);
   document.getElementById('roei-investment').textContent   = fmtK(programmeInv);
-  document.getElementById('roei-ratio').textContent        = Math.round(roiRatio) + '×';
+  document.getElementById('roei-ratio').textContent        = Math.round(roiRatio) + '\u00d7';
   document.getElementById('insight-value').textContent     = fmt(twoPercent);
+
+  // Personalise inline CTA and cta-band with the calculated figure
+  const fmtTotal = fmt(total);
+  const el = document.getElementById('inline-cta-headline');
+  if (el) el.textContent = 'That\u2019s ' + fmtTotal + ' per year \u2014 two conversations to start addressing it.';
+  const h2 = document.getElementById('cta-band-headline');
+  if (h2) h2.innerHTML = 'The real cost for your business may be <em>' + fmtTotal + '</em>. The Review finds the exact number.';
 
   const leaversRounded = Math.round(leavers * 10) / 10;
   document.getElementById('turnover-sub').textContent = leaversRounded + ' leavers per year at approx. ' + fmtK(replacementCost) + ' replacement cost each';
