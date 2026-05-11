@@ -1,0 +1,1748 @@
+From d3a36c1513b3eb0545331eadd678899ba336b0e6 Mon Sep 17 00:00:00 2001
+From: Matthew Steiner <matthew.steiner@aetas-partners.com>
+Date: Mon, 11 May 2026 12:56:11 +0000
+Subject: [PATCH] Brand refresh: logo, palette, footer lockup
+
+- Standardise navy to brand #0d2c6c (was three variants: #1a2b4a, #1F3864, #1a2744)
+- Standardise gold to #b8934a (was two variants: #C49A28, #b89a5a)
+- Harmonise navy-mid (hover state) to #1d4291 to match new navy
+- Update meta theme-color and manifest.webmanifest to #0d2c6c
+- Add Aetas mark icon to .nav-logo (10 pages) and .nav-brand (8 pages)
+- Add Aetas mark icon to .footer-logo (6 pages) and .footer-brand (8 pages)
+- Add Aetas Partners horizontal lockup to all 24 footers, linked to aetas-partners.com
+- Typography (Cormorant Garamond + Jost) unchanged
+- Existing colour scheme in nav/footer logos (navy 'Aetas', gold 'in the Workplace') preserved
+---
+ 404.html                                      | 12 ++++--
+ benefits-review.html                          | 23 +++++++++---
+ calculator.html                               | 27 ++++++++++----
+ case-studies/bristol-organisation.html        | 23 +++++++++---
+ case-studies/uk-retail-group.html             | 23 +++++++++---
+ charities.html                                | 10 ++++-
+ data-processing-agreement.html                | 23 +++++++++---
+ diagnostic.html                               | 35 ++++++++++++------
+ faqs.html                                     | 29 +++++++++++----
+ form-thankyou.html                            | 17 ++++++++-
+ index.html                                    | 35 ++++++++++++------
+ insights.html                                 | 31 +++++++++++-----
+ insights/article-template.html                | 21 +++++++++--
+ .../financial-wellbeing-in-the-workplace.html | 21 +++++++++--
+ .../introducing-the-aetas-collective.html     | 21 +++++++++--
+ ...your-team-through-financial-wellbeing.html | 21 +++++++++--
+ ...when-everyday-life-stops-talking-back.html | 21 +++++++++--
+ ...nancial-wellbeing-is-a-business-issue.html | 21 +++++++++--
+ investment.html                               | 25 ++++++++++---
+ limited-companies.html                        | 37 +++++++++++++------
+ llps.html                                     | 35 ++++++++++++------
+ manifest.webmanifest                          |  4 +-
+ privacy.html                                  | 29 +++++++++++----
+ whats-next.html                               | 25 ++++++++++---
+ 24 files changed, 427 insertions(+), 142 deletions(-)
+
+diff --git a/404.html b/404.html
+index be4603f..3477906 100644
+--- a/404.html
++++ b/404.html
+@@ -17,13 +17,13 @@
+ <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png" />
+ <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+ <link rel="manifest" href="/manifest.webmanifest" />
+-<meta name="theme-color" content="#1a2744" />
++<meta name="theme-color" content="#0d2c6c" />
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+ <style>
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ :root {
+-  --navy: #1a2744; --navy-dark: #111b33;
+-  --gold: #b89a5a; --gold-light: #d4b97a;
++  --navy: #0d2c6c; --navy-dark: #081f4d;
++  --gold: #b8934a; --gold-light: #d4b97a;
+   --cream: #f8f4ee; --white: #ffffff;
+   --muted: #5c5c5c; --border: rgba(184,154,90,0.22);
+ }
+@@ -92,6 +92,12 @@ p { color: rgba(255,255,255,0.5); font-size: 0.95rem; line-height: 1.75; margin-
+ }
+ .brand:hover { color: var(--gold-light); }
+ @media (max-width: 600px) { .brand { left: 24px; } }
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ </head>
+ <body>
+diff --git a/benefits-review.html b/benefits-review.html
+index c9415e9..45d0157 100644
+--- a/benefits-review.html
++++ b/benefits-review.html
+@@ -16,17 +16,17 @@
+ <meta name="robots" content="noindex, nofollow">
+ <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+ <link rel="manifest" href="/manifest.webmanifest">
+-<meta name="theme-color" content="#1a2b4a">
++<meta name="theme-color" content="#0d2c6c">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+ :root {
+-  --navy:#1a2b4a; --navy-mid:#2d4270; --navy-light:#e8ecf3; --navy-xlight:#f0f3f8;
++  --navy:#0d2c6c; --navy-mid:#1d4291; --navy-light:#e8ecf3; --navy-xlight:#f0f3f8;
+   --gold:#b8934a; --gold-light:#d4b07a; --gold-pale:#f5ede0;
+   --cream:#faf8f5; --white:#ffffff;
+-  --text-body:#4a4a4a; --text-muted:#7a7a7a; --text-label:#1a2b4a;
+-  --border:rgba(26,43,74,0.14); --border-focus:rgba(184,147,74,0.6);
++  --text-body:#4a4a4a; --text-muted:#7a7a7a; --text-label:#0d2c6c;
++  --border:rgba(13,44,108,0.14); --border-focus:rgba(184,147,74,0.6);
+   --error:#d0442a; --success:#1a7a4a;
+   --section-gap: 2.5rem;
+ }
+@@ -136,7 +136,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
+ .btn-submit:disabled{background:var(--text-muted);cursor:not-allowed;}
+ .btn-reset{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;background:transparent;color:var(--text-muted);font-family:'Jost',sans-serif;font-size:0.8rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;border:0.5px solid var(--border);border-radius:2px;cursor:pointer;transition:all 0.2s;}
+ .btn-reset:hover{color:var(--navy);border-color:var(--navy);}
+-.btn-spinner{display:none;width:16px;height:16px;border:2px solid rgba(26,43,74,0.2);border-top-color:var(--navy);border-radius:50%;animation:spin 0.7s linear infinite;}
++.btn-spinner{display:none;width:16px;height:16px;border:2px solid rgba(13,44,108,0.2);border-top-color:var(--navy);border-radius:50%;animation:spin 0.7s linear infinite;}
+ .btn-submit.loading .btn-spinner{display:block;}
+ .btn-submit.loading .btn-text{opacity:0.7;}
+ @keyframes spin{to{transform:rotate(360deg);}}
+@@ -215,6 +215,12 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
+   font-style: italic;
+   letter-spacing: 0;
+ }
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ </head>
+ <body>
+@@ -581,6 +587,13 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
+   Aetas in the Workplace &nbsp;·&nbsp; A trading style of Aetas Wealth, Insight Financial Associates Limited &nbsp;·&nbsp; FCA reg 458421 &nbsp;·&nbsp;
+   <a href="https://itw.aetaspartners.com/privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+   <a href="https://www.aetas-partners.com">aetas-partners.com</a>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+   <!-- ── CDN LIBRARIES ──────────────────────────────────────────────── -->
+diff --git a/calculator.html b/calculator.html
+index 94e7fe0..4c4be69 100644
+--- a/calculator.html
++++ b/calculator.html
+@@ -32,17 +32,17 @@
+ <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+ <link rel="manifest" href="/manifest.webmanifest">
+-<meta name="theme-color" content="#1a2744">
++<meta name="theme-color" content="#0d2c6c">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+ :root {
+-  --navy: #1a2b4a; --navy-mid: #2d4270; --navy-light: #e8ecf3;
++  --navy: #0d2c6c; --navy-mid: #1d4291; --navy-light: #e8ecf3;
+   --gold: #b8934a; --gold-light: #d4b07a; --gold-pale: #f5ede0;
+   --cream: #faf8f5; --white: #ffffff;
+   --text-body: #4a4a4a; --text-muted: #7a7a7a;
+-  --border: rgba(26,43,74,0.12); --border-gold: rgba(184,147,74,0.35);
++  --border: rgba(13,44,108,0.12); --border-gold: rgba(184,147,74,0.35);
+ }
+ *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+ html{scroll-behavior:smooth;}
+@@ -152,8 +152,8 @@ footer a:hover{color:var(--gold-light);}
+     .nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+     .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+     .nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+-    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(26,43,74,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
+-    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(26,43,74,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
++    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(13,44,108,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
++    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(13,44,108,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
+     .nav-links.open a:last-child { border-bottom: none; }
+     .nav-links.open .nav-cta { background: var(--navy); color: var(--white) !important; padding: 10px 18px; border-radius: 2px; margin-top: 0.75rem; width: auto; text-align: center; border-bottom: none; }
+   }
+@@ -202,6 +202,12 @@ footer a:hover{color:var(--gold-light);}
+ @media(max-width:640px){
+   .inline-cta{flex-direction:column;align-items:flex-start;}
+ }
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">
+ {
+@@ -229,7 +235,7 @@ footer a:hover{color:var(--gold-light);}
+ <body>
+ 
+ <nav>
+-  <a href="index.html" class="nav-logo">Aetas <span>in the Workplace</span></a>
++  <a href="index.html" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
+   <div class="nav-links">
+     <a href="limited-companies.html">Limited companies</a>
+     <a href="llps.html">LLPs</a>
+@@ -405,7 +411,7 @@ footer a:hover{color:var(--gold-light);}
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-logo">Aetas <span>in the Workplace</span></div>
++      <div class="footer-logo"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="28" height="28">Aetas <span>in the Workplace</span></div>
+       <div style="margin-top:0.5rem;"><a href="mailto:matthew.steiner@aetas-partners.com" class="footer-contact">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com" style="color:rgba(255,255,255,0.5);font-size:0.82rem;text-decoration:none;">aetas-partners.com</a></div>
+     </div>
+     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services support financial understanding, engagement, and resilience but do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
+@@ -426,6 +432,13 @@ footer a:hover{color:var(--gold-light);}
+     &nbsp;&middot;&nbsp;
+     <a href="https://collective.aetaspartners.com/" style="color:rgba(255,255,255,0.55);text-decoration:none;">Aetas Collective</a>
+   </div>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/case-studies/bristol-organisation.html b/case-studies/bristol-organisation.html
+index 51cb1aa..1b5d3a7 100644
+--- a/case-studies/bristol-organisation.html
++++ b/case-studies/bristol-organisation.html
+@@ -16,7 +16,7 @@
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+-:root{--navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(26,43,74,0.12);--border-gold:rgba(184,147,74,0.3);}
++:root{--navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(13,44,108,0.12);--border-gold:rgba(184,147,74,0.3);}
+ *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+ html{scroll-behavior:smooth;}
+ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;}
+@@ -114,7 +114,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;background:var(-
+ .more-eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--gold);}
+ .more-section h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin-bottom:0.75rem;}
+ .more-section p{font-size:0.9rem;color:var(--text-muted);line-height:1.75;max-width:540px;margin-bottom:1.5rem;}
+-.btn-outline-navy{display:inline-block;padding:11px 22px;background:transparent;color:var(--navy);font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border:0.5px solid rgba(26,43,74,0.35);border-radius:2px;transition:all 0.2s;}
++.btn-outline-navy{display:inline-block;padding:11px 22px;background:transparent;color:var(--navy);font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border:0.5px solid rgba(13,44,108,0.35);border-radius:2px;transition:all 0.2s;}
+ .btn-outline-navy:hover{background:var(--navy);color:var(--white);}
+ 
+ /* FOOTER */
+@@ -139,19 +139,25 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+   .cs-layout{padding-left:24px;padding-right:24px;}
+   .nav-links{display:none;}
+   .nav-burger{display:flex;}
+-  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(26,43,74,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
++  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(13,44,108,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
+   .nav-links.open li a{font-size:0.9rem;padding:0.65rem 0;border-bottom:0.5px solid rgba(255,255,255,0.08);width:100%;display:block;}
+   .nav-links.open li:last-child a{border-bottom:none;}
+ }
+ .fade-in{opacity:0;transform:translateY(14px);transition:opacity 0.5s ease,transform 0.5s ease;}
+ .fade-in.visible{opacity:1;transform:none;}
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Case Study: Supporting Employee Financial Resilience","description":"Bristol-based organisation engagement covering financial resilience workshops, workplace pension review, and Aetas Collective partner services.","author":{"@type":"Person","name":"Anne Fergusson","url":"https://www.aetas-partners.com"},"publisher":{"@type":"Organization","name":"Aetas in the Workplace","url":"https://itw.aetaspartners.com/","logo":{"@type":"ImageObject","url":"https://itw.aetaspartners.com/icons/favicon-32.png"}},"datePublished":"2026-05-06","dateModified":"2026-05-06","mainEntityOfPage":{"@type":"WebPage","@id":"https://itw.aetaspartners.com/case-studies/bristol-organisation.html"},"image":"https://itw.aetaspartners.com/og-image.png","inLanguage":"en-GB","articleSection":"Case Studies","keywords":"financial resilience workshop, workplace pension review, Aetas Collective"}</script>
+ </head>
+ <body>
+ 
+ <nav>
+-  <a class="nav-brand" href="/index.html">Aetas <span>in the Workplace</span></a>
++  <a class="nav-brand" href="/index.html"><img src="/aetas-mark-reverse.svg" alt="" class="nav-mark" width="28" height="28">Aetas <span>in the Workplace</span></a>
+   <ul class="nav-links" id="navLinks">
+     <li><a href="/limited-companies.html">Limited companies</a></li>
+     <li><a href="/llps.html">LLPs</a></li>
+@@ -335,7 +341,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-brand">Aetas <span>in the Workplace</span></div>
++      <div class="footer-brand"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="26" height="26">Aetas <span>in the Workplace</span></div>
+       <div class="footer-contact"><a href="mailto:matthew.steiner@aetas-partners.com">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com">aetas-partners.com</a></div>
+       <div class="footer-links">
+         <a href="/faqs.html">FAQs</a>
+@@ -345,6 +351,13 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+     </div>
+     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421). Details in this case study have been anonymised.</div>
+   </div>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/case-studies/uk-retail-group.html b/case-studies/uk-retail-group.html
+index 98c8948..66b7611 100644
+--- a/case-studies/uk-retail-group.html
++++ b/case-studies/uk-retail-group.html
+@@ -16,7 +16,7 @@
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+-:root{--navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(26,43,74,0.12);--border-gold:rgba(184,147,74,0.3);}
++:root{--navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(13,44,108,0.12);--border-gold:rgba(184,147,74,0.3);}
+ *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+ html{scroll-behavior:smooth;}
+ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;}
+@@ -118,7 +118,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;background:var(-
+ .cs-card p{font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;}
+ .btn-gold-sm{display:inline-block;padding:12px 24px;background:var(--gold);color:var(--navy);font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background 0.2s;margin-right:12px;}
+ .btn-gold-sm:hover{background:var(--gold-light);}
+-.btn-outline-navy{display:inline-block;padding:11px 22px;background:transparent;color:var(--navy);font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border:0.5px solid rgba(26,43,74,0.35);border-radius:2px;transition:all 0.2s;}
++.btn-outline-navy{display:inline-block;padding:11px 22px;background:transparent;color:var(--navy);font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border:0.5px solid rgba(13,44,108,0.35);border-radius:2px;transition:all 0.2s;}
+ .btn-outline-navy:hover{background:var(--navy);color:var(--white);}
+ 
+ footer{background:var(--navy);padding:2.5rem 40px;}
+@@ -141,19 +141,25 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+   .cs-layout{padding-left:24px;padding-right:24px;}
+   .nav-links{display:none;}
+   .nav-burger{display:flex;}
+-  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(26,43,74,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
++  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(13,44,108,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
+   .nav-links.open li a{font-size:0.9rem;padding:0.65rem 0;border-bottom:0.5px solid rgba(255,255,255,0.08);width:100%;display:block;}
+   .nav-links.open li:last-child a{border-bottom:none;}
+ }
+ .fade-in{opacity:0;transform:translateY(14px);transition:opacity 0.5s ease,transform 0.5s ease;}
+ .fade-in.visible{opacity:1;transform:none;}
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Case Study: Practical Financial Support for a Larger Workforce","description":"Case study: large UK retail group diagnostic and benefits review, with a candid recommendation that the existing pension arrangement was suitable.","author":{"@type":"Person","name":"Anne Fergusson","url":"https://www.aetas-partners.com"},"publisher":{"@type":"Organization","name":"Aetas in the Workplace","url":"https://itw.aetaspartners.com/","logo":{"@type":"ImageObject","url":"https://itw.aetaspartners.com/icons/favicon-32.png"}},"datePublished":"2026-05-13","dateModified":"2026-05-13","mainEntityOfPage":{"@type":"WebPage","@id":"https://itw.aetaspartners.com/case-studies/uk-retail-group.html"},"image":"https://itw.aetaspartners.com/og-image.png","inLanguage":"en-GB","articleSection":"Case Studies","keywords":"benefits review, workplace pension, retail workforce, employee benefits"}</script>
+ </head>
+ <body>
+ 
+ <nav>
+-  <a class="nav-brand" href="/index.html">Aetas <span>in the Workplace</span></a>
++  <a class="nav-brand" href="/index.html"><img src="/aetas-mark-reverse.svg" alt="" class="nav-mark" width="28" height="28">Aetas <span>in the Workplace</span></a>
+   <ul class="nav-links" id="navLinks">
+     <li><a href="/limited-companies.html">Limited companies</a></li>
+     <li><a href="/llps.html">LLPs</a></li>
+@@ -355,7 +361,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-brand">Aetas <span>in the Workplace</span></div>
++      <div class="footer-brand"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="26" height="26">Aetas <span>in the Workplace</span></div>
+       <div class="footer-contact"><a href="mailto:matthew.steiner@aetas-partners.com">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com">aetas-partners.com</a></div>
+       <div class="footer-links">
+         <a href="/faqs.html">FAQs</a>
+@@ -365,6 +371,13 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+     </div>
+     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421). Details in this case study have been anonymised.</div>
+   </div>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/charities.html b/charities.html
+index 30d6ed4..85d02fe 100644
+--- a/charities.html
++++ b/charities.html
+@@ -11,17 +11,23 @@
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+ <style>
+ *{box-sizing:border-box;margin:0;padding:0;}
+-body{font-family:'Jost',sans-serif;font-weight:300;background:#1a2b4a;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;text-align:center;}
++body{font-family:'Jost',sans-serif;font-weight:300;background:#0d2c6c;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;text-align:center;}
+ .wrap{max-width:520px;}
+ .logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:#d4b07a;margin-bottom:3rem;letter-spacing:0.04em;}
+ h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:300;line-height:1.2;margin-bottom:1.25rem;}
+ h1 em{font-style:italic;color:#d4b07a;}
+ p{font-size:0.92rem;line-height:1.8;color:rgba(255,255,255,0.6);margin-bottom:2rem;}
+-.btn{display:inline-block;padding:14px 30px;background:#b8934a;color:#1a2b4a;font-family:'Jost',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;margin-bottom:1rem;}
++.btn{display:inline-block;padding:14px 30px;background:#b8934a;color:#0d2c6c;font-family:'Jost',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;margin-bottom:1rem;}
+ .btn:hover{background:#d4b07a;}
+ .back{font-size:0.8rem;color:rgba(255,255,255,0.4);display:block;}
+ .back a{color:rgba(255,255,255,0.5);text-decoration:none;}
+ .back a:hover{color:#d4b07a;}
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ </head>
+ <body>
+diff --git a/data-processing-agreement.html b/data-processing-agreement.html
+index 161fcd9..7d60050 100644
+--- a/data-processing-agreement.html
++++ b/data-processing-agreement.html
+@@ -16,17 +16,17 @@
+ <meta name="robots" content="noindex, nofollow">
+ <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+ <link rel="manifest" href="/manifest.webmanifest">
+-<meta name="theme-color" content="#1a2b4a">
++<meta name="theme-color" content="#0d2c6c">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+ :root{
+-  --navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;
++  --navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;
+   --gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;
+   --cream:#faf8f5;--white:#ffffff;
+-  --text-body:#4a4a4a;--text-muted:#7a7a7a;--text-label:#1a2b4a;
+-  --border:rgba(26,43,74,0.14);--border-gold:rgba(184,147,74,0.6);
++  --text-body:#4a4a4a;--text-muted:#7a7a7a;--text-label:#0d2c6c;
++  --border:rgba(13,44,108,0.14);--border-gold:rgba(184,147,74,0.6);
+   --error:#d0442a;--success:#1a7a4a;
+ }
+ *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+@@ -122,7 +122,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);backgr
+ .btn-submit:disabled{background:var(--text-muted);cursor:not-allowed;opacity:0.7;}
+ .btn-print{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;background:transparent;color:var(--text-muted);font-family:'Jost',sans-serif;font-size:0.8rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;border:0.5px solid var(--border);border-radius:2px;cursor:pointer;transition:all 0.2s;}
+ .btn-print:hover{color:var(--navy);border-color:var(--navy);}
+-.btn-spinner{display:none;width:16px;height:16px;border:2px solid rgba(26,43,74,0.2);border-top-color:var(--navy);border-radius:50%;animation:spin 0.7s linear infinite;}
++.btn-spinner{display:none;width:16px;height:16px;border:2px solid rgba(13,44,108,0.2);border-top-color:var(--navy);border-radius:50%;animation:spin 0.7s linear infinite;}
+ .btn-submit.loading .btn-spinner{display:block;}
+ @keyframes spin{to{transform:rotate(360deg);}}
+ 
+@@ -179,6 +179,12 @@ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);backgr
+   font-style: italic;
+   letter-spacing: 0;
+ }
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ </head>
+ <body>
+@@ -450,6 +456,13 @@ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);backgr
+   Aetas Partners Limited &nbsp;·&nbsp; Registered in England &amp; Wales &nbsp;·&nbsp; FCA reg 458421 &nbsp;·&nbsp;
+   <a href="https://itw.aetaspartners.com/privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+   <a href="https://www.aetas-partners.com">aetas-partners.com</a>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+diff --git a/diagnostic.html b/diagnostic.html
+index f4b486b..f86c94f 100644
+--- a/diagnostic.html
++++ b/diagnostic.html
+@@ -32,7 +32,7 @@
+ <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png" />
+ <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+ <link rel="manifest" href="/manifest.webmanifest" />
+-<meta name="theme-color" content="#1a2744" />
++<meta name="theme-color" content="#0d2c6c" />
+ 
+ <!--
+ ═══════════════════════════════════════════════════════
+@@ -64,8 +64,8 @@
+ 
+ <style>
+ :root {
+-  --navy:   #1F3864;
+-  --gold:   #C49A28;
++  --navy:   #0d2c6c;
++  --gold:   #b8934a;
+   --gold-l: #E8C96A;
+   --cream:  #FDFBF7;
+   --grey:   #F3F1EB;
+@@ -354,7 +354,7 @@ body {
+ }
+ 
+ footer {
+-  background: #111E33; text-align: center;
++  background: #0d2c6c; text-align: center;
+   padding: 22px 40px; font-size: 12px;
+   color: rgba(255,255,255,0.3); letter-spacing: 0.04em;
+ }
+@@ -387,9 +387,9 @@ footer span { color: var(--gold); }
+   .nav-logo {
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 1.2rem; font-weight: 500;
+-    color: #1F3864; text-decoration: none; letter-spacing: 0.04em;
++    color: #0d2c6c; text-decoration: none; letter-spacing: 0.04em;
+   }
+-  .nav-logo span { color: #C49A28; }
++  .nav-logo span { color: #b8934a; }
+   .nav-links { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; }
+   .nav-links a {
+     font-family: 'Jost', sans-serif;
+@@ -397,9 +397,9 @@ footer span { color: var(--gold); }
+     text-transform: uppercase; color: #6B6560;
+     text-decoration: none; transition: color 0.2s;
+   }
+-  .nav-links a:hover { color: #1F3864; }
++  .nav-links a:hover { color: #0d2c6c; }
+   .nav-cta {
+-    background: #1F3864 !important; padding: 9px 18px;
++    background: #0d2c6c !important; padding: 9px 18px;
+     border-radius: 2px; color: #fff !important;
+     transition: background 0.2s !important;
+   }
+@@ -412,6 +412,12 @@ footer span { color: var(--gold); }
+     .nav-links a { font-size: 0.68rem; }
+   }
+ 
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">
+ {
+@@ -435,7 +441,7 @@ footer span { color: var(--gold); }
+ <body>
+ 
+ <nav>
+-  <a href="/" class="nav-logo">Aetas <span>in the Workplace</span></a>
++  <a href="/" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
+   <div class="nav-links">
+     <a href="limited-companies.html">Limited companies</a>
+     <a href="llps.html">LLPs</a>
+@@ -816,6 +822,13 @@ footer span { color: var(--gold); }
+ 
+ <footer>
+   <p>Aetas in the Workplace &nbsp;·&nbsp; <span>Where employee wellbeing meets business performance</span> &nbsp;·&nbsp; itw.aetaspartners.com</p>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+@@ -1144,8 +1157,8 @@ document.addEventListener('DOMContentLoaded', function() {
+           var lbl = document.querySelector('label[for="' + radio.id + '"]');
+           if (lbl) {
+             if (radio.checked) {
+-              lbl.style.backgroundColor = '#1F3864';
+-              lbl.style.borderColor = '#1F3864';
++              lbl.style.backgroundColor = '#0d2c6c';
++              lbl.style.borderColor = '#0d2c6c';
+               lbl.style.color = '#ffffff';
+               lbl.style.fontWeight = '500';
+             } else {
+diff --git a/faqs.html b/faqs.html
+index f320d5c..b89f442 100644
+--- a/faqs.html
++++ b/faqs.html
+@@ -30,8 +30,8 @@
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <style>
+ :root {
+-  --navy:   #1F3864;
+-  --gold:   #C49A28;
++  --navy:   #0d2c6c;
++  --gold:   #b8934a;
+   --gold-l: #E8C96A;
+   --cream:  #FDFBF7;
+   --grey:   #F3F1EB;
+@@ -220,7 +220,7 @@ body {
+ .btn-cta.secondary:hover { background: rgba(255,255,255,0.08); color: #fff; }
+ 
+ footer {
+-  background: #111E33; text-align: center;
++  background: #0d2c6c; text-align: center;
+   padding: 22px 40px; font-size: 12px;
+   color: rgba(255,255,255,0.3); letter-spacing: 0.04em;
+ }
+@@ -251,9 +251,9 @@ footer span { color: var(--gold); }
+   .nav-logo {
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 1.2rem; font-weight: 500;
+-    color: #1F3864; text-decoration: none; letter-spacing: 0.04em;
++    color: #0d2c6c; text-decoration: none; letter-spacing: 0.04em;
+   }
+-  .nav-logo span { color: #C49A28; }
++  .nav-logo span { color: #b8934a; }
+   .nav-links { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; }
+   .nav-links a {
+     font-family: 'Jost', sans-serif;
+@@ -261,9 +261,9 @@ footer span { color: var(--gold); }
+     text-transform: uppercase; color: #6B6560;
+     text-decoration: none; transition: color 0.2s;
+   }
+-  .nav-links a:hover { color: #1F3864; }
++  .nav-links a:hover { color: #0d2c6c; }
+   .nav-cta {
+-    background: #1F3864 !important; padding: 9px 18px;
++    background: #0d2c6c !important; padding: 9px 18px;
+     border-radius: 2px; color: #fff !important;
+     transition: background 0.2s !important;
+   }
+@@ -276,6 +276,12 @@ footer span { color: var(--gold); }
+     .nav-links a { font-size: 0.68rem; }
+   }
+ 
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">
+ {
+@@ -405,7 +411,7 @@ footer span { color: var(--gold); }
+ <body>
+ 
+ <nav>
+-  <a href="/" class="nav-logo">Aetas <span>in the Workplace</span></a>
++  <a href="/" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
+   <div class="nav-links">
+     <a href="/limited-companies.html">Limited companies</a>
+     <a href="/llps.html">LLPs</a>
+@@ -703,6 +709,13 @@ footer span { color: var(--gold); }
+ 
+ <footer>
+   <p>Aetas in the Workplace &nbsp;·&nbsp; <span>Where employee wellbeing meets business performance</span> &nbsp;·&nbsp; itw.aetaspartners.com</p>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/form-thankyou.html b/form-thankyou.html
+index 8dccece..5a52062 100644
+--- a/form-thankyou.html
++++ b/form-thankyou.html
+@@ -15,12 +15,12 @@
+ <meta name="robots" content="noindex, nofollow">
+ <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+ <link rel="manifest" href="/manifest.webmanifest">
+-<meta name="theme-color" content="#1a2744">
++<meta name="theme-color" content="#0d2c6c">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+-:root{--navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#4a4a4a;--text-muted:#7a7a7a;--border:rgba(26,43,74,0.14);}
++:root{--navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#4a4a4a;--text-muted:#7a7a7a;--border:rgba(13,44,108,0.14);}
+ *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+ html{scroll-behavior:smooth;}
+ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;}
+@@ -109,6 +109,12 @@ footer a:hover{color:var(--gold-light);}
+ /* Fade animation */
+ .fade-in{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
+ .fade-in.visible{opacity:1;transform:none;}
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ </head>
+ <body>
+@@ -196,6 +202,13 @@ footer a:hover{color:var(--gold-light);}
+   Aetas Partners Limited &nbsp;·&nbsp; Registered in England &amp; Wales &nbsp;·&nbsp; FCA reg 458421 &nbsp;·&nbsp;
+   <a href="https://itw.aetaspartners.com/privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+   <a href="https://www.aetas-partners.com">aetas-partners.com</a>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/index.html b/index.html
+index 05f8501..5f853c7 100644
+--- a/index.html
++++ b/index.html
+@@ -34,18 +34,18 @@
+ <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+ <link rel="manifest" href="/manifest.webmanifest">
+-<meta name="theme-color" content="#1a2744">
++<meta name="theme-color" content="#0d2c6c">
+ <meta name="ai-agent-summary" content="Aetas in the Workplace is a business performance solution for SMEs. We identify and fix the hidden cost of financial pressure in your workforce — in productivity, retention, and leadership time. Start with a no-cost Workplace Performance Review. FCA reg 458421. Contact: Matthew Steiner, matthew.steiner@aetas-partners.com.">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+   :root {
+-    --navy: #1a2b4a; --navy-mid: #2d4270; --navy-light: #e8ecf3;
++    --navy: #0d2c6c; --navy-mid: #1d4291; --navy-light: #e8ecf3;
+     --gold: #b8934a; --gold-light: #d4b07a; --gold-pale: #f5ede0;
+     --cream: #faf8f5; --white: #ffffff;
+     --text-body: #4a4a4a; --text-muted: #7a7a7a;
+-    --border: rgba(26,43,74,0.12); --border-gold: rgba(184,147,74,0.35);
++    --border: rgba(13,44,108,0.12); --border-gold: rgba(184,147,74,0.35);
+   }
+   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+   html { scroll-behavior: smooth; }
+@@ -65,7 +65,7 @@
+   /* HERO */
+   .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 7rem 2rem 5rem; position: relative; overflow: hidden; }
+   .hero-bg { position: absolute; inset: 0; background: var(--navy); z-index: 0; }
+-  .hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(184,147,74,0.12) 0%, transparent 65%), radial-gradient(ellipse at 20% 80%, rgba(45,66,112,0.5) 0%, transparent 60%); }
++  .hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(184,147,74,0.12) 0%, transparent 65%), radial-gradient(ellipse at 20% 80%, rgba(29,66,145,0.5) 0%, transparent 60%); }
+   .hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; width: 100%; }
+   .hero-eyebrow { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 2rem; display: flex; align-items: center; gap: 12px; }
+   .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+@@ -205,8 +205,8 @@
+     .nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+     .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+     .nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+-    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(26,43,74,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
+-    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(26,43,74,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
++    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(13,44,108,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
++    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(13,44,108,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
+     .nav-links.open a:last-child { border-bottom: none; }
+     .nav-links.open .nav-cta { background: var(--navy); color: var(--white) !important; padding: 10px 18px; border-radius: 2px; margin-top: 0.75rem; width: auto; text-align: center; border-bottom: none; }
+   }
+@@ -220,6 +220,12 @@
+   .fade-in-delay-1 { transition-delay: 0.1s; }
+   .fade-in-delay-2 { transition-delay: 0.2s; }
+   .fade-in-delay-3 { transition-delay: 0.3s; }
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">
+ {
+@@ -399,7 +405,7 @@
+ </head>
+ 
+ <nav>
+-  <a href="index.html" class="nav-logo">Aetas <span>in the Workplace</span></a>
++  <a href="index.html" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
+   <div class="nav-links">
+     <a href="limited-companies.html">Limited companies</a>
+     <a href="llps.html">LLPs</a>
+@@ -461,7 +467,7 @@
+       <div style="font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">ROEI Calculator</div>
+       <p style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--navy);line-height:1.3;max-width:560px;">Want to see what it may be costing your business specifically — before you speak to anyone?</p>
+     </div>
+-    <a href="/calculator.html" style="display:inline-block;padding:13px 26px;background:var(--navy);color:var(--white);font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;white-space:nowrap;flex-shrink:0;transition:background 0.2s;" onmouseover="this.style.background='#2d4270'" onmouseout="this.style.background='#1a2b4a'">Use the ROEI calculator →</a>
++    <a href="/calculator.html" style="display:inline-block;padding:13px 26px;background:var(--navy);color:var(--white);font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;white-space:nowrap;flex-shrink:0;transition:background 0.2s;" onmouseover="this.style.background='#1d4291'" onmouseout="this.style.background='#0d2c6c'">Use the ROEI calculator →</a>
+   </div>
+ </div>
+ 
+@@ -561,8 +567,8 @@
+     <div class="proof-quote fade-in">
+       <blockquote>"We knew something needed to change, but we did not know where to start. The improvements to the pension alone justified the engagement many times over."</blockquote>
+       <cite>Senior leader, Bristol-based organisation</cite>
+-      <a href="/case-studies/bristol-organisation.html" style="display:inline-block;margin-top:1.25rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(26,43,74,0.25);padding-bottom:2px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(26,43,74,0.25)'">Bristol case study →</a>
+-      <a href="/case-studies/uk-retail-group.html" style="display:inline-block;margin-top:0.5rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(26,43,74,0.25);padding-bottom:2px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(26,43,74,0.25)'">UK retail group case study →</a>
++      <a href="/case-studies/bristol-organisation.html" style="display:inline-block;margin-top:1.25rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(13,44,108,0.25);padding-bottom:2px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(13,44,108,0.25)'">Bristol case study →</a>
++      <a href="/case-studies/uk-retail-group.html" style="display:inline-block;margin-top:0.5rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(13,44,108,0.25);padding-bottom:2px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(13,44,108,0.25)'">UK retail group case study →</a>
+     </div>
+     <div class="proof-numbers fade-in">
+       <div class="proof-num-row">
+@@ -692,7 +698,7 @@
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-logo">Aetas <span>in the Workplace</span></div>
++      <div class="footer-logo"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="28" height="28">Aetas <span>in the Workplace</span></div>
+       <div class="footer-contact" style="margin-top:0.5rem;"><a href="mailto:matthew.steiner@aetas-partners.com">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com" style="color:var(--gold-light);text-decoration:none;">aetas-partners.com</a></div>
+     </div>
+     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services support financial understanding, engagement, and resilience but do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
+@@ -715,6 +721,13 @@
+     &nbsp;&middot;&nbsp;
+     <a href="https://collective.aetaspartners.com/" style="color:rgba(255,255,255,0.55);text-decoration:none;">Aetas Collective</a>
+   </div>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/insights.html b/insights.html
+index 29c43b7..50ad3ee 100644
+--- a/insights.html
++++ b/insights.html
+@@ -30,7 +30,7 @@
+ <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png" />
+ <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+ <link rel="manifest" href="/manifest.webmanifest" />
+-<meta name="theme-color" content="#1a2744" />
++<meta name="theme-color" content="#0d2c6c" />
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <meta name="description" content="Practical insights on employee financial wellbeing, benefits strategy, and workforce performance for SME leaders and HR teams." />
+ <meta name="author" content="Matthew Steiner, Aetas in the Workplace" />
+@@ -50,14 +50,14 @@
+ <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png" />
+ <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+ <link rel="manifest" href="/manifest.webmanifest" />
+-<meta name="theme-color" content="#1a2744" />
++<meta name="theme-color" content="#0d2c6c" />
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <style>
+ :root {
+-  --navy:   #1F3864;
+-  --gold:   #C49A28;
++  --navy:   #0d2c6c;
++  --gold:   #b8934a;
+   --gold-l: #E8C96A;
+   --cream:  #FDFBF7;
+   --grey:   #F3F1EB;
+@@ -154,7 +154,7 @@ body { padding-top: 68px; }
+   margin-bottom: 48px; background: #fff;
+   transition: box-shadow 0.2s;
+ }
+-.featured:hover { box-shadow: 0 8px 32px rgba(31,56,100,0.1); }
++.featured:hover { box-shadow: 0 8px 32px rgba(13,44,108,0.1); }
+ .featured-content { padding: 44px 40px; display: flex; flex-direction: column; justify-content: space-between; }
+ .featured-image {
+   background: var(--navy); position: relative; overflow: hidden; min-height: 340px;
+@@ -175,7 +175,7 @@ body { padding-top: 68px; }
+   letter-spacing: 0.12em; text-transform: uppercase;
+   padding: 4px 10px; border-radius: 2px; margin-bottom: 14px;
+ }
+-.tag-business   { background: rgba(31,56,100,0.08); color: var(--navy); }
++.tag-business   { background: rgba(13,44,108,0.08); color: var(--navy); }
+ .tag-research   { background: rgba(196,154,40,0.12); color: #8B6A00; }
+ .tag-collective { background: rgba(45,122,79,0.1); color: #1a5c35; }
+ .tag-wellbeing  { background: rgba(139,46,46,0.08); color: #6B2020; }
+@@ -218,7 +218,7 @@ body { padding-top: 68px; }
+   padding: 24px 22px 20px; display: flex; flex-direction: column;
+   transition: box-shadow 0.2s, border-color 0.2s;
+ }
+-.article-card:hover { box-shadow: 0 4px 20px rgba(31,56,100,0.09); border-color: var(--gold); }
++.article-card:hover { box-shadow: 0 4px 20px rgba(13,44,108,0.09); border-color: var(--gold); }
+ .article-card h3 {
+   font-family: 'Cormorant Garamond', serif; font-size: 20px;
+   font-weight: 600; color: var(--navy); line-height: 1.25; margin-bottom: 10px;
+@@ -271,7 +271,7 @@ body { padding-top: 68px; }
+ .btn-secondary:hover { border-color: var(--navy); }
+ 
+ footer {
+-  background: #111E33; text-align: center;
++  background: #0d2c6c; text-align: center;
+   padding: 22px 40px; font-size: 12px;
+   color: rgba(255,255,255,0.3); letter-spacing: 0.04em;
+ }
+@@ -288,6 +288,12 @@ footer span { color: var(--gold); }
+   .stats-bar { grid-template-columns: repeat(2,1fr); padding: 24px 20px; }
+   .cta-block { grid-template-columns: 1fr; }
+ }
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">
+ {
+@@ -332,7 +338,7 @@ footer span { color: var(--gold); }
+ 
+ <!-- Nav -->
+ <nav>
+-  <a href="/" class="nav-logo">Aetas <span>in the Workplace</span></a>
++  <a href="/" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
+   <div class="nav-links">
+     <a href="limited-companies.html">Limited companies</a>
+     <a href="llps.html">LLPs</a>
+@@ -496,6 +502,13 @@ footer span { color: var(--gold); }
+ 
+ <footer>
+   <p>Aetas in the Workplace &nbsp;·&nbsp; <span>Where employee wellbeing meets business performance</span> &nbsp;·&nbsp; itw.aetaspartners.com</p>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/insights/article-template.html b/insights/article-template.html
+index 99ad3fd..07671f8 100644
+--- a/insights/article-template.html
++++ b/insights/article-template.html
+@@ -16,7 +16,7 @@
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+-:root{--navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(26,43,74,0.12);}
++:root{--navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(13,44,108,0.12);}
+ *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+ html{scroll-behavior:smooth;}
+ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;}
+@@ -111,19 +111,25 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+   .nav-burger{display:flex;}
+   .article-hero,.article-layout,.more-articles,footer{padding-left:24px;padding-right:24px;}
+   .more-grid{grid-template-columns:1fr;}
+-  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(26,43,74,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
++  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(13,44,108,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
+   .nav-links.open li a{font-size:0.9rem;padding:0.65rem 0;border-bottom:0.5px solid rgba(255,255,255,0.08);width:100%;display:block;}
+   .nav-links.open li:last-child a{border-bottom:none;}
+ }
+ 
+ .fade-in{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
+ .fade-in.visible{opacity:1;transform:none;}
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ </head>
+ <body>
+ 
+ <nav>
+-  <a class="nav-brand" href="/index.html">Aetas <span>in the Workplace</span></a>
++  <a class="nav-brand" href="/index.html"><img src="/aetas-mark-reverse.svg" alt="" class="nav-mark" width="28" height="28">Aetas <span>in the Workplace</span></a>
+   <ul class="nav-links" id="navLinks">
+     <li><a href="/limited-companies.html">Limited companies</a></li>
+     <li><a href="/llps.html">LLPs</a></li>
+@@ -190,7 +196,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-brand">Aetas <span>in the Workplace</span></div>
++      <div class="footer-brand"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="26" height="26">Aetas <span>in the Workplace</span></div>
+       <div class="footer-contact"><a href="mailto:matthew.steiner@aetas-partners.com">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com">aetas-partners.com</a></div>
+       <div class="footer-links">
+         <a href="/faqs.html">FAQs</a>
+@@ -200,6 +206,13 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+     </div>
+     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
+   </div>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/insights/financial-wellbeing-in-the-workplace.html b/insights/financial-wellbeing-in-the-workplace.html
+index 2d2330d..74b6c26 100644
+--- a/insights/financial-wellbeing-in-the-workplace.html
++++ b/insights/financial-wellbeing-in-the-workplace.html
+@@ -16,7 +16,7 @@
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+-:root{--navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(26,43,74,0.12);}
++:root{--navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(13,44,108,0.12);}
+ *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+ html{scroll-behavior:smooth;}
+ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;}
+@@ -111,20 +111,26 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+   .nav-burger{display:flex;}
+   .article-hero,.article-layout,.more-articles,footer{padding-left:24px;padding-right:24px;}
+   .more-grid{grid-template-columns:1fr;}
+-  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(26,43,74,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
++  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(13,44,108,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
+   .nav-links.open li a{font-size:0.9rem;padding:0.65rem 0;border-bottom:0.5px solid rgba(255,255,255,0.08);width:100%;display:block;}
+   .nav-links.open li:last-child a{border-bottom:none;}
+ }
+ 
+ .fade-in{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
+ .fade-in.visible{opacity:1;transform:none;}
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Financial Wellbeing in the Workplace","description":"An overview of the Aetas in the Workplace approach to financial wellbeing for SMEs and mid-sized employers, structured around three practical pillars.","author":{"@type":"Person","name":"Matthew Steiner","url":"https://www.aetas-partners.com"},"publisher":{"@type":"Organization","name":"Aetas in the Workplace","url":"https://itw.aetaspartners.com/","logo":{"@type":"ImageObject","url":"https://itw.aetaspartners.com/icons/favicon-32.png"}},"datePublished":"2026-04-22","dateModified":"2026-04-22","mainEntityOfPage":{"@type":"WebPage","@id":"https://itw.aetaspartners.com/insights/financial-wellbeing-in-the-workplace.html"},"image":"https://itw.aetaspartners.com/og-image.png","inLanguage":"en-GB","articleSection":"Insights","keywords":"financial wellbeing, workplace programme, SME, employee engagement"}</script>
+ </head>
+ <body>
+ 
+ <nav>
+-  <a class="nav-brand" href="/index.html">Aetas <span>in the Workplace</span></a>
++  <a class="nav-brand" href="/index.html"><img src="/aetas-mark-reverse.svg" alt="" class="nav-mark" width="28" height="28">Aetas <span>in the Workplace</span></a>
+   <ul class="nav-links" id="navLinks">
+     <li><a href="/limited-companies.html">Limited companies</a></li>
+     <li><a href="/llps.html">LLPs</a></li>
+@@ -226,7 +232,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-brand">Aetas <span>in the Workplace</span></div>
++      <div class="footer-brand"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="26" height="26">Aetas <span>in the Workplace</span></div>
+       <div class="footer-contact"><a href="mailto:matthew.steiner@aetas-partners.com">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com">aetas-partners.com</a></div>
+       <div class="footer-links">
+         <a href="/faqs.html">FAQs</a>
+@@ -236,6 +242,13 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+     </div>
+     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
+   </div>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/insights/introducing-the-aetas-collective.html b/insights/introducing-the-aetas-collective.html
+index 64a3e00..4e17abd 100644
+--- a/insights/introducing-the-aetas-collective.html
++++ b/insights/introducing-the-aetas-collective.html
+@@ -16,7 +16,7 @@
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+-:root{--navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(26,43,74,0.12);}
++:root{--navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(13,44,108,0.12);}
+ *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+ html{scroll-behavior:smooth;}
+ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;}
+@@ -111,20 +111,26 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+   .nav-burger{display:flex;}
+   .article-hero,.article-layout,.more-articles,footer{padding-left:24px;padding-right:24px;}
+   .more-grid{grid-template-columns:1fr;}
+-  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(26,43,74,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
++  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(13,44,108,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
+   .nav-links.open li a{font-size:0.9rem;padding:0.65rem 0;border-bottom:0.5px solid rgba(255,255,255,0.08);width:100%;display:block;}
+   .nav-links.open li:last-child a{border-bottom:none;}
+ }
+ 
+ .fade-in{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
+ .fade-in.visible{opacity:1;transform:none;}
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Introducing the Aetas Collective","description":"Introducing the Aetas Collective: a curated network of employee benefit and wellbeing partners delivered through the Aetas in the Workplace programme.","author":{"@type":"Person","name":"Anne Fergusson","url":"https://www.aetas-partners.com"},"publisher":{"@type":"Organization","name":"Aetas in the Workplace","url":"https://itw.aetaspartners.com/","logo":{"@type":"ImageObject","url":"https://itw.aetaspartners.com/icons/favicon-32.png"}},"datePublished":"2026-04-15","dateModified":"2026-04-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://itw.aetaspartners.com/insights/introducing-the-aetas-collective.html"},"image":"https://itw.aetaspartners.com/og-image.png","inLanguage":"en-GB","articleSection":"Insights","keywords":"Aetas Collective, employee benefits, partner network, workplace wellbeing"}</script>
+ </head>
+ <body>
+ 
+ <nav>
+-  <a class="nav-brand" href="/index.html">Aetas <span>in the Workplace</span></a>
++  <a class="nav-brand" href="/index.html"><img src="/aetas-mark-reverse.svg" alt="" class="nav-mark" width="28" height="28">Aetas <span>in the Workplace</span></a>
+   <ul class="nav-links" id="navLinks">
+     <li><a href="/limited-companies.html">Limited companies</a></li>
+     <li><a href="/llps.html">LLPs</a></li>
+@@ -241,7 +247,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-brand">Aetas <span>in the Workplace</span></div>
++      <div class="footer-brand"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="26" height="26">Aetas <span>in the Workplace</span></div>
+       <div class="footer-contact"><a href="mailto:matthew.steiner@aetas-partners.com">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com">aetas-partners.com</a></div>
+       <div class="footer-links">
+         <a href="/faqs.html">FAQs</a>
+@@ -251,6 +257,13 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+     </div>
+     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
+   </div>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/insights/strengthening-your-team-through-financial-wellbeing.html b/insights/strengthening-your-team-through-financial-wellbeing.html
+index d603a4e..ac3ee69 100644
+--- a/insights/strengthening-your-team-through-financial-wellbeing.html
++++ b/insights/strengthening-your-team-through-financial-wellbeing.html
+@@ -16,7 +16,7 @@
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+-:root{--navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(26,43,74,0.12);}
++:root{--navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(13,44,108,0.12);}
+ *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+ html{scroll-behavior:smooth;}
+ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;}
+@@ -111,20 +111,26 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+   .nav-burger{display:flex;}
+   .article-hero,.article-layout,.more-articles,footer{padding-left:24px;padding-right:24px;}
+   .more-grid{grid-template-columns:1fr;}
+-  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(26,43,74,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
++  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(13,44,108,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
+   .nav-links.open li a{font-size:0.9rem;padding:0.65rem 0;border-bottom:0.5px solid rgba(255,255,255,0.08);width:100%;display:block;}
+   .nav-links.open li:last-child a{border-bottom:none;}
+ }
+ 
+ .fade-in{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
+ .fade-in.visible{opacity:1;transform:none;}
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Strengthening Your Team Through Financial Wellbeing","description":"How proportionate financial wellbeing support strengthens engagement, retention and performance across SME and mid-sized teams.","author":{"@type":"Person","name":"Peter Rose","url":"https://www.aetas-partners.com"},"publisher":{"@type":"Organization","name":"Aetas in the Workplace","url":"https://itw.aetaspartners.com/","logo":{"@type":"ImageObject","url":"https://itw.aetaspartners.com/icons/favicon-32.png"}},"datePublished":"2026-04-29","dateModified":"2026-04-29","mainEntityOfPage":{"@type":"WebPage","@id":"https://itw.aetaspartners.com/insights/strengthening-your-team-through-financial-wellbeing.html"},"image":"https://itw.aetaspartners.com/og-image.png","inLanguage":"en-GB","articleSection":"Insights","keywords":"financial wellbeing, employee retention, team performance, SME"}</script>
+ </head>
+ <body>
+ 
+ <nav>
+-  <a class="nav-brand" href="/index.html">Aetas <span>in the Workplace</span></a>
++  <a class="nav-brand" href="/index.html"><img src="/aetas-mark-reverse.svg" alt="" class="nav-mark" width="28" height="28">Aetas <span>in the Workplace</span></a>
+   <ul class="nav-links" id="navLinks">
+     <li><a href="/limited-companies.html">Limited companies</a></li>
+     <li><a href="/llps.html">LLPs</a></li>
+@@ -218,7 +224,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-brand">Aetas <span>in the Workplace</span></div>
++      <div class="footer-brand"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="26" height="26">Aetas <span>in the Workplace</span></div>
+       <div class="footer-contact"><a href="mailto:matthew.steiner@aetas-partners.com">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com">aetas-partners.com</a></div>
+       <div class="footer-links">
+         <a href="/faqs.html">FAQs</a>
+@@ -228,6 +234,13 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+     </div>
+     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
+   </div>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/insights/when-everyday-life-stops-talking-back.html b/insights/when-everyday-life-stops-talking-back.html
+index 03fd5e7..e9ef267 100644
+--- a/insights/when-everyday-life-stops-talking-back.html
++++ b/insights/when-everyday-life-stops-talking-back.html
+@@ -16,7 +16,7 @@
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+-:root{--navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(26,43,74,0.12);}
++:root{--navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(13,44,108,0.12);}
+ *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+ html{scroll-behavior:smooth;}
+ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;}
+@@ -111,20 +111,26 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+   .nav-burger{display:flex;}
+   .article-hero,.article-layout,.more-articles,footer{padding-left:24px;padding-right:24px;}
+   .more-grid{grid-template-columns:1fr;}
+-  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(26,43,74,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
++  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(13,44,108,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
+   .nav-links.open li a{font-size:0.9rem;padding:0.65rem 0;border-bottom:0.5px solid rgba(255,255,255,0.08);width:100%;display:block;}
+   .nav-links.open li:last-child a{border-bottom:none;}
+ }
+ 
+ .fade-in{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
+ .fade-in.visible{opacity:1;transform:none;}
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"When Everyday Life Stops Talking Back","description":"How financial pressure manifests through silence, withdrawal, and the slow disengagement that quietly undermines workforce performance.","author":{"@type":"Person","name":"Daniel Cottam","url":"https://www.aetas-partners.com"},"publisher":{"@type":"Organization","name":"Aetas in the Workplace","url":"https://itw.aetaspartners.com/","logo":{"@type":"ImageObject","url":"https://itw.aetaspartners.com/icons/favicon-32.png"}},"datePublished":"2026-04-08","dateModified":"2026-04-08","mainEntityOfPage":{"@type":"WebPage","@id":"https://itw.aetaspartners.com/insights/when-everyday-life-stops-talking-back.html"},"image":"https://itw.aetaspartners.com/og-image.png","inLanguage":"en-GB","articleSection":"Insights","keywords":"financial wellbeing, employee engagement, mental load, workforce performance"}</script>
+ </head>
+ <body>
+ 
+ <nav>
+-  <a class="nav-brand" href="/index.html">Aetas <span>in the Workplace</span></a>
++  <a class="nav-brand" href="/index.html"><img src="/aetas-mark-reverse.svg" alt="" class="nav-mark" width="28" height="28">Aetas <span>in the Workplace</span></a>
+   <ul class="nav-links" id="navLinks">
+     <li><a href="/limited-companies.html">Limited companies</a></li>
+     <li><a href="/llps.html">LLPs</a></li>
+@@ -283,7 +289,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-brand">Aetas <span>in the Workplace</span></div>
++      <div class="footer-brand"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="26" height="26">Aetas <span>in the Workplace</span></div>
+       <div class="footer-contact"><a href="mailto:matthew.steiner@aetas-partners.com">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com">aetas-partners.com</a></div>
+       <div class="footer-links">
+         <a href="/faqs.html">FAQs</a>
+@@ -293,6 +299,13 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+     </div>
+     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
+   </div>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/insights/why-financial-wellbeing-is-a-business-issue.html b/insights/why-financial-wellbeing-is-a-business-issue.html
+index fb6f2ba..b989135 100644
+--- a/insights/why-financial-wellbeing-is-a-business-issue.html
++++ b/insights/why-financial-wellbeing-is-a-business-issue.html
+@@ -16,7 +16,7 @@
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+-:root{--navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(26,43,74,0.12);}
++:root{--navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(13,44,108,0.12);}
+ *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+ html{scroll-behavior:smooth;}
+ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;}
+@@ -111,20 +111,26 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+   .nav-burger{display:flex;}
+   .article-hero,.article-layout,.more-articles,footer{padding-left:24px;padding-right:24px;}
+   .more-grid{grid-template-columns:1fr;}
+-  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(26,43,74,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
++  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(13,44,108,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
+   .nav-links.open li a{font-size:0.9rem;padding:0.65rem 0;border-bottom:0.5px solid rgba(255,255,255,0.08);width:100%;display:block;}
+   .nav-links.open li:last-child a{border-bottom:none;}
+ }
+ 
+ .fade-in{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
+ .fade-in.visible{opacity:1;transform:none;}
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Why Financial Wellbeing Has Become a Business Issue for SMEs","description":"An examination of why employee financial pressure has become a measurable business issue for UK SMEs, and what proportionate responses look like.","author":{"@type":"Person","name":"Matthew Steiner","url":"https://www.aetas-partners.com"},"publisher":{"@type":"Organization","name":"Aetas in the Workplace","url":"https://itw.aetaspartners.com/","logo":{"@type":"ImageObject","url":"https://itw.aetaspartners.com/icons/favicon-32.png"}},"datePublished":"2026-04-01","dateModified":"2026-04-01","mainEntityOfPage":{"@type":"WebPage","@id":"https://itw.aetaspartners.com/insights/why-financial-wellbeing-is-a-business-issue.html"},"image":"https://itw.aetaspartners.com/og-image.png","inLanguage":"en-GB","articleSection":"Insights","keywords":"financial wellbeing, SME, employee productivity, business performance"}</script>
+ </head>
+ <body>
+ 
+ <nav>
+-  <a class="nav-brand" href="/index.html">Aetas <span>in the Workplace</span></a>
++  <a class="nav-brand" href="/index.html"><img src="/aetas-mark-reverse.svg" alt="" class="nav-mark" width="28" height="28">Aetas <span>in the Workplace</span></a>
+   <ul class="nav-links" id="navLinks">
+     <li><a href="/limited-companies.html">Limited companies</a></li>
+     <li><a href="/llps.html">LLPs</a></li>
+@@ -233,7 +239,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-brand">Aetas <span>in the Workplace</span></div>
++      <div class="footer-brand"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="26" height="26">Aetas <span>in the Workplace</span></div>
+       <div class="footer-contact"><a href="mailto:matthew.steiner@aetas-partners.com">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com">aetas-partners.com</a></div>
+       <div class="footer-links">
+         <a href="/faqs.html">FAQs</a>
+@@ -243,6 +249,13 @@ footer{background:var(--navy);padding:2.5rem 40px;}
+     </div>
+     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
+   </div>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/investment.html b/investment.html
+index 87386bc..3969237 100644
+--- a/investment.html
++++ b/investment.html
+@@ -27,12 +27,12 @@
+ <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+ <link rel="manifest" href="/manifest.webmanifest">
+-<meta name="theme-color" content="#1a2744">
++<meta name="theme-color" content="#0d2c6c">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+-:root{--navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#4a4a4a;--text-muted:#7a7a7a;--border:rgba(26,43,74,0.12);--border-gold:rgba(184,147,74,0.35);}
++:root{--navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#4a4a4a;--text-muted:#7a7a7a;--border:rgba(13,44,108,0.12);--border-gold:rgba(184,147,74,0.35);}
+ *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+ html{scroll-behavior:smooth;}
+ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;}
+@@ -145,11 +145,17 @@ footer a:hover{color:var(--gold-light);}
+     .nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+     .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+     .nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+-    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(26,43,74,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
+-    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(26,43,74,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
++    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(13,44,108,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
++    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(13,44,108,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
+     .nav-links.open a:last-child { border-bottom: none; }
+     .nav-links.open .nav-cta { background: var(--navy); color: var(--white) !important; padding: 10px 18px; border-radius: 2px; margin-top: 0.75rem; width: auto; text-align: center; border-bottom: none; }
+   }
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">
+ {
+@@ -201,7 +207,7 @@ footer a:hover{color:var(--gold-light);}
+ <body>
+ 
+ <nav>
+-  <a href="index.html" class="nav-logo">Aetas <span>in the Workplace</span></a>
++  <a href="index.html" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
+   <div class="nav-links">
+     <a href="limited-companies.html">Limited companies</a>
+     <a href="llps.html">LLPs</a>
+@@ -441,7 +447,7 @@ footer a:hover{color:var(--gold-light);}
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-logo">Aetas <span>in the Workplace</span></div>
++      <div class="footer-logo"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="28" height="28">Aetas <span>in the Workplace</span></div>
+       <div style="margin-top:0.5rem;"><a href="mailto:matthew.steiner@aetas-partners.com" style="color:var(--gold-light);font-size:0.82rem;">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com" style="color:rgba(255,255,255,0.5);font-size:0.82rem;text-decoration:none;">aetas-partners.com</a></div>
+     </div>
+     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services support financial understanding, engagement, and resilience but do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
+@@ -455,6 +461,13 @@ footer a:hover{color:var(--gold-light);}
+   <a href="/faqs.html">FAQs</a> &nbsp;·&nbsp;
+   <a href="/diagnostic.html">Diagnostic</a> &nbsp;·&nbsp;
+   <a href="/privacy.html">Privacy Policy</a>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/limited-companies.html b/limited-companies.html
+index e5f7bfa..a1cd1c5 100644
+--- a/limited-companies.html
++++ b/limited-companies.html
+@@ -33,15 +33,15 @@
+ <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+ <link rel="manifest" href="/manifest.webmanifest">
+-<meta name="theme-color" content="#1a2744">
++<meta name="theme-color" content="#0d2c6c">
+ <meta name="ai-agent-summary" content="Aetas in the Workplace provides consultancy-led employee financial wellbeing services to UK SMEs and limited companies (10–250 employees). Three pillars: benefits consultancy, financial resilience workshops, wellbeing initiatives. FCA reg 458421. Contact: Matthew Steiner, matthew.steiner@aetas-partners.com.">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+   :root {
+-    --navy: #1a2b4a;
+-    --navy-mid: #2d4270;
++    --navy: #0d2c6c;
++    --navy-mid: #1d4291;
+     --navy-light: #e8ecf3;
+     --gold: #b8934a;
+     --gold-light: #d4b07a;
+@@ -50,7 +50,7 @@
+     --white: #ffffff;
+     --text-body: #4a4a4a;
+     --text-muted: #7a7a7a;
+-    --border: rgba(26,43,74,0.12);
++    --border: rgba(13,44,108,0.12);
+     --border-gold: rgba(184,147,74,0.35);
+   }
+ 
+@@ -391,8 +391,8 @@
+     .nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+     .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+     .nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+-    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(26,43,74,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
+-    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(26,43,74,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
++    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(13,44,108,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
++    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(13,44,108,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
+     .nav-links.open a:last-child { border-bottom: none; }
+     .nav-links.open .nav-cta { background: var(--navy); color: var(--white) !important; padding: 10px 18px; border-radius: 2px; margin-top: 0.75rem; width: auto; text-align: center; border-bottom: none; }
+   }
+@@ -446,11 +446,17 @@
+ .cs-strip{background:var(--cream-dark,#ede8df);border-top:0.5px solid var(--border,rgba(26,39,68,.22));border-bottom:0.5px solid var(--border,rgba(26,39,68,.22));padding:3.5rem 2rem;}
+ .cs-strip-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:2.5rem;align-items:center;}
+ .cs-strip-text .eyebrow-sm{font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold,#b8934a);margin-bottom:0.5rem;display:block;}
+-.cs-strip-text h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2vw,1.7rem);font-weight:400;color:var(--navy,#1a2744);margin-bottom:0.5rem;line-height:1.3;}
++.cs-strip-text h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2vw,1.7rem);font-weight:400;color:var(--navy,#0d2c6c);margin-bottom:0.5rem;line-height:1.3;}
+ .cs-strip-text p{font-size:0.88rem;color:var(--muted,#5c5c5c);line-height:1.75;max-width:560px;}
+-.btn-cs{display:inline-block;padding:11px 22px;background:var(--navy,#1a2744);color:#fff;font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;white-space:nowrap;transition:background .2s;}
+-.btn-cs:hover{background:var(--navy-dark,#111b33);}
++.btn-cs{display:inline-block;padding:11px 22px;background:var(--navy,#0d2c6c);color:#fff;font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;white-space:nowrap;transition:background .2s;}
++.btn-cs:hover{background:var(--navy-dark,#081f4d);}
+ @media(max-width:700px){.cs-strip-inner{grid-template-columns:1fr;gap:1.25rem;}}
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+   <script type="application/ld+json">
+ {
+@@ -468,7 +474,7 @@
+ <body>
+ 
+ <nav>
+-  <a href="index.html" class="nav-logo">Aetas <span>in the Workplace</span></a>
++  <a href="index.html" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
+   <div class="nav-links">
+     <a href="limited-companies.html" style="color:var(--navy);">Limited companies</a>
+     <a href="llps.html">LLPs</a>
+@@ -773,7 +779,7 @@
+     </div>
+     <div style="display:flex;gap:12px;flex-wrap:wrap;">
+       <a href="/case-studies/bristol-organisation.html" class="btn-cs">Bristol organisation →</a>
+-      <a href="/case-studies/uk-retail-group.html" class="btn-cs" style="background:transparent;color:var(--navy,#1a2744);border:0.5px solid rgba(26,43,74,0.35);">UK retail group →</a>
++      <a href="/case-studies/uk-retail-group.html" class="btn-cs" style="background:transparent;color:var(--navy,#0d2c6c);border:0.5px solid rgba(13,44,108,0.35);">UK retail group →</a>
+     </div>
+   </div>
+ </section>
+@@ -819,7 +825,7 @@
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-logo">Aetas <span>in the Workplace</span></div>
++      <div class="footer-logo"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="28" height="28">Aetas <span>in the Workplace</span></div>
+       <div class="footer-contact" style="margin-top:0.5rem;">
+         <a href="mailto:matthew.steiner@aetas-partners.com">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com" style="color:rgba(255,255,255,0.5);font-size:0.82rem;text-decoration:none;">aetas-partners.com</a>
+       </div>
+@@ -828,6 +834,13 @@
+       Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services support financial understanding, engagement, and resilience but do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).
+     </div>
+   </div>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/llps.html b/llps.html
+index e55a479..1061a6f 100644
+--- a/llps.html
++++ b/llps.html
+@@ -33,17 +33,17 @@
+ <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+ <link rel="manifest" href="/manifest.webmanifest">
+-<meta name="theme-color" content="#1a2744">
++<meta name="theme-color" content="#0d2c6c">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+   :root {
+-    --navy: #1a2b4a; --navy-mid: #2d4270; --navy-light: #e8ecf3;
++    --navy: #0d2c6c; --navy-mid: #1d4291; --navy-light: #e8ecf3;
+     --gold: #b8934a; --gold-light: #d4b07a; --gold-pale: #f5ede0;
+     --cream: #faf8f5; --white: #ffffff;
+     --text-body: #4a4a4a; --text-muted: #7a7a7a;
+-    --border: rgba(26,43,74,0.12); --border-gold: rgba(184,147,74,0.35);
++    --border: rgba(13,44,108,0.12); --border-gold: rgba(184,147,74,0.35);
+   }
+   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+   html{scroll-behavior:smooth;}
+@@ -178,8 +178,8 @@
+     .nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+     .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+     .nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+-    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(26,43,74,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
+-    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(26,43,74,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
++    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(13,44,108,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
++    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(13,44,108,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
+     .nav-links.open a:last-child { border-bottom: none; }
+     .nav-links.open .nav-cta { background: var(--navy); color: var(--white) !important; padding: 10px 18px; border-radius: 2px; margin-top: 0.75rem; width: auto; text-align: center; border-bottom: none; }
+   }
+@@ -188,11 +188,17 @@
+ .cs-strip{background:var(--cream-dark,#ede8df);border-top:0.5px solid var(--border,rgba(26,39,68,.22));border-bottom:0.5px solid var(--border,rgba(26,39,68,.22));padding:3.5rem 2rem;}
+ .cs-strip-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:2.5rem;align-items:center;}
+ .cs-strip-text .eyebrow-sm{font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold,#b8934a);margin-bottom:0.5rem;display:block;}
+-.cs-strip-text h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2vw,1.7rem);font-weight:400;color:var(--navy,#1a2744);margin-bottom:0.5rem;line-height:1.3;}
++.cs-strip-text h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2vw,1.7rem);font-weight:400;color:var(--navy,#0d2c6c);margin-bottom:0.5rem;line-height:1.3;}
+ .cs-strip-text p{font-size:0.88rem;color:var(--muted,#5c5c5c);line-height:1.75;max-width:560px;}
+-.btn-cs{display:inline-block;padding:11px 22px;background:var(--navy,#1a2744);color:#fff;font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;white-space:nowrap;transition:background .2s;}
+-.btn-cs:hover{background:var(--navy-dark,#111b33);}
++.btn-cs{display:inline-block;padding:11px 22px;background:var(--navy,#0d2c6c);color:#fff;font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;white-space:nowrap;transition:background .2s;}
++.btn-cs:hover{background:var(--navy-dark,#081f4d);}
+ @media(max-width:700px){.cs-strip-inner{grid-template-columns:1fr;gap:1.25rem;}}
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">
+ {
+@@ -222,7 +228,7 @@
+ <body>
+ 
+ <nav>
+-  <a href="index.html" class="nav-logo">Aetas <span>in the Workplace</span></a>
++  <a href="index.html" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
+   <div class="nav-links">
+     <a href="limited-companies.html">Limited companies</a>
+     <a href="llps.html" style="color:var(--navy);">LLPs</a>
+@@ -472,7 +478,7 @@
+     </div>
+     <div style="display:flex;gap:12px;flex-wrap:wrap;">
+       <a href="/case-studies/bristol-organisation.html" class="btn-cs">Bristol organisation →</a>
+-      <a href="/case-studies/uk-retail-group.html" class="btn-cs" style="background:transparent;color:var(--navy,#1a2744);border:0.5px solid rgba(26,43,74,0.35);">UK retail group →</a>
++      <a href="/case-studies/uk-retail-group.html" class="btn-cs" style="background:transparent;color:var(--navy,#0d2c6c);border:0.5px solid rgba(13,44,108,0.35);">UK retail group →</a>
+     </div>
+   </div>
+ </section>
+@@ -517,7 +523,7 @@
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-logo">Aetas <span>in the Workplace</span></div>
++      <div class="footer-logo"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="28" height="28">Aetas <span>in the Workplace</span></div>
+       <div style="margin-top:0.5rem;"><a href="mailto:matthew.steiner@aetas-partners.com" style="color:var(--gold-light);text-decoration:none;font-size:0.82rem;">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com" style="color:rgba(255,255,255,0.5);font-size:0.82rem;text-decoration:none;">aetas-partners.com</a></div>
+     </div>
+     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services support financial understanding, engagement, and resilience but do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
+@@ -527,6 +533,13 @@
+   <a href="/diagnostic.html">Take the Diagnostic</a> &nbsp;·&nbsp;
+   <a href="/calculator.html">ROEI Calculator</a> &nbsp;·&nbsp;
+   <a href="/privacy.html">Privacy Policy</a>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+diff --git a/manifest.webmanifest b/manifest.webmanifest
+index 21af8b5..3e70066 100644
+--- a/manifest.webmanifest
++++ b/manifest.webmanifest
+@@ -4,8 +4,8 @@
+   "description": "A consultancy-led financial wellbeing service for SMEs, charities, and not-for-profits.",
+   "start_url": "/",
+   "display": "browser",
+-  "background_color": "#1a2744",
+-  "theme_color": "#1a2744",
++  "background_color": "#0d2c6c",
++  "theme_color": "#0d2c6c",
+   "lang": "en-GB",
+   "icons": [
+     {
+diff --git a/privacy.html b/privacy.html
+index b470f0e..208b003 100644
+--- a/privacy.html
++++ b/privacy.html
+@@ -17,8 +17,8 @@
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <style>
+ :root {
+-  --navy:   #1F3864;
+-  --gold:   #C49A28;
++  --navy:   #0d2c6c;
++  --gold:   #b8934a;
+   --gold-l: #E8C96A;
+   --cream:  #FDFBF7;
+   --grey:   #F3F1EB;
+@@ -146,7 +146,7 @@ body {
+ 
+ /* ── Footer ── */
+ footer {
+-  background: #111E33; text-align: center;
++  background: #0d2c6c; text-align: center;
+   padding: 22px 40px; font-size: 12px;
+   color: rgba(255,255,255,0.3); letter-spacing: 0.04em;
+ }
+@@ -178,9 +178,9 @@ footer span { color: var(--gold); }
+   .nav-logo {
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 1.2rem; font-weight: 500;
+-    color: #1F3864; text-decoration: none; letter-spacing: 0.04em;
++    color: #0d2c6c; text-decoration: none; letter-spacing: 0.04em;
+   }
+-  .nav-logo span { color: #C49A28; }
++  .nav-logo span { color: #b8934a; }
+   .nav-links { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; }
+   .nav-links a {
+     font-family: 'Jost', sans-serif;
+@@ -188,9 +188,9 @@ footer span { color: var(--gold); }
+     text-transform: uppercase; color: #6B6560;
+     text-decoration: none; transition: color 0.2s;
+   }
+-  .nav-links a:hover { color: #1F3864; }
++  .nav-links a:hover { color: #0d2c6c; }
+   .nav-cta {
+-    background: #1F3864 !important; padding: 9px 18px;
++    background: #0d2c6c !important; padding: 9px 18px;
+     border-radius: 2px; color: #fff !important;
+     transition: background 0.2s !important;
+   }
+@@ -203,6 +203,12 @@ footer span { color: var(--gold); }
+     .nav-links a { font-size: 0.68rem; }
+   }
+ 
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ <script type="application/ld+json">
+ {
+@@ -222,7 +228,7 @@ footer span { color: var(--gold); }
+ <body>
+ 
+ <nav>
+-  <a href="/" class="nav-logo">Aetas <span>in the Workplace</span></a>
++  <a href="/" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
+   <div class="nav-links">
+     <a href="limited-companies.html">Limited companies</a>
+     <a href="llps.html">LLPs</a>
+@@ -506,6 +512,13 @@ footer span { color: var(--gold); }
+ 
+ <footer>
+   <p>Aetas in the Workplace &nbsp;·&nbsp; <span>Where employee wellbeing meets business performance</span> &nbsp;·&nbsp; itw.aetaspartners.com</p>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ 
+diff --git a/whats-next.html b/whats-next.html
+index f00ff92..a18cd2b 100644
+--- a/whats-next.html
++++ b/whats-next.html
+@@ -18,12 +18,12 @@
+ <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+ <link rel="manifest" href="/manifest.webmanifest">
+-<meta name="theme-color" content="#1a2744">
++<meta name="theme-color" content="#0d2c6c">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+ <style>
+-:root{--navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#4a4a4a;--text-muted:#7a7a7a;--border:rgba(26,43,74,0.12);--border-gold:rgba(184,147,74,0.35);--green:#1a7a4a;}
++:root{--navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#4a4a4a;--text-muted:#7a7a7a;--border:rgba(13,44,108,0.12);--border-gold:rgba(184,147,74,0.35);--green:#1a7a4a;}
+ *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+ html{scroll-behavior:smooth;}
+ body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;}
+@@ -70,7 +70,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3vw,2.6rem);fon
+ .convo-label{font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-light);margin-bottom:0.4rem;}
+ .convo-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--white);margin-bottom:0.25rem;}
+ .convo-duration{font-size:0.82rem;color:rgba(255,255,255,0.45);font-style:italic;}
+-.convo-body{background:rgba(26,43,74,0.04);border:0.5px solid var(--border);border-radius:0 0 4px 4px;padding:1.5rem 1.75rem;}
++.convo-body{background:rgba(13,44,108,0.04);border:0.5px solid var(--border);border-radius:0 0 4px 4px;padding:1.5rem 1.75rem;}
+ .convo-intro{font-size:0.92rem;color:var(--text-body);line-height:1.8;margin-bottom:1.25rem;}
+ .convo-points{display:flex;flex-direction:column;gap:10px;}
+ .convo-point{display:flex;gap:14px;font-size:0.88rem;color:var(--text-body);line-height:1.6;}
+@@ -155,19 +155,25 @@ footer a:hover{color:var(--gold-light);}
+   .nav-burger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+   .nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+   .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:68px;left:0;right:0;background:rgba(250,248,245,0.98);border-bottom:0.5px solid var(--border);padding:1rem 2rem 1.5rem;z-index:99;backdrop-filter:blur(10px);}
+-  .nav-links.open a{font-size:0.9rem;padding:0.65rem 0;border-bottom:0.5px solid rgba(26,43,74,0.08);width:100%;color:var(--text-body)!important;letter-spacing:0.06em;}
++  .nav-links.open a{font-size:0.9rem;padding:0.65rem 0;border-bottom:0.5px solid rgba(13,44,108,0.08);width:100%;color:var(--text-body)!important;letter-spacing:0.06em;}
+   .nav-links.open a:last-child{border-bottom:none;}
+   .nav-links.open .nav-cta{background:var(--navy);color:var(--white)!important;padding:10px 18px;border-radius:2px;margin-top:0.75rem;width:auto;text-align:center;border-bottom:none;}
+ }
+ 
+ .fade-in{opacity:0;transform:translateY(18px);transition:opacity 0.55s ease,transform 0.55s ease;}
+ .fade-in.visible{opacity:1;transform:none;}
++
++  /* brand-refresh: inline logo marks */
++  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
++  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
++  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
++  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
+ </style>
+ </head>
+ <body>
+ 
+ <nav>
+-  <a href="index.html" class="nav-logo">Aetas <span>in the Workplace</span></a>
++  <a href="index.html" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
+   <div class="nav-links">
+     <a href="limited-companies.html">Limited companies</a>
+     <a href="llps.html">LLPs</a>
+@@ -383,7 +389,7 @@ footer a:hover{color:var(--gold-light);}
+ <footer>
+   <div class="footer-inner">
+     <div>
+-      <div class="footer-logo">Aetas <span>in the Workplace</span></div>
++      <div class="footer-logo"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="28" height="28">Aetas <span>in the Workplace</span></div>
+       <div style="margin-top:0.5rem;"><a href="mailto:matthew.steiner@aetas-partners.com" style="color:var(--gold-light);font-size:0.82rem;">matthew.steiner@aetas-partners.com</a>&nbsp;·&nbsp;<a href="https://www.aetas-partners.com" style="color:rgba(255,255,255,0.5);font-size:0.82rem;text-decoration:none;">aetas-partners.com</a></div>
+     </div>
+     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
+@@ -395,6 +401,13 @@ footer a:hover{color:var(--gold-light);}
+   <a href="/investment.html">Fees</a> &nbsp;·&nbsp;
+   <a href="/faqs.html">FAQs</a> &nbsp;·&nbsp;
+   <a href="/privacy.html">Privacy Policy</a>
++
++  <!-- brand-refresh: aetas partners lockup -->
++  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
++    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
++      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
++    </a>
++  </div>
+ </footer>
+ 
+ <script>
+-- 
+2.43.0
+
