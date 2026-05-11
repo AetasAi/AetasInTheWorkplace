@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(26,43,74,0.12);}
+:root{--navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--navy-xlight:#f0f3f8;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#3a3a3a;--text-muted:#6a6a6a;--border:rgba(13,44,108,0.12);}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;}
@@ -111,20 +111,26 @@ footer{background:var(--navy);padding:2.5rem 40px;}
   .nav-burger{display:flex;}
   .article-hero,.article-layout,.more-articles,footer{padding-left:24px;padding-right:24px;}
   .more-grid{grid-template-columns:1fr;}
-  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(26,43,74,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
+  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:64px;left:0;right:0;background:rgba(13,44,108,0.98);border-bottom:1px solid rgba(184,154,90,0.18);padding:1rem 24px 1.5rem;z-index:99;}
   .nav-links.open li a{font-size:0.9rem;padding:0.65rem 0;border-bottom:0.5px solid rgba(255,255,255,0.08);width:100%;display:block;}
   .nav-links.open li:last-child a{border-bottom:none;}
 }
 
 .fade-in{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
 .fade-in.visible{opacity:1;transform:none;}
+
+  /* brand-refresh: inline logo marks */
+  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
+  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
+  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
+  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Strengthening Your Team Through Financial Wellbeing","description":"How proportionate financial wellbeing support strengthens engagement, retention and performance across SME and mid-sized teams.","author":{"@type":"Person","name":"Peter Rose","url":"https://www.aetas-partners.com"},"publisher":{"@type":"Organization","name":"Aetas in the Workplace","url":"https://itw.aetaspartners.com/","logo":{"@type":"ImageObject","url":"https://itw.aetaspartners.com/icons/favicon-32.png"}},"datePublished":"2026-04-29","dateModified":"2026-04-29","mainEntityOfPage":{"@type":"WebPage","@id":"https://itw.aetaspartners.com/insights/strengthening-your-team-through-financial-wellbeing.html"},"image":"https://itw.aetaspartners.com/og-image.png","inLanguage":"en-GB","articleSection":"Insights","keywords":"financial wellbeing, employee retention, team performance, SME"}</script>
 </head>
 <body>
 
 <nav>
-  <a class="nav-brand" href="/index.html">Aetas <span>in the Workplace</span></a>
+  <a class="nav-brand" href="/index.html"><img src="/aetas-mark-reverse.svg" alt="" class="nav-mark" width="28" height="28">Aetas <span>in the Workplace</span></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="/limited-companies.html">Limited companies</a></li>
     <li><a href="/llps.html">LLPs</a></li>
@@ -218,7 +224,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand">Aetas <span>in the Workplace</span></div>
+      <div class="footer-brand"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="26" height="26">Aetas <span>in the Workplace</span></div>
       <div class="footer-contact"><a href="mailto:matthew.steiner@aetas-partners.com">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com">aetas-partners.com</a></div>
       <div class="footer-links">
         <a href="/faqs.html">FAQs</a>
@@ -227,6 +233,13 @@ footer{background:var(--navy);padding:2.5rem 40px;}
       </div>
     </div>
     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
+  </div>
+
+  <!-- brand-refresh: aetas partners lockup -->
+  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
+    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
+      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
+    </a>
   </div>
 </footer>
 

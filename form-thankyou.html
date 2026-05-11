@@ -15,12 +15,12 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#1a2744">
+<meta name="theme-color" content="#0d2c6c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#1a2b4a;--navy-mid:#2d4270;--navy-light:#e8ecf3;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#4a4a4a;--text-muted:#7a7a7a;--border:rgba(26,43,74,0.14);}
+:root{--navy:#0d2c6c;--navy-mid:#1d4291;--navy-light:#e8ecf3;--gold:#b8934a;--gold-light:#d4b07a;--gold-pale:#f5ede0;--cream:#faf8f5;--white:#ffffff;--text-body:#4a4a4a;--text-muted:#7a7a7a;--border:rgba(13,44,108,0.14);}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'Jost',sans-serif;font-weight:300;color:var(--text-body);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;}
@@ -109,6 +109,12 @@ footer a:hover{color:var(--gold-light);}
 /* Fade animation */
 .fade-in{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
 .fade-in.visible{opacity:1;transform:none;}
+
+  /* brand-refresh: inline logo marks */
+  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
+  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
+  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
+  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
 </style>
 </head>
 <body>
@@ -196,6 +202,13 @@ footer a:hover{color:var(--gold-light);}
   Aetas Partners Limited &nbsp;·&nbsp; Registered in England &amp; Wales &nbsp;·&nbsp; FCA reg 458421 &nbsp;·&nbsp;
   <a href="https://itw.aetaspartners.com/privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
   <a href="https://www.aetas-partners.com">aetas-partners.com</a>
+
+  <!-- brand-refresh: aetas partners lockup -->
+  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
+    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
+      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
+    </a>
+  </div>
 </footer>
 
 <script>

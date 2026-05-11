@@ -34,18 +34,18 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#1a2744">
+<meta name="theme-color" content="#0d2c6c">
 <meta name="ai-agent-summary" content="Aetas in the Workplace is a business performance solution for SMEs. We identify and fix the hidden cost of financial pressure in your workforce — in productivity, retention, and leadership time. Start with a no-cost Workplace Performance Review. FCA reg 458421. Contact: Matthew Steiner, matthew.steiner@aetas-partners.com.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #1a2b4a; --navy-mid: #2d4270; --navy-light: #e8ecf3;
+    --navy: #0d2c6c; --navy-mid: #1d4291; --navy-light: #e8ecf3;
     --gold: #b8934a; --gold-light: #d4b07a; --gold-pale: #f5ede0;
     --cream: #faf8f5; --white: #ffffff;
     --text-body: #4a4a4a; --text-muted: #7a7a7a;
-    --border: rgba(26,43,74,0.12); --border-gold: rgba(184,147,74,0.35);
+    --border: rgba(13,44,108,0.12); --border-gold: rgba(184,147,74,0.35);
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -65,7 +65,7 @@
   /* HERO */
   .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 7rem 2rem 5rem; position: relative; overflow: hidden; }
   .hero-bg { position: absolute; inset: 0; background: var(--navy); z-index: 0; }
-  .hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(184,147,74,0.12) 0%, transparent 65%), radial-gradient(ellipse at 20% 80%, rgba(45,66,112,0.5) 0%, transparent 60%); }
+  .hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(184,147,74,0.12) 0%, transparent 65%), radial-gradient(ellipse at 20% 80%, rgba(29,66,145,0.5) 0%, transparent 60%); }
   .hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; width: 100%; }
   .hero-eyebrow { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 2rem; display: flex; align-items: center; gap: 12px; }
   .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
@@ -205,8 +205,8 @@
     .nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(26,43,74,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
-    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(26,43,74,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
+    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(13,44,108,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
+    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(13,44,108,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
     .nav-links.open a:last-child { border-bottom: none; }
     .nav-links.open .nav-cta { background: var(--navy); color: var(--white) !important; padding: 10px 18px; border-radius: 2px; margin-top: 0.75rem; width: auto; text-align: center; border-bottom: none; }
   }
@@ -220,6 +220,12 @@
   .fade-in-delay-1 { transition-delay: 0.1s; }
   .fade-in-delay-2 { transition-delay: 0.2s; }
   .fade-in-delay-3 { transition-delay: 0.3s; }
+
+  /* brand-refresh: inline logo marks */
+  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
+  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
+  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
+  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
 </style>
 <script type="application/ld+json">
 {
@@ -399,7 +405,7 @@
 </head>
 
 <nav>
-  <a href="index.html" class="nav-logo">Aetas <span>in the Workplace</span></a>
+  <a href="index.html" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
   <div class="nav-links">
     <a href="limited-companies.html">Limited companies</a>
     <a href="llps.html">LLPs</a>
@@ -461,7 +467,7 @@
       <div style="font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">ROEI Calculator</div>
       <p style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--navy);line-height:1.3;max-width:560px;">Want to see what it may be costing your business specifically — before you speak to anyone?</p>
     </div>
-    <a href="/calculator.html" style="display:inline-block;padding:13px 26px;background:var(--navy);color:var(--white);font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;white-space:nowrap;flex-shrink:0;transition:background 0.2s;" onmouseover="this.style.background='#2d4270'" onmouseout="this.style.background='#1a2b4a'">Use the ROEI calculator →</a>
+    <a href="/calculator.html" style="display:inline-block;padding:13px 26px;background:var(--navy);color:var(--white);font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;white-space:nowrap;flex-shrink:0;transition:background 0.2s;" onmouseover="this.style.background='#1d4291'" onmouseout="this.style.background='#0d2c6c'">Use the ROEI calculator →</a>
   </div>
 </div>
 
@@ -561,8 +567,8 @@
     <div class="proof-quote fade-in">
       <blockquote>"We knew something needed to change, but we did not know where to start. The improvements to the pension alone justified the engagement many times over."</blockquote>
       <cite>Senior leader, Bristol-based organisation</cite>
-      <a href="/case-studies/bristol-organisation.html" style="display:inline-block;margin-top:1.25rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(26,43,74,0.25);padding-bottom:2px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(26,43,74,0.25)'">Bristol case study →</a>
-      <a href="/case-studies/uk-retail-group.html" style="display:inline-block;margin-top:0.5rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(26,43,74,0.25);padding-bottom:2px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(26,43,74,0.25)'">UK retail group case study →</a>
+      <a href="/case-studies/bristol-organisation.html" style="display:inline-block;margin-top:1.25rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(13,44,108,0.25);padding-bottom:2px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(13,44,108,0.25)'">Bristol case study →</a>
+      <a href="/case-studies/uk-retail-group.html" style="display:inline-block;margin-top:0.5rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(13,44,108,0.25);padding-bottom:2px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(13,44,108,0.25)'">UK retail group case study →</a>
     </div>
     <div class="proof-numbers fade-in">
       <div class="proof-num-row">
@@ -692,7 +698,7 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-logo">Aetas <span>in the Workplace</span></div>
+      <div class="footer-logo"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="28" height="28">Aetas <span>in the Workplace</span></div>
       <div class="footer-contact" style="margin-top:0.5rem;"><a href="mailto:matthew.steiner@aetas-partners.com">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com" style="color:var(--gold-light);text-decoration:none;">aetas-partners.com</a></div>
     </div>
     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services support financial understanding, engagement, and resilience but do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
@@ -714,6 +720,13 @@
     <a href="https://charitywellbeing.aetaspartners.com/" style="color:rgba(255,255,255,0.55);text-decoration:none;">Charity Wellbeing Service</a>
     &nbsp;&middot;&nbsp;
     <a href="https://collective.aetaspartners.com/" style="color:rgba(255,255,255,0.55);text-decoration:none;">Aetas Collective</a>
+  </div>
+
+  <!-- brand-refresh: aetas partners lockup -->
+  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
+    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
+      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
+    </a>
   </div>
 </footer>
 

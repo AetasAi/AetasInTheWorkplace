@@ -16,17 +16,17 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#1a2b4a">
+<meta name="theme-color" content="#0d2c6c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy:#1a2b4a; --navy-mid:#2d4270; --navy-light:#e8ecf3; --navy-xlight:#f0f3f8;
+  --navy:#0d2c6c; --navy-mid:#1d4291; --navy-light:#e8ecf3; --navy-xlight:#f0f3f8;
   --gold:#b8934a; --gold-light:#d4b07a; --gold-pale:#f5ede0;
   --cream:#faf8f5; --white:#ffffff;
-  --text-body:#4a4a4a; --text-muted:#7a7a7a; --text-label:#1a2b4a;
-  --border:rgba(26,43,74,0.14); --border-focus:rgba(184,147,74,0.6);
+  --text-body:#4a4a4a; --text-muted:#7a7a7a; --text-label:#0d2c6c;
+  --border:rgba(13,44,108,0.14); --border-focus:rgba(184,147,74,0.6);
   --error:#d0442a; --success:#1a7a4a;
   --section-gap: 2.5rem;
 }
@@ -136,7 +136,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 .btn-submit:disabled{background:var(--text-muted);cursor:not-allowed;}
 .btn-reset{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;background:transparent;color:var(--text-muted);font-family:'Jost',sans-serif;font-size:0.8rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;border:0.5px solid var(--border);border-radius:2px;cursor:pointer;transition:all 0.2s;}
 .btn-reset:hover{color:var(--navy);border-color:var(--navy);}
-.btn-spinner{display:none;width:16px;height:16px;border:2px solid rgba(26,43,74,0.2);border-top-color:var(--navy);border-radius:50%;animation:spin 0.7s linear infinite;}
+.btn-spinner{display:none;width:16px;height:16px;border:2px solid rgba(13,44,108,0.2);border-top-color:var(--navy);border-radius:50%;animation:spin 0.7s linear infinite;}
 .btn-submit.loading .btn-spinner{display:block;}
 .btn-submit.loading .btn-text{opacity:0.7;}
 @keyframes spin{to{transform:rotate(360deg);}}
@@ -215,6 +215,12 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   font-style: italic;
   letter-spacing: 0;
 }
+
+  /* brand-refresh: inline logo marks */
+  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
+  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
+  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
+  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
 </style>
 </head>
 <body>
@@ -581,6 +587,13 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   Aetas in the Workplace &nbsp;·&nbsp; A trading style of Aetas Wealth, Insight Financial Associates Limited &nbsp;·&nbsp; FCA reg 458421 &nbsp;·&nbsp;
   <a href="https://itw.aetaspartners.com/privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
   <a href="https://www.aetas-partners.com">aetas-partners.com</a>
+
+  <!-- brand-refresh: aetas partners lockup -->
+  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
+    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
+      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
+    </a>
+  </div>
 </footer>
 
   <!-- ── CDN LIBRARIES ──────────────────────────────────────────────── -->

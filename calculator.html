@@ -32,17 +32,17 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#1a2744">
+<meta name="theme-color" content="#0d2c6c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy: #1a2b4a; --navy-mid: #2d4270; --navy-light: #e8ecf3;
+  --navy: #0d2c6c; --navy-mid: #1d4291; --navy-light: #e8ecf3;
   --gold: #b8934a; --gold-light: #d4b07a; --gold-pale: #f5ede0;
   --cream: #faf8f5; --white: #ffffff;
   --text-body: #4a4a4a; --text-muted: #7a7a7a;
-  --border: rgba(26,43,74,0.12); --border-gold: rgba(184,147,74,0.35);
+  --border: rgba(13,44,108,0.12); --border-gold: rgba(184,147,74,0.35);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -152,8 +152,8 @@ footer a:hover{color:var(--gold-light);}
     .nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(26,43,74,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
-    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(26,43,74,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
+    .nav-links.open { display: flex !important; flex-direction: column; align-items: flex-start; gap: 0; position: fixed; top: 68px; left: 0; right: 0; background: rgba(250,248,245,0.98); border-bottom: 0.5px solid rgba(13,44,108,0.15); padding: 1rem 2rem 1.5rem; z-index: 99; backdrop-filter: blur(10px); }
+    .nav-links.open a { font-size: 0.9rem; padding: 0.65rem 0; border-bottom: 0.5px solid rgba(13,44,108,0.08); width: 100%; color: var(--text-body) !important; letter-spacing: 0.06em; }
     .nav-links.open a:last-child { border-bottom: none; }
     .nav-links.open .nav-cta { background: var(--navy); color: var(--white) !important; padding: 10px 18px; border-radius: 2px; margin-top: 0.75rem; width: auto; text-align: center; border-bottom: none; }
   }
@@ -202,6 +202,12 @@ footer a:hover{color:var(--gold-light);}
 @media(max-width:640px){
   .inline-cta{flex-direction:column;align-items:flex-start;}
 }
+
+  /* brand-refresh: inline logo marks */
+  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
+  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
+  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
+  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
 </style>
 <script type="application/ld+json">
 {
@@ -229,7 +235,7 @@ footer a:hover{color:var(--gold-light);}
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">Aetas <span>in the Workplace</span></a>
+  <a href="index.html" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
   <div class="nav-links">
     <a href="limited-companies.html">Limited companies</a>
     <a href="llps.html">LLPs</a>
@@ -405,7 +411,7 @@ footer a:hover{color:var(--gold-light);}
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-logo">Aetas <span>in the Workplace</span></div>
+      <div class="footer-logo"><img src="/aetas-mark-reverse.svg" alt="" class="footer-mark" width="28" height="28">Aetas <span>in the Workplace</span></div>
       <div style="margin-top:0.5rem;"><a href="mailto:matthew.steiner@aetas-partners.com" class="footer-contact">matthew.steiner@aetas-partners.com</a> &nbsp;·&nbsp; <a href="https://www.aetas-partners.com" style="color:rgba(255,255,255,0.5);font-size:0.82rem;text-decoration:none;">aetas-partners.com</a></div>
     </div>
     <div class="footer-reg">Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services support financial understanding, engagement, and resilience but do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</div>
@@ -425,6 +431,13 @@ footer a:hover{color:var(--gold-light);}
     <a href="https://charitywellbeing.aetaspartners.com/" style="color:rgba(255,255,255,0.55);text-decoration:none;">Charity Wellbeing Service</a>
     &nbsp;&middot;&nbsp;
     <a href="https://collective.aetaspartners.com/" style="color:rgba(255,255,255,0.55);text-decoration:none;">Aetas Collective</a>
+  </div>
+
+  <!-- brand-refresh: aetas partners lockup -->
+  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
+    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
+      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
+    </a>
   </div>
 </footer>
 

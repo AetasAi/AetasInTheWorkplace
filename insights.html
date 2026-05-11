@@ -30,7 +30,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
 <link rel="manifest" href="/manifest.webmanifest" />
-<meta name="theme-color" content="#1a2744" />
+<meta name="theme-color" content="#0d2c6c" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <meta name="description" content="Practical insights on employee financial wellbeing, benefits strategy, and workforce performance for SME leaders and HR teams." />
 <meta name="author" content="Matthew Steiner, Aetas in the Workplace" />
@@ -50,14 +50,14 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
 <link rel="manifest" href="/manifest.webmanifest" />
-<meta name="theme-color" content="#1a2744" />
+<meta name="theme-color" content="#0d2c6c" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy:   #1F3864;
-  --gold:   #C49A28;
+  --navy:   #0d2c6c;
+  --gold:   #b8934a;
   --gold-l: #E8C96A;
   --cream:  #FDFBF7;
   --grey:   #F3F1EB;
@@ -154,7 +154,7 @@ body { padding-top: 68px; }
   margin-bottom: 48px; background: #fff;
   transition: box-shadow 0.2s;
 }
-.featured:hover { box-shadow: 0 8px 32px rgba(31,56,100,0.1); }
+.featured:hover { box-shadow: 0 8px 32px rgba(13,44,108,0.1); }
 .featured-content { padding: 44px 40px; display: flex; flex-direction: column; justify-content: space-between; }
 .featured-image {
   background: var(--navy); position: relative; overflow: hidden; min-height: 340px;
@@ -175,7 +175,7 @@ body { padding-top: 68px; }
   letter-spacing: 0.12em; text-transform: uppercase;
   padding: 4px 10px; border-radius: 2px; margin-bottom: 14px;
 }
-.tag-business   { background: rgba(31,56,100,0.08); color: var(--navy); }
+.tag-business   { background: rgba(13,44,108,0.08); color: var(--navy); }
 .tag-research   { background: rgba(196,154,40,0.12); color: #8B6A00; }
 .tag-collective { background: rgba(45,122,79,0.1); color: #1a5c35; }
 .tag-wellbeing  { background: rgba(139,46,46,0.08); color: #6B2020; }
@@ -218,7 +218,7 @@ body { padding-top: 68px; }
   padding: 24px 22px 20px; display: flex; flex-direction: column;
   transition: box-shadow 0.2s, border-color 0.2s;
 }
-.article-card:hover { box-shadow: 0 4px 20px rgba(31,56,100,0.09); border-color: var(--gold); }
+.article-card:hover { box-shadow: 0 4px 20px rgba(13,44,108,0.09); border-color: var(--gold); }
 .article-card h3 {
   font-family: 'Cormorant Garamond', serif; font-size: 20px;
   font-weight: 600; color: var(--navy); line-height: 1.25; margin-bottom: 10px;
@@ -271,7 +271,7 @@ body { padding-top: 68px; }
 .btn-secondary:hover { border-color: var(--navy); }
 
 footer {
-  background: #111E33; text-align: center;
+  background: #0d2c6c; text-align: center;
   padding: 22px 40px; font-size: 12px;
   color: rgba(255,255,255,0.3); letter-spacing: 0.04em;
 }
@@ -288,6 +288,12 @@ footer span { color: var(--gold); }
   .stats-bar { grid-template-columns: repeat(2,1fr); padding: 24px 20px; }
   .cta-block { grid-template-columns: 1fr; }
 }
+
+  /* brand-refresh: inline logo marks */
+  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
+  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
+  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
+  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
 </style>
 <script type="application/ld+json">
 {
@@ -332,7 +338,7 @@ footer span { color: var(--gold); }
 
 <!-- Nav -->
 <nav>
-  <a href="/" class="nav-logo">Aetas <span>in the Workplace</span></a>
+  <a href="/" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
   <div class="nav-links">
     <a href="limited-companies.html">Limited companies</a>
     <a href="llps.html">LLPs</a>
@@ -496,6 +502,13 @@ footer span { color: var(--gold); }
 
 <footer>
   <p>Aetas in the Workplace &nbsp;·&nbsp; <span>Where employee wellbeing meets business performance</span> &nbsp;·&nbsp; itw.aetaspartners.com</p>
+
+  <!-- brand-refresh: aetas partners lockup -->
+  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
+    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
+      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
+    </a>
+  </div>
 </footer>
 
 <script>

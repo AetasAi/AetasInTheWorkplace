@@ -32,7 +32,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
 <link rel="manifest" href="/manifest.webmanifest" />
-<meta name="theme-color" content="#1a2744" />
+<meta name="theme-color" content="#0d2c6c" />
 
 <!--
 ═══════════════════════════════════════════════════════
@@ -64,8 +64,8 @@
 
 <style>
 :root {
-  --navy:   #1F3864;
-  --gold:   #C49A28;
+  --navy:   #0d2c6c;
+  --gold:   #b8934a;
   --gold-l: #E8C96A;
   --cream:  #FDFBF7;
   --grey:   #F3F1EB;
@@ -354,7 +354,7 @@ body {
 }
 
 footer {
-  background: #111E33; text-align: center;
+  background: #0d2c6c; text-align: center;
   padding: 22px 40px; font-size: 12px;
   color: rgba(255,255,255,0.3); letter-spacing: 0.04em;
 }
@@ -387,9 +387,9 @@ footer span { color: var(--gold); }
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem; font-weight: 500;
-    color: #1F3864; text-decoration: none; letter-spacing: 0.04em;
+    color: #0d2c6c; text-decoration: none; letter-spacing: 0.04em;
   }
-  .nav-logo span { color: #C49A28; }
+  .nav-logo span { color: #b8934a; }
   .nav-links { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; }
   .nav-links a {
     font-family: 'Jost', sans-serif;
@@ -397,9 +397,9 @@ footer span { color: var(--gold); }
     text-transform: uppercase; color: #6B6560;
     text-decoration: none; transition: color 0.2s;
   }
-  .nav-links a:hover { color: #1F3864; }
+  .nav-links a:hover { color: #0d2c6c; }
   .nav-cta {
-    background: #1F3864 !important; padding: 9px 18px;
+    background: #0d2c6c !important; padding: 9px 18px;
     border-radius: 2px; color: #fff !important;
     transition: background 0.2s !important;
   }
@@ -412,6 +412,12 @@ footer span { color: var(--gold); }
     .nav-links a { font-size: 0.68rem; }
   }
 
+
+  /* brand-refresh: inline logo marks */
+  .nav-mark    { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
+  .nav-brand .nav-mark { width: 28px; height: 28px; margin-right: 8px; }
+  .footer-mark { width: 28px; height: 28px; vertical-align: middle; margin-right: 10px; }
+  .footer-brand .footer-mark { width: 26px; height: 26px; margin-right: 8px; }
 </style>
 <script type="application/ld+json">
 {
@@ -435,7 +441,7 @@ footer span { color: var(--gold); }
 <body>
 
 <nav>
-  <a href="/" class="nav-logo">Aetas <span>in the Workplace</span></a>
+  <a href="/" class="nav-logo"><img src="/aetas-mark.svg" alt="" class="nav-mark" width="32" height="32">Aetas <span>in the Workplace</span></a>
   <div class="nav-links">
     <a href="limited-companies.html">Limited companies</a>
     <a href="llps.html">LLPs</a>
@@ -816,6 +822,13 @@ footer span { color: var(--gold); }
 
 <footer>
   <p>Aetas in the Workplace &nbsp;·&nbsp; <span>Where employee wellbeing meets business performance</span> &nbsp;·&nbsp; itw.aetaspartners.com</p>
+
+  <!-- brand-refresh: aetas partners lockup -->
+  <div style="margin-top:1.75rem;padding-top:1.25rem;border-top:0.5px solid rgba(255,255,255,0.08);text-align:center;">
+    <a href="https://aetas-partners.com/" aria-label="Part of Aetas Partners" style="display:inline-block;opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'">
+      <img src="/aetas-horizontal-reverse.svg" alt="Aetas Partners" style="display:block;height:30px;width:auto;">
+    </a>
+  </div>
 </footer>
 
 <script>
@@ -1144,8 +1157,8 @@ document.addEventListener('DOMContentLoaded', function() {
           var lbl = document.querySelector('label[for="' + radio.id + '"]');
           if (lbl) {
             if (radio.checked) {
-              lbl.style.backgroundColor = '#1F3864';
-              lbl.style.borderColor = '#1F3864';
+              lbl.style.backgroundColor = '#0d2c6c';
+              lbl.style.borderColor = '#0d2c6c';
               lbl.style.color = '#ffffff';
               lbl.style.fontWeight = '500';
             } else {
