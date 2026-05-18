@@ -528,6 +528,16 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 }
 .page-banner h1 { color: #fff; max-width: 720px; position: relative; }
 .page-banner .lead { color: rgba(255, 255, 255, 0.85); max-width: 640px; position: relative; font-weight: 300; }
+
+/* Investment page: centered hero + forced 2x2 principles grid */
+.page-banner .container { text-align: center; }
+.page-banner h1 { margin-left: auto; margin-right: auto; }
+.page-banner .lead { margin-left: auto; margin-right: auto; }
+.page-banner .breadcrumbs { text-align: left; }
+.grid-2x2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 720px) {
+  .grid-2x2 { grid-template-columns: 1fr; }
+}
 .breadcrumbs {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.65);
@@ -946,7 +956,7 @@ article.post blockquote {
       <p>Before any numbers are discussed, these four principles apply to every engagement.</p>
     </div>
 
-    <div class="grid grid-2">
+    <div class="grid grid-2 grid-2x2">
       <div class="card reveal">
         <div class="card-icon">01</div>
         <h3>The Workplace Performance Review is always free</h3>
