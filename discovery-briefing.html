@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HNH05BKNFX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HNH05BKNFX');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discovery Briefing &middot; Aetas in the Workplace</title>
+<meta name="description" content="A briefing before the Discovery meeting, building on the Initial Conversation.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap">
+<style>
+:root {
+  --aetas-blue: #00205B;
+  --aetas-blue-dark: #001640;
+  --aetas-blue-soft: #f4f6fb;
+  --aetas-turquoise: #009CA6;
+  --aetas-turquoise-dark: #007a82;
+  --aetas-gold: #9A7B3A;
+  --aetas-gold-soft: #c8a55c;
+  --ink: #1a1f2e;
+  --ink-soft: #4a5269;
+  --ink-muted: #8089a0;
+  --paper: #ffffff;
+  --paper-warm: #fafaf7;
+  --line: #e6e8ee;
+  --line-soft: #f0f2f6;
+  --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --tracking-display: -0.01em;
+  --tracking-eyebrow: 0.18em;
+  --container-narrow: 880px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --shadow-sm: 0 1px 2px rgba(0,32,91,0.04), 0 2px 6px rgba(0,32,91,0.04);
+  --shadow-md: 0 4px 12px rgba(0,32,91,0.06), 0 12px 28px rgba(0,32,91,0.06);
+  --radius-sm: 4px;
+  --radius: 8px;
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--font-sans); font-weight: 400; font-size: 17px; line-height: 1.65; color: var(--ink); background: var(--paper-warm); -webkit-font-smoothing: antialiased; }
+a { color: var(--aetas-blue); text-decoration: none; transition: color 200ms var(--ease); }
+a:hover { color: var(--aetas-turquoise); }
+button { font-family: inherit; cursor: pointer; }
+h1,h2,h3,h4 { font-family: var(--font-sans); color: var(--aetas-blue); font-weight: 700; line-height: 1.2; letter-spacing: var(--tracking-display); margin: 0 0 0.6em; }
+h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 300; }
+h1 .accent { font-weight: 700; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 400; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+p { margin: 0 0 1.1em; color: var(--ink-soft); }
+.lead { font-size: 1.15rem; line-height: 1.6; color: var(--ink); font-weight: 300; }
+.eyebrow { display: inline-block; font-size: 0.78rem; font-weight: 600; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--aetas-gold); margin-bottom: 1rem; }
+.rule { width: 60px; height: 2px; background: var(--aetas-gold); border: 0; margin: 1.25rem 0 1.5rem; }
+
+.topbar { background: var(--paper); border-bottom: 1px solid var(--line); padding: 1rem var(--gutter); display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 60; }
+.topbar-brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.topbar-brand-mark { width: 32px; height: 32px; flex-shrink: 0; }
+.topbar-brand-text { display: flex; flex-direction: column; line-height: 1; }
+.topbar-brand-name { font-size: 1.05rem; font-weight: 700; color: var(--aetas-blue); letter-spacing: -0.01em; }
+.topbar-brand-tagline { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--aetas-turquoise); margin-top: 4px; }
+.topbar-link { font-size: 0.88rem; font-weight: 500; color: var(--ink-soft); transition: color 200ms var(--ease); }
+.topbar-link:hover { color: var(--aetas-blue); }
+
+.progress-bar { position: sticky; top: 65px; z-index: 50; background: var(--paper); border-bottom: 1px solid var(--line); padding: 0 var(--gutter); overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.progress-inner { display: flex; max-width: var(--container-narrow); margin: 0 auto; }
+.progress-step { flex: 1; min-width: 70px; padding: 12px 8px; text-align: center; font-size: 0.68rem; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--ink-muted); border-bottom: 2px solid transparent; cursor: pointer; transition: color 200ms var(--ease), border-color 200ms var(--ease); white-space: nowrap; font-weight: 600; }
+.progress-step:hover { color: var(--aetas-blue); }
+.progress-step.active { color: var(--aetas-blue); border-bottom-color: var(--aetas-gold); }
+.progress-step.complete { color: var(--aetas-turquoise); border-bottom-color: var(--line); }
+
+.page { max-width: var(--container-narrow); margin: 0 auto; padding: clamp(2rem, 5vw, 3.5rem) var(--gutter) 5rem; }
+.page-header { margin-bottom: 3rem; }
+.page-header h1 { margin-bottom: 0.5rem; }
+.page-header p.lead { margin-bottom: 1.5rem; }
+
+.notice-box { background: var(--aetas-blue-soft); border-left: 3px solid var(--aetas-gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-top: 1.5rem; }
+.notice-box p { font-size: 0.95rem; margin: 0; color: var(--ink-soft); }
+.notice-box strong { color: var(--aetas-blue); font-weight: 600; }
+
+.form-section { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 1.5rem; scroll-margin-top: 130px; overflow: hidden; box-shadow: var(--shadow-sm); }
+.section-head { padding: 1rem 1.5rem; border-bottom: 1px solid var(--line-soft); display: flex; align-items: baseline; gap: 0.85rem; background: var(--paper-warm); }
+.section-num { font-size: 0.78rem; font-weight: 700; letter-spacing: var(--tracking-eyebrow); color: var(--aetas-gold); }
+.section-title { font-size: 0.92rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--aetas-blue); }
+.section-body { padding: 1.75rem 1.5rem; }
+.section-intro { font-size: 0.95rem; color: var(--ink-soft); margin: 0 0 1.5rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--line-soft); }
+
+.field-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem 1.5rem; }
+.field-grid.three { grid-template-columns: repeat(3, 1fr); }
+.field-full { grid-column: 1 / -1; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field > label { font-size: 0.85rem; font-weight: 600; color: var(--aetas-blue); letter-spacing: 0.01em; }
+.field .req { color: var(--aetas-turquoise); }
+.field .hint { font-size: 0.82rem; color: var(--ink-muted); font-weight: 400; line-height: 1.5; margin-bottom: 0.3rem; }
+.field-prompt { font-size: 0.95rem; font-weight: 600; color: var(--aetas-blue); margin: 0 0 0.5rem; line-height: 1.45; }
+.field-prompt .req { color: var(--aetas-turquoise); }
+.field-prompt + .hint { margin-top: -0.3rem; margin-bottom: 0.85rem; }
+
+input[type=text], input[type=email], input[type=tel], input[type=number], select, textarea { width: 100%; font-family: var(--font-sans); font-size: 0.95rem; font-weight: 400; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 0.7rem 0.9rem; line-height: 1.5; transition: border-color 200ms var(--ease), box-shadow 200ms var(--ease); }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--aetas-turquoise); box-shadow: 0 0 0 3px rgba(0,156,166,0.12); }
+textarea { resize: vertical; min-height: 90px; }
+select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2300205B' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+
+.option-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.option-group label { display: flex; align-items: flex-start; gap: 12px; padding: 0.85rem 1rem; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); cursor: pointer; transition: border-color 180ms var(--ease), background 180ms var(--ease); font-size: 0.92rem; font-weight: 400; color: var(--ink-soft); line-height: 1.5; }
+.option-group label:hover { border-color: var(--aetas-turquoise); background: var(--aetas-blue-soft); }
+.option-group input[type=radio], .option-group input[type=checkbox] { margin-top: 0.25rem; accent-color: var(--aetas-blue); flex-shrink: 0; }
+.option-group label:has(input[type=radio]:checked), .option-group label:has(input[type=checkbox]:checked) { border-color: var(--aetas-blue); background: var(--aetas-blue-soft); }
+.option-group label:has(input[type=radio]:checked) > span, .option-group label:has(input[type=checkbox]:checked) > span { color: var(--ink); }
+.option-group label strong { color: var(--aetas-blue); font-weight: 600; }
+
+/* Multi-select grid for compact checkbox lists */
+.option-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+@media (max-width: 720px) { .option-grid { grid-template-columns: 1fr; } }
+
+.conditional { display: none; margin-top: 0.9rem; padding-left: 1rem; border-left: 2px solid var(--aetas-turquoise); }
+.conditional.visible { display: block; }
+
+.warning-text { margin-top: 0.6rem; font-size: 0.85rem; color: var(--aetas-turquoise-dark); font-weight: 500; background: rgba(0,156,166,0.08); border-left: 2px solid var(--aetas-turquoise); padding: 0.6rem 0.85rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+
+.legal-note { margin: 2.5rem 0 0; padding: 1.25rem 1.5rem; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); font-size: 0.82rem; line-height: 1.65; color: var(--ink-muted); }
+.legal-note strong { color: var(--aetas-blue); font-weight: 600; }
+
+.form-actions { margin-top: 2.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.02em; border-radius: 2px; border: 1px solid transparent; transition: all 220ms var(--ease); cursor: pointer; font-family: inherit; }
+.btn-primary { background: var(--aetas-blue); color: #fff; border-color: var(--aetas-blue); }
+.btn-primary:hover { background: var(--aetas-turquoise); border-color: var(--aetas-turquoise); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.btn-ghost { background: transparent; color: var(--ink-soft); border-color: var(--line); }
+.btn-ghost:hover { background: var(--paper); color: var(--aetas-blue); border-color: var(--aetas-blue); }
+.btn.loading .btn-text { opacity: 0.6; }
+.btn.loading .btn-spinner { display: inline-block; }
+.btn-spinner { display: none; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.page-footer { background: var(--aetas-blue); color: rgba(255,255,255,0.65); text-align: center; padding: 1.5rem var(--gutter); font-size: 0.82rem; line-height: 1.6; }
+.page-footer a { color: rgba(255,255,255,0.75); }
+.page-footer a:hover { color: var(--aetas-gold-soft); }
+
+@media (max-width: 720px) {
+  .field-grid, .field-grid.three { grid-template-columns: 1fr; }
+  .topbar-brand-name { font-size: 1rem; }
+  .topbar-brand-tagline { font-size: 0.6rem; }
+  .progress-bar { top: 73px; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="https://itw.aetaspartners.com/" class="topbar-brand">
+    <img src="/icons/favicon-32.png" alt="" class="topbar-brand-mark" width="32" height="32">
+    <span class="topbar-brand-text">
+      <span class="topbar-brand-name">Aetas in the Workplace</span>
+      <span class="topbar-brand-tagline">The Business Performance Solution</span>
+    </span>
+  </a>
+  <a href="https://itw.aetaspartners.com/" class="topbar-link">&larr; Back to site</a>
+</header>
+
+<nav class="progress-bar" aria-label="Form progress">
+  <div class="progress-inner">
+    <a class="progress-step active" data-target="section-1">Workforce</a>
+    <a class="progress-step" data-target="section-2">Pension</a>
+    <a class="progress-step" data-target="section-3">Benefits</a>
+    <a class="progress-step" data-target="section-4">Comms</a>
+    <a class="progress-step" data-target="section-5">Pressure</a>
+    <a class="progress-step" data-target="section-6">Outcomes</a>
+    <a class="progress-step" data-target="section-7">Logistics</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <div class="page-header">
+    <span class="eyebrow">Stage 2 of the Workplace Performance Review</span>
+    <h1>Discovery <span class="accent">Briefing</span></h1>
+    <hr class="rule">
+    <p class="lead">A more detailed briefing ahead of the Discovery meeting. This builds on our Initial Conversation and gives us the material to identify where pressure sits, what is already in place, and what should be in your Options meeting.</p>
+    <p style="font-size: 1rem;">Most people complete it in around twenty minutes. You can save partial answers by leaving the tab open. You do not need to know every answer precisely. "Don't know" is a useful answer in its own right.</p>
+    <div class="notice-box">
+      <p><strong>What happens next.</strong> Once submitted, you receive a confirmation email with a copy of your responses and a downloaded PDF. Matthew will review them before the Discovery meeting and bring relevant context to the call.</p>
+    </div>
+  </div>
+
+  <form id="briefing-form" novalidate>
+
+    <!-- 01 WORKFORCE SHAPE -->
+    <section class="form-section" id="section-1">
+      <div class="section-head"><span class="section-num">01</span><span class="section-title">Workforce shape</span></div>
+      <div class="section-body">
+        <p class="section-intro">The shape and texture of your team. Numbers can be approximate.</p>
+        <div class="field-grid">
+          <div class="field"><label for="contact_name">Your name <span class="req">*</span></label><input type="text" id="contact_name" name="contact_name" required></div>
+          <div class="field"><label for="contact_email">Your email <span class="req">*</span></label><input type="email" id="contact_email" name="contact_email" required></div>
+          <div class="field"><label for="org_name">Organisation name <span class="req">*</span></label><input type="text" id="org_name" name="org_name" required></div>
+          <div class="field"><label for="total_headcount">Total headcount <span class="req">*</span></label><input type="number" id="total_headcount" name="total_headcount" min="1" required></div>
+          <div class="field"><label for="permanent_count">Approximate permanent</label><input type="number" id="permanent_count" name="permanent_count" min="0"></div>
+          <div class="field"><label for="part_time_count">Approximate part-time</label><input type="number" id="part_time_count" name="part_time_count" min="0"></div>
+          <div class="field"><label for="contract_count">Approximate contract or temporary</label><input type="number" id="contract_count" name="contract_count" min="0"></div>
+          <div class="field"><label for="primary_age_band">Most common age band</label>
+            <select id="primary_age_band" name="primary_age_band">
+              <option value="">Select</option>
+              <option>Mostly under 30</option>
+              <option>Mostly 30s</option>
+              <option>Mostly 40s</option>
+              <option>Mostly 50 and above</option>
+              <option>Roughly evenly distributed</option>
+              <option>Don't know</option>
+            </select>
+          </div>
+          <div class="field"><label for="gender_split">Approximate gender split</label>
+            <select id="gender_split" name="gender_split">
+              <option value="">Select</option>
+              <option>Roughly 50/50</option>
+              <option>Predominantly male (60%+)</option>
+              <option>Predominantly female (60%+)</option>
+              <option>Strongly male (75%+)</option>
+              <option>Strongly female (75%+)</option>
+              <option>Don't know</option>
+            </select>
+          </div>
+          <div class="field"><label for="working_pattern">Working pattern</label>
+            <select id="working_pattern" name="working_pattern">
+              <option value="">Select</option>
+              <option>Office-based</option>
+              <option>Hybrid (office and home)</option>
+              <option>Fully remote</option>
+              <option>Field-based or on-site (e.g. construction, healthcare)</option>
+              <option>Mixed across teams</option>
+            </select>
+          </div>
+          <div class="field"><label for="locations">Locations</label>
+            <select id="locations" name="locations">
+              <option value="">Select</option>
+              <option>Single site</option>
+              <option>Two to three sites</option>
+              <option>Multiple UK sites</option>
+              <option>UK plus international</option>
+            </select>
+          </div>
+          <div class="field field-full">
+            <label for="workforce_dynamics">Any workforce dynamics worth flagging?</label>
+            <span class="hint">For example: high turnover in one area, recent hiring surge, recent redundancies, planned restructure, a population segment under specific pressure.</span>
+            <textarea id="workforce_dynamics" name="workforce_dynamics" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 PENSION -->
+    <section class="form-section" id="section-2">
+      <div class="section-head"><span class="section-num">02</span><span class="section-title">Current pension provision</span></div>
+      <div class="section-body">
+        <p class="section-intro">The biggest single source of value identified in most engagements. Don't worry about precise numbers, ranges and estimates are fine.</p>
+        <div class="field-grid">
+          <div class="field field-full">
+            <label for="pension_provider">Pension scheme name and provider</label>
+            <span class="hint">For example: NEST, Aviva, Standard Life Master Trust, Royal London GPP. If you have more than one scheme, list them.</span>
+            <input type="text" id="pension_provider" name="pension_provider">
+          </div>
+          <div class="field"><label for="pension_type">Pension type</label>
+            <select id="pension_type" name="pension_type">
+              <option value="">Select</option>
+              <option>Group Personal Pension (GPP)</option>
+              <option>Master Trust</option>
+              <option>NEST</option>
+              <option>Occupational scheme</option>
+              <option>Multiple schemes</option>
+              <option>Other</option>
+              <option>Don't know</option>
+            </select>
+          </div>
+          <div class="field"><label for="employer_contribution">Employer contribution rate</label>
+            <select id="employer_contribution" name="employer_contribution">
+              <option value="">Select</option>
+              <option>3% (statutory minimum)</option>
+              <option>4 to 5%</option>
+              <option>6 to 8%</option>
+              <option>9 to 10%</option>
+              <option>Over 10%</option>
+              <option>Matched scheme (varies)</option>
+              <option>Don't know</option>
+            </select>
+          </div>
+          <div class="field"><label for="employee_contribution">Employee contribution rate</label>
+            <select id="employee_contribution" name="employee_contribution">
+              <option value="">Select</option>
+              <option>5% (statutory minimum)</option>
+              <option>4 to 5%</option>
+              <option>6 to 8%</option>
+              <option>Over 8%</option>
+              <option>Variable / matched</option>
+              <option>Don't know</option>
+            </select>
+          </div>
+          <div class="field"><label for="auto_enrolment">Auto-enrolment compliant?</label>
+            <select id="auto_enrolment" name="auto_enrolment">
+              <option value="">Select</option>
+              <option>Yes</option>
+              <option>No</option>
+              <option>Don't know</option>
+            </select>
+          </div>
+          <div class="field"><label for="salary_exchange">Salary exchange (sacrifice) in place?</label>
+            <select id="salary_exchange" name="salary_exchange">
+              <option value="">Select</option>
+              <option>Yes, used by most employees</option>
+              <option>Yes, used by some employees</option>
+              <option>Available but rarely used</option>
+              <option>No</option>
+              <option>Don't know</option>
+            </select>
+          </div>
+          <div class="field"><label for="pension_last_reviewed">When was the pension scheme last reviewed?</label>
+            <select id="pension_last_reviewed" name="pension_last_reviewed">
+              <option value="">Select</option>
+              <option>Within the last 12 months</option>
+              <option>1 to 3 years ago</option>
+              <option>Over 3 years ago</option>
+              <option>Never formally reviewed</option>
+              <option>Don't know</option>
+            </select>
+          </div>
+          <div class="field"><label for="default_fund_check">Most employees still in the default fund?</label>
+            <select id="default_fund_check" name="default_fund_check">
+              <option value="">Select</option>
+              <option>Yes, most are</option>
+              <option>About half have made changes</option>
+              <option>Most have made changes</option>
+              <option>Don't know</option>
+            </select>
+          </div>
+          <div class="field field-full">
+            <label for="pension_concerns">Anything you already suspect is not working with the pension?</label>
+            <span class="hint">Open to anything: low understanding among staff, high charges, poor performance, unclear governance, employee complaints.</span>
+            <textarea id="pension_concerns" name="pension_concerns" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 BENEFITS -->
+    <section class="form-section" id="section-3">
+      <div class="section-head"><span class="section-num">03</span><span class="section-title">Current benefits provision</span></div>
+      <div class="section-body">
+        <p class="section-intro">What is offered beyond salary and pension. Tick everything that is in place, even if take-up is low.</p>
+        <div class="field field-full">
+          <p class="field-prompt">Which benefits are in place?</p>
+          <p class="hint">Tick all that apply.</p>
+          <div class="option-grid">
+            <label><input type="checkbox" name="benefits_in_place" value="Private medical insurance"><span>Private medical insurance</span></label>
+            <label><input type="checkbox" name="benefits_in_place" value="Group life assurance"><span>Group life assurance</span></label>
+            <label><input type="checkbox" name="benefits_in_place" value="Group income protection"><span>Group income protection</span></label>
+            <label><input type="checkbox" name="benefits_in_place" value="Critical illness cover"><span>Critical illness cover</span></label>
+            <label><input type="checkbox" name="benefits_in_place" value="Dental or optical cover"><span>Dental or optical cover</span></label>
+            <label><input type="checkbox" name="benefits_in_place" value="Salary advance / pay-on-demand"><span>Salary advance / pay-on-demand</span></label>
+            <label><input type="checkbox" name="benefits_in_place" value="EAP (Employee Assistance Programme)"><span>EAP (Employee Assistance Programme)</span></label>
+            <label><input type="checkbox" name="benefits_in_place" value="Bike-to-work or EV salary sacrifice"><span>Bike-to-work or EV salary sacrifice</span></label>
+            <label><input type="checkbox" name="benefits_in_place" value="Enhanced parental leave"><span>Enhanced parental leave</span></label>
+            <label><input type="checkbox" name="benefits_in_place" value="Mental health support or coaching"><span>Mental health support or coaching</span></label>
+            <label><input type="checkbox" name="benefits_in_place" value="Discount platform or perks scheme"><span>Discount platform or perks scheme</span></label>
+            <label><input type="checkbox" name="benefits_in_place" value="Annual bonus or profit share"><span>Annual bonus or profit share</span></label>
+          </div>
+        </div>
+        <div class="field-grid" style="margin-top: 1.75rem;">
+          <div class="field field-full">
+            <label for="benefits_other">Other benefits in place</label>
+            <span class="hint">Anything not on the list above.</span>
+            <input type="text" id="benefits_other" name="benefits_other">
+          </div>
+          <div class="field field-full">
+            <label for="benefits_valued">Which benefits does the team genuinely understand and value?</label>
+            <span class="hint">An honest answer, even if it is fewer than you would hope.</span>
+            <textarea id="benefits_valued" name="benefits_valued" rows="3"></textarea>
+          </div>
+          <div class="field field-full">
+            <label for="benefits_underperforming">Which benefits feel like they are not pulling their weight, or you are not sure about?</label>
+            <span class="hint">Often these are the highest-cost lines with the lowest visibility.</span>
+            <textarea id="benefits_underperforming" name="benefits_underperforming" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 COMMUNICATIONS -->
+    <section class="form-section" id="section-4">
+      <div class="section-head"><span class="section-num">04</span><span class="section-title">Communication and engagement</span></div>
+      <div class="section-body">
+        <p class="section-intro">How benefits and pension are communicated. Strong provision with weak communication produces the same result as no provision: an under-engaged team.</p>
+        <div class="field field-full">
+          <p class="field-prompt">How are benefits currently communicated to the team?</p>
+          <p class="hint">Tick all that apply.</p>
+          <div class="option-grid">
+            <label><input type="checkbox" name="comms_channels" value="Onboarding pack or document"><span>Onboarding pack or document</span></label>
+            <label><input type="checkbox" name="comms_channels" value="Intranet or shared drive page"><span>Intranet or shared drive page</span></label>
+            <label><input type="checkbox" name="comms_channels" value="Annual reminder or summary"><span>Annual reminder or summary</span></label>
+            <label><input type="checkbox" name="comms_channels" value="Occasional emails"><span>Occasional emails</span></label>
+            <label><input type="checkbox" name="comms_channels" value="Manager conversations"><span>Manager conversations</span></label>
+            <label><input type="checkbox" name="comms_channels" value="All-hands or town hall"><span>All-hands or town hall</span></label>
+            <label><input type="checkbox" name="comms_channels" value="Nothing formal"><span>Nothing formal</span></label>
+            <label><input type="checkbox" name="comms_channels" value="Don't know"><span>Don't know</span></label>
+          </div>
+        </div>
+        <div class="field-grid" style="margin-top: 1.75rem;">
+          <div class="field">
+            <p class="field-prompt" style="margin-bottom: 0.5rem;">Do employees know who to ask for pension or benefits help?</p>
+            <div class="option-group">
+              <label><input type="radio" name="employee_help_clarity" value="Yes, very clearly"><span>Yes, very clearly</span></label>
+              <label><input type="radio" name="employee_help_clarity" value="Generally yes"><span>Generally yes</span></label>
+              <label><input type="radio" name="employee_help_clarity" value="Probably not"><span>Probably not</span></label>
+              <label><input type="radio" name="employee_help_clarity" value="Don't know"><span>Don't know</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <p class="field-prompt" style="margin-bottom: 0.5rem;">Have you run a benefits or financial wellbeing session?</p>
+            <div class="option-group">
+              <label><input type="radio" name="prior_sessions" value="Yes, multiple"><span>Yes, multiple over the years</span></label>
+              <label><input type="radio" name="prior_sessions" value="Yes, one or two"><span>Yes, one or two</span></label>
+              <label><input type="radio" name="prior_sessions" value="No, but considering"><span>No, but considering it</span></label>
+              <label><input type="radio" name="prior_sessions" value="No"><span>No</span></label>
+            </div>
+          </div>
+          <div class="field field-full">
+            <label for="team_feedback">What does the team say about benefits, formally or informally?</label>
+            <span class="hint">Survey results, exit interview themes, off-the-cuff comments. Anything that has come up.</span>
+            <textarea id="team_feedback" name="team_feedback" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 PRESSURE -->
+    <section class="form-section" id="section-5">
+      <div class="section-head"><span class="section-num">05</span><span class="section-title">Where pressure is showing up</span></div>
+      <div class="section-body">
+        <p class="section-intro">The diagnostic core. The symptoms here are what we will connect back to underlying cause in the Options meeting.</p>
+        <div class="field field-full">
+          <p class="field-prompt">What have you noticed in the last six to twelve months?</p>
+          <p class="hint">Tick all that apply, then add detail below.</p>
+          <div class="option-group">
+            <label><input type="checkbox" name="pressure_signals" value="Increased turnover in one team or seniority level"><span>Increased turnover in one team or seniority level</span></label>
+            <label><input type="checkbox" name="pressure_signals" value="Difficulty hiring for specific roles"><span>Difficulty hiring for specific roles</span></label>
+            <label><input type="checkbox" name="pressure_signals" value="Salary pressure or counter-offers needed to retain"><span>Salary pressure or counter-offers needed to retain</span></label>
+            <label><input type="checkbox" name="pressure_signals" value="More sickness absence than usual"><span>More sickness absence than usual</span></label>
+            <label><input type="checkbox" name="pressure_signals" value="Productivity concerns"><span>Productivity concerns</span></label>
+            <label><input type="checkbox" name="pressure_signals" value="Engagement scores down, or no good engagement data"><span>Engagement scores down, or no good engagement data</span></label>
+            <label><input type="checkbox" name="pressure_signals" value="Leadership bandwidth absorbed by people issues"><span>Leadership bandwidth absorbed by people issues</span></label>
+            <label><input type="checkbox" name="pressure_signals" value="Specific feedback about pay or benefits from the team"><span>Specific feedback about pay or benefits from the team</span></label>
+            <label><input type="checkbox" name="pressure_signals" value="None of the above, things look stable"><span>None of the above, things look stable</span></label>
+          </div>
+        </div>
+        <div class="field-grid" style="margin-top: 1.75rem;">
+          <div class="field field-full">
+            <label for="pressure_detail">Anything specific you would want the Discovery meeting to surface or address?</label>
+            <span class="hint">A theme, a person, a team, a recent event. The more specific, the more useful.</span>
+            <textarea id="pressure_detail" name="pressure_detail" rows="4"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 OUTCOMES -->
+    <section class="form-section" id="section-6">
+      <div class="section-head"><span class="section-num">06</span><span class="section-title">Outcomes and success</span></div>
+      <div class="section-body">
+        <p class="section-intro">What "success" looks like for this engagement. The answers here shape the Options meeting agenda directly.</p>
+        <div class="field field-full">
+          <p class="field-prompt">Which outcomes matter most to you?</p>
+          <p class="hint">Tick all that apply.</p>
+          <div class="option-grid">
+            <label><input type="checkbox" name="success_outcomes" value="Reduced cost in pension or benefits spend"><span>Reduced cost in pension or benefits spend</span></label>
+            <label><input type="checkbox" name="success_outcomes" value="Improved retention"><span>Improved retention</span></label>
+            <label><input type="checkbox" name="success_outcomes" value="Increased benefits take-up and understanding"><span>Increased benefits take-up and understanding</span></label>
+            <label><input type="checkbox" name="success_outcomes" value="Reduced leadership time on people issues"><span>Reduced leadership time on people issues</span></label>
+            <label><input type="checkbox" name="success_outcomes" value="Stronger employer proposition for recruitment"><span>Stronger employer proposition for recruitment</span></label>
+            <label><input type="checkbox" name="success_outcomes" value="A clear documented strategy for the board"><span>A clear documented strategy for the board</span></label>
+            <label><input type="checkbox" name="success_outcomes" value="A more financially confident team"><span>A more financially confident team</span></label>
+            <label><input type="checkbox" name="success_outcomes" value="Improved governance and compliance"><span>Improved governance and compliance</span></label>
+          </div>
+        </div>
+        <div class="field-grid" style="margin-top: 1.75rem;">
+          <div class="field field-full">
+            <label for="success_other">Other outcomes that matter</label>
+            <input type="text" id="success_other" name="success_other">
+          </div>
+          <div class="field field-full">
+            <label for="twelve_month_success">In twelve months' time, what would make you say "that was a good decision"?</label>
+            <span class="hint">An honest, specific answer. This becomes the success measure we work to.</span>
+            <textarea id="twelve_month_success" name="twelve_month_success" rows="4"></textarea>
+          </div>
+          <div class="field field-full">
+            <p class="field-prompt">How do you measure success today?</p>
+            <div class="option-group">
+              <label><input type="radio" name="measurement_approach" value="Hard metrics"><span>Hard metrics (turnover %, engagement scores, cost per hire, etc.)</span></label>
+              <label><input type="radio" name="measurement_approach" value="Softer signals"><span>Softer signals (conversations, feedback, vibe)</span></label>
+              <label><input type="radio" name="measurement_approach" value="Mixed"><span>Mixed approach</span></label>
+              <label><input type="radio" name="measurement_approach" value="Don't really measure"><span>We don't really measure this today</span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 DISCOVERY LOGISTICS -->
+    <section class="form-section" id="section-7">
+      <div class="section-head"><span class="section-num">07</span><span class="section-title">Discovery meeting logistics</span></div>
+      <div class="section-body">
+        <p class="section-intro">Practical detail for the Discovery meeting itself.</p>
+        <div class="field-grid">
+          <div class="field field-full">
+            <p class="field-prompt">Preferred Discovery format</p>
+            <div class="option-group">
+              <label><input type="radio" name="discovery_format" value="Video"><span>Video (Teams or Zoom)</span></label>
+              <label><input type="radio" name="discovery_format" value="In-person"><span>In-person at your office</span></label>
+              <label><input type="radio" name="discovery_format" value="Either"><span>Either, whatever fits the diary</span></label>
+            </div>
+          </div>
+          <div class="field field-full">
+            <label for="who_attending">Who else will be in the Discovery meeting?</label>
+            <span class="hint">Names, roles, and a sentence on what each person brings or what they want from the conversation.</span>
+            <textarea id="who_attending" name="who_attending" rows="3"></textarea>
+          </div>
+          <div class="field field-full">
+            <label for="sensitivities">Anything sensitive or confidential we should be aware of?</label>
+            <span class="hint">A recent event, a specific person, a topic to handle carefully or avoid.</span>
+            <textarea id="sensitivities" name="sensitivities" rows="3"></textarea>
+          </div>
+          <div class="field field-full">
+            <label for="discovery_prep">Anything else you would like us to bring or be prepared for?</label>
+            <textarea id="discovery_prep" name="discovery_prep" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="legal-note">
+      <strong>Confidentiality.</strong> Information submitted via this form is used only by Aetas in the Workplace to prepare for your Discovery meeting. It is not shared with third parties. Submission does not constitute a commitment by either party to enter into a formal engagement. Aetas Wealth (a trading style of Insight Financial Associates Limited, FCA registration 458421) provides regulated financial advice separately; this form is for scoping purposes only.
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary" id="submit-btn">
+        <span class="btn-text">Submit briefing</span>
+        <span class="btn-spinner"></span>
+      </button>
+      <button type="reset" class="btn btn-ghost" onclick="if(!confirm('Clear all responses?')) event.preventDefault();">Clear form</button>
+    </div>
+
+  </form>
+</div>
+
+<footer class="page-footer">
+  Aetas in the Workplace &nbsp;&middot;&nbsp; A trading style of Aetas Wealth, Insight Financial Associates Limited &nbsp;&middot;&nbsp; FCA reg 458421 &nbsp;&middot;&nbsp;
+  <a href="https://itw.aetaspartners.com/privacy.html">Privacy Policy</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+const EMAILJS_PUBLIC_KEY        = 'T-OvAY8-q_r_P4tAA';
+const EMAILJS_SERVICE_ID        = 'service_dztbuyl';
+const EMAILJS_TEMPLATE_INTERNAL = 'template_283g3pp';
+const EMAILJS_TEMPLATE_CONFIRM  = 'template_2hfklis';
+emailjs.init(EMAILJS_PUBLIC_KEY);
+
+const FORM_REF = (function(){
+  const d=new Date(), ym=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0');
+  return 'ADB-'+ym+'-'+Math.random().toString(36).substring(2,6).toUpperCase();
+})();
+
+// URL PRE-FILL. Supports ?org=, ?contact=, ?email=
+(function prefillFromUrl(){
+  const params = new URLSearchParams(window.location.search);
+  const map = {
+    org: 'org_name',
+    contact: 'contact_name',
+    email: 'contact_email',
+    headcount: 'total_headcount'
+  };
+  Object.keys(map).forEach(function(key){
+    const v = params.get(key);
+    if(v){
+      const el = document.querySelector('[name="'+map[key]+'"]');
+      if(el) el.value = decodeURIComponent(v);
+    }
+  });
+})();
+
+function val(name){
+  const el = document.querySelector('[name="'+name+'"]');
+  if(!el) return '(not provided)';
+  if(el.type === 'radio'){
+    const checked = document.querySelector('[name="'+name+'"]:checked');
+    return checked ? checked.value : '(not answered)';
+  }
+  return (el.value || '').trim() || '(not provided)';
+}
+
+// Collect multiple checkbox values as comma-separated string
+function multi(name){
+  const checked = document.querySelectorAll('[name="'+name+'"]:checked');
+  if(checked.length === 0) return '(none selected)';
+  return Array.from(checked).map(function(c){ return c.value; }).join(', ');
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  // Progress bar click navigation
+  document.querySelectorAll('.progress-step').forEach(function(step){
+    step.addEventListener('click', function(){
+      const target = document.getElementById(this.dataset.target);
+      if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  // Progress bar active state on scroll
+  const sections = Array.from(document.querySelectorAll('.form-section'));
+  const steps = Array.from(document.querySelectorAll('.progress-step'));
+  window.addEventListener('scroll', function(){
+    const scrollPos = window.scrollY + 200;
+    let activeIdx = 0;
+    sections.forEach(function(s, i){ if(s.offsetTop <= scrollPos) activeIdx = i; });
+    steps.forEach(function(s, i){
+      s.classList.toggle('active', i === activeIdx);
+      s.classList.toggle('complete', i < activeIdx);
+    });
+  });
+});
+
+function generatePDF(){
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+  const pageW = doc.internal.pageSize.getWidth();
+  const margin = 18;
+  let y = 22;
+  const C_BLUE = '#00205B', C_GOLD = '#9A7B3A', C_INK = '#1a1f2e', C_INK_SOFT = '#4a5269', C_MUTED = '#8089a0';
+
+  function pageBreak(needed){ if(y + needed > 280){ doc.addPage(); y = 22; } }
+  function sectionHead(num, title){
+    pageBreak(20); y += 4;
+    doc.setFillColor(C_BLUE);
+    doc.rect(margin, y - 4, pageW - margin*2, 8, 'F');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(8);
+    doc.setTextColor(C_GOLD); doc.text(num, margin + 3, y + 1);
+    doc.setTextColor('#ffffff'); doc.text(title, margin + 12, y + 1);
+    y += 10;
+  }
+  function field(label, value){
+    pageBreak(14);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(8);
+    doc.setTextColor(C_GOLD); doc.text(label.toUpperCase(), margin, y); y += 4.5;
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(9.5);
+    doc.setTextColor(C_INK);
+    const wrapped = doc.splitTextToSize(value || '(not provided)', pageW - margin*2);
+    doc.text(wrapped, margin, y);
+    y += wrapped.length * 4.6 + 4;
+  }
+
+  // Header band
+  doc.setFillColor(C_BLUE);
+  doc.rect(0, 0, pageW, 14, 'F');
+  doc.setTextColor('#ffffff'); doc.setFont('helvetica', 'bold'); doc.setFontSize(11);
+  doc.text('Aetas in the Workplace', margin, 9);
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(8);
+  doc.setTextColor('#c8a55c');
+  doc.text('Discovery Briefing', pageW - margin, 9, { align: 'right' });
+
+  // Title block
+  y = 28;
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5);
+  doc.setTextColor(C_MUTED);
+  doc.text('Reference: ' + FORM_REF + '   |   Submitted: ' + new Date().toLocaleString('en-GB'), margin, y);
+  y += 4;
+  doc.setDrawColor(C_GOLD); doc.setLineWidth(0.5);
+  doc.line(margin, y, margin + 60, y); y += 8;
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(16);
+  doc.setTextColor(C_BLUE); doc.text(val('org_name'), margin, y); y += 6;
+  doc.setFontSize(10); doc.setTextColor(C_INK_SOFT);
+  doc.text('Discovery Briefing submitted by ' + val('contact_name'), margin, y); y += 10;
+
+  sectionHead('01', 'WORKFORCE SHAPE');
+  field('Total headcount', val('total_headcount'));
+  field('Approximate permanent', val('permanent_count'));
+  field('Approximate part-time', val('part_time_count'));
+  field('Approximate contract or temporary', val('contract_count'));
+  field('Most common age band', val('primary_age_band'));
+  field('Gender split', val('gender_split'));
+  field('Working pattern', val('working_pattern'));
+  field('Locations', val('locations'));
+  field('Workforce dynamics worth flagging', val('workforce_dynamics'));
+
+  sectionHead('02', 'CURRENT PENSION PROVISION');
+  field('Pension scheme name and provider', val('pension_provider'));
+  field('Pension type', val('pension_type'));
+  field('Employer contribution', val('employer_contribution'));
+  field('Employee contribution', val('employee_contribution'));
+  field('Auto-enrolment compliant', val('auto_enrolment'));
+  field('Salary exchange in place', val('salary_exchange'));
+  field('Last reviewed', val('pension_last_reviewed'));
+  field('Most employees in default fund', val('default_fund_check'));
+  field('Concerns about the pension', val('pension_concerns'));
+
+  sectionHead('03', 'CURRENT BENEFITS PROVISION');
+  field('Benefits in place', multi('benefits_in_place'));
+  field('Other benefits in place', val('benefits_other'));
+  field('Benefits the team understands and values', val('benefits_valued'));
+  field('Benefits not pulling their weight', val('benefits_underperforming'));
+
+  sectionHead('04', 'COMMUNICATION AND ENGAGEMENT');
+  field('How benefits are currently communicated', multi('comms_channels'));
+  field('Do employees know who to ask for help', val('employee_help_clarity'));
+  field('Prior benefits or wellbeing sessions', val('prior_sessions'));
+  field('What the team says about benefits', val('team_feedback'));
+
+  sectionHead('05', 'WHERE PRESSURE IS SHOWING UP');
+  field('Pressure signals noticed', multi('pressure_signals'));
+  field('Specific detail for Discovery to address', val('pressure_detail'));
+
+  sectionHead('06', 'OUTCOMES AND SUCCESS');
+  field('Which outcomes matter most', multi('success_outcomes'));
+  field('Other outcomes that matter', val('success_other'));
+  field('What would make this a good decision in 12 months', val('twelve_month_success'));
+  field('How success is measured today', val('measurement_approach'));
+
+  sectionHead('07', 'DISCOVERY MEETING LOGISTICS');
+  field('Preferred Discovery format', val('discovery_format'));
+  field('Who else will be in the meeting', val('who_attending'));
+  field('Sensitivities to be aware of', val('sensitivities'));
+  field('Anything else for us to bring or prepare', val('discovery_prep'));
+
+  // Page footers
+  const pageCount = doc.internal.getNumberOfPages();
+  for(let p = 1; p <= pageCount; p++){
+    doc.setPage(p);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5);
+    doc.setTextColor(C_MUTED);
+    doc.text('Aetas in the Workplace  |  Discovery Briefing  |  Confidential', margin, 290);
+    doc.text('Page ' + p + ' of ' + pageCount, pageW - margin, 290, { align: 'right' });
+  }
+  return doc;
+}
+
+document.getElementById('briefing-form').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  const btnText = btn.querySelector('.btn-text');
+  if(!this.checkValidity()){ this.reportValidity(); return; }
+  btn.classList.add('loading'); btn.disabled = true; btnText.textContent = 'Submitting...';
+
+  try {
+    const pdf = generatePDF();
+    const orgClean = val('org_name').replace(/[^a-zA-Z0-9]+/g, '-');
+    pdf.save('ADB-' + orgClean + '-' + FORM_REF + '.pdf');
+
+    const summary = [
+      'DISCOVERY BRIEFING', 'Ref: ' + FORM_REF, '',
+      'CONTACT',
+      'Name: ' + val('contact_name'),
+      'Email: ' + val('contact_email'),
+      'Organisation: ' + val('org_name'),
+      '', 'WORKFORCE',
+      'Total headcount: ' + val('total_headcount'),
+      'Permanent: ' + val('permanent_count'),
+      'Part-time: ' + val('part_time_count'),
+      'Contract: ' + val('contract_count'),
+      'Most common age band: ' + val('primary_age_band'),
+      'Gender split: ' + val('gender_split'),
+      'Working pattern: ' + val('working_pattern'),
+      'Locations: ' + val('locations'),
+      'Dynamics: ' + val('workforce_dynamics'),
+      '', 'PENSION',
+      'Provider: ' + val('pension_provider'),
+      'Type: ' + val('pension_type'),
+      'Employer contribution: ' + val('employer_contribution'),
+      'Employee contribution: ' + val('employee_contribution'),
+      'Auto-enrolment: ' + val('auto_enrolment'),
+      'Salary exchange: ' + val('salary_exchange'),
+      'Last reviewed: ' + val('pension_last_reviewed'),
+      'Default fund: ' + val('default_fund_check'),
+      'Concerns: ' + val('pension_concerns'),
+      '', 'BENEFITS',
+      'In place: ' + multi('benefits_in_place'),
+      'Other: ' + val('benefits_other'),
+      'Valued: ' + val('benefits_valued'),
+      'Underperforming: ' + val('benefits_underperforming'),
+      '', 'COMMUNICATIONS',
+      'Channels: ' + multi('comms_channels'),
+      'Employee help clarity: ' + val('employee_help_clarity'),
+      'Prior sessions: ' + val('prior_sessions'),
+      'Team feedback: ' + val('team_feedback'),
+      '', 'PRESSURE SIGNALS',
+      'Signals: ' + multi('pressure_signals'),
+      'Detail: ' + val('pressure_detail'),
+      '', 'OUTCOMES',
+      'Outcomes: ' + multi('success_outcomes'),
+      'Other: ' + val('success_other'),
+      '12 month success: ' + val('twelve_month_success'),
+      'Measurement: ' + val('measurement_approach'),
+      '', 'DISCOVERY LOGISTICS',
+      'Format: ' + val('discovery_format'),
+      'Attendees: ' + val('who_attending'),
+      'Sensitivities: ' + val('sensitivities'),
+      'Prep: ' + val('discovery_prep')
+    ].join('\n');
+
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_INTERNAL, {
+      ref: FORM_REF, org: val('org_name'), contact: val('contact_name'),
+      email: val('contact_email'), form_type: 'Discovery Briefing',
+      form_data: summary, submitted: new Date().toLocaleString('en-GB'),
+      to_email: 'matthew.steiner@aetas-partners.com'
+    });
+
+    if(val('contact_email') !== '(not provided)'){
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_CONFIRM, {
+        ref: FORM_REF, org: val('org_name'), contact: val('contact_name'),
+        to_email: val('contact_email'), form_type: 'Discovery Briefing'
+      });
+    }
+
+    if(typeof gtag !== 'undefined') gtag('event', 'form_submit', { event_category: 'Discovery Briefing', event_label: FORM_REF });
+    window.location.href = 'form-thankyou.html?form=discovery&org=' + encodeURIComponent(val('org_name')) + '&ref=' + encodeURIComponent(FORM_REF);
+
+  } catch(err){
+    console.error('Submission error:', err);
+    btn.classList.remove('loading'); btn.disabled = false; btnText.textContent = 'Submit briefing';
+    alert('There was a problem sending your briefing. Your PDF has been downloaded. Please email it directly to matthew.steiner@aetas-partners.com.');
+  }
+});
+</script>
+
+</body>
+</html>
