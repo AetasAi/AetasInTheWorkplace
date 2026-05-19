@@ -17,7 +17,7 @@
 (function () {
   'use strict';
 
-  var COOKIEBOT_ID = 'f87c63d7-fd2d-4dfd-8854-081181829426';
+  var COOKIEBOT_ID = '8950e961-dd22-4ba3-bce7-b59e1fe40193';
   var GA4_ID = 'G-HNH05BKNFX';
   var CLARITY_ID = 'wtnjld3lda';
 
