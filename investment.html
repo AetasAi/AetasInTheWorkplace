@@ -247,6 +247,9 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
   border-radius: 2px;
 }
 .bundle-card.bundle-featured { border-top: 3px solid var(--aetas-gold); }
+/* Apply transparent 3px border to non-featured cards so all bundle cards
+   have the same content offset and labels align across columns. */
+.bundle-card:not(.bundle-featured) { border-top: 3px solid transparent; }
 .bundle-section-label {
   display: block;
   font-size: 0.72rem;
@@ -294,18 +297,19 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 .bundles-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  row-gap: 2rem;
 }
 @media (min-width: 880px) {
   .bundles-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto 1fr auto auto 1fr auto;
+    column-gap: 2rem;
+    row-gap: 0;
   }
   .bundle-card {
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 7;
-    gap: 0.5rem;
   }
 }
 .bundle-header { margin: 0 0 0.5rem; }
@@ -487,9 +491,15 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 
         <span class="bundle-section-label is-section-2">Beyond Year 1</span>
 
-        <p class="bundle-note">No ongoing commitment with the Foundation bundle. You can add services à la carte or upgrade to Core whenever you are ready.</p>
+        <div class="bundle-note">
+          <p style="margin: 0 0 0.6rem;">No ongoing commitment with the Foundation bundle.</p>
+          <p style="margin: 0 0 0.6rem;">You can add further workshops, clinic days or other services à la carte at any time.</p>
+          <p style="margin: 0;">If you want a continuing engagement, upgrade to Core when you are ready.</p>
+        </div>
 
-        <div class="bundle-spacer"></div>
+        <div class="bundle-price-block" style="background: transparent; padding: 0.85rem 0; box-shadow: none;">
+          <a href="#a-la-carte" style="color: var(--aetas-turquoise); font-weight: 600; font-size: 0.9rem; text-decoration: none;">See à la carte options →</a>
+        </div>
       </div>
 
       <!-- CORE -->
@@ -527,7 +537,7 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
         </ul>
 
         <div class="bundle-price-block">
-          <span class="bundle-price-label">Annual continuing fee</span>
+          <span class="bundle-price-label">Annual Governance &amp; Support Fee</span>
           <p class="bundle-price">£3,150 <small>/ yr</small></p>
         </div>
       </div>
@@ -568,7 +578,7 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
         </ul>
 
         <div class="bundle-price-block">
-          <span class="bundle-price-label">Annual continuing fee</span>
+          <span class="bundle-price-label">Annual Governance &amp; Support Fee</span>
           <p class="bundle-price">£4,500 <small>/ yr</small></p>
         </div>
       </div>
