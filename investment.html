@@ -288,6 +288,46 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
   margin: 1.5rem 0 0;
 }
 
+/* Bundle grid alignment: subgrid aligns rows across all three cards
+   so "Initial fee" and "Ongoing" appear at the same vertical position
+   on Foundation, Core and Executive. */
+.bundles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 880px) {
+  .bundles-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto 1fr auto auto 1fr auto;
+  }
+  .bundle-card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 7;
+    gap: 0.5rem;
+  }
+}
+.bundle-header { margin: 0 0 0.5rem; }
+.bundle-header h3 { margin-bottom: 0.5rem; }
+.bundle-header p { font-size: 0.92rem; color: var(--ink-soft); margin: 0; }
+.bundle-section-label.is-section-2 {
+  border-top: 1px dashed var(--line);
+  padding-top: 1.25rem;
+  margin-top: 1rem;
+}
+.bundle-note {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0;
+  padding: 0.35rem 0;
+}
+.bundle-spacer { /* invisible placeholder to maintain grid alignment */
+  visibility: hidden;
+  min-height: 1px;
+}
+
 .ifa-callout { background: var(--aetas-blue); color: #fff; padding: 2.5rem; border-radius: var(--radius); border-top: 3px solid var(--aetas-gold); }
 .ifa-callout-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: center; }
 @media (max-width: 720px) { .ifa-callout-grid { grid-template-columns: 1fr; gap: 1rem; } }
@@ -419,15 +459,18 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
       <p>Each bundle combines services at a saving. Initial and ongoing fees are shown separately, so you can see year-one and year-on-year commitments clearly.</p>
     </div>
 
-    <div class="grid grid-3">
+    <div class="bundles-grid">
 
       <!-- FOUNDATION -->
       <div class="card bundle-card reveal">
-        <span class="eyebrow">Foundation</span>
-        <h3 style="margin-bottom: 1rem;">A focused introduction</h3>
-        <p style="font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 1.25rem;">For employers testing the proposition without committing to a long engagement.</p>
+        <div class="bundle-header">
+          <span class="eyebrow">Foundation</span>
+          <h3>A focused introduction</h3>
+          <p>For employers testing the proposition without committing to a long engagement.</p>
+        </div>
 
         <span class="bundle-section-label">What's included</span>
+
         <ul class="bundle-list">
           <li>Financial Wellbeing Audit (usually £595, free)</li>
           <li>One workshop, your choice of topic</li>
@@ -441,16 +484,25 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
           <p class="bundle-price">£1,745</p>
           <p class="bundle-save">Audit included free (saves £595)</p>
         </div>
+
+        <span class="bundle-section-label is-section-2">Beyond Year 1</span>
+
+        <p class="bundle-note">No ongoing commitment with the Foundation bundle. You can add services à la carte or upgrade to Core whenever you are ready.</p>
+
+        <div class="bundle-spacer"></div>
       </div>
 
       <!-- CORE -->
       <div class="card bundle-card bundle-featured reveal">
         <span class="bundle-badge">Most popular</span>
-        <span class="eyebrow" style="color: var(--aetas-gold);">Core</span>
-        <h3 style="margin-bottom: 1rem;">The standard engagement</h3>
-        <p style="font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 1.25rem;">For employers with a workplace pension that needs review and a workforce that would benefit from structured financial education.</p>
+        <div class="bundle-header">
+          <span class="eyebrow" style="color: var(--aetas-gold);">Core</span>
+          <h3>The standard engagement</h3>
+          <p>For employers with a workplace pension that needs review and a workforce that would benefit from structured financial education.</p>
+        </div>
 
         <span class="bundle-section-label">Initial engagement (Year 1)</span>
+
         <ul class="bundle-list">
           <li>Financial Wellbeing Audit (usually £595, free)</li>
           <li>Pension Scheme Review (consultancy fee waived)</li>
@@ -466,9 +518,8 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
           <p class="bundle-save">Save £1,240 vs separately</p>
         </div>
 
-        <div class="bundle-divider"></div>
+        <span class="bundle-section-label is-section-2">Ongoing (Year 2+)</span>
 
-        <span class="bundle-section-label">Ongoing (Year 2+)</span>
         <ul class="bundle-list">
           <li>Annual Pension Governance</li>
           <li>Two financial clinic days per year</li>
@@ -483,15 +534,22 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 
       <!-- EXECUTIVE -->
       <div class="card bundle-card reveal">
-        <span class="eyebrow">Executive</span>
-        <h3 style="margin-bottom: 1rem;">The full engagement</h3>
-        <p style="font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 1.25rem;">For employers committing to workforce financial wellbeing as an operational priority, with quarterly on-site engagement and new starter onboarding.</p>
+        <div class="bundle-header">
+          <span class="eyebrow">Executive</span>
+          <h3>The full engagement</h3>
+          <p>For employers committing to workforce financial wellbeing as an operational priority, with quarterly on-site engagement and new starter onboarding.</p>
+        </div>
 
         <span class="bundle-section-label">Initial engagement (Year 1)</span>
+
         <ul class="bundle-list">
-          <li>Everything in Core initial</li>
-          <li>Three further workshops (six total)</li>
+          <li>Financial Wellbeing Audit (usually £595, free)</li>
+          <li>Pension Scheme Review (consultancy fee waived)</li>
+          <li>New Scheme Implementation</li>
+          <li>Six workshops, your pick across clusters</li>
+          <li>Two financial clinic days</li>
           <li>New Starter Presentation</li>
+          <li>Access to IFA throughout</li>
         </ul>
 
         <div class="bundle-price-block">
@@ -500,9 +558,8 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
           <p class="bundle-save">Save £2,235 vs separately</p>
         </div>
 
-        <div class="bundle-divider"></div>
+        <span class="bundle-section-label is-section-2">Ongoing (Year 2+)</span>
 
-        <span class="bundle-section-label">Ongoing (Year 2+)</span>
         <ul class="bundle-list">
           <li>Annual Pension Governance</li>
           <li>Four quarterly on-site days</li>
