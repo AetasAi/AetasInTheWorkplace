@@ -1,129 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-          <!-- Homepage -->
-          <url>
-                      <loc>https://itw.aetaspartners.com/</loc>
-                      <lastmod>2026-05-01</lastmod>
-                      <changefreq>monthly</changefreq>
-                      <priority>1.0</priority>
-          </url>
-
-          <!-- Core audience pages -->
-          <url>
-                      <loc>https://itw.aetaspartners.com/limited-companies.html</loc>
-                      <lastmod>2026-05-01</lastmod>
-                      <changefreq>monthly</changefreq>
-                      <priority>0.9</priority>
-          </url>
-
-          <url>
-                      <loc>https://itw.aetaspartners.com/llps.html</loc>
-                      <lastmod>2026-05-01</lastmod>
-                      <changefreq>monthly</changefreq>
-                      <priority>0.9</priority>
-          </url>
-
-          <!-- Tools and conversion -->
-          <url>
-                      <loc>https://itw.aetaspartners.com/diagnostic.html</loc>
-                      <lastmod>2026-05-01</lastmod>
-                      <changefreq>monthly</changefreq>
-                      <priority>0.8</priority>
-          </url>
-          <url>
-                      <loc>https://itw.aetaspartners.com/calculator.html</loc>
-          </url>
-          <url>
-                      <loc>https://itw.aetaspartners.com/investment.html</loc>
-                      <lastmod>2026-05-07</lastmod>
-                      <changefreq>monthly</changefreq>
-                      <priority>0.8</priority>
-                      <lastmod>2026-05-07</lastmod>
-                      <changefreq>monthly</changefreq>
-                      <priority>0.8</priority>
-          </url>
-
-          <!-- Content and education -->
-          <url>
-                      <loc>https://itw.aetaspartners.com/insights.html</loc>
-                      <lastmod>2026-05-01</lastmod>
-                      <changefreq>weekly</changefreq>
-                      <priority>0.8</priority>
-          </url>
-
-          <url>
-                      <loc>https://itw.aetaspartners.com/faqs.html</loc>
-                      <lastmod>2026-05-01</lastmod>
-                      <changefreq>monthly</changefreq>
-                      <priority>0.8</priority>
-          </url>
-
-          <!-- Informational -->
-          <url>
-                      <loc>https://itw.aetaspartners.com/whats-next.html</loc>
-                      <lastmod>2026-05-07</lastmod>
-                      <changefreq>monthly</changefreq>
-                      <priority>0.6</priority>
-          </url>
-          <url>
-                      <loc>https://itw.aetaspartners.com/privacy.html</loc>
-                      <lastmod>2026-05-01</lastmod>
-                      <changefreq>yearly</changefreq>
-                      <priority>0.3</priority>
-          </url>
-
-          <!-- AI agent discovery -->
-          <url>
-                      <loc>https://itw.aetaspartners.com/llms.txt</loc>
-                      <lastmod>2026-05-01</lastmod>
-                      <changefreq>monthly</changefreq>
-                      <priority>0.5</priority>
-          </url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://itw.aetaspartners.com/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Audience pages -->
+  <url>
+    <loc>https://itw.aetaspartners.com/charities.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/limited-companies.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/llps.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Tools and pricing -->
+  <url>
+    <loc>https://itw.aetaspartners.com/calculator.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/diagnostic.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/investment.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Section hubs -->
+  <url>
+    <loc>https://itw.aetaspartners.com/faqs.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/insights.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Case studies -->
   <url>
     <loc>https://itw.aetaspartners.com/case-studies/bristol-organisation.html</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://itw.aetaspartners.com/case-studies/uk-retail-group.html</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <!-- Insights -->
+  <url>
+    <loc>https://itw.aetaspartners.com/insights/financial-wellbeing-in-the-workplace.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/insights/introducing-the-aetas-collective.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/insights/strengthening-your-team-through-financial-wellbeing.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/insights/when-everyday-life-stops-talking-back.html</loc>
+    <lastmod>2026-05-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://itw.aetaspartners.com/insights/why-financial-wellbeing-is-a-business-issue.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <!-- Other -->
+  <url>
+    <loc>https://itw.aetaspartners.com/data-processing-agreement.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://itw.aetaspartners.com/discovery-briefing.html</loc>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://itw.aetaspartners.com/insights/when-everyday-life-stops-talking-back.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <loc>https://itw.aetaspartners.com/initial-conversation-briefing.html</loc>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://itw.aetaspartners.com/insights/introducing-the-aetas-collective.html</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://itw.aetaspartners.com/privacy.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://itw.aetaspartners.com/insights/financial-wellbeing-in-the-workplace.html</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://itw.aetaspartners.com/insights/strengthening-your-team-through-financial-wellbeing.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <loc>https://itw.aetaspartners.com/whats-next.html</loc>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
