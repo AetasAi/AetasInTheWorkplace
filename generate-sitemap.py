@@ -33,6 +33,7 @@ EXCLUDE_FILES = {
     "form-thankyou.html",             # post-form, noindex
     "benefits-review.html",           # internal data capture
     "google4bf7b0394b6b5986.html",    # Google site verification file
+    "charities.html",                 # redirect to charitywellbeing.aetaspartners.com (noindex)
 }
 
 
@@ -41,7 +42,6 @@ def _is_audience_page(rel: Path) -> bool:
     return rel.parent == Path(".") and rel.name in {
         "limited-companies.html",
         "llps.html",
-        "charities.html",
     }
 
 
