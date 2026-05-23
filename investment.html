@@ -200,7 +200,7 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 
 .site-footer { background: var(--aetas-blue-dark); color: rgba(255, 255, 255, 0.7); padding-block: 4rem 2rem; position: relative; }
 .site-footer::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 3px; background: linear-gradient(90deg, var(--aetas-gold) 0%, var(--aetas-turquoise) 100%); }
-.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem; }
+.footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; margin-bottom: 3rem; }
 @media (max-width: 880px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
 @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
 .footer-grid h4 { color: #fff; font-size: 0.78rem; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; margin-bottom: 1rem; }
@@ -232,7 +232,7 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 .tier-card .tier-save { display: block; color: var(--aetas-turquoise); font-weight: 600; margin-top: 4px; font-size: 0.9rem; }
 
 /* Bundle cards with initial/ongoing split */
-.bundle-card { padding: 2rem; position: relative; display: flex; flex-direction: column; overflow: visible; }
+.bundle-card { padding: 2rem; position: relative; display: flex; flex-direction: column; }
 .bundle-card .bundle-badge {
   position: absolute;
   top: -12px;
@@ -356,101 +356,6 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 .audit-callout .audit-value { font-size: 0.9rem; color: var(--aetas-gold-soft); margin-top: 0.5rem; }
 .audit-callout .strike { text-decoration: line-through; color: rgba(255,255,255,0.6); }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Aetas in the Workplace Programme",
-    "description": "Consultancy-led workplace financial wellbeing programme delivered in three bundles: Foundation, Core, and Executive. Initial and ongoing fees shown separately. The Workplace Performance Audit is always free.",
-    "provider": { "@id": "https://itw.aetaspartners.com/#organization" },
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    },
-    "serviceType": "Workplace Financial Wellbeing Consultancy",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Aetas ITW Programme Bundles",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "name": "Foundation bundle",
-          "description": "A focused introduction. For employers testing the proposition without committing to a long engagement. Includes Workplace Performance Audit (free, normally £595), one workshop, one financial clinic day, summary recommendations, and IFA access during engagement.",
-          "price": "1745",
-          "priceCurrency": "GBP",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "price": "1745",
-            "priceCurrency": "GBP",
-            "valueAddedTaxIncluded": false
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Core bundle (initial)",
-          "description": "The standard engagement. For employers with a workplace pension that needs review and a workforce that would benefit from structured financial education. Initial year includes Workplace Performance Audit (free), Pension Scheme Review, New Scheme Implementation, three workshops, two financial clinic days, and IFA access throughout.",
-          "price": "6500",
-          "priceCurrency": "GBP",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "price": "6500",
-            "priceCurrency": "GBP",
-            "valueAddedTaxIncluded": false
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Core bundle (ongoing, Year 2+)",
-          "description": "Annual Pension Governance, two financial clinic days per year, and continued IFA access.",
-          "price": "3150",
-          "priceCurrency": "GBP",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "3150",
-            "priceCurrency": "GBP",
-            "unitText": "year",
-            "valueAddedTaxIncluded": false
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Executive bundle (initial)",
-          "description": "The full engagement. For employers committing to workforce financial wellbeing as an operational priority. Initial year includes Workplace Performance Audit (free), Pension Scheme Review, New Scheme Implementation, six workshops, two financial clinic days, New Starter Presentation, and IFA access throughout.",
-          "price": "8500",
-          "priceCurrency": "GBP",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "price": "8500",
-            "priceCurrency": "GBP",
-            "valueAddedTaxIncluded": false
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Executive bundle (ongoing, Year 2+)",
-          "description": "Annual Pension Governance, four quarterly on-site days, New Starter Presentations as required, and continued IFA access.",
-          "price": "4500",
-          "priceCurrency": "GBP",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "4500",
-            "priceCurrency": "GBP",
-            "unitText": "year",
-            "valueAddedTaxIncluded": false
-          }
-        }
-      ]
-    },
-    "offers": {
-      "@type": "Offer",
-      "name": "Workplace Performance Audit (no-cost)",
-      "description": "Normally £595, included free at the start of every engagement. Four short stages: initial conversation, discovery meeting, options meeting, and decision meeting. No obligation. No commitment until proposal stage.",
-      "price": "0",
-      "priceCurrency": "GBP",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
 </head>
 <body>
 
@@ -926,42 +831,53 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="brand">
-          <span class="brand-mark" style="background:#fff; padding:4px;"><img src="/aetas-mark.svg" alt="Aetas in the Workplace"></span>
-          <span class="brand-text">
-            <span style="color:#fff;">Aetas in the Workplace</span>
-            <span>The Business Performance Solution</span>
-          </span>
-        </div>
-        <p>Workplace financial wellbeing, education and consultancy services for SMEs and professional practices across the UK.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.88rem;"><a href="mailto:matthew.steiner@aetas-partners.com">matthew.steiner@aetas-partners.com</a></p>
-      </div>
       <div>
-        <h4>Aetas ITW</h4>
+        <h4>Site</h4>
         <ul>
+          <li><a href="./">Home</a></li>
           <li><a href="limited-companies.html">Limited companies</a></li>
           <li><a href="llps.html">LLPs</a></li>
           <li><a href="investment.html">Pricing</a></li>
-          <li><a href="calculator.html">ROEI Calculator</a></li>
-          <li><a href="diagnostic.html">Diagnostic</a></li>
           <li><a href="faqs.html">FAQs</a></li>
           <li><a href="insights.html">Insights</a></li>
         </ul>
       </div>
       <div>
-        <h4>The Aetas Group</h4>
+        <h4>Services</h4>
         <ul>
-          <li><a href="https://aetas-partners.com/">Aetas Partners</a></li>
-          <li><a href="https://aetas-wealth.com/">Aetas Wealth</a></li>
-          <li><a href="https://charitywellbeing.aetaspartners.com/">Charity Wellbeing Service</a></li>
+          <li><a href="https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V" target="_blank" rel="noopener">Book an Audit</a></li>
+          <li><a href="calculator.html">ROEI Calculator</a></li>
+          <li><a href="diagnostic.html">Diagnostic</a></li>
         </ul>
       </div>
       <div>
-        <h4>Get in touch</h4>
+        <h4>Useful</h4>
         <ul>
-          <li><a href="https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V" target="_blank" rel="noopener">Book an Audit</a></li>
-          <li><a href="https://www.aetas-partners.com">aetas-partners.com</a></li>
+          <li><a href="https://aetas-wealth.com/working-with-us.html" target="_blank" rel="noopener">Working with Us</a></li>
+          <li><a href="https://aetas-wealth.com/professional-introducers.html" target="_blank" rel="noopener">Professional Introducers</a></li>
+          <li><a href="https://aetas-wealth.com/lifetime-to-legacy.html" target="_blank" rel="noopener">Lifetime to Legacy</a></li>
+        </ul>
+        <p style="margin: 1rem 0 0.4rem 0; font-weight: 600; color: #fff;">External links</p>
+        <ul>
+          <li><a href="https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V" target="_blank" rel="noopener">Workplace Performance Audit</a></li>
+          <li><a href="https://charitywellbeing.aetaspartners.com/" target="_blank" rel="noopener">Charity Performance Audit</a></li>
+          <li><a href="https://aetas-wealth.com/" target="_blank" rel="noopener">Aetas Wealth</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Offices</h4>
+        <p style="margin: 0 0 0.4rem 0; font-weight: 600; color: #fff;">London</p>
+        <ul style="margin-bottom: 1.25rem;">
+          <li>13 Hanover Square</li>
+          <li>Mayfair, London</li>
+          <li>W1S 1HN</li>
+        </ul>
+        <p style="margin: 0 0 0.4rem 0; font-weight: 600; color: #fff;">Norwich</p>
+        <ul>
+          <li>Insight House</li>
+          <li>7a Alkmaar Way</li>
+          <li>Norwich International Business Park</li>
+          <li>NR6 6BF</li>
         </ul>
       </div>
     </div>
