@@ -141,9 +141,6 @@ body.is-advisor .non-advisor { display: none; }
 .btn-spinner { display: none; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-.page-footer { background: var(--aetas-blue); color: rgba(255,255,255,0.65); text-align: center; padding: 1.5rem var(--gutter); font-size: 0.82rem; line-height: 1.6; }
-.page-footer a { color: rgba(255,255,255,0.75); }
-.page-footer a:hover { color: var(--aetas-gold-soft); }
 
 @media (max-width: 720px) {
   .field-grid { grid-template-columns: 1fr; }
@@ -151,6 +148,77 @@ body.is-advisor .non-advisor { display: none; }
   .topbar-brand-tagline { font-size: 0.6rem; }
   .progress-bar { top: 73px; }
 }
+/* ---------- ITW canonical 4-column footer ---------- */
+.site-footer {
+  background: #001640;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 4rem 0 2rem;
+  position: relative;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.site-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, #9A7B3A 0%, #009CA6 100%);
+}
+.site-footer-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 880px) {
+  .site-footer .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+@media (max-width: 480px) {
+  .site-footer .footer-grid { grid-template-columns: 1fr; }
+}
+.site-footer .footer-grid h4 {
+  color: #fff;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+.site-footer .footer-grid ul { list-style: none; padding: 0; margin: 0; }
+.site-footer .footer-grid li { margin-bottom: 0.55rem; }
+.site-footer .footer-grid a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.site-footer .footer-grid a:hover { color: #fff; }
+.site-footer .footer-sublabel {
+  margin: 1rem 0 0.4rem;
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.92rem;
+}
+.site-footer .footer-address { margin-bottom: 1.25rem; }
+.site-footer .footer-address li { color: rgba(255, 255, 255, 0.7); font-size: 0.92rem; }
+.site-footer .footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+}
+.site-footer .footer-bottom p { margin: 0 0 0.5rem; color: inherit; }
+.site-footer .footer-bottom a { color: rgba(255, 255, 255, 0.7); text-decoration: none; }
+.site-footer .footer-bottom a:hover { color: #fff; }
+.site-footer .footer-bottom strong { color: rgba(255, 255, 255, 0.85); font-weight: 600; }
+/* ---------- /ITW canonical 4-column footer ---------- */
+
 </style>
 </head>
 <body>
@@ -414,9 +482,65 @@ body.is-advisor .non-advisor { display: none; }
   </form>
 </div>
 
-<footer class="page-footer">
-  Aetas in the Workplace &nbsp;&middot;&nbsp; A trading style of Aetas Wealth, Insight Financial Associates Limited &nbsp;&middot;&nbsp; FCA reg 458421 &nbsp;&middot;&nbsp;
-  <a href="https://itw.aetaspartners.com/privacy.html">Privacy Policy</a>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="footer-grid">
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="limited-companies.html">Limited companies</a></li>
+          <li><a href="llps.html">LLPs</a></li>
+          <li><a href="investment.html">Pricing</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="insights.html">Insights</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V" target="_blank" rel="noopener">Book an Audit</a></li>
+          <li><a href="calculator.html">ROEI Calculator</a></li>
+          <li><a href="diagnostic.html">Diagnostic</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Useful</h4>
+        <ul>
+          <li><a href="https://aetas-wealth.com/working-with-us.html" target="_blank" rel="noopener">Working with Us</a></li>
+          <li><a href="https://aetas-wealth.com/professional-introducers.html" target="_blank" rel="noopener">Professional Introducers</a></li>
+          <li><a href="https://aetas-wealth.com/lifetime-to-legacy.html" target="_blank" rel="noopener">Lifetime to Legacy</a></li>
+        </ul>
+        <p class="footer-sublabel">External links</p>
+        <ul>
+          <li><a href="https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V" target="_blank" rel="noopener">Workplace Performance Audit</a></li>
+          <li><a href="https://charitywellbeing.aetaspartners.com/" target="_blank" rel="noopener">Charity Performance Audit</a></li>
+          <li><a href="https://aetas-wealth.com/" target="_blank" rel="noopener">Aetas Wealth</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Offices</h4>
+        <p class="footer-sublabel">London</p>
+        <ul class="footer-address">
+          <li>13 Hanover Square</li>
+          <li>Mayfair, London</li>
+          <li>W1S 1HN</li>
+        </ul>
+        <p class="footer-sublabel">Norwich</p>
+        <ul class="footer-address">
+          <li>Insight House</li>
+          <li>7a Alkmaar Way</li>
+          <li>Norwich International Business Park</li>
+          <li>NR6 6BF</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services support financial understanding, engagement, and resilience but do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by <strong>Aetas Wealth</strong>, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</p>
+      <p>&copy; <span data-year>2026</span> Aetas in the Workplace. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
+    </div>
+  </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
