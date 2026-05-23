@@ -29,11 +29,12 @@ EXCLUDE_DIRS = {
 
 # Specific files to skip (matched by filename only, not path)
 EXCLUDE_FILES = {
-    "404.html",                       # error page
-    "form-thankyou.html",             # post-form, noindex
-    "benefits-review.html",           # internal data capture
-    "google4bf7b0394b6b5986.html",    # Google site verification file
-    "charities.html",                 # redirect to charitywellbeing.aetaspartners.com (noindex)
+    "404.html",                                  # error page
+    "form-thankyou.html",                        # post-form, noindex
+    "benefits-review.html",                      # internal data capture
+    "google4bf7b0394b6b5986.html",               # Google site verification file
+    "charities.html",                            # redirect to charitywellbeing.aetaspartners.com (noindex)
+    "introducing-the-aetas-collective.html",     # article retired (Aetas Collective branding removed)
 }
 
 
