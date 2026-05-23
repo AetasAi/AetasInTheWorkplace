@@ -35,6 +35,7 @@ EXCLUDE_FILES = {
     "google4bf7b0394b6b5986.html",               # Google site verification file
     "charities.html",                            # redirect to charitywellbeing.aetaspartners.com (noindex)
     "introducing-the-aetas-collective.html",     # article retired (Aetas Collective branding removed)
+    "article-template.html",                     # internal article template, not real content
 }
 
 
