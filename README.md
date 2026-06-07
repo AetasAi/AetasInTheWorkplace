@@ -1,6 +1,6 @@
 # Aetas in the Workplace
 
-**Live site:** https://itw.aetas-wealth.com  
+**Live site:** https://workplace.aetas-wealth.com  
 **Repo:** https://github.com/AetasAi/AetasInTheWorkplace  
 **Deployed via:** GitHub Pages (automatic on push to `main`)  
 **Contact:** matthew.steiner@aetas-partners.com
@@ -74,7 +74,7 @@ The site presents the service to two primary audiences — limited companies and
 
 | File | Description |
 |------|-------------|
-| `CNAME` | Custom domain: `itw.aetas-wealth.com` |
+| `CNAME` | Custom domain: `workplace.aetas-wealth.com` |
 | `sitemap.xml` | Sitemap for search engines |
 | `robots.txt` | Permits ClaudeBot, GPTBot, PerplexityBot, Google-Extended |
 | `llms.txt` | AI crawler guidance — service description, pages, contact |
@@ -137,7 +137,7 @@ https://links.aetas-partners.com/widget/booking/IacdM2cW2bnLm0pK7Jty
 
 ### Analytics — GA4
 **Measurement ID:** `<script defer src="/assets/js/analytics.js"></script>`  
-All pages include the GA4 tag. Shared property with `aetas-partners.com` — filter by hostname `itw.aetas-wealth.com` in GA4 for ITW-only data.
+All pages include the GA4 tag. Shared property with `aetas-partners.com` — filter by hostname `workplace.aetas-wealth.com` in GA4 for ITW-only data.
 
 ### Booking — GoHighLevel
 All booking CTAs link to the GHL widget. The `whats-next.html` page should be set as the confirmation redirect URL in GHL calendar settings.
@@ -212,7 +212,7 @@ Checklist:
 
 GitHub Pages deploys automatically on every push to `main`. Takes 1–2 minutes.
 
-**Domain:** `itw.aetas-wealth.com` (configured via `CNAME`)  
+**Domain:** `workplace.aetas-wealth.com` (configured via `CNAME`)  
 **Branch:** `main` only
 
 ### Push workflow
@@ -272,12 +272,12 @@ If this figure changes, update all instances.
 <meta name="theme-color" content="#1a2b4a">
 
 <!-- Canonical + OG (adjust per page) -->
-<link rel="canonical" href="https://itw.aetas-wealth.com/[page-url]">
+<link rel="canonical" href="https://workplace.aetas-wealth.com/[page-url]">
 <meta property="og:title" content="[Page title]">
 <meta property="og:description" content="[Page description]">
-<meta property="og:url" content="https://itw.aetas-wealth.com/[page-url]">
+<meta property="og:url" content="https://workplace.aetas-wealth.com/[page-url]">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://itw.aetas-wealth.com/og-image.png">
+<meta property="og:image" content="https://workplace.aetas-wealth.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">

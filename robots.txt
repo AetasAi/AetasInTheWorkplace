@@ -1,5 +1,5 @@
 # Aetas in the Workplace — robots.txt
-# https://itw.aetas-wealth.com
+# https://workplace.aetas-wealth.com
 
 # ─────────────────────────────────────────────
 # Standard search engine bots
@@ -57,10 +57,10 @@ Allow: /
 # Sitemaps and structured content
 # ─────────────────────────────────────────────
 
-Sitemap: https://itw.aetas-wealth.com/sitemap.xml
+Sitemap: https://workplace.aetas-wealth.com/sitemap.xml
 
 # ─────────────────────────────────────────────
 # AI agent discovery files
 # ─────────────────────────────────────────────
 
-# llms.txt is at: https://itw.aetas-wealth.com/llms.txt
+# llms.txt is at: https://workplace.aetas-wealth.com/llms.txt
