@@ -1,5 +1,5 @@
 ---
-site: itw.aetaspartners.com
+site: itw.aetas-wealth.com
 entity: Aetas in the Workplace
 type: Employee financial wellbeing consultancy
 parent: Aetas Partners

@@ -90,20 +90,20 @@ Diagnostic and benefits review completed. Pension review concluded the existing 
 
 ## ROEI Calculator
 
-A short online tool at itw.aetaspartners.com/calculator.html that estimates the annual cost of financial pressure in a specific workforce before any conversation takes place. Takes approximately 3 minutes to complete.
+A short online tool at itw.aetas-wealth.com/calculator.html that estimates the annual cost of financial pressure in a specific workforce before any conversation takes place. Takes approximately 3 minutes to complete.
 
 ---
 
 ## Key URLs
 
-- Homepage: https://itw.aetaspartners.com/
-- Limited companies: https://itw.aetaspartners.com/limited-companies.html
-- LLPs: https://itw.aetaspartners.com/llps.html
-- Pricing: https://itw.aetaspartners.com/investment.html
-- ROEI Calculator: https://itw.aetaspartners.com/calculator.html
-- Diagnostic: https://itw.aetaspartners.com/diagnostic.html
-- FAQs: https://itw.aetaspartners.com/faqs.html
-- Case studies: https://itw.aetaspartners.com/case-studies/
+- Homepage: https://itw.aetas-wealth.com/
+- Limited companies: https://itw.aetas-wealth.com/limited-companies.html
+- LLPs: https://itw.aetas-wealth.com/llps.html
+- Pricing: https://itw.aetas-wealth.com/investment.html
+- ROEI Calculator: https://itw.aetas-wealth.com/calculator.html
+- Diagnostic: https://itw.aetas-wealth.com/diagnostic.html
+- FAQs: https://itw.aetas-wealth.com/faqs.html
+- Case studies: https://itw.aetas-wealth.com/case-studies/
 - Book an Audit: https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V
 
 ---
