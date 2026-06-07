@@ -1,21 +1,19 @@
-# Aetas in the Workplace — robots.txt
+# Aetas Workplace — robots.txt
 # https://workplace.aetas-wealth.com
-
-# ─────────────────────────────────────────────
-# Standard search engine bots
-# ─────────────────────────────────────────────
 
 User-agent: *
 Allow: /
-Disallow: /private/
-Disallow: /admin/
-
-# ─────────────────────────────────────────────
-# AI agent crawlers — explicitly permitted
-# ─────────────────────────────────────────────
+Disallow: /form-thankyou.html
+Disallow: /whats-next.html
+Disallow: /discovery-briefing.html
+Disallow: /initial-conversation-briefing.html
+Disallow: /benefits-review.html
 
 # Anthropic (Claude)
 User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
 Allow: /
 
 # OpenAI (ChatGPT browsing, SearchGPT)
@@ -29,15 +27,25 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-# Google AI (Gemini, AI Overviews)
+# Google (standard + AI Overviews)
+User-agent: Googlebot
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
-# Meta AI
-User-agent: FacebookBot
+# Bing / Microsoft Copilot
+User-agent: bingbot
 Allow: /
 
-# Common crawl (used by many AI training datasets)
+User-agent: BingPreview
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+# Common Crawl
 User-agent: CCBot
 Allow: /
 
@@ -53,14 +61,6 @@ Allow: /
 User-agent: BraveBot
 Allow: /
 
-# ─────────────────────────────────────────────
-# Sitemaps and structured content
-# ─────────────────────────────────────────────
-
 Sitemap: https://workplace.aetas-wealth.com/sitemap.xml
-
-# ─────────────────────────────────────────────
-# AI agent discovery files
-# ─────────────────────────────────────────────
-
-# llms.txt is at: https://workplace.aetas-wealth.com/llms.txt
+Sitemap: https://workplace.aetas-wealth.com/llms.txt
+Sitemap: https://workplace.aetas-wealth.com/llms-full.txt
