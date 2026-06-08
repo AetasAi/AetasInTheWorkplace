@@ -115,4 +115,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <url><loc>https://workplace.aetas-wealth.com/guides/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://workplace.aetas-wealth.com/guides/the-cost-of-financial-anxiety-in-the-workplace.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://workplace.aetas-wealth.com/guides/generational-differences-in-the-workforce.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://workplace.aetas-wealth.com/guides/employee-benefits-national-insurance-planning.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://workplace.aetas-wealth.com/guides/salary-sacrifice-pensions-explained-for-employers.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://workplace.aetas-wealth.com/guides/measuring-the-roi-of-financial-wellbeing-programmes.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://workplace.aetas-wealth.com/guides/building-an-employee-benefits-strategy-for-smes.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
