@@ -21,13 +21,13 @@
   --aetas-blue: #00205B;
   --aetas-blue-dark: #001640;
   --aetas-blue-soft: #f4f6fb;
-  --aetas-turquoise: #009CA6;
-  --aetas-turquoise-dark: #007a82;
-  --aetas-gold: #9A7B3A;
-  --aetas-gold-soft: #c8a55c;
+  --aetas-turquoise: #00747E;
+  --aetas-turquoise-dark: #006870;
+  --aetas-gold: #896C2E;
+  --aetas-gold-soft: #8a6e20;
   --ink: #1a1f2e;
   --ink-soft: #4a5269;
-  --ink-muted: #8089a0;
+  --ink-muted: #606882;
   --paper: #ffffff;
   --paper-warm: #fafaf7;
   --line: #e6e8ee;
@@ -159,7 +159,7 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
   position: absolute;
   inset: 0 0 auto 0;
   height: 3px;
-  background: linear-gradient(90deg, #9A7B3A 0%, #009CA6 100%);
+  background: linear-gradient(90deg, #896C2E 0%, #00747E 100%);
 }
 .site-footer-inner {
   width: 100%;
@@ -788,7 +788,7 @@ function generatePDF(){
   const pageW = doc.internal.pageSize.getWidth();
   const margin = 18;
   let y = 22;
-  const C_BLUE = '#00205B', C_GOLD = '#9A7B3A', C_INK = '#1a1f2e', C_INK_SOFT = '#4a5269', C_MUTED = '#8089a0';
+  const C_BLUE = '#00205B', C_GOLD = '#896C2E', C_INK = '#1a1f2e', C_INK_SOFT = '#4a5269', C_MUTED = '#606882';
 
   function pageBreak(needed){ if(y + needed > 280){ doc.addPage(); y = 22; } }
   function sectionHead(num, title){
@@ -817,7 +817,7 @@ function generatePDF(){
   doc.setTextColor('#ffffff'); doc.setFont('helvetica', 'bold'); doc.setFontSize(11);
   doc.text('Aetas in the Workplace', margin, 9);
   doc.setFont('helvetica', 'normal'); doc.setFontSize(8);
-  doc.setTextColor('#c8a55c');
+  doc.setTextColor('#8a6e20');
   doc.text('Discovery Briefing', pageW - margin, 9, { align: 'right' });
 
   // Title block
