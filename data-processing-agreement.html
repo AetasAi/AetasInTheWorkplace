@@ -881,7 +881,7 @@ body{font-family:'Open Sans', sans-serif;font-weight:300;color:var(--text-body);
         await emailjs.send(EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_INTERNAL,{
           ref:ref, org:clientOrg, contact:clientPrint, email:clientEmail,
           form_type:'Data Processing Agreement', form_data:'Client: '+clientOrg+'\nSigned: '+clientSig+'\nDate: '+clientDate,
-          submitted:new Date().toLocaleString('en-GB'), to_email:'matthew.steiner@aetas-partners.com'
+          submitted:new Date().toLocaleString('en-GB'), to_email:'matthew.steiner@aetas-wealth.com'
         });
         if(clientEmail){
           await emailjs.send(EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_CONFIRM,{
