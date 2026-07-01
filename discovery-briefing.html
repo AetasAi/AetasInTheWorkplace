@@ -962,7 +962,7 @@ document.getElementById('briefing-form').addEventListener('submit', async functi
       ref: FORM_REF, org: val('org_name'), contact: val('contact_name'),
       email: val('contact_email'), form_type: 'Discovery Briefing',
       form_data: summary, submitted: new Date().toLocaleString('en-GB'),
-      to_email: 'matthew.steiner@aetas-partners.com'
+      to_email: 'matthew.steiner@aetas-wealth.com'
     });
 
     if(val('contact_email') !== '(not provided)'){
@@ -978,7 +978,7 @@ document.getElementById('briefing-form').addEventListener('submit', async functi
   } catch(err){
     console.error('Submission error:', err);
     btn.classList.remove('loading'); btn.disabled = false; btnText.textContent = 'Submit briefing';
-    alert('There was a problem sending your briefing. Your PDF has been downloaded. Please email it directly to matthew.steiner@aetas-partners.com.');
+    alert('There was a problem sending your briefing. Your PDF has been downloaded. Please email it directly to matthew.steiner@aetas-wealth.com.');
   }
 });
 </script>
