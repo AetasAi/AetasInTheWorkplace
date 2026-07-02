@@ -304,3 +304,24 @@ All public pages include (adapted per page):
 ---
 
 *Aetas in the Workplace · A trading style of Aetas Wealth, Insight Financial Associates Limited · FCA reg 458421*
+
+
+## Phase 6 — Monitoring
+
+### Lighthouse CI Setup (manual step required)
+The PAT used for automated updates does not have `workflows` scope.
+To complete the Lighthouse CI setup:
+
+1. In GitHub, go to **AetasAi/AetasInTheWorkplace > Add file > Create new file**
+2. Name it: `.github/workflows/lighthouse-ci.yml`
+3. Paste the content from `scripts/lighthouse-ci.yml.txt`
+4. Also create `.github/lighthouse-budget.json` using content from `scripts/lighthouse-budget.json`
+5. Commit both files — the workflow will run automatically on next push to main
+
+### Google Search Console
+- Submit sitemap: `https://workplace.aetas-wealth.com/sitemap.xml`
+- Verify domain ownership via the DNS TXT record method in Cloudflare
+
+### Screaming Frog
+- Re-crawl recommended monthly
+- Compare against this session's baseline (0 errors, 4 warnings)
