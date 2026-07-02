@@ -595,6 +595,8 @@ article.post blockquote {
   inset: 0 0 auto 0;
   height: 3px;
   background: linear-gradient(90deg, var(--aetas-gold) 0%, var(--aetas-turquoise) 100%);
+  z-index: 0;
+  pointer-events: none;
 }
 .footer-grid {
   display: grid;
