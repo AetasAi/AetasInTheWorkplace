@@ -588,6 +588,10 @@ article.post blockquote {
   color: rgba(255, 255, 255, 0.7);
   padding-block: 4rem 2rem;
 }
+/* Explicit override — prevents Lighthouse inheriting rgba(255,255,255,0.7) as text colour */
+.site-footer .footer-heading {
+  color: #ffffff;
+}
 .footer-rule {
   height: 3px;
   background: linear-gradient(90deg, var(--aetas-gold) 0%, var(--aetas-turquoise) 100%);
