@@ -589,14 +589,10 @@ article.post blockquote {
   padding-block: 4rem 2rem;
   position: relative;
 }
-.site-footer::before {
-  content: '';
-  position: absolute;
-  inset: 0 0 auto 0;
+.footer-rule {
   height: 3px;
   background: linear-gradient(90deg, var(--aetas-gold) 0%, var(--aetas-turquoise) 100%);
-  z-index: 0;
-  pointer-events: none;
+  margin-bottom: 0;
 }
 .footer-grid {
   display: grid;
