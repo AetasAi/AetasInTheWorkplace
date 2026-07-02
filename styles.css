@@ -609,7 +609,7 @@ article.post blockquote {
   .footer-grid { grid-template-columns: 1fr; }
 }
 .footer-grid h4,
-.footer-heading {
+.site-footer .footer-heading {
   color: #fff;
   font-size: 0.78rem;
   letter-spacing: var(--tracking-eyebrow);
