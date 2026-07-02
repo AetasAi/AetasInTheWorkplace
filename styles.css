@@ -587,7 +587,6 @@ article.post blockquote {
   background: var(--aetas-blue-dark);
   color: rgba(255, 255, 255, 0.7);
   padding-block: 4rem 2rem;
-  position: relative;
 }
 .footer-rule {
   height: 3px;
@@ -599,8 +598,6 @@ article.post blockquote {
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 2.5rem;
   margin-bottom: 3rem;
-  position: relative;
-  z-index: 1;
 }
 @media (max-width: 880px) {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -611,11 +608,6 @@ article.post blockquote {
 .footer-grid h4,
 .site-footer .footer-heading {
   color: #fff;
-  background-color: transparent;
-  position: relative;
-  z-index: 1;
-  border: none;
-  outline: none;
   font-size: 0.78rem;
   letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
