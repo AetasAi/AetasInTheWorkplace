@@ -608,7 +608,8 @@ article.post blockquote {
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
-.footer-grid h4 {
+.footer-grid h4,
+.footer-heading {
   color: #fff;
   font-size: 0.78rem;
   letter-spacing: var(--tracking-eyebrow);
