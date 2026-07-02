@@ -3,117 +3,93 @@
   <!-- Homepage -->
   <url>
     <loc>https://workplace.aetas-wealth.com/</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- Audience pages -->
   <url>
     <loc>https://workplace.aetas-wealth.com/limited-companies.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://workplace.aetas-wealth.com/llps.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Tools and pricing -->
   <url>
     <loc>https://workplace.aetas-wealth.com/calculator.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://workplace.aetas-wealth.com/diagnostic.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://workplace.aetas-wealth.com/investment.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Section hubs -->
   <url>
     <loc>https://workplace.aetas-wealth.com/faqs.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://workplace.aetas-wealth.com/insights.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Case studies -->
   <url>
     <loc>https://workplace.aetas-wealth.com/case-studies/bristol-organisation.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://workplace.aetas-wealth.com/case-studies/uk-retail-group.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <priority>0.7</priority>
   </url>
   <!-- Insights -->
   <url>
     <loc>https://workplace.aetas-wealth.com/insights/financial-wellbeing-in-the-workplace.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://workplace.aetas-wealth.com/insights/strengthening-your-team-through-financial-wellbeing.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://workplace.aetas-wealth.com/insights/when-everyday-life-stops-talking-back.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://workplace.aetas-wealth.com/insights/why-financial-wellbeing-is-a-business-issue.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <priority>0.7</priority>
   </url>
   <!-- Other -->
   <url>
-    <loc>https://workplace.aetas-wealth.com/data-processing-agreement.html</loc>
-    <lastmod>2026-05-23</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://workplace.aetas-wealth.com/discovery-briefing.html</loc>
-    <lastmod>2026-05-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://workplace.aetas-wealth.com/initial-conversation-briefing.html</loc>
-    <lastmod>2026-05-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://workplace.aetas-wealth.com/privacy.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://workplace.aetas-wealth.com/whats-next.html</loc>
-    <lastmod>2026-05-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 
   <url><loc>https://workplace.aetas-wealth.com/guides/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
