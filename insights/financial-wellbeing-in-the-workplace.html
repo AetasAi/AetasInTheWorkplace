@@ -448,11 +448,22 @@ if(grid){
   document.getElementById('cookie-accept').addEventListener('click', function(){
     localStorage.setItem('aetas-cookie-consent', 'accepted');
     notice.style.display = 'none';
+    // Fire analytics immediately on accept (don't wait for next interaction)
+    if (window.gtag) return;
+    var GA4_ID = 'G-HNH05BKNFX';
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA4_ID, { anonymize_ip: true });
   });
   document.getElementById('cookie-decline').addEventListener('click', function(){
     localStorage.setItem('aetas-cookie-consent', 'declined');
     notice.style.display = 'none';
-    // Note: GA4 already defers until interaction — declining just prevents future prompts
   });
 })();
 </script>
