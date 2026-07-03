@@ -97,12 +97,12 @@ A short online tool at workplace.aetas-wealth.com/calculator.html that estimates
 ## Key URLs
 
 - Homepage: https://workplace.aetas-wealth.com/
-- Limited companies: https://workplace.aetas-wealth.com/limited-companies.html
-- LLPs: https://workplace.aetas-wealth.com/llps.html
-- Pricing: https://workplace.aetas-wealth.com/investment.html
-- ROEI Calculator: https://workplace.aetas-wealth.com/calculator.html
-- Diagnostic: https://workplace.aetas-wealth.com/diagnostic.html
-- FAQs: https://workplace.aetas-wealth.com/faqs.html
+- Limited companies: https://workplace.aetas-wealth.com/limited-companies
+- LLPs: https://workplace.aetas-wealth.com/llps
+- Pricing: https://workplace.aetas-wealth.com/investment
+- ROEI Calculator: https://workplace.aetas-wealth.com/calculator
+- Diagnostic: https://workplace.aetas-wealth.com/diagnostic
+- FAQs: https://workplace.aetas-wealth.com/faqs
 - Case studies: https://workplace.aetas-wealth.com/case-studies/
 - Book an Audit: https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V
 
