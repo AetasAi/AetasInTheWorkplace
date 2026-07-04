@@ -62,3 +62,4 @@ User-agent: BraveBot
 Allow: /
 
 Sitemap: https://workplace.aetas-wealth.com/sitemap.xml
+Sitemap: https://workplace.aetas-wealth.com/image-sitemap.xml
