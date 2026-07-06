@@ -7,8 +7,8 @@
 <meta name="author" content="Matthew Steiner, Aetas in the Workplace">
 <meta name="meta-author" content="Matthew Steiner, Aetas in the Workplace">
 <link rel="canonical" href="https://workplace.aetas-wealth.com/initial-conversation-briefing">
-<title>Initial Conversation Briefing &middot; Aetas in the Workplace</title>
-<meta name="description" content="A short briefing before our first conversation, helping us focus the time and arrive prepared.">
+<title>Initial Conversation Briefing | Aetas in the Workplace</title>
+<meta name="description" content="Prepare for your Workplace Performance Audit conversation with Aetas. What to expect, what to prepare and how the process works.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
@@ -221,6 +221,42 @@ body.is-advisor .non-advisor { display: none; }
 .site-footer .footer-bottom a:hover { color: #fff; }
 .site-footer .footer-bottom strong { color: rgba(255, 255, 255, 0.85); font-weight: 600; }
 /* ---------- /ITW canonical 4-column footer ---------- */
+
+
+/* ---- Nav dropdown ---- */
+.nav-dropdown { position: relative; }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: var(--aetas-blue);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  list-style: none;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.nav-dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-dropdown-menu li a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu:hover { display: block; }
+.nav-caret { font-size: 0.6rem; margin-left: 0.3rem; vertical-align: middle; }
+@media (max-width: 768px) {
+  .nav-dropdown-menu { position: static; box-shadow: none; border: none; background: transparent; padding: 0 0 0 1rem; }
+  .nav-dropdown-menu li a { color: rgba(255,255,255,0.7); padding: 0.4rem 0; }
+  .nav-dropdown:hover .nav-dropdown-menu { display: none; }
+  .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+}
 
 </style>
   <meta property="og:type" content="website">
@@ -516,52 +552,60 @@ body.is-advisor .non-advisor { display: none; }
 </div>
 
 </main>
+<!-- ============================================================
+     SHARED: site-footer
+     ============================================================ -->
 <footer class="site-footer">
   <div class="footer-rule"></div>
-  <div class="site-footer-inner">
+  <div class="container">
     <div class="footer-grid">
       <div>
-        <p class="footer-heading" style="color:#ffffff">Site</p>
+        <p class="footer-heading" style="color:#ffffff">Navigate</p>
         <ul>
-          <li><a href="./">Home</a></li>
-          <li><a href="limited-companies">Limited companies</a></li>
-          <li><a href="llps">LLPs</a></li>
-          <li><a href="investment">Pricing</a></li>
-          <li><a href="faqs">FAQs</a></li>
-          <li><a href="insights">Insights</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/roei">ROEI Framework</a></li>
+          <li><a href="/limited-companies">For Employers</a></li>
+          <li><a href="/llps">For Professional Practices</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/insights">Insights</a></li>
+          <li><a href="/faqs">FAQs</a></li>
         </ul>
       </div>
       <div>
-        <p class="footer-heading" style="color:#ffffff">Services</p>
+        <p class="footer-heading" style="color:#ffffff">Tools</p>
         <ul>
-          <li><a href="https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V" target="_blank" rel="noopener">Book an Audit</a></li>
-          <li><a href="calculator">ROEI Calculator</a></li>
-          <li><a href="diagnostic">Diagnostic</a></li>
+          <li><a href="/diagnostic">Workplace Diagnostic</a></li>
+          <li><a href="/calculator">ROEI Calculator</a></li>
+          <li><a href="/case-studies/bristol-organisation">Bristol Case Study</a></li>
+          <li><a href="/case-studies/uk-retail-group">UK Retail Case Study</a></li>
+        </ul>
+        <p style="margin: 1rem 0 0.4rem 0; font-weight: 600; color: #fff;">Guides</p>
+        <ul>
+          <li><a href="/guides/the-cost-of-financial-anxiety-in-the-workplace">Financial Anxiety at Work</a></li>
+          <li><a href="/guides/generational-differences-in-the-workforce">Generational Differences</a></li>
+          <li><a href="/guides/building-an-employee-benefits-strategy-for-smes">Benefits Strategy Guide</a></li>
+          <li><a href="/guides/salary-sacrifice-pensions-explained-for-employers">Salary Sacrifice Guide</a></li>
         </ul>
       </div>
       <div>
-        <p class="footer-heading" style="color:#ffffff">Useful</p>
-        <ul>
-          <li><a href="https://aetas-wealth.com/working-with-us" target="_blank" rel="noopener">Working with Us</a></li>
-          <li><a href="https://aetas-wealth.com/professional-introducers" target="_blank" rel="noopener">Professional Introducers</a></li>
-          <li><a href="https://aetas-wealth.com/lifetime-to-legacy" target="_blank" rel="noopener">Lifetime to Legacy</a></li>
-        </ul>
-        <p class="footer-sublabel">External Links</p>
+        <p class="footer-heading" style="color:#ffffff">Also part of Aetas</p>
         <ul>
           <li><a href="https://aetas-wealth.com/" target="_blank" rel="noopener">Aetas Wealth</a></li>
-          <li><a href="https://charities.aetaspartners.com/" target="_blank" rel="noopener">Charity Performance Audit</a></li>
+          <li><a href="https://charities.aetas-wealth.com/" target="_blank" rel="noopener">Aetas for Charities</a></li>
         </ul>
+        <p style="margin:1.5rem 0 0.75rem;font-size:0.9rem;color:rgba(255,255,255,0.78);">Aetas Wealth is a trading name of Insight Financial Associates Ltd, authorised and regulated by the FCA (FRN 458421).</p>
+        <p style="margin:0;font-size:0.9rem;color:rgba(255,255,255,0.78);">13 Hanover Square, Mayfair, London W1S 1HN</p>
       </div>
       <div>
         <p class="footer-heading" style="color:#ffffff">Offices</p>
-        <p class="footer-sublabel">London</p>
-        <ul class="footer-address">
+        <p style="margin: 0 0 0.4rem 0; font-weight: 600; color: #fff;">London</p>
+        <ul style="margin-bottom: 1.25rem;">
           <li>13 Hanover Square</li>
           <li>Mayfair, London</li>
           <li>W1S 1HN</li>
         </ul>
-        <p class="footer-sublabel">Norwich</p>
-        <ul class="footer-address">
+        <p style="margin: 0 0 0.4rem 0; font-weight: 600; color: #fff;">Norwich</p>
+        <ul>
           <li>Insight House</li>
           <li>7a Alkmaar Way</li>
           <li>Norwich International Business Park</li>
@@ -572,10 +616,11 @@ body.is-advisor .non-advisor { display: none; }
 
     <div class="footer-bottom">
       <p>Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services support financial understanding, engagement, and resilience but do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by <strong>Aetas Wealth</strong>, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</p>
-      <p>&copy; <span data-year>2026</span> Aetas in the Workplace. All rights reserved. <a href="privacy" style="text-decoration:underline;">Privacy Policy</a></p>
+      <p>&#169; <span data-year>2026</span> Aetas in the Workplace. All rights reserved. <a href="privacy" style="text-decoration:underline;">Privacy Policy</a></p>
     </div>
   </div>
 </footer>
+<!-- /site-footer -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>

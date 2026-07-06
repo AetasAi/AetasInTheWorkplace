@@ -1,70 +1,48 @@
 # Aetas in the Workplace
 
-> Aetas in the Workplace (Aetas ITW) is a business performance solution for SMEs, LLPs, and professional practices in the United Kingdom. It identifies and fixes the hidden cost of financial pressure in the workforce — in productivity, retention, and leadership time. The programme is delivered by Aetas Partners and supported by Aetas Wealth, an FCA-regulated financial advisory firm (FCA registration 458421).
+> Aetas in the Workplace is a workplace performance consultancy for SME employers in the United Kingdom. It helps organisations improve business performance, retention and employee engagement through financial wellbeing, employee benefits review and strategic workplace planning. The programme is delivered by Matthew Steiner and Daniel Cottam, and supported by Aetas Wealth, an FCA-regulated financial advisory firm (FCA registration 458421).
 
-Aetas ITW is not a platform or a generic employee benefits package. It is a bespoke, consultancy-led engagement designed for organisations with between 10 and 250 employees — the range where financial wellbeing has the greatest individual impact and where most off-the-shelf market solutions do not translate effectively.
-
-The entry point is always the Workplace Performance Review — a no-cost, no-obligation, two-session structured conversation that identifies whether financial pressure is affecting performance, and what it is likely costing. Nothing is recommended or introduced without this first.
+Aetas in the Workplace is not a generic employee benefits platform. It is a consultancy-led engagement for organisations with between 10 and 250 employees, built around the Return on Employee Investment (ROEI) framework. Every engagement begins with a no-cost Workplace Performance Audit before any recommendation is made.
 
 ## Who this is for
 
-- SMEs and mid-sized limited companies (10–250 employees) seeking a commercially justified approach to workforce performance
-- LLPs and professional practices — law firms, accountancy practices, architecture and surveying firms, management consultancies — where support staff financial pressure falls directly on fee-earning partners
-- Business owners, managing partners, and leadership teams where financial pressure in the workforce is affecting output, retention, or leadership capacity
-- Organisations where a single disengaged employee represents a meaningful share of total headcount
+- SME and mid-sized limited companies (10 to 250 employees) seeking a commercially justified approach to workforce performance
+- LLPs and professional practices including law firms, accountancy practices, architecture and surveying firms, where support staff financial pressure affects fee-earning output
+- Business owners, managing directors, HR directors and finance directors where financial pressure in the workforce is affecting output, retention or leadership capacity
 
-## What the problem looks like
+## The ROEI Framework
 
-Financial pressure among employees shows up as:
-- Reduced focus and output (presenteeism)
-- Higher-than-average absence
-- Unexplained disengagement and performance drift
-- Staff leaving earlier than they should
-- Leadership time spent managing people problems rather than driving the business
+ROEI (Return on Employee Investment) is the proprietary Aetas framework for measuring and improving the commercial return on an employer's total investment in their people. It covers salary, pension, benefits, training, wellbeing and management time. The five stages are: Measure, Diagnose, Recommend, Implement, and Measure Again.
 
-Most business owners can see these effects. Almost none have connected them to their root cause.
+## The programme pillars
 
-## The programme
+**Clarity** - a structured review of pension, benefits and financial support arrangements. Identifies gaps, inefficiencies and spend that is not performing.
 
-Aetas ITW operates across three pillars:
+**Confidence** - practical financial education for employees. Group workshops and optional one-to-one sessions with a regulated financial planner.
 
-**Clarity** — a structured review of the organisation's pension, benefits, and financial support arrangements. Identifies gaps, inefficiencies, and spend that is not performing. Employees begin to understand and value what is already in place.
+**Stability** - ongoing access to tools, guidance and partner support. Sustains improvements and builds financial resilience across the workforce over time.
 
-**Confidence** — practical financial education for employees. Group workshops (online or in-person) covering budgeting, debt, pensions, and planning. Optional one-to-one sessions with a regulated financial planner at no cost to the employer.
+## The team
 
-**Stability** — ongoing access to tools, guidance, and partner support. Sustains the improvements made and builds financial resilience across the workforce over time.
+- Matthew Steiner, Managing Director. Leads every Workplace Performance Audit personally. Over 20 years in financial services. matthew.steiner@aetas-wealth.com
+- Daniel Cottam, Financial Planner. Delivers employee-facing workshops and one-to-one guidance sessions.
 
-## Partner services
+## Navigation
 
-A curated set of employee benefit and wellbeing partners available as part of the Aetas ITW programme, including:
-- Shop St — employee savings platform (cashback and discounts at major retailers)
-- Online wills and legacy planning service
-- 24/7 GP and wellbeing support via 360 Wellbeing
-
-## Pricing
-
-Fees are per-employee and scale with headcount. Indicative full programme rates:
-- 10–30 employees: from £165/employee/year
-- 31–80 employees: from £140/employee/year
-- 81–250 employees: from £115/employee/year
-
-The Workplace Performance Review is always free. Fees are agreed in writing before delivery begins.
+- [Home](https://workplace.aetas-wealth.com/)
+- [ROEI Framework](https://workplace.aetas-wealth.com/roei)
+- [For Employers (Limited Companies)](https://workplace.aetas-wealth.com/limited-companies)
+- [For Professional Practices (LLPs)](https://workplace.aetas-wealth.com/llps)
+- [Pricing](https://workplace.aetas-wealth.com/investment)
+- [ROEI Calculator](https://workplace.aetas-wealth.com/calculator)
+- [Workplace Diagnostic](https://workplace.aetas-wealth.com/diagnostic)
+- [Insights](https://workplace.aetas-wealth.com/insights)
+- [FAQs](https://workplace.aetas-wealth.com/faqs)
 
 ## Case studies
 
-- [Bristol-based organisation](https://workplace.aetas-wealth.com/case-studies/bristol-organisation) — Financial resilience workshop, workplace pension review, and partner services introduced. Ongoing engagement.
-- [Large UK retail group](https://workplace.aetas-wealth.com/case-studies/uk-retail-group) — Diagnostic and benefits review completed. Pension review concluded existing arrangement was suitable. Shop St introduced as immediate, low-cost employee benefit.
-
-## Key pages
-
-- [Homepage](https://workplace.aetas-wealth.com/)
-- [Limited companies](https://workplace.aetas-wealth.com/limited-companies)
-- [LLPs and professional practices](https://workplace.aetas-wealth.com/llps)
-- [Pricing](https://workplace.aetas-wealth.com/investment)
-- [ROEI Calculator](https://workplace.aetas-wealth.com/calculator)
-- [Diagnostic tool](https://workplace.aetas-wealth.com/diagnostic)
-- [FAQs](https://workplace.aetas-wealth.com/faqs)
-- [Insights](https://workplace.aetas-wealth.com/insights)
+- [Bristol-based organisation](https://workplace.aetas-wealth.com/case-studies/bristol-organisation) - pension review, workshops and partner services delivered. Ongoing engagement.
+- [UK retail group](https://workplace.aetas-wealth.com/case-studies/uk-retail-group) - diagnostic and benefits review completed. Shop St introduced as immediate employee benefit.
 
 ## Insights articles
 
@@ -73,12 +51,25 @@ The Workplace Performance Review is always free. Fees are agreed in writing befo
 - [Financial Wellbeing in the Workplace](https://workplace.aetas-wealth.com/insights/financial-wellbeing-in-the-workplace)
 - [Strengthening Your Team Through Financial Wellbeing](https://workplace.aetas-wealth.com/insights/strengthening-your-team-through-financial-wellbeing)
 
-## Contact
+## Employer Guides
+
+- [The Cost of Financial Anxiety in the Workplace](https://workplace.aetas-wealth.com/guides/the-cost-of-financial-anxiety-in-the-workplace)
+- [Building an Employee Benefits Strategy for SMEs](https://workplace.aetas-wealth.com/guides/building-an-employee-benefits-strategy-for-smes)
+- [Salary Sacrifice Pensions Explained for Employers](https://workplace.aetas-wealth.com/guides/salary-sacrifice-pensions-explained-for-employers)
+- [Employee Benefits and National Insurance Planning](https://workplace.aetas-wealth.com/guides/employee-benefits-national-insurance-planning)
+- [Measuring the ROI of Financial Wellbeing Programmes](https://workplace.aetas-wealth.com/guides/measuring-the-roi-of-financial-wellbeing-programmes)
+- [Generational Differences in the Workforce](https://workplace.aetas-wealth.com/guides/generational-differences-in-the-workforce)
+
+## Also part of the Aetas group
+
+- [Aetas Wealth](https://aetas-wealth.com) - personal financial planning for individuals, directors and business owners
+- [Aetas for Charities](https://charities.aetas-wealth.com) - financial wellbeing, governance and trustee support for the third sector
+
+## Contact and booking
 
 - Email: matthew.steiner@aetas-wealth.com
-- [Book a Workplace Performance Review](https://link.aetas-wealth.com/widget/booking/LlxFl4DIfn023BvfaFO7)
-- [Aetas Wealth website](https://www.aetas-wealth.com)
+- [Book a Workplace Performance Audit](https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V) - no cost, no obligation
 
 ## Regulatory
 
-Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by [Aetas Wealth](https://www.aetas-wealth.com), a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (FCA registration: 458421).
+Aetas in the Workplace provides workplace financial wellbeing, education and consultancy services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (FCA registration: 458421). Registered office: 13 Hanover Square, Mayfair, London W1S 1HN.

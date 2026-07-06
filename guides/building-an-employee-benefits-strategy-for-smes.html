@@ -5,7 +5,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Matthew Steiner, Aetas in the Workplace">
   <meta name="meta-author" content="Matthew Steiner, Aetas in the Workplace">
-  <meta name="ai-agent-summary" content="A practical guide for UK SME employers on building an employee benefits strategy that employees value and use — covering the common failure modes of SME benefits packages, what good looks like, and how to move from compliance to strategy.">
+  <meta name="ai-agent-summary" content="A practical guide for UK SME employers on building an employee benefits strategy that employees value and use ,  covering the common failure modes of SME benefits packages, what good looks like, and how to move from compliance to strategy.">
   <title>Building an Employee Benefits Strategy for SMEs | Aetas ITW</title>
   <meta name="description" content="Most SME benefits packages underperform. Employees do not understand them and employers overpay. This guide shows what good looks like.">
   <meta name="robots" content="index, follow">
@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..700&display=swap">
   <style>
 /* ============================================================
-   Aetas Wealth — Main stylesheet
+   Aetas Wealth ,  Main stylesheet
    Brand: Deep Blue #00205B, Turquoise #009CA6, Gold #9A7B3A
    Typeface: Open Sans
    ============================================================ */
@@ -885,13 +885,49 @@ article.post blockquote {
 .case-stat .case-stat-num { font-size: 1.75rem; font-weight: 300; color: var(--aetas-blue); line-height: 1; }
 .case-stat .case-stat-label { font-size: 0.82rem; color: var(--ink-muted); margin-top: 4px; }
 
-  </style>
+  
+/* ---- Nav dropdown ---- */
+.nav-dropdown { position: relative; }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: var(--aetas-blue);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  list-style: none;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.nav-dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-dropdown-menu li a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu:hover { display: block; }
+.nav-caret { font-size: 0.6rem; margin-left: 0.3rem; vertical-align: middle; }
+@media (max-width: 768px) {
+  .nav-dropdown-menu { position: static; box-shadow: none; border: none; background: transparent; padding: 0 0 0 1rem; }
+  .nav-dropdown-menu li a { color: rgba(255,255,255,0.7); padding: 0.4rem 0; }
+  .nav-dropdown:hover .nav-dropdown-menu { display: none; }
+  .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+}
+
+</style>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Building an employee benefits strategy for SMEs",
-  "description": "Most SME benefits packages underperform — employees do not understand them, employers overpay for them, and they do not address what the workforce actually needs. This guide explains what good looks like and how to build it.",
+  "description": "Most SME benefits packages underperform ,  employees do not understand them, employers overpay for them, and they do not address what the workforce actually needs. This guide explains what good looks like and how to build it.",
   "datePublished": "2026-06-08",
   "dateModified": "2026-06-08",
   "author": {
@@ -929,7 +965,7 @@ article.post blockquote {
       "name": "How much should an SME spend on employee benefits?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "There is no single answer, but a useful benchmark is total benefits cost as a percentage of total payroll. For most SMEs, this sits between 3% and 8% including pension contributions, group risk premiums, and any flexible benefits spend. The question that matters more than the total is whether the spend is performing — generating engagement, reducing turnover, and meeting employee needs."
+        "text": "There is no single answer, but a useful benchmark is total benefits cost as a percentage of total payroll. For most SMEs, this sits between 3% and 8% including pension contributions, group risk premiums, and any flexible benefits spend. The question that matters more than the total is whether the spend is performing ,  generating engagement, reducing turnover, and meeting employee needs."
       }
     },
     {
@@ -1007,7 +1043,7 @@ article.post blockquote {
 <body>
 <header class="site-header">
   <div class="container nav-inner">
-    <a href="./" class="brand" aria-label="Aetas in the Workplace home">
+    <a href="../ class="brand" aria-label="Aetas in the Workplace home">
       <span class="brand-mark"><img src="/aetas-mark.svg" alt="Aetas in the Workplace" width="38" height="38"></span>
       <span class="brand-text">
         <span>Aetas in the Workplace</span>
@@ -1018,14 +1054,20 @@ article.post blockquote {
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="/limited-companies">Limited companies</a></li>
-      <li><a href="/llps">LLPs</a></li>
-      <li><a href="/investment">Pricing</a></li>
-      <li><a href="/calculator">Calculator</a></li>
-      <li><a href="/diagnostic">Diagnostic</a></li>
-      <li><a href="/insights">Insights</a></li>
-      <li><a href="/faqs">FAQs</a></li>
-      <li><a href="https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V" class="nav-cta" target="_blank" rel="noopener">Book an Audit</a></li>
+      <li><a href="../">Home</a></li>
+      <li class="nav-dropdown">
+        <a href="#" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Solutions <span class="nav-caret">&#9660;</span></a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="../roei">ROEI Framework</a></li>
+          <li><a href="../limited-companies">Employee Benefits</a></li>
+          <li><a href="../llps">Financial Wellbeing</a></li>
+          <li><a href="../diagnostic">Workplace Diagnostic</a></li>
+          <li><a href="../calculator">ROEI Calculator</a></li>
+        </ul>
+      </li>
+      <li><a href="../insights">Insights</a></li>
+      <li><a href="../faqs">FAQs</a></li>
+      <li><a href="https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V" class="nav-cta" target="_blank" rel="noopener">Book an Initial Conversation</a></li>
     </ul>
   </div>
 </header>
@@ -1050,18 +1092,18 @@ article.post blockquote {
   </div></section>
   <section class="section-tight" style="border-top:1px solid var(--line);background:var(--paper-warm);"><div class="container-narrow">
     <h2>What a good SME benefits strategy looks like</h2>
-    <p>A well-constructed benefits strategy for an SME has three characteristics: it is commercially justified, it is understood by employees, and it addresses the actual financial concerns the workforce has — not a generic template.</p>
+    <p>A well-constructed benefits strategy for an SME has three characteristics: it is commercially justified, it is understood by employees, and it addresses the actual financial concerns the workforce has ,  not a generic template.</p>
     <p>The building blocks are typically:</p>
     <ul class="checklist">
-      <li>A reviewed and optimised workplace pension — correct charge levels, appropriate default investment, salary sacrifice in place</li>
-      <li>Group life assurance — cost-effective and valued, particularly by employees with dependants</li>
-      <li>Group income protection — addresses the gap between statutory sick pay and the employee's actual income needs</li>
-      <li>Financial education — workshops or one-to-one access that help employees understand and use what they have</li>
-      <li>Access to regulated financial advice — the most valued benefit across most workforce segments, and available through Aetas Wealth as part of the programme</li>
+      <li>A reviewed and optimised workplace pension ,  correct charge levels, appropriate default investment, salary sacrifice in place</li>
+      <li>Group life assurance ,  cost-effective and valued, particularly by employees with dependants</li>
+      <li>Group income protection ,  addresses the gap between statutory sick pay and the employee's actual income needs</li>
+      <li>Financial education ,  workshops or one-to-one access that help employees understand and use what they have</li>
+      <li>Access to regulated financial advice ,  the most valued benefit across most workforce segments, and available through Aetas Wealth as part of the programme</li>
     </ul>
   </div></section>
   <section class="section-tight" style="border-top:1px solid var(--line);"><div class="container-narrow">
-    <h2>The right starting point — audit before you build</h2>
+    <h2>The right starting point ,  audit before you build</h2>
     <p>The most common mistake employers make when reviewing their benefits is adding rather than restructuring. Adding a new benefit without first understanding what the workforce actually needs, what is already in place, and what is performing well tends to increase cost and complexity without improving outcomes.</p>
     <p>The Aetas Workplace Performance Audit starts with the employer's current position. It maps what is already in place, identifies what is not performing, quantifies the cost of gaps, and only then proposes a programme. The result is a benefits strategy built around your workforce, not a generic package applied to it.</p>
   </div></section>
@@ -1069,15 +1111,15 @@ article.post blockquote {
     <h2>How to present benefits so employees actually engage</h2>
     <p>Communication is as important as the benefits themselves. Employees who do not understand what they have will not value it, will not use it, and will not cite it as a reason to stay. The most effective communication:</p>
     <ul class="checklist">
-      <li>Uses plain language and avoids jargon — "we contribute 5% to your pension each month" lands better than "defined contribution employer contribution at 5% of pensionable pay"</li>
-      <li>Puts a pound figure on benefits — "your total employment package is worth £X, not just your salary" changes how employees perceive their compensation</li>
-      <li>Is repeated, not just announced — an annual benefits statement and a welcome pack for new starters are the minimum</li>
-      <li>Offers a conversation — access to someone who can explain what individual benefits mean in practice is the most effective engagement tool available</li>
+      <li>Uses plain language and avoids jargon ,  "we contribute 5% to your pension each month" lands better than "defined contribution employer contribution at 5% of pensionable pay"</li>
+      <li>Puts a pound figure on benefits ,  "your total employment package is worth £X, not just your salary" changes how employees perceive their compensation</li>
+      <li>Is repeated, not just announced ,  an annual benefits statement and a welcome pack for new starters are the minimum</li>
+      <li>Offers a conversation ,  access to someone who can explain what individual benefits mean in practice is the most effective engagement tool available</li>
     </ul>
     <p>Aetas manages employee communications as part of every programme engagement, including drafting, scheduling and delivery. The employer retains full approval throughout.</p>
   </div></section>
   <section class="section-tight" style="border-top:1px solid var(--line);"><div class="container-narrow">
-    <h2>Common questions</h2><div class="faq-list"><details class="faq-item"><summary>How much should an SME spend on employee benefits?</summary><div class="faq-body"><p>There is no single answer, but a useful benchmark is total benefits cost as a percentage of total payroll. For most SMEs, this sits between 3% and 8% including pension contributions, group risk premiums, and any flexible benefits spend. The question that matters more than the total is whether the spend is performing — generating engagement, reducing turnover, and meeting employee needs.</p></div></details><details class="faq-item"><summary>What are the most valued benefits for SME employees?</summary><div class="faq-body"><p>Research consistently identifies pension contributions, flexible working, and financial planning access as the most valued benefits across most employee segments. Group life assurance and income protection are also highly valued, particularly by employees with dependants. Generic perks and discount schemes rank consistently lower than financial security benefits.</p></div></details><details class="faq-item"><summary>Should we offer a flexible benefits platform?</summary><div class="faq-body"><p>For most SMEs under 150 employees, a flexible benefits platform adds administrative complexity without proportionate value. A well-structured core package, clearly communicated and regularly reviewed, typically outperforms a platform in engagement and cost-efficiency at this scale. Platforms become more appropriate as headcount and workforce complexity increase.</p></div></details><details class="faq-item"><summary>How often should we review our benefits package?</summary><div class="faq-body"><p>An annual review is the minimum. The review should cover: whether charge rates on pension and group risk schemes are competitive, whether the workforce composition has changed in ways that affect benefit relevance, whether auto-enrolment obligations are being met, and whether employee engagement with benefits has been measured and is trending in the right direction.</p></div></details></div>
+    <h2>Common questions</h2><div class="faq-list"><details class="faq-item"><summary>How much should an SME spend on employee benefits?</summary><div class="faq-body"><p>There is no single answer, but a useful benchmark is total benefits cost as a percentage of total payroll. For most SMEs, this sits between 3% and 8% including pension contributions, group risk premiums, and any flexible benefits spend. The question that matters more than the total is whether the spend is performing ,  generating engagement, reducing turnover, and meeting employee needs.</p></div></details><details class="faq-item"><summary>What are the most valued benefits for SME employees?</summary><div class="faq-body"><p>Research consistently identifies pension contributions, flexible working, and financial planning access as the most valued benefits across most employee segments. Group life assurance and income protection are also highly valued, particularly by employees with dependants. Generic perks and discount schemes rank consistently lower than financial security benefits.</p></div></details><details class="faq-item"><summary>Should we offer a flexible benefits platform?</summary><div class="faq-body"><p>For most SMEs under 150 employees, a flexible benefits platform adds administrative complexity without proportionate value. A well-structured core package, clearly communicated and regularly reviewed, typically outperforms a platform in engagement and cost-efficiency at this scale. Platforms become more appropriate as headcount and workforce complexity increase.</p></div></details><details class="faq-item"><summary>How often should we review our benefits package?</summary><div class="faq-body"><p>An annual review is the minimum. The review should cover: whether charge rates on pension and group risk schemes are competitive, whether the workforce composition has changed in ways that affect benefit relevance, whether auto-enrolment obligations are being met, and whether employee engagement with benefits has been measured and is trending in the right direction.</p></div></details></div>
   </div></section>
   <section class="section-tight" style="background:var(--paper-warm);border-top:1px solid var(--line);"><div class="container-narrow">
     <p style="font-size:0.85rem;color:var(--ink-muted);">Research on employee benefits effectiveness and workforce engagement is published by the <a href="https://www.cipd.org/uk/knowledge/reports/" target="_blank" rel="noopener">CIPD</a>. Auto-enrolment contribution requirements are set out by <a href="https://www.thepensionsregulator.gov.uk/en/employers" target="_blank" rel="noopener">The Pensions Regulator</a>. HMRC guidance on tax-efficient employee benefits is available at <a href="https://www.gov.uk/employer-reporting-expenses-benefits" target="_blank" rel="noopener">gov.uk/employer-reporting-expenses-benefits</a>.</p>
@@ -1099,48 +1141,49 @@ article.post blockquote {
     </div>
   </section>
 </main>
+<!-- ============================================================
+     SHARED: site-footer
+     ============================================================ -->
 <footer class="site-footer">
   <div class="footer-rule"></div>
   <div class="container">
     <div class="footer-grid">
       <div>
-        <p class="footer-heading" style="color:#ffffff">Site</p>
+        <p class="footer-heading" style="color:#ffffff">Navigate</p>
         <ul>
-          <li><a href="./">Home</a></li>
-          <li><a href="/limited-companies">Limited companies</a></li>
-          <li><a href="/llps">LLPs</a></li>
-          <li><a href="/investment">Pricing</a></li>
-          <li><a href="/faqs">FAQs</a></li>
-          <li><a href="/insights">Insights</a></li>
+          <li><a href="../">Home</a></li>
+          <li><a href="../roei">ROEI Framework</a></li>
+          <li><a href="../limited-companies">For Employers</a></li>
+          <li><a href="../llps">For Professional Practices</a></li>
+          <li><a href="../investment">Pricing</a></li>
+          <li><a href="../insights">Insights</a></li>
+          <li><a href="../faqs">FAQs</a></li>
         </ul>
       </div>
       <div>
-        <p class="footer-heading" style="color:#ffffff">Services</p>
+        <p class="footer-heading" style="color:#ffffff">Tools</p>
         <ul>
-          <li><a href="https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V" target="_blank" rel="noopener">Book an Audit</a></li>
-          <li><a href="/calculator">ROEI Calculator</a></li>
-          <li><a href="/diagnostic">Diagnostic</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-heading" style="color:#ffffff">Useful</p>
-        <ul>
-          <li><a href="https://aetas-wealth.com/working-with-us" target="_blank" rel="noopener">Working with Us</a></li>
-          <li><a href="https://aetas-wealth.com/professional-introducers" target="_blank" rel="noopener">Professional Introducers</a></li>
-          <li><a href="https://aetas-wealth.com/lifetime-to-legacy" target="_blank" rel="noopener">Lifetime to Legacy</a></li>
-          <li><a href="https://aetas-wealth.com/about/aetas-wealth-company-profile" target="_blank" rel="noopener">Aetas Wealth Profile</a></li>
+          <li><a href="../diagnostic">Workplace Diagnostic</a></li>
+          <li><a href="../calculator">ROEI Calculator</a></li>
+          <li><a href="../case-studies/bristol-organisation">Bristol Case Study</a></li>
+          <li><a href="../case-studies/uk-retail-group">UK Retail Case Study</a></li>
         </ul>
         <p style="margin: 1rem 0 0.4rem 0; font-weight: 600; color: #fff;">Guides</p>
         <ul>
-          <li><a href="/guides/the-cost-of-financial-anxiety-in-the-workplace">Financial Anxiety at Work</a></li>
-          <li><a href="/guides/generational-differences-in-the-workforce">Generational Differences</a></li>
-          <li><a href="/guides/employee-benefits-national-insurance-planning">Benefits &amp; NI Planning</a></li>
+          <li><a href="../guides/the-cost-of-financial-anxiety-in-the-workplace">Financial Anxiety at Work</a></li>
+          <li><a href="../guides/generational-differences-in-the-workforce">Generational Differences</a></li>
+          <li><a href="../guides/building-an-employee-benefits-strategy-for-smes">Benefits Strategy Guide</a></li>
+          <li><a href="../guides/salary-sacrifice-pensions-explained-for-employers">Salary Sacrifice Guide</a></li>
         </ul>
-        <p style="margin: 1rem 0 0.4rem 0; font-weight: 600; color: #fff;">External Links</p>
+      </div>
+      <div>
+        <p class="footer-heading" style="color:#ffffff">Also part of Aetas</p>
         <ul>
           <li><a href="https://aetas-wealth.com/" target="_blank" rel="noopener">Aetas Wealth</a></li>
-          <li><a href="https://charities.aetaspartners.com/" target="_blank" rel="noopener">Charity Performance Audit</a></li>
+          <li><a href="https://charities.aetas-wealth.com/" target="_blank" rel="noopener">Aetas for Charities</a></li>
         </ul>
+        <p style="margin:1.5rem 0 0.75rem;font-size:0.9rem;color:rgba(255,255,255,0.78);">Aetas Wealth is a trading name of Insight Financial Associates Ltd, authorised and regulated by the FCA (FRN 458421).</p>
+        <p style="margin:0;font-size:0.9rem;color:rgba(255,255,255,0.78);">13 Hanover Square, Mayfair, London W1S 1HN</p>
       </div>
       <div>
         <p class="footer-heading" style="color:#ffffff">Offices</p>
@@ -1162,10 +1205,11 @@ article.post blockquote {
 
     <div class="footer-bottom">
       <p>Aetas in the Workplace provides workplace financial wellbeing, education, and consultancy services to employers. These services support financial understanding, engagement, and resilience but do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by <strong>Aetas Wealth</strong>, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (registration number 458421).</p>
-      <p>© <span data-year>2026</span> Aetas in the Workplace. All rights reserved. <a href="/privacy">Privacy Policy</a></p>
+      <p>&#169; <span data-year>2026</span> Aetas in the Workplace. All rights reserved. <a href="privacy" style="text-decoration:underline;">Privacy Policy</a></p>
     </div>
   </div>
 </footer>
+<!-- /site-footer -->
 <script>const toggle=document.querySelector('.nav-toggle');const links=document.querySelector('.nav-links');if(toggle&&links){toggle.addEventListener('click',()=>{const open=links.classList.toggle('is-open');toggle.classList.toggle('is-open',open);toggle.setAttribute('aria-expanded',open);});}</script>
 
 <!-- Cookie notice -->

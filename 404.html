@@ -4,7 +4,7 @@
 <script defer src="/assets/js/analytics.js"></script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Page Not Found — Aetas in the Workplace</title>
+<title>Page Not Found ,  Aetas in the Workplace</title>
 <meta name="robots" content="noindex, follow" />
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png" />
@@ -129,6 +129,42 @@ p { color: rgba(255,255,255,0.5); font-size: 0.95rem; line-height: 1.75; margin-
     font-size: 0.82rem !important;
     letter-spacing: 0.02em !important;
   }
+
+/* ---- Nav dropdown ---- */
+.nav-dropdown { position: relative; }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: var(--aetas-blue);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  list-style: none;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.nav-dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-dropdown-menu li a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu:hover { display: block; }
+.nav-caret { font-size: 0.6rem; margin-left: 0.3rem; vertical-align: middle; }
+@media (max-width: 768px) {
+  .nav-dropdown-menu { position: static; box-shadow: none; border: none; background: transparent; padding: 0 0 0 1rem; }
+  .nav-dropdown-menu li a { color: rgba(255,255,255,0.7); padding: 0.4rem 0; }
+  .nav-dropdown:hover .nav-dropdown-menu { display: none; }
+  .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+}
+
 </style>
 </head>
 <body>
@@ -136,7 +172,7 @@ p { color: rgba(255,255,255,0.5); font-size: 0.95rem; line-height: 1.75; margin-
 <a class="brand" href="/">Aetas in the Workplace</a>
 
 <div class="inner">
-  <span class="label">404 — Page not found</span>
+  <span class="label">404 ,  Page not found</span>
   <div class="num">404</div>
   <h1>This page doesn't exist.<br><em>But the right one probably does.</em></h1>
   <div class="rule"></div>

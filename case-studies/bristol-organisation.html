@@ -3,7 +3,7 @@
 <head>
 <script defer src="/assets/js/analytics.js"></script>
 <meta charset="UTF-8">
-<meta name="ai-agent-summary" content="Case study: a Bristol-based organisation that implemented the Aetas Workplace three-pillar programme — financial resilience workshops, pension review, and partner services including Shop St and online wills.">
+<meta name="ai-agent-summary" content="Case study: a Bristol-based organisation that implemented the Aetas Workplace three-pillar programme ,  financial resilience workshops, pension review, and partner services including Shop St and online wills.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Matthew Steiner, Aetas in the Workplace">
 <meta name="meta-author" content="Matthew Steiner, Aetas in the Workplace">
@@ -191,6 +191,42 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     font-size: 0.82rem !important;
     letter-spacing: 0.02em !important;
   }
+
+/* ---- Nav dropdown ---- */
+.nav-dropdown { position: relative; }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: var(--aetas-blue);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  list-style: none;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.nav-dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-dropdown-menu li a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu:hover { display: block; }
+.nav-caret { font-size: 0.6rem; margin-left: 0.3rem; vertical-align: middle; }
+@media (max-width: 768px) {
+  .nav-dropdown-menu { position: static; box-shadow: none; border: none; background: transparent; padding: 0 0 0 1rem; }
+  .nav-dropdown-menu li a { color: rgba(255,255,255,0.7); padding: 0.4rem 0; }
+  .nav-dropdown:hover .nav-dropdown-menu { display: none; }
+  .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -278,6 +314,38 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     "@id": "https://workplace.aetas-wealth.com/#organization"
   },
   "inLanguage": "en-GB"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How did the Workplace Performance Audit identify the issues?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Audit involved a structured conversation with senior leadership, a review of existing pension and benefits arrangements, and an assessment of workforce composition and turnover data."
+      }
+    }
+    {
+      "@type": "Question",
+      "name": "What outcomes did the engagement deliver?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Outcomes included improvements to pension governance, introduction of additional employee benefits at no extra employer cost, and financial education workshops with strong employee attendance."
+      }
+    }
+    {
+      "@type": "Question",
+      "name": "How long does a typical Aetas engagement take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The initial Audit takes approximately 30 minutes. Implementation of the full programme typically runs over three to six months, with ongoing support thereafter."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -418,7 +486,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
       </div>
       <div class="outcome-item">
         <span class="outcome-check">✓</span>
-        <span class="outcome-text">Workplace pension review completed — improvements identified and in implementation</span>
+        <span class="outcome-text">Workplace pension review completed ,  improvements identified and in implementation</span>
       </div>
       <div class="outcome-item">
         <span class="outcome-check">✓</span>
@@ -430,7 +498,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
       </div>
       <div class="outcome-item">
         <span class="outcome-check">✓</span>
-        <span class="outcome-text">Structured approach to financial wellbeing established — ongoing programme in place</span>
+        <span class="outcome-text">Structured approach to financial wellbeing established ,  ongoing programme in place</span>
       </div>
     </div>
 
@@ -445,7 +513,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
 
 </div>
 
-<!-- BOOKING CTA — ITW audit -->
+<!-- BOOKING CTA ,  ITW audit -->
 <div style="background:var(--navy);padding:3.5rem 40px;text-align:center;">
   <div style="max-width:640px;margin:0 auto;">
     <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin:0 0 1rem;">Book your workplace audit</p>
@@ -468,8 +536,8 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:var(--border);margin-bottom:2rem;border-radius:4px;overflow:hidden;">
       <a href="/case-studies/uk-retail-group" style="background:var(--cream);padding:1.5rem;text-decoration:none;display:block;transition:background 0.2s;" onmouseover="this.style.background='var(--gold-pale)'" onmouseout="this.style.background='var(--cream)'">
         <span style="font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem;">Case study</span>
-        <h3 style="font-family:'Open Sans', sans-serif;font-size:1.05rem;font-weight:500;color:var(--navy);line-height:1.35;margin-bottom:0.4rem;">Practical Financial Support for a Larger Workforce — UK Retail Group</h3>
-        <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">Why the most impactful recommendation was also the simplest — and why recommending against a pension change was the right advice.</p>
+        <h3 style="font-family:'Open Sans', sans-serif;font-size:1.05rem;font-weight:500;color:var(--navy);line-height:1.35;margin-bottom:0.4rem;">Practical Financial Support for a Larger Workforce ,  UK Retail Group</h3>
+        <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">Why the most impactful recommendation was also the simplest ,  and why recommending against a pension change was the right advice.</p>
       </a>
       <div style="background:var(--navy-xlight);padding:1.5rem;display:flex;flex-direction:column;justify-content:center;">
         <span style="font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem;">Book a Review</span>

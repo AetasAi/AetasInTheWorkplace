@@ -3,11 +3,12 @@
 <head>
 <script defer src="/assets/js/analytics.js"></script>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="ai-agent-summary" content="Employee benefits data capture form for Aetas in the Workplace. Used during the Workplace Performance Audit process to review existing pension and benefits arrangements.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Matthew Steiner, Aetas in the Workplace">
 <meta name="meta-author" content="Matthew Steiner, Aetas in the Workplace">
 <link rel="canonical" href="https://workplace.aetas-wealth.com/benefits-review">
-<title>Employee Benefits Data Capture &middot; Aetas in the Workplace</title>
+<title>Employee Benefits Review | Aetas in the Workplace</title>
 <meta name="description" content="Employee benefits and pension data capture form for the Aetas in the Workplace Workplace Performance Review.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
@@ -188,10 +189,46 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
   .topbar-brand-tagline { font-size: 0.6rem; }
   .progress-bar { top: 73px; }
 }
+
+/* ---- Nav dropdown ---- */
+.nav-dropdown { position: relative; }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: var(--aetas-blue);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  list-style: none;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.nav-dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-dropdown-menu li a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu:hover { display: block; }
+.nav-caret { font-size: 0.6rem; margin-left: 0.3rem; vertical-align: middle; }
+@media (max-width: 768px) {
+  .nav-dropdown-menu { position: static; box-shadow: none; border: none; background: transparent; padding: 0 0 0 1rem; }
+  .nav-dropdown-menu li a { color: rgba(255,255,255,0.7); padding: 0.4rem 0; }
+  .nav-dropdown:hover .nav-dropdown-menu { display: none; }
+  .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+}
+
 </style>
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Employee Benefits Data Capture · Aetas in the Workplace">
-  <meta property="og:description" content="Employee benefits and pension data capture for the Aetas in the Workplace review process.">
+  <meta property="og:title" content="Employee Benefits Review | Aetas in the Workplace">
+  <meta property="og:description" content="Submit your current employee benefits information to Aetas in the Workplace as part of the Workplace Performance Audit process.">
   <meta property="og:url" content="https://workplace.aetas-wealth.com/benefits-review">
   <meta property="og:site_name" content="Aetas in the Workplace">
   <meta property="og:image" content="https://workplace.aetas-wealth.com/og-image.png">
@@ -260,6 +297,11 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
   }
 }
 </script>
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Employee Benefits Review | Aetas in the Workplace">
+  <meta name="twitter:description" content="Submit your benefits information to Aetas in the Workplace as part of the Audit process.">
+  <meta name="twitter:image" content="https://workplace.aetas-wealth.com/og-image.png">
 </head>
 <body>
 

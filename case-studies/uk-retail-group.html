@@ -8,10 +8,10 @@
 <meta name="author" content="Matthew Steiner, Aetas in the Workplace">
 <meta name="meta-author" content="Matthew Steiner, Aetas in the Workplace">
 <title>Financial Support for a Larger Workforce | Aetas ITW</title>
-<meta name="description" content="How Aetas ITW helped a large UK retail group review benefits and pension arrangements — and found the most impactful fix was also the simplest.">
+<meta name="description" content="How Aetas ITW helped a large UK retail group review benefits and pension arrangements ,  and found the most impactful fix was also the simplest.">
 <link rel="canonical" href="https://workplace.aetas-wealth.com/case-studies/uk-retail-group">
 <meta property="og:title" content="Financial Support for a Larger Workforce | Aetas ITW">
-<meta property="og:description" content="How Aetas ITW helped a large UK retail group review benefits and pension arrangements — and found the most impactful fix was also the simplest.">
+<meta property="og:description" content="How Aetas ITW helped a large UK retail group review benefits and pension arrangements ,  and found the most impactful fix was also the simplest.">
 <meta property="og:type" content="article">
   <meta property="og:url" content="https://workplace.aetas-wealth.com/case-studies/uk-retail-group">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -193,6 +193,42 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     font-size: 0.82rem !important;
     letter-spacing: 0.02em !important;
   }
+
+/* ---- Nav dropdown ---- */
+.nav-dropdown { position: relative; }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: var(--aetas-blue);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  list-style: none;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.nav-dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-dropdown-menu li a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu:hover { display: block; }
+.nav-caret { font-size: 0.6rem; margin-left: 0.3rem; vertical-align: middle; }
+@media (max-width: 768px) {
+  .nav-dropdown-menu { position: static; box-shadow: none; border: none; background: transparent; padding: 0 0 0 1rem; }
+  .nav-dropdown-menu li a { color: rgba(255,255,255,0.7); padding: 0.4rem 0; }
+  .nav-dropdown:hover .nav-dropdown-menu { display: none; }
+  .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -272,7 +308,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
   "@id": "https://workplace.aetas-wealth.com/case-studies/uk-retail-group#webpage",
   "url": "https://workplace.aetas-wealth.com/case-studies/uk-retail-group",
   "name": "Case Study: UK Retail Group | Aetas in the Workplace",
-  "description": "How a structured review for a large UK retail group found that the most impactful solution was also the simplest — and why recommending against change was the right advice.",
+  "description": "How a structured review for a large UK retail group found that the most impactful solution was also the simplest ,  and why recommending against change was the right advice.",
   "isPartOf": {
     "@id": "https://workplace.aetas-wealth.com/#website"
   },
@@ -280,6 +316,38 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     "@id": "https://workplace.aetas-wealth.com/#organization"
   },
   "inLanguage": "en-GB"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How did the Workplace Performance Audit identify the issues?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Audit involved a structured conversation with senior leadership, a review of existing pension and benefits arrangements, and an assessment of workforce composition and turnover data."
+      }
+    }
+    {
+      "@type": "Question",
+      "name": "What outcomes did the engagement deliver?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Outcomes included improvements to pension governance, introduction of additional employee benefits at no extra employer cost, and financial education workshops with strong employee attendance."
+      }
+    }
+    {
+      "@type": "Question",
+      "name": "How long does a typical Aetas engagement take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The initial Audit takes approximately 30 minutes. Implementation of the full programme typically runs over three to six months, with ongoing support thereafter."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -312,7 +380,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
       <span class="hero-eyebrow-cat">Case Study</span>
     </div>
     <h1>Practical Financial Support<br><em>for a Larger Workforce</em></h1>
-    <p class="hero-sub">How a structured review for a large UK retail group identified that the most impactful solution was also the simplest one — and why recommending against change was the right advice.</p>
+    <p class="hero-sub">How a structured review for a large UK retail group identified that the most impactful solution was also the simplest one ,  and why recommending against change was the right advice.</p>
   </div>
 </div>
 
@@ -343,7 +411,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
 
     <div class="cs-rule"></div>
 
-    <h2>The pension review — and why we recommended no change</h2>
+    <h2>The pension review ,  and why we recommended no change</h2>
     <p>As part of the process, Aetas ITW reviewed the organisation's workplace pension arrangements, including the existing auto-enrolment scheme.</p>
     <p>The review found that the current provider remained suitable. Changing the scheme would have required a significant operational exercise across a large, dispersed workforce. At this stage, a transition would have created disruption without delivering meaningful benefit to employees.</p>
 
@@ -352,13 +420,13 @@ footer{background:var(--navy);padding:2.5rem 40px;}
       <p>Our recommendation was to leave the pension arrangement in place. The resource required for a transition was not justified by the benefit it would deliver. We redirected attention to areas where impact would be immediate and visible.</p>
     </div>
 
-    <p>This is an important part of how Aetas ITW works. The Review is not designed to generate a predetermined set of recommendations. Where the existing arrangements are suitable, we say so — and direct attention where it will actually make a difference.</p>
+    <p>This is an important part of how Aetas ITW works. The Review is not designed to generate a predetermined set of recommendations. Where the existing arrangements are suitable, we say so ,  and direct attention where it will actually make a difference.</p>
 
     <div class="cs-rule"></div>
 
-    <h2>The recommendation — and why it worked</h2>
+    <h2>The recommendation ,  and why it worked</h2>
     <p>With the pension question settled, the focus shifted to practical support that employees would engage with immediately. For a large workforce with many people in lower-paid roles, the priority was something tangible and useful in everyday life.</p>
-    <p>The most appropriate solution was the introduction of a low-cost employee savings and cashback platform through <strong>Shop St</strong> — a partner service available as part of the Aetas ITW framework.</p>
+    <p>The most appropriate solution was the introduction of a low-cost employee savings and cashback platform through <strong>Shop St</strong> ,  a partner service available as part of the Aetas ITW framework.</p>
 
     <div class="benefit-grid">
       <div class="benefit-card">
@@ -417,7 +485,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
       </div>
       <div class="sidebar-row">
         <span class="sidebar-label">Pension outcome</span>
-        <span class="sidebar-value">No change recommended — existing scheme suitable</span>
+        <span class="sidebar-value">No change recommended ,  existing scheme suitable</span>
       </div>
       <div class="sidebar-row">
         <span class="sidebar-label">Solution introduced</span>
@@ -427,7 +495,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
 
     <div class="finding-callout fade-in">
       <span class="finding-callout-label">Key finding</span>
-      <p>"The most impactful recommendation was also the simplest one — and the confidence to make it came from completing the diagnostic honestly."</p>
+      <p>"The most impactful recommendation was also the simplest one ,  and the confidence to make it came from completing the diagnostic honestly."</p>
     </div>
 
     <div class="outcomes-card fade-in">
@@ -438,7 +506,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
       </div>
       <div class="outcome-item">
         <span class="outcome-check">✓</span>
-        <span class="outcome-text">Workplace pension review — current provider confirmed as suitable, no disruptive change recommended</span>
+        <span class="outcome-text">Workplace pension review ,  current provider confirmed as suitable, no disruptive change recommended</span>
       </div>
       <div class="outcome-item">
         <span class="outcome-check">✓</span>
@@ -457,7 +525,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     <div class="cta-card fade-in">
       <span>Start with the diagnostic</span>
       <h3>Find out where an honest review would take your organisation.</h3>
-      <p>Two 30-minute conversations. No cost. No obligation — and no predetermined answer.</p>
+      <p>Two 30-minute conversations. No cost. No obligation ,  and no predetermined answer.</p>
       <a href="https://aetas-wealth.com/book" target="_blank" class="btn-cta-gold" rel="noopener noreferrer">Book a Review</a>
     </div>
 
@@ -473,8 +541,8 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     <div class="cs-cards">
       <a href="/case-studies/bristol-organisation" class="cs-card">
         <span class="cs-card-tag">Case study</span>
-        <h3>Supporting Employee Financial Resilience — Bristol-based Organisation</h3>
-        <p>Workshop delivery, pension review, and partner services introduced — an ongoing engagement built from a no-cost Review.</p>
+        <h3>Supporting Employee Financial Resilience ,  Bristol-based Organisation</h3>
+        <p>Workshop delivery, pension review, and partner services introduced ,  an ongoing engagement built from a no-cost Review.</p>
       </a>
       <div class="cs-card" style="background:var(--navy-xlight);display:flex;flex-direction:column;justify-content:center;">
         <span class="cs-card-tag">Book a Review</span>

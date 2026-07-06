@@ -164,6 +164,42 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     font-size: 0.82rem !important;
     letter-spacing: 0.02em !important;
   }
+
+/* ---- Nav dropdown ---- */
+.nav-dropdown { position: relative; }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: var(--aetas-blue);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  list-style: none;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.nav-dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-dropdown-menu li a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu:hover { display: block; }
+.nav-caret { font-size: 0.6rem; margin-left: 0.3rem; vertical-align: middle; }
+@media (max-width: 768px) {
+  .nav-dropdown-menu { position: static; box-shadow: none; border: none; background: transparent; padding: 0 0 0 1rem; }
+  .nav-dropdown-menu li a { color: rgba(255,255,255,0.7); padding: 0.4rem 0; }
+  .nav-dropdown:hover .nav-dropdown-menu { display: none; }
+  .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -254,6 +290,38 @@ footer{background:var(--navy);padding:2.5rem 40px;}
   "inLanguage": "en-GB"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is financial wellbeing a business issue rather than just an HR issue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Financial stress in the workforce creates direct commercial costs: reduced productivity, increased absence, higher staff turnover and recruitment costs. These are business performance issues, not just welfare concerns."
+      }
+    }
+    {
+      "@type": "Question",
+      "name": "How much does financial stress cost UK employers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Research from organisations including the CIPD and the Money and Pensions Service suggests that financial stress costs the UK economy tens of billions of pounds each year in lost productivity alone."
+      }
+    }
+    {
+      "@type": "Question",
+      "name": "What is the Return on Employee Investment (ROEI)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ROEI is an Aetas framework that measures and improves the commercial return on an employer's total investment in their people, encompassing salary, benefits, pension, training and wellbeing support."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -325,7 +393,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     <p>This is where Aetas take a different approach.</p>
     <p>Rather than starting with products or apps, we start with structure.</p>
     <p>We help businesses step back and look at financial wellbeing in a joined-up way. Our approach brings together practical financial guidance, a clear view of existing benefits, and a framework that links support directly to performance and retention.</p>
-    <p>The emphasis is on clarity — for leaders, and employees.</p>
+    <p>The emphasis is on clarity ,  for leaders, and employees.</p>
     <h2>Financial resilience in practice</h2>
     <p>In practice, this means helping employees understand the financial decisions they are facing at different stages of life, and giving them access to guidance that makes those decisions less daunting.</p>
     <p>It also means helping businesses understand whether the benefits they already offer are delivering value, and where small changes in communication or structure can improve outcomes without increasing cost.</p>
@@ -348,7 +416,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     <div class="article-cta">
       <span class="article-cta-label">Take the next step</span>
       <h3>Find out what financial pressure is costing your business.</h3>
-      <p>The Workplace Performance Review is a no-cost, two-session conversation with Matthew Steiner. It identifies where financial pressure is showing up in your specific business — and what a proportionate response looks like.</p>
+      <p>The Workplace Performance Review is a no-cost, two-session conversation with Matthew Steiner. It identifies where financial pressure is showing up in your specific business ,  and what a proportionate response looks like.</p>
             <aside style="background:var(--surface,#f5f1eb);border-left:3px solid var(--aetas-turquoise,#009CA6);padding:1.25rem 1.5rem;margin:2rem 0;border-radius:0 4px 4px 0;">
         <p style="margin:0 0 0.75rem;font-size:0.85rem;font-weight:600;color:var(--navy,#0d2c6c);letter-spacing:0.06em;text-transform:uppercase;">Authoritative sources</p>
         <ul style="list-style:none;padding:0;margin:0;font-size:0.92rem;">
@@ -432,7 +500,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
 var obs=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.08});
 document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el);});
 
-// More articles — populate from master list, excluding current
+// More articles ,  populate from master list, excluding current
 var CURRENT_SLUG = 'why-financial-wellbeing-is-a-business-issue';
 var ALL_ARTICLES = [{"slug": "why-financial-wellbeing-is-a-business-issue", "cat": "Business performance", "title": "Why Financial Wellbeing Has Become a Business Issue for SMEs", "summary": "An examination of why employee financial pressure has become a measurable business issue for UK SMEs, and what proportionate responses look like."}, {"slug": "when-everyday-life-stops-talking-back", "cat": "Business performance", "title": "When Everyday Life Stops Talking Back", "summary": "Britain is changing in ways that appear practical and inevitable. Post offices close, services move online, shops automate, and workplaces digitise."}, {"slug": "introducing-the-aetas-collective", "cat": "Business performance", "title": "Introducing the Aetas Collective: Bringing Financial Wellbeing Expertise Together for SMEs", "summary": "Across the UK, many small and medium-sized businesses are facing a quiet but significant challenge. Financial pressure, wellbeing, and performance are"}, {"slug": "financial-wellbeing-in-the-workplace", "cat": "Business performance", "title": "Financial Wellbeing? Introducing Aetas In the Workplace", "summary": "In today’s fast-moving business landscape, employee wellbeing is much more than a nice-to-have benefit. For small and medium-sized enterprises (SMEs),"}, {"slug": "strengthening-your-team-through-financial-wellbeing", "cat": "Business performance", "title": "Strengthening Your Team Through Financial Wellbeing", "summary": "Helping Your Team Feel Confident, Supported, and Ready for the Future"}];
 

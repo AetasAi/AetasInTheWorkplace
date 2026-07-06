@@ -3,7 +3,7 @@
 <head>
 <script defer src="/assets/js/analytics.js"></script>
 <meta charset="UTF-8">
-<meta name="ai-agent-summary" content="An introduction to the Aetas Workplace financial wellbeing programme — the three-pillar framework (Clarity, Confidence, Stability) and how a structured approach differs from generic EAP platforms.">
+<meta name="ai-agent-summary" content="An introduction to the Aetas Workplace financial wellbeing programme ,  the three-pillar framework (Clarity, Confidence, Stability) and how a structured approach differs from generic EAP platforms.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Matthew Steiner, Aetas in the Workplace">
 <meta name="meta-author" content="Matthew Steiner, Aetas in the Workplace">
@@ -164,6 +164,42 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     font-size: 0.82rem !important;
     letter-spacing: 0.02em !important;
   }
+
+/* ---- Nav dropdown ---- */
+.nav-dropdown { position: relative; }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: var(--aetas-blue);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  list-style: none;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.nav-dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-dropdown-menu li a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu:hover { display: block; }
+.nav-caret { font-size: 0.6rem; margin-left: 0.3rem; vertical-align: middle; }
+@media (max-width: 768px) {
+  .nav-dropdown-menu { position: static; box-shadow: none; border: none; background: transparent; padding: 0 0 0 1rem; }
+  .nav-dropdown-menu li a { color: rgba(255,255,255,0.7); padding: 0.4rem 0; }
+  .nav-dropdown:hover .nav-dropdown-menu { display: none; }
+  .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -254,6 +290,38 @@ footer{background:var(--navy);padding:2.5rem 40px;}
   "inLanguage": "en-GB"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is financial wellbeing in the workplace?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Financial wellbeing at work refers to an employee's ability to meet their financial commitments, feel secure about their financial future, and make informed financial decisions without excessive stress."
+      }
+    }
+    {
+      "@type": "Question",
+      "name": "Why should employers care about financial wellbeing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Financially stressed employees are measurably less productive, take more sick leave, and are more likely to seek employment elsewhere. Addressing financial wellbeing has a direct return on the employer's people investment."
+      }
+    }
+    {
+      "@type": "Question",
+      "name": "How can a small employer improve financial wellbeing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Small employers can start with a benefits and pension review, introduce financial education workshops, and provide access to confidential financial guidance. The Aetas Workplace Performance Audit is a no-cost starting point."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -327,7 +395,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     <h3>Webinar Details</h3>
     <ul>
     <li>Date: Thursday 29 January 2026</li>
-    <li>Time: 12:00 — 12:45pm</li>
+    <li>Time: 12:00 ,  12:45pm</li>
     <li>Format: Online via Zoom</li>
     <li>Cost: Complimentary</li>
     </ul>
@@ -341,7 +409,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     <div class="article-cta">
       <span class="article-cta-label">Take the next step</span>
       <h3>Find out what financial pressure is costing your business.</h3>
-      <p>The Workplace Performance Review is a no-cost, two-session conversation with Matthew Steiner. It identifies where financial pressure is showing up in your specific business — and what a proportionate response looks like.</p>
+      <p>The Workplace Performance Review is a no-cost, two-session conversation with Matthew Steiner. It identifies where financial pressure is showing up in your specific business ,  and what a proportionate response looks like.</p>
             <aside style="background:var(--surface,#f5f1eb);border-left:3px solid var(--aetas-turquoise,#009CA6);padding:1.25rem 1.5rem;margin:2rem 0;border-radius:0 4px 4px 0;">
         <p style="margin:0 0 0.75rem;font-size:0.85rem;font-weight:600;color:var(--navy,#0d2c6c);letter-spacing:0.06em;text-transform:uppercase;">Authoritative sources</p>
         <ul style="list-style:none;padding:0;margin:0;font-size:0.92rem;">
@@ -425,7 +493,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
 var obs=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.08});
 document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el);});
 
-// More articles — populate from master list, excluding current
+// More articles ,  populate from master list, excluding current
 var CURRENT_SLUG = 'financial-wellbeing-in-the-workplace';
 var ALL_ARTICLES = [{"slug": "why-financial-wellbeing-is-a-business-issue", "cat": "Business performance", "title": "Why Financial Wellbeing Has Become a Business Issue for SMEs", "summary": "That assumption no longer holds."}, {"slug": "when-everyday-life-stops-talking-back", "cat": "Business performance", "title": "When Everyday Life Stops Talking Back", "summary": "Britain is changing in ways that appear practical and inevitable. Post offices close, services move online, shops automate, and workplaces digitise."}, {"slug": "introducing-the-aetas-collective", "cat": "Business performance", "title": "Introducing the Aetas Collective: Bringing Financial Wellbeing Expertise Together for SMEs", "summary": "Across the UK, many small and medium-sized businesses are facing a quiet but significant challenge. Financial pressure, wellbeing, and performance are"}, {"slug": "financial-wellbeing-in-the-workplace", "cat": "Business performance", "title": "Financial Wellbeing? Introducing Aetas In the Workplace", "summary": "In today’s fast-moving business landscape, employee wellbeing is much more than a nice-to-have benefit. For small and medium-sized enterprises (SMEs),"}, {"slug": "strengthening-your-team-through-financial-wellbeing", "cat": "Business performance", "title": "Strengthening Your Team Through Financial Wellbeing", "summary": "Helping Your Team Feel Confident, Supported, and Ready for the Future"}];
 

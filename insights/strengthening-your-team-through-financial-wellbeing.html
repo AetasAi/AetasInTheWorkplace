@@ -164,6 +164,42 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     font-size: 0.82rem !important;
     letter-spacing: 0.02em !important;
   }
+
+/* ---- Nav dropdown ---- */
+.nav-dropdown { position: relative; }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: var(--aetas-blue);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  list-style: none;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.nav-dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-dropdown-menu li a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu:hover { display: block; }
+.nav-caret { font-size: 0.6rem; margin-left: 0.3rem; vertical-align: middle; }
+@media (max-width: 768px) {
+  .nav-dropdown-menu { position: static; box-shadow: none; border: none; background: transparent; padding: 0 0 0 1rem; }
+  .nav-dropdown-menu li a { color: rgba(255,255,255,0.7); padding: 0.4rem 0; }
+  .nav-dropdown:hover .nav-dropdown-menu { display: none; }
+  .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -254,6 +290,38 @@ footer{background:var(--navy);padding:2.5rem 40px;}
   "inLanguage": "en-GB"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does financial wellbeing strengthen teams?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When employees feel financially secure, they are more focused, more collaborative, and less likely to leave. Financial wellbeing reduces the hidden costs of distraction, presenteeism and turnover."
+      }
+    }
+    {
+      "@type": "Question",
+      "name": "What is presenteeism in a financial wellbeing context?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Presenteeism occurs when employees are physically at work but mentally distracted, often by financial stress. Studies suggest it costs UK employers more than absenteeism in lost productivity each year."
+      }
+    }
+    {
+      "@type": "Question",
+      "name": "How does Aetas help employers strengthen their teams?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aetas delivers a structured programme combining benefits review, financial education workshops and ongoing employee support, all measured against the ROEI framework to demonstrate commercial return."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -333,7 +401,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
     <div class="article-cta">
       <span class="article-cta-label">Take the next step</span>
       <h3>Find out what financial pressure is costing your business.</h3>
-      <p>The Workplace Performance Review is a no-cost, two-session conversation with Matthew Steiner. It identifies where financial pressure is showing up in your specific business — and what a proportionate response looks like.</p>
+      <p>The Workplace Performance Review is a no-cost, two-session conversation with Matthew Steiner. It identifies where financial pressure is showing up in your specific business ,  and what a proportionate response looks like.</p>
             <aside style="background:var(--surface,#f5f1eb);border-left:3px solid var(--aetas-turquoise,#009CA6);padding:1.25rem 1.5rem;margin:2rem 0;border-radius:0 4px 4px 0;">
         <p style="margin:0 0 0.75rem;font-size:0.85rem;font-weight:600;color:var(--navy,#0d2c6c);letter-spacing:0.06em;text-transform:uppercase;">Authoritative sources</p>
         <ul style="list-style:none;padding:0;margin:0;font-size:0.92rem;">
@@ -417,7 +485,7 @@ footer{background:var(--navy);padding:2.5rem 40px;}
 var obs=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.08});
 document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el);});
 
-// More articles — populate from master list, excluding current
+// More articles ,  populate from master list, excluding current
 var CURRENT_SLUG = 'strengthening-your-team-through-financial-wellbeing';
 var ALL_ARTICLES = [{"slug": "why-financial-wellbeing-is-a-business-issue", "cat": "Business performance", "title": "Why Financial Wellbeing Has Become a Business Issue for SMEs", "summary": "That assumption no longer holds."}, {"slug": "when-everyday-life-stops-talking-back", "cat": "Business performance", "title": "When Everyday Life Stops Talking Back", "summary": "Britain is changing in ways that appear practical and inevitable. Post offices close, services move online, shops automate, and workplaces digitise."}, {"slug": "introducing-the-aetas-collective", "cat": "Business performance", "title": "Introducing the Aetas Collective: Bringing Financial Wellbeing Expertise Together for SMEs", "summary": "Across the UK, many small and medium-sized businesses are facing a quiet but significant challenge. Financial pressure, wellbeing, and performance are"}, {"slug": "financial-wellbeing-in-the-workplace", "cat": "Business performance", "title": "Financial Wellbeing? Introducing Aetas In the Workplace", "summary": "In today’s fast-moving business landscape, employee wellbeing is much more than a nice-to-have benefit. For small and medium-sized enterprises (SMEs),"}, {"slug": "strengthening-your-team-through-financial-wellbeing", "cat": "Business performance", "title": "Strengthening Your Team Through Financial Wellbeing", "summary": "How proportionate financial wellbeing support strengthens engagement, retention and performance across SME and mid-sized teams."}];
 
