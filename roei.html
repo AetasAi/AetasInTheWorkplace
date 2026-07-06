@@ -133,7 +133,7 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 .brand-mark { width: 42px; height: 42px; display: grid; place-items: center; flex-shrink: 0; }
 .brand-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .brand-text { display: flex; flex-direction: column; line-height: 1; }
-.brand-text span:last-child { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--aetas-turquoise); margin-top: 4px; }
+/* brand-text last-child removed — replaced by .brand-division */
 .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
 .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--ink); position: relative; padding-block: 6px; white-space: nowrap; }
 .nav-links a:hover, .nav-links a.is-active { color: var(--aetas-blue); }
@@ -425,7 +425,7 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
   color: var(--aetas-blue);
   line-height: 1;
 }
-.brand-division {
+.brand-text .brand-division {
   font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.1em;
