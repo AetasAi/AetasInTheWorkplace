@@ -1,5 +1,5 @@
 # Aetas Workplace — robots.txt
-# https://workplace.aetas-wealth.com
+# https://performance.aetas-wealth.com
 
 User-agent: *
 Allow: /
@@ -61,5 +61,5 @@ Allow: /
 User-agent: BraveBot
 Allow: /
 
-Sitemap: https://workplace.aetas-wealth.com/sitemap.xml
-Sitemap: https://workplace.aetas-wealth.com/image-sitemap.xml
+Sitemap: https://performance.aetas-wealth.com/sitemap.xml
+Sitemap: https://performance.aetas-wealth.com/image-sitemap.xml

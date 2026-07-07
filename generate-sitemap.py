@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate sitemap.xml for workplace.aetas-wealth.com.
+"""Generate sitemap.xml for performance.aetas-wealth.com.
 
 Walks the repo, classifies each .html file, and writes sitemap.xml.
 Run this from the repo root:
@@ -19,7 +19,7 @@ import sys
 # CONFIG
 # ---------------------------------------------------------------
 
-SITE_ROOT = "https://workplace.aetas-wealth.com"
+SITE_ROOT = "https://performance.aetas-wealth.com"
 TODAY = date.today().isoformat()
 
 # Folders to skip entirely (won't recurse into these)
