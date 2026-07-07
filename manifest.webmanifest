@@ -1,7 +1,7 @@
 {
-  "name": "Aetas in the Workplace",
-  "short_name": "Aetas ITW",
-  "description": "A consultancy-led financial wellbeing service for SMEs, charities, and not-for-profits.",
+  "name": "Aetas Performance",
+  "short_name": "Aetas Performance",
+  "description": "A business performance consultancy helping organisations improve performance through their people.",
   "start_url": "/",
   "display": "browser",
   "background_color": "#0d2c6c",
