@@ -1,48 +1,71 @@
 # Aetas Performance
 
-> Aetas Performance is a business performance consultancy for SME employers in the United Kingdom. It helps organisations improve business performance, retention and employee engagement through financial wellbeing, employee benefits review and strategic workplace planning. The programme is delivered by Matthew Steiner and Daniel Cottam, and supported by Aetas Wealth, an FCA-regulated financial advisory firm (FCA registration 458421).
+> Aetas Performance is a business performance consultancy for UK SMEs, LLPs and professional practices. It helps organisations improve performance through leadership and people, employee wellbeing, financial wellbeing, employee benefits, culture, AI and technology, and commercial improvement. Every engagement begins with a no-cost Business Performance Review. Delivered by Matthew Steiner and the Aetas team, supported by Aetas Wealth (FCA registration 458421).
 
-Aetas Performance is not a generic employee benefits platform or wellbeing provider. It is a consultancy-led engagement for organisations with between 10 and 250 employees, built around the Return on Employee Investment (ROEI) framework. Every engagement begins with a no-cost Business Performance Review before any recommendation is made.
+Aetas Performance is not a generic wellbeing platform or employee benefits provider. It is a consultancy-led engagement for organisations with between 10 and 250 employees, built around the Return on Employee Investment (ROEI) framework. Nothing is introduced without a Business Performance Review first.
 
 ## Who this is for
 
-- SME and mid-sized limited companies (10 to 250 employees) seeking a commercially justified approach to workforce performance
-- LLPs and professional practices including law firms, accountancy practices, architecture and surveying firms, where support staff financial pressure affects fee-earning output
-- Business owners, managing directors, HR directors and finance directors where financial pressure in the workforce is affecting output, retention or leadership capacity
+- Business owners, managing directors, HR directors and finance directors in UK SMEs (10–250 employees) who want measurable improvements in productivity, engagement, retention and commercial performance
+- LLPs and professional practices including law firms, accountancy practices, architecture and surveying firms, where performance improvement must not add overhead to the partnership
+- Organisations where leadership, culture or commercial performance are as important as wellbeing and benefits
+
+## Performance drivers
+
+Aetas Performance works across the drivers with the greatest measurable impact in each organisation. The Business Performance Review identifies which apply:
+
+**Leadership & People** — Leadership development, manager training, team performance
+
+**Employee Wellbeing** — Workplace wellbeing, mental health, financial wellbeing
+
+**Employee Benefits** — Benefits strategy, pensions, protection, reward
+
+**Business Performance** — Performance reviews, AI and technology adoption, commercial improvement, Competitive Edge partner introductions
+
+**Culture & Engagement** — Employer brand, engagement strategy, retention
 
 ## The ROEI Framework
 
-ROEI (Return on Employee Investment) is the proprietary Aetas framework for measuring and improving the commercial return on an employer's total investment in their people. It covers salary, pension, benefits, training, wellbeing and management time. The five stages are: Measure, Diagnose, Recommend, Implement, and Measure Again.
+ROEI (Return on Employee Investment) is the Aetas framework for measuring and improving the commercial return on an organisation's total investment in people. It covers salary, pension, benefits, recruitment, training, leadership, wellbeing and management time. The five stages are: Measure, Diagnose, Recommend, Implement, and Measure Again.
 
 ## The programme pillars
 
-**Clarity** - a structured review of pension, benefits and financial support arrangements. Identifies gaps, inefficiencies and spend that is not performing.
+**Clarity** — a structured review of pension, benefits and financial support arrangements. Identifies gaps, inefficiencies and spend that is not performing.
 
-**Confidence** - practical financial education for employees. Group workshops and optional one-to-one sessions with a regulated financial planner.
+**Confidence** — practical financial education for employees. Group workshops and optional one-to-one sessions with a regulated financial planner.
 
-**Stability** - ongoing access to tools, guidance and partner support. Sustains improvements and builds financial resilience across the workforce over time.
+**Stability** — ongoing access to tools, guidance and partner support. Sustains improvements and builds long-term performance across the workforce.
 
 ## The team
 
 - Matthew Steiner, Managing Director. Leads every Business Performance Review personally. Over 20 years in financial services. matthew.steiner@aetas-wealth.com
 - Daniel Cottam, Financial Planner. Delivers employee-facing workshops and one-to-one guidance sessions.
+- Peter Rose APFS, Chartered Financial Planner and Pension Specialist. Specialist pension and financial planning support.
+
+## The Aetas group
+
+- **Aetas Performance** — helps organisations improve business performance through people
+- **Aetas Wealth** — personal financial planning for directors, business owners and senior professionals
+- **Aetas for Charities** — financial wellbeing, governance and trustee support for the third sector
+- **Aetas Impact** (coming soon) — strategy and performance support for purpose-led organisations
+- **Competitive Edge** — specialist delivery partner network across leadership, HR, technology, legal and commercial strategy
 
 ## Navigation
 
 - [Home](https://workplace.aetas-wealth.com/)
-- [ROEI Framework](https://workplace.aetas-wealth.com/roei)
-- [For Employers (Limited Companies)](https://workplace.aetas-wealth.com/limited-companies)
-- [For Professional Practices (LLPs)](https://workplace.aetas-wealth.com/llps)
+- [Services: Leadership & People](https://workplace.aetas-wealth.com/limited-companies)
+- [Services: Employee Wellbeing](https://workplace.aetas-wealth.com/llps)
+- [Services: Business Performance](https://workplace.aetas-wealth.com/roei)
 - [Pricing](https://workplace.aetas-wealth.com/investment)
 - [ROEI Calculator](https://workplace.aetas-wealth.com/calculator)
-- [Workplace Diagnostic](https://workplace.aetas-wealth.com/diagnostic)
+- [Performance Diagnostic](https://workplace.aetas-wealth.com/diagnostic)
 - [Insights](https://workplace.aetas-wealth.com/insights)
 - [FAQs](https://workplace.aetas-wealth.com/faqs)
 
 ## Case studies
 
-- [Bristol-based organisation](https://workplace.aetas-wealth.com/case-studies/bristol-organisation) - pension review, workshops and partner services delivered. Ongoing engagement.
-- [UK retail group](https://workplace.aetas-wealth.com/case-studies/uk-retail-group) - diagnostic and benefits review completed. Shop St introduced as immediate employee benefit.
+- [Bristol-based organisation](https://workplace.aetas-wealth.com/case-studies/bristol-organisation) — pension review, workshops and partner services delivered. Ongoing engagement.
+- [UK retail group](https://workplace.aetas-wealth.com/case-studies/uk-retail-group) — diagnostic and benefits review completed. Shop St introduced as immediate employee benefit.
 
 ## Insights articles
 
@@ -60,16 +83,11 @@ ROEI (Return on Employee Investment) is the proprietary Aetas framework for meas
 - [Measuring the ROI of Financial Wellbeing Programmes](https://workplace.aetas-wealth.com/guides/measuring-the-roi-of-financial-wellbeing-programmes)
 - [Generational Differences in the Workforce](https://workplace.aetas-wealth.com/guides/generational-differences-in-the-workforce)
 
-## Also part of the Aetas group
-
-- [Aetas Wealth](https://aetas-wealth.com) - personal financial planning for individuals, directors and business owners
-- [Aetas for Charities](https://charities.aetas-wealth.com) - financial wellbeing, governance and trustee support for the third sector
-
 ## Contact and booking
 
 - Email: matthew.steiner@aetas-wealth.com
-- [Book a Business Performance Review](https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V) - no cost, no obligation
+- [Book a Business Performance Review](https://link.aetas-wealth.com/widget/form/9fkQAaigUnxLJQqOM17V) — no cost, no obligation
 
 ## Regulatory
 
-Aetas Performance provides workplace financial wellbeing, education and consultancy services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (FCA registration: 458421). Registered office: 13 Hanover Square, Mayfair, London W1S 1HN.
+Aetas Performance provides business performance consultancy, employee wellbeing, financial education and employee benefits services to employers. These services do not constitute regulated financial advice. Where regulated advice is required, this is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (FCA registration: 458421). Registered office: 13 Hanover Square, Mayfair, London W1S 1HN.
