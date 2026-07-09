@@ -8,7 +8,7 @@
   <meta name="ai-agent-summary" content="Aetas Performance is a business performance consultancy for UK SMEs (10–250 employees). Helps organisations improve performance through leadership, employee wellbeing, financial wellbeing, employee benefits and AI and technology. Entry point: free Business Performance Review. Delivered by Aetas Wealth (FCA 458421).">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aetas Performance | A Measurable System for Higher Performance</title>
-  <meta name="description" content="Aetas Performance runs a measurable system that turns your investment in people into commercial return — combining financial wellbeing, employee benefits, leadership and practical business improvement. Start with a free Performance Review.">>>
+  <meta name="description" content="Aetas Performance runs a measurable system that turns your investment in people into commercial return — combining financial wellbeing, employee benefits, leadership and practical business improvement. Start with a free Performance Review.">
   <meta name="author" content="Matthew Steiner, Aetas Performance">
 <meta name="meta-author" content="Matthew Steiner, Aetas Performance">
   <meta name="robots" content="index, follow">
@@ -838,6 +838,8 @@ article.post blockquote {
 .nav-dropdown-menu li a:hover { color: #fff; background: rgba(255,255,255,0.08); }
 .nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown-menu:hover { display: block; }
+/* invisible bridge across the top gap so the menu doesn't close mid-hover (desktop only) */
+@media (min-width: 769px) { .nav-dropdown-menu::before { content: ''; position: absolute; top: -0.6rem; left: 0; right: 0; height: 0.6rem; background: transparent; } }
 .nav-caret { font-size: 0.6rem; margin-left: 0.3rem; vertical-align: middle; }
 @media (max-width: 768px) {
   .nav-dropdown-menu { position: static; box-shadow: none; border: none; background: transparent; padding: 0 0 0 1rem; }
