@@ -46,8 +46,7 @@ ROEI (Return on Employee Investment) is the Aetas framework for measuring and im
 
 - **Aetas Performance** — helps organisations improve business performance through people
 - **Aetas Wealth** — personal financial planning for directors, business owners and senior professionals
-- **Aetas for Charities** — financial wellbeing, governance and trustee support for the third sector
-- **Aetas Impact** (coming soon) — strategy and performance support for purpose-led organisations
+- **Aetas Impact** — financial wellbeing, governance and resilience for charities and purpose-led organisations
 - **Competitive Edge** — specialist delivery partner network across leadership, HR, technology, legal and commercial strategy
 
 ## Navigation
