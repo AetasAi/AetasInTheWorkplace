@@ -291,6 +291,8 @@ h2{font-family:'Open Sans', sans-serif;font-size:clamp(1.9rem,3vw,2.6rem);font-w
 .nav-dropdown-menu li a:hover { color: #fff; background: rgba(255,255,255,0.08); }
 .nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown-menu:hover { display: block; }
+/* invisible bridge across the top gap so the menu doesn't close mid-hover (desktop only) */
+@media (min-width: 769px) { .nav-dropdown-menu::before { content: ''; position: absolute; top: -0.6rem; left: 0; right: 0; height: 0.6rem; background: transparent; } }
 .nav-caret { font-size: 0.6rem; margin-left: 0.3rem; vertical-align: middle; }
 @media (max-width: 768px) {
   .nav-dropdown-menu { position: static; box-shadow: none; border: none; background: transparent; padding: 0 0 0 1rem; }
