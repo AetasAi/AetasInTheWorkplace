@@ -157,7 +157,9 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .grid-5 { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
-.grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 1080px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .grid-4 { grid-template-columns: 1fr; } }
 
 .text-center { text-align: center; }
 
@@ -1233,26 +1235,20 @@ article.post blockquote {
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div class="hero-eyebrow">Business performance consultancy for UK SMEs</div>
-        <h1>Get more from your biggest investment: <strong>your people</strong></h1>
-        <p class="hero-subline" style="font-size:1.25rem;color:var(--aetas-blue);font-weight:600;line-height:1.4;margin:0.85rem 0 1.15rem;">We help SME employers turn leadership, employee wellbeing, employee benefits and business improvement into measurable gains in productivity, retention and profit.</p>
-        <p class="accent-line">Money worries, underused benefits and stretched managers quietly drain productivity and drive good people away. We measure what that is costing you, fix the causes, and prove the return.</p>
-        <ul class="hero-checks" style="list-style:none;padding:0;margin:1.5rem 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.6rem 1.5rem;">
-          <li style="font-weight:600;"><span style="color:var(--aetas-turquoise);font-weight:700;margin-right:0.4rem;">✓</span>Improve productivity</li>
-          <li style="font-weight:600;"><span style="color:var(--aetas-turquoise);font-weight:700;margin-right:0.4rem;">✓</span>Increase retention</li>
-          <li style="font-weight:600;"><span style="color:var(--aetas-turquoise);font-weight:700;margin-right:0.4rem;">✓</span>Reduce absence</li>
-          <li style="font-weight:600;"><span style="color:var(--aetas-turquoise);font-weight:700;margin-right:0.4rem;">✓</span>Measure the commercial return</li>
-        </ul>
-        <p style="font-size: 1.45rem; color: var(--aetas-gold-soft); margin-top: 1.4rem; font-weight: 500; line-height: 1.3;">Measure the loss.<br>Fix the cause.<br><strong style="font-weight:800;">Prove the return.</strong></p>
+        <div class="hero-eyebrow">Employee financial wellbeing for UK employers</div>
+        <h1>Financial pressure is quietly reducing your <strong>business performance</strong>.</h1>
+        <p class="hero-subline" style="font-size:1.25rem;color:var(--aetas-blue);font-weight:600;line-height:1.4;margin:0.85rem 0 1.15rem;">Most employers see the symptoms, lower productivity, higher absence, more turnover, but rarely the cause.</p>
+        <p class="accent-line">We find where financial pressure is affecting your people, improve their financial wellbeing, and prove the commercial return through ROEI.</p>
+        <p style="margin:1.25rem 0 0;font-size:0.9rem;font-weight:700;letter-spacing:0.06em;color:var(--aetas-turquoise);text-transform:uppercase;">Benefits review &middot; Employee financial education &middot; Ongoing support</p>
+        <p style="font-size: 1.45rem; color: var(--aetas-gold-soft); margin-top: 1.4rem; font-weight: 500; line-height: 1.3;">Measure the impact.<br>Improve performance.<br><strong style="font-weight:800;">Prove the return.</strong></p>
         <div class="hero-actions">
           <a href="/book-a-meeting" class="btn btn-primary btn-arrow">Book a Performance Review</a>
-          <a href="performance-system" class="btn btn-ghost">Explore the Performance System</a>
+          <a href="#entry-offer" class="btn btn-ghost">See how it works</a>
         </div>
-        <p style="margin-top: 1.5rem; font-size: 0.88rem; color: var(--ink-muted);">No cost · No obligation · No commitment until proposal stage</p>
-      <p style="margin-top:0.75rem;font-size:0.9rem;"><a href="roei" style="color:var(--aetas-turquoise);font-weight:600;">About the ROEI Framework →</a></p>
+        <p style="margin-top: 1.5rem; font-size: 0.88rem; color: var(--ink-muted);">No cost &middot; No obligation &middot; No commitment until proposal stage</p>
       </div>
       <aside class="hero-aside reveal">
-        <h2>Discover the hidden cost of underperformance</h2>
+        <h2>Discover the hidden cost of financial pressure</h2>
         <p>Two minutes to find out. Move the sliders to match your business and the ROEI Calculator produces a live estimate of the annual cost, before you speak to anyone.</p>
         <ul>
           <li>Retention, productivity, absence and benefits waste</li>
@@ -1270,113 +1266,19 @@ article.post blockquote {
 <!-- ============================================================
      BUSINESS JOURNEY SIGNPOST
      ============================================================ -->
-<section class="section section-soft" id="business-journey">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">The Business Growth Journey</span>
-      <h2>Where is your business right now?</h2>
-      <p>Business performance is not the same at every stage of growth. The challenges that matter at 15 people are different from those at 80, and different again as you prepare to transition. Find the stage that fits.</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:2rem;">
 
-      <a href="business-journey/starting-your-business/" class="card reveal" style="text-decoration:none;border-top:3px solid var(--aetas-gold);">
-        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--aetas-gold);margin-bottom:0.75rem;">Stage 01</div>
-        <h3>Starting Your Business</h3>
-        <p style="font-style:italic;font-size:0.88rem;color:var(--aetas-turquoise);margin-bottom:0.75rem;">Establishing strong foundations for sustainable growth.</p>
-        <p>Benefits, leadership habits, financial foundations and ROEI from the start. Getting these right early determines what's possible later.</p>
-        <span class="card-link">Explore this stage</span>
-      </a>
-
-      <a href="business-journey/growing-your-business/" class="card reveal" style="text-decoration:none;border-top:3px solid var(--aetas-gold);">
-        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--aetas-gold);margin-bottom:0.75rem;">Stage 02</div>
-        <h3>Growing Your Business</h3>
-        <p style="font-style:italic;font-size:0.88rem;color:var(--aetas-turquoise);margin-bottom:0.75rem;">Building your team, systems and culture.</p>
-        <p>Growth is outpacing culture. Leadership is uneven. The cost of turnover is becoming measurable. This is the stage where performance investment pays back fastest.</p>
-        <span class="card-link">Explore this stage</span>
-      </a>
-
-      <a href="business-journey/scaling-your-business/" class="card reveal" style="text-decoration:none;border-top:3px solid var(--aetas-gold);">
-        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--aetas-gold);margin-bottom:0.75rem;">Stage 03</div>
-        <h3>Scaling Your Business</h3>
-        <p style="font-style:italic;font-size:0.88rem;color:var(--aetas-turquoise);margin-bottom:0.75rem;">Improving performance, productivity and leadership.</p>
-        <p>Real organisational complexity. Leadership, culture and technology are performance levers. The return on people investment is now quantifiable.</p>
-        <span class="card-link">Explore this stage</span>
-      </a>
-
-      <a href="business-journey/planning-your-exit/" class="card reveal" style="text-decoration:none;border-top:3px solid var(--aetas-gold);">
-        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--aetas-gold);margin-bottom:0.75rem;">Stage 04</div>
-        <h3>Planning Your Exit</h3>
-        <p style="font-style:italic;font-size:0.88rem;color:var(--aetas-turquoise);margin-bottom:0.75rem;">Preparing your business, people and personal finances for the future.</p>
-        <p>People strategy affects valuation. Leadership continuity is a due diligence question. The personal financial plan needs to be built now.</p>
-        <span class="card-link">Explore this stage</span>
-      </a>
-
-    </div>
-    <p style="text-align:center;margin-top:2rem;font-size:0.95rem;">Not sure which stage fits? <a href="business-journey/" style="color:var(--aetas-turquoise);font-weight:600;">Explore the full Business Growth Journey →</a></p>
-  </div>
-</section>
 
 
 <!-- ============================================================
      THE SYSTEM
      ============================================================ -->
-<section class="section" id="the-system">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">The Aetas Performance System</span>
-      <h2>We don&rsquo;t sell services. We run a system.</h2>
-      <p>Most organisations spend hundreds of thousands of pounds on their people every year without ever measuring the return. Aetas Performance follows a single, repeatable method that makes that return visible at every stage &mdash; and sets us apart from a training provider, a benefits broker or a consultancy.</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;margin-top:2rem;">
-      <div class="card reveal" style="border-top:3px solid var(--aetas-gold);">
-        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--aetas-gold);margin-bottom:0.75rem;">Stage 01</div>
-        <h3>Measure</h3>
-        <p>We quantify what underperformance is costing you, across retention, productivity, absence and benefits waste, in pounds, not generalities.</p>
-      </div>
-      <div class="card reveal" style="border-top:3px solid var(--aetas-turquoise);">
-        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--aetas-turquoise);margin-bottom:0.75rem;">Stage 02</div>
-        <h3>Diagnose</h3>
-        <p>We pinpoint the causes, whether leadership, financial stress, benefits design, engagement or process.</p>
-      </div>
-      <div class="card reveal" style="border-top:3px solid var(--aetas-gold);">
-        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--aetas-gold);margin-bottom:0.75rem;">Stage 03</div>
-        <h3>Recommend</h3>
-        <p>A written proposal with a clear commercial rationale. Nothing is introduced without one.</p>
-      </div>
-      <div class="card reveal" style="border-top:3px solid var(--aetas-turquoise);">
-        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--aetas-turquoise);margin-bottom:0.75rem;">Stage 04</div>
-        <h3>Implement</h3>
-        <p>We deploy the right specialists for each cause and coordinate delivery, managed on your behalf.</p>
-      </div>
-      <div class="card reveal" style="border-top:3px solid var(--aetas-gold);">
-        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--aetas-gold);margin-bottom:0.75rem;">Stage 05</div>
-        <h3>Measure Again</h3>
-        <p>We track the impact against the original cost, so you see exactly what the investment returned.</p>
-      </div>
-    </div>
-    <p style="max-width:780px;margin:2.25rem auto 0;text-align:center;font-size:1.05rem;">Leadership, wellbeing, benefits and business improvement aren&rsquo;t the point. They&rsquo;re the drivers we deploy within the system &mdash; all in service of one outcome: a higher <strong>Return on Employee Investment</strong>.</p>
-    <p style="text-align:center;margin-top:1.5rem;"><a href="performance-system" class="btn btn-primary btn-arrow">Explore the full Performance System</a></p>
-  </div>
-</section>
+
 
 
 <!-- ============================================================
      GUIDING PRINCIPLES
      ============================================================ -->
-<section class="section section-blue">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">What the system stands for</span>
-      <h2>Four principles behind every engagement</h2>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:1.5rem;">
-      <div class="card reveal" style="background:rgba(255,255,255,0.04);border-top:3px solid var(--aetas-gold);"><h3>Everything is measurable.</h3><p>If it affects performance, it can be quantified &mdash; and what gets measured gets improved.</p></div>
-      <div class="card reveal" style="background:rgba(255,255,255,0.04);border-top:3px solid var(--aetas-turquoise);"><h3>Every intervention has a commercial purpose.</h3><p>We deploy a driver to move a number, never simply to run a programme.</p></div>
-      <div class="card reveal" style="background:rgba(255,255,255,0.04);border-top:3px solid var(--aetas-gold);"><h3>Solve the cause, not the symptom.</h3><p>We treat what is actually driving the loss, not the surface issue it shows up as.</p></div>
-      <div class="card reveal" style="background:rgba(255,255,255,0.04);border-top:3px solid var(--aetas-turquoise);"><h3>Return is measured, not assumed.</h3><p>Every engagement is judged on the Return on Employee Investment it moved.</p></div>
-    </div>
-  </div>
-</section>
+
 
 
 <!-- ============================================================
@@ -1414,140 +1316,19 @@ article.post blockquote {
 <!-- ============================================================
      THE PROBLEM
      ============================================================ -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">The challenge</span>
-      <h2>The performance gaps most organisations recognise but rarely measure</h2>
-      <p>The challenges are consistent across sectors. The commercial cost is rarely quantified. That is where Aetas Performance starts.</p>
-    </div>
-    <div class="grid grid-3" style="margin-top:2.5rem;">
-      <div class="card reveal">
-        <div class="card-icon" style="font-size:1.4rem;">&#128203;</div>
-        <h3>Absence and presenteeism</h3>
-        <p>UK businesses lose an estimated £51 billion per year to stress-related absence and presenteeism. For a 50-person business, that is a material number, and almost none of it appears on a management report.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="font-size:1.4rem;">&#128101;</div>
-        <h3>Recruitment and retention</h3>
-        <p>Replacing a skilled employee costs between 50 and 200 per cent of their annual salary. A 15% turnover rate in a 60-person business means losing nine people a year. Most organisations have never calculated the actual invoice.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="font-size:1.4rem;">&#127760;</div>
-        <h3>Benefits spend with no return</h3>
-        <p>The average UK employer spends over £800 per employee per year on benefits. In most organisations, roughly 15% is unused or poorly understood. That is £12,000 wasted annually in a 100-person business.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="font-size:1.4rem;">&#128200;</div>
-        <h3>Leadership and management gaps</h3>
-        <p>Poor management is the single biggest driver of employee disengagement. Every hour a senior person spends managing a people problem that a better-developed manager could handle is an hour not spent on the business.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="font-size:1.4rem;">&#128092;</div>
-        <h3>Culture that doesn't scale</h3>
-        <p>What worked at 20 people rarely works at 80. Culture gaps become visible as recruitment problems, rising turnover, and declining engagement scores, by which point they are expensive to fix.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="font-size:1.4rem;">&#127919;</div>
-        <h3>Employer brand falling behind</h3>
-        <p>In a competitive labour market, the quality of candidates you attract reflects how your organisation is perceived. Organisations that invest in their people demonstrably attract better talent and retain them longer.</p>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 
 <!-- ============================================================
      ROEI CALCULATOR
      ============================================================ -->
-<section class="section section-soft" id="roei">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow turquoise">Return on Employee Investment</span>
-      <h2>Your people are your largest investment. Are you measuring the return?</h2>
-      <p>Most organisations invest heavily in their workforce and rarely measure what they get back.</p>
-    </div>
-    <div class="grid grid-3" style="margin-top: 2.5rem;">
-      <div class="card reveal">
-        <p class="card-eyebrow" style="font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--aetas-turquoise);margin-bottom:0.75rem;">What you invest in</p>
-        <ul class="checklist">
-          <li>Salaries and bonuses</li>
-          <li>Pensions and contributions</li>
-          <li>Employee benefits</li>
-          <li>Recruitment and onboarding</li>
-          <li>Training and development</li>
-          <li>Wellbeing and support</li>
-        </ul>
-      </div>
-      <div class="card reveal" style="background: var(--aetas-blue); color: #fff; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <p style="font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#d4a847;margin-bottom:0.75rem;">The question</p>
-        <p style="font-size: 1.4rem; font-weight: 600; color: #fff; line-height: 1.4; margin: 0;">Are those investments generating the maximum return?</p>
-      </div>
-      <div class="card reveal">
-        <p class="card-eyebrow" style="font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--aetas-turquoise);margin-bottom:0.75rem;">What Aetas measures and improves</p>
-        <ul class="checklist">
-          <li>Employee engagement and focus</li>
-          <li>Productivity and output</li>
-          <li>Retention and recruitment cost</li>
-          <li>Absence and presenteeism</li>
-          <li>Benefits utilisation</li>
-          <li>Employer brand strength</li>
-        </ul>
-      </div>
-    </div>
-    <div class="text-center" style="margin-top: 2.5rem;">
-      <span class="eyebrow turquoise" style="display:block;margin-bottom:0.75rem;">ROEI Calculator</span>
-      <p style="font-size: 1.05rem; color: var(--ink-soft); max-width: 560px; margin: 0 auto 1.75rem;">See what financial pressure may be costing your workforce specifically, before any conversation takes place.</p>
-      <a href="calculator" class="btn btn-primary btn-arrow">Use the ROEI calculator</a>
-      <p style="margin-top:1rem;font-size:0.9rem;"><a href="roei" style="color:var(--aetas-turquoise);font-weight:500;">Learn more about the ROEI Framework &#8594;</a></p>
-    </div>
-  </div>
-</section>
+
 
 
 <!-- ============================================================
      SERVICES OVERVIEW
      ============================================================ -->
-<section class="section" id="services">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">What we do</span>
-      <h2>Performance across four practice areas</h2>
-      <p>Each engagement begins with a Business Performance Review. What follows is built around the drivers with the greatest measurable impact in your organisation.</p>
-    </div>
 
-    <div class="grid grid-2" style="margin-top:2.5rem;">
-      <a href="limited-companies" class="card reveal" style="text-decoration:none;">
-        <div class="card-icon" style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--aetas-blue);">01</div>
-        <h3>Leadership &amp; People</h3>
-        <p style="font-size:0.85rem;color:var(--aetas-turquoise);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.75rem;">Leadership Development · Manager Training · Team Performance</p>
-        <p>Leadership capability and team dynamics are the foundations of organisational output. We identify gaps, introduce development and measure the improvement in commercial performance.</p>
-        <span class="card-link">Explore</span>
-      </a>
-      <a href="llps" class="card reveal" style="text-decoration:none;">
-        <div class="card-icon" style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--aetas-blue);">02</div>
-        <h3>Employee Wellbeing</h3>
-        <p style="font-size:0.85rem;color:var(--aetas-turquoise);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.75rem;">Workplace Wellbeing · Mental Health · Financial Wellbeing</p>
-        <p>Wellbeing is a performance driver, not a pastoral concern. Financial anxiety, mental health and workplace stress cost organisations in productivity, absence and retention. We measure and address the commercial impact.</p>
-        <span class="card-link">Explore</span>
-      </a>
-      <a href="limited-companies#benefits" class="card reveal" style="text-decoration:none;">
-        <div class="card-icon" style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--aetas-blue);">03</div>
-        <h3>Employee Benefits</h3>
-        <p style="font-size:0.85rem;color:var(--aetas-turquoise);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.75rem;">Benefits Strategy · Pensions · Protection · Reward</p>
-        <p>Most organisations invest significantly in benefits that staff do not understand or value. We review, restructure and communicate your benefits package so the investment generates a measurable return.</p>
-        <span class="card-link">Explore</span>
-      </a>
-      <a href="roei" class="card reveal" style="text-decoration:none;">
-        <div class="card-icon" style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--aetas-blue);">04</div>
-        <h3>Business Improvement</h3>
-        <p style="font-size:0.85rem;color:var(--aetas-turquoise);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.75rem;">Performance Reviews · AI &amp; Technology · Commercial Improvement · Competitive Edge Partners</p>
-        <p>Broader commercial and operational performance improvement, including AI adoption, competitive positioning and access to the Competitive Edge specialist partner network.</p>
-        <span class="card-link">Explore</span>
-      </a>
-    </div>
-  </div>
-</section>
 
 
 <!-- ============================================================
@@ -1558,34 +1339,34 @@ article.post blockquote {
     <div class="section-head">
       <span class="eyebrow">What to expect</span>
       <h2>The Business Performance Review</h2>
-      <span class="how-subtitle">A four-stage process. No cost or commitment until you decide to proceed.</span>
-      <p>Every engagement begins the same way. Four short stages, light on your time, with full visibility at each point. Nothing is recommended, costed, or committed to until you have seen exactly what we propose and why. Most clients reach the proposal stage within four to six weeks.</p>
+      <span class="how-subtitle">A four-step process. No cost or commitment until you decide to proceed.</span>
+      <p>Every engagement begins the same way. Four short steps, light on your time, with full visibility at each point. Nothing is recommended, costed, or committed to until you have seen exactly what we propose and why. Most clients reach the proposal step within four to six weeks.</p>
     </div>
 
     <div class="grid grid-4">
       <div class="card reveal">
-        <div class="card-icon">01</div>
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--aetas-turquoise);margin-bottom:0.9rem;">Step 1</div>
         <h3>Initial conversation</h3>
         <p class="stage-tagline">Getting to know your business</p>
         <p>A short introductory call, supported by a brief pre-meeting questionnaire that focuses the time.</p>
         <p class="stage-meta">30 minutes &middot; Video or phone</p>
       </div>
       <div class="card reveal">
-        <div class="card-icon">02</div>
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--aetas-turquoise);margin-bottom:0.9rem;">Step 2</div>
         <h3>Discovery</h3>
         <p class="stage-tagline">Identifying where the pressure sits</p>
         <p>A deeper conversation that identifies where financial pressure may be affecting performance, and what is already in place to support your people.</p>
         <p class="stage-meta">45 minutes &middot; Video or in-person</p>
       </div>
       <div class="card reveal">
-        <div class="card-icon">03</div>
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--aetas-turquoise);margin-bottom:0.9rem;">Step 3</div>
         <h3>Options</h3>
         <p class="stage-tagline">Shaping the right approach together</p>
         <p>We review and discuss options together, designed for your size, practical to implement, and built around your situation.</p>
         <p class="stage-meta">45 minutes &middot; Video or in-person</p>
       </div>
       <div class="card reveal">
-        <div class="card-icon">04</div>
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--aetas-turquoise);margin-bottom:0.9rem;">Step 4</div>
         <h3>Proposal</h3>
         <p class="stage-tagline">Where you decide whether to proceed</p>
         <p>A written proposal setting out exactly what is recommended, the costs, and the expected return. This is the first point at which commitment is invited.</p>
@@ -1614,7 +1395,6 @@ article.post blockquote {
 
     <div class="grid grid-3">
       <div class="card reveal">
-        <div class="card-icon">01</div>
         <h3>Clarity</h3>
         <p style="font-size: 0.85rem; color: var(--aetas-turquoise); font-weight: 600; letter-spacing: 0.04em; margin-bottom: 0.75rem; text-transform: uppercase;">Understanding what you have</p>
         <p>A review of pensions, benefits, and financial support, identifying gaps, inefficiencies, and spend that is not performing. Employees start to understand and value what is already in place.</p>
@@ -1625,7 +1405,6 @@ article.post blockquote {
       </div>
 
       <div class="card reveal">
-        <div class="card-icon">02</div>
         <h3>Confidence</h3>
         <p style="font-size: 0.85rem; color: var(--aetas-turquoise); font-weight: 600; letter-spacing: 0.04em; margin-bottom: 0.75rem; text-transform: uppercase;">Helping employees feel financially in control</p>
         <p>Practical financial education for employees (covering budgeting, debt, pensions, and planning), designed to feel achievable, not overwhelming. One-to-one guidance available where needed.</p>
@@ -1636,7 +1415,6 @@ article.post blockquote {
       </div>
 
       <div class="card reveal">
-        <div class="card-icon">03</div>
         <h3>Stability</h3>
         <p style="font-size: 0.85rem; color: var(--aetas-turquoise); font-weight: 600; letter-spacing: 0.04em; margin-bottom: 0.75rem; text-transform: uppercase;">Ongoing support and resilience</p>
         <p>Continued access to tools, guidance, and ongoing support. Sustains the gains and builds financial resilience across your workforce.</p>
@@ -1723,24 +1501,12 @@ article.post blockquote {
 
     <div class="process" style="border-top-color: rgba(255,255,255,0.18); border-bottom-color: rgba(255,255,255,0.18); margin-top: 3rem;">
       <div class="process-step" style="border-right-color: rgba(255,255,255,0.12);">
-        <div class="process-num" style="color: #d4a847;">01</div>
-        <h3 style="color:#fff;">The Business Performance Review comes first, always</h3>
-        <p style="color: rgba(255,255,255,0.7);">Nothing is introduced without first understanding your organisation, your workforce, and where the pressure sits. No two programmes look the same.</p>
-      </div>
-      <div class="process-step" style="border-right-color: rgba(255,255,255,0.12);">
-        <div class="process-num" style="color: #d4a847;">02</div>
         <h3 style="color:#fff;">Commercially grounded, not sentiment-led</h3>
         <p style="color: rgba(255,255,255,0.7);">Every recommendation has a commercial rationale. If the numbers do not justify it, we say so. Fees are presented alongside the savings we identify.</p>
       </div>
-      <div class="process-step" style="border-right-color: rgba(255,255,255,0.12);">
-        <div class="process-num" style="color: #d4a847;">03</div>
+      <div class="process-step">
         <h3 style="color:#fff;">Managed on your behalf throughout</h3>
         <p style="color: rgba(255,255,255,0.7);">Aetas coordinates delivery, handles employee communications, and oversees implementation. You retain full visibility without managing providers yourself.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-num" style="color: #d4a847;">04</div>
-        <h3 style="color:#fff;">Built for organisations where every person matters</h3>
-        <p style="color: rgba(255,255,255,0.7);">One disengaged person in a 30-person team is more than three percent of your entire workforce. Smaller organisations cannot absorb quiet underperformance the way larger ones can.</p>
       </div>
     </div>
   </div>
@@ -1764,7 +1530,6 @@ article.post blockquote {
 
     <div class="grid grid-2">
       <div class="card reveal">
-        <div class="card-icon">A</div>
         <h3>Book a Business Performance Review</h3>
         <p>A focused, no-cost conversation with Matthew Steiner to identify where performance can be improved in your organisation and what the gaps may be costing.</p>
         <ul class="checklist">
@@ -1778,7 +1543,6 @@ article.post blockquote {
       </div>
 
       <div class="card reveal">
-        <div class="card-icon">B</div>
         <h3>Business Performance: A Leader's Briefing</h3>
         <p>A 45-minute webinar via Zoom for MDs, FDs and senior leaders on how to measure and improve the Return on Employee Investment in your organisation.</p>
         <ul class="checklist">
@@ -1787,7 +1551,7 @@ article.post blockquote {
           <li>No cost and no obligation</li>
         </ul>
         <p style="margin-top: 1.25rem;">
-          <a href="https://performance.aetas-wealth.com/insights" class="btn btn-ghost" rel="noopener noreferrer">See upcoming dates</a>
+          <a href="/events" class="btn btn-ghost">See upcoming dates</a>
         </p>
       </div>
     </div>
@@ -1815,101 +1579,19 @@ article.post blockquote {
 <!-- ============================================================
      PEOPLE
      ============================================================ -->
-<section class="section section-soft">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">The team</span>
-      <h2>The people you will work with</h2>
-      <p>Aetas Performance is built around senior relationships, not account managers. You will deal directly with the people responsible for your programme, from first conversation to ongoing review.</p>
-    </div>
-    <div class="grid grid-3" style="margin-top:2.5rem;">
-      <div class="card reveal">
-        <div class="card-icon" style="font-size:1.5rem;font-weight:700;color:var(--aetas-blue);">MS</div>
-        <h3>Matthew Steiner</h3>
-        <p style="font-size:0.85rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--aetas-turquoise);margin-bottom:0.75rem;">Managing Director</p>
-        <p>Matthew founded Aetas in 2022 following more than 20 years in financial services. He leads every Business Performance Review personally and takes direct responsibility for each client engagement, from initial conversation through to ongoing programme delivery.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="font-size:1.5rem;font-weight:700;color:var(--aetas-blue);">PR</div>
-        <h3>Peter Rose APFS</h3>
-        <p style="font-size:0.85rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--aetas-turquoise);margin-bottom:0.75rem;">Chartered Financial Planner &amp; Pensions Specialist</p>
-        <p>Peter is a Chartered Financial Planner with over 50 years of experience in financial services. He provides specialist pension and financial planning guidance for employees, covering retirement strategy, pension consolidation and pre-retirement planning.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="font-size:1.5rem;font-weight:700;color:var(--aetas-blue);">DC</div>
-        <h3>Daniel Cottam</h3>
-        <p style="font-size:0.85rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--aetas-turquoise);margin-bottom:0.75rem;">Financial Planner</p>
-        <p>Daniel delivers the employee-facing elements of the Aetas programme, including one-to-one financial guidance sessions and group workshops. He works with employees at all stages of their financial life, from early career planning through to pre-retirement.</p>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 
 <!-- ============================================================
      ECOSYSTEM CROSS-LINKS
      ============================================================ -->
-<section class="section section-soft">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">The Aetas Group</span>
-      <h2>One group. A wider ecosystem of specialist expertise.</h2>
-      <p>Aetas Performance sits alongside Aetas Wealth and Aetas Impact within a broader group. Whether the need is personal financial planning, organisational performance or purpose-led strategy, the Aetas group covers the full picture, supported by the Competitive Edge partner network.</p>
-    </div>
-    <div class="grid grid-2" style="margin-top:2.5rem;">
-      <a href="https://aetas-wealth.com/" target="_blank" rel="noopener" class="card reveal" style="text-decoration:none;">
-        <div class="card-icon" style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;">Wealth</div>
-        <h3>Aetas Wealth</h3>
-        <p>Personal financial planning for directors, business owners and senior professionals. Retirement, inheritance, investment and protection, delivered through the Lifetime to Legacy framework.</p>
-        <span class="card-link">Visit Aetas Wealth</span>
-      </a>
-      <a href="https://impact.aetas-wealth.com/" target="_blank" rel="noopener" class="card reveal" style="text-decoration:none;">
-        <div class="card-icon" style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;">Impact</div>
-        <h3>Aetas Impact</h3>
-        <p>Helping charities, not-for-profits and purpose-led organisations build the resilience, governance and capacity that lasting impact requires.</p>
-        <span class="card-link">Visit Aetas Impact</span>
-      </a>
 
-      <div class="card reveal">
-        <div class="card-icon" style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;">Edge</div>
-        <h3>Competitive Edge</h3>
-        <p>Access to a curated network of specialist delivery partners across leadership, HR, technology, legal, and commercial strategy. Where the performance opportunity requires a specialist beyond the Aetas team, Competitive Edge provides a trusted introduction.</p>
-        <span class="card-link" style="color:var(--ink-muted);cursor:default;">Via Aetas Performance</span>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ============================================================
      BOOK CTA
      ============================================================ -->
-<section class="section section-blue" id="book">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow" style="color:#d4a847;">Get started</span>
-      <h2 style="color:#fff;">Book a Business Performance Review</h2>
-      <p style="color:rgba(255,255,255,0.78);">A focused conversation with Matthew Steiner, at no cost and with no obligation. Thirty minutes to understand where your organisation stands and what, if anything, would make a measurable difference to performance.</p>
-    </div>
-    <div class="grid grid-3" style="margin-top:2.5rem;">
-      <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.07);border-radius:var(--radius);border:1px solid rgba(255,255,255,0.14);">
-        <p style="font-size:1.6rem;margin:0 0 0.5rem;">30</p>
-        <p style="color:rgba(255,255,255,0.7);margin:0;font-size:0.9rem;">minutes</p>
-      </div>
-      <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.07);border-radius:var(--radius);border:1px solid rgba(255,255,255,0.14);">
-        <p style="font-size:1.6rem;margin:0 0 0.5rem;">No</p>
-        <p style="color:rgba(255,255,255,0.7);margin:0;font-size:0.9rem;">cost or obligation</p>
-      </div>
-      <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.07);border-radius:var(--radius);border:1px solid rgba(255,255,255,0.14);">
-        <p style="font-size:1.6rem;margin:0 0 0.5rem;">Clear</p>
-        <p style="color:rgba(255,255,255,0.7);margin:0;font-size:0.9rem;">next steps either way</p>
-      </div>
-    </div>
-    <div class="text-center" style="margin-top:2.5rem;">
-      <a href="/book-a-meeting" class="btn btn-primary btn-arrow">Book a Performance Review</a>
-    </div>
-  </div>
-</section>
+
 
 <!-- ============================================================
      SHARED: site-footer
