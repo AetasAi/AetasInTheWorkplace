@@ -1,40 +1,35 @@
 # Aetas Workplace
 
-> Aetas Workplace is an employee financial wellbeing partner for UK SMEs, LLPs and professional practices. It helps organisations improve performance through leadership and people, employee wellbeing, financial wellbeing, employee benefits, culture, AI and technology, and commercial improvement. Every engagement begins with a no-cost Workplace Review. Delivered by Matthew Steiner and the Aetas team, supported by Aetas Wealth (FCA registration 458421).
+> Aetas Workplace is an employee financial wellbeing partner for UK SMEs, LLPs and professional practices (10 to 250 employees). It eases the money worries that quietly drain focus, attendance and loyalty, through three things: a review of the benefits an employer already funds, practical financial education and resilience training for staff, and access to a hub of independent wellbeing partners. The commercial return is shown in plain pounds, a measure Aetas calls ROEI (Return on Employee Investment). Every engagement begins with a no-cost Workplace Review. Delivered by Matthew Steiner and the Aetas team, supported by sister firm Aetas Wealth (FCA registration 458421). These services are not regulated financial advice.
 
-Aetas Workplace is not a generic wellbeing platform or employee benefits provider. It is a consultancy-led engagement for organisations with between 10 and 250 employees, built around the Return on Employee Investment (ROEI) framework. Nothing is introduced without a Workplace Review first.
+One philosophy, three firms: Aetas believes that better decisions create better futures. That belief runs through Aetas Wealth (personal financial planning), Aetas Workplace (employee financial wellbeing, measured by Return on Employee Investment, ROEI), and Aetas Impact (financial wellbeing and resilience for charities).
+
+Aetas Workplace is not a self-serve benefits platform. It is a hands-on partner for smaller organisations, built around the employer's own people and constraints rather than a corporate model. Nothing is introduced without a Workplace Review first, and the return is always shown in plain pounds.
 
 ## Who this is for
 
-- Business owners, managing directors, HR directors and finance directors in UK SMEs (10–250 employees) who want measurable improvements in productivity, engagement, retention and commercial performance
-- LLPs and professional practices including law firms, accountancy practices, architecture and surveying firms, where performance improvement must not add overhead to the partnership
-- Organisations where leadership, culture or commercial performance are as important as wellbeing and benefits
+- Business owners, managing directors, HR directors and finance directors in UK SMEs (10 to 250 employees) who want to ease the cost of financially stressed staff and see the return
+- LLPs and professional practices, including law firms, accountancy practices, architecture and surveying firms, where financially stressed support staff cost fee-earner time and the fix must not add overhead to the partnership
+- Employers who want a genuine, well-used benefit for their people, not a platform that sits unused
 
-## Performance drivers
+## What Aetas Workplace does
 
-Aetas Workplace works across the drivers with the greatest measurable impact in each organisation. The Workplace Review identifies which apply:
+Where the Workplace Review shows financial wellbeing is a driver, a three-part programme addresses it, held together by ongoing support:
 
-**Leadership & People**, Leadership development, manager training, team performance
+**Benefits review**, a review of pensions, benefits and financial support. Identifies gaps, inefficiencies and spend that is not performing.
 
-**Employee Wellbeing**, Workplace wellbeing, mental health, financial wellbeing
+**Education and resilience**, practical financial education and resilience training for staff. Group workshops and optional one-to-one guidance with a regulated financial planner.
 
-**Employee Benefits**, Benefits strategy, pensions, protection, reward
+**The wellbeing hub**, access, through independent partners, to a range of wellbeing and everyday-savings services in one place.
 
-**Business Performance**, Performance reviews, AI and technology adoption, commercial improvement, Competitive Edge partner introductions
+## The ROEI framework
 
-**Culture & Engagement**, Employer brand, engagement strategy, retention
+ROEI (Return on Employee Investment) is how Aetas puts the return on better financial wellbeing into plain pounds. It considers salary, pension, benefits, recruitment, training, wellbeing and management time. The five stages are: Measure, Diagnose, Recommend, Implement, and Measure Again.
 
-## The ROEI Framework
+## Partners
 
-ROEI (Return on Employee Investment) is the Aetas framework for measuring and improving the commercial return on an organisation's total investment in people. It covers salary, pension, benefits, recruitment, training, leadership, wellbeing and management time. The five stages are: Measure, Diagnose, Recommend, Implement, and Measure Again.
-
-## The programme pillars
-
-**Clarity**, a structured review of pension, benefits and financial support arrangements. Identifies gaps, inefficiencies and spend that is not performing.
-
-**Confidence**, practical financial education for employees. Group workshops and optional one-to-one sessions with a regulated financial planner.
-
-**Stability**, ongoing access to tools, guidance and partner support. Sustains improvements and builds long-term performance across the workforce.
+- **Every Wellbeing**, Strategic Wellbeing Partner. Specialist workplace wellbeing: strategy, leadership and manager development, mental health, resilience and engagement.
+- **Shop St**, Everyday Savings Partner. A cardless app giving staff discounts across more than 1,000 brands, from big retailers to local businesses, from as little as a penny per week.
 
 ## The team
 
@@ -44,20 +39,22 @@ ROEI (Return on Employee Investment) is the Aetas framework for measuring and im
 
 ## The Aetas group
 
-- **Aetas Workplace**, helps organisations improve business performance through people
+- **Aetas Workplace**, employee financial wellbeing for smaller employers
 - **Aetas Wealth**, personal financial planning for directors, business owners and senior professionals
 - **Aetas Impact**, financial wellbeing, governance and resilience for charities and purpose-led organisations
-- **Competitive Edge**, specialist delivery partner network across leadership, HR, technology, legal and commercial strategy
 
 ## Navigation
 
 - [Home](https://workplace.aetas-wealth.com/)
-- [Services: Leadership & People](https://workplace.aetas-wealth.com/limited-companies)
-- [Services: Employee Wellbeing](https://workplace.aetas-wealth.com/llps)
-- [Services: Business Performance](https://workplace.aetas-wealth.com/roei)
+- [Approach](https://workplace.aetas-wealth.com/approach)
+- [How it works](https://workplace.aetas-wealth.com/performance-system)
+- [For limited companies](https://workplace.aetas-wealth.com/limited-companies)
+- [For LLPs and professional practices](https://workplace.aetas-wealth.com/llps)
+- [Partners](https://workplace.aetas-wealth.com/partners)
+- [ROEI: the return in plain terms](https://workplace.aetas-wealth.com/roei)
 - [Pricing](https://workplace.aetas-wealth.com/investment)
-- [ROEI Calculator](https://workplace.aetas-wealth.com/calculator)
-- [Performance Diagnostic](https://workplace.aetas-wealth.com/diagnostic)
+- [ROEI calculator](https://workplace.aetas-wealth.com/calculator)
+- [Workplace wellbeing diagnostic](https://workplace.aetas-wealth.com/diagnostic)
 - [Insights](https://workplace.aetas-wealth.com/insights)
 - [FAQs](https://workplace.aetas-wealth.com/faqs)
 
