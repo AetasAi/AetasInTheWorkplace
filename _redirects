@@ -7,11 +7,6 @@
 /index.html / 301
 
 # Retired / merged pages (must come before the /*.html splat below)
-# Limited Companies + LLPs merged into Who we work with
-/limited-companies /who-we-work-with 301
-/limited-companies.html /who-we-work-with 301
-/llps /who-we-work-with 301
-/llps.html /who-we-work-with 301
 # Business Journey section retired
 /business-journey / 301
 /business-journey/ / 301
