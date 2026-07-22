@@ -127,6 +127,18 @@ def find_html(root: Path) -> list[Path]:
     return sorted(out)
 
 
+import re as _re
+_NOINDEX_RE = _re.compile(r'<meta[^>]+name=["\']robots["\'][^>]*content=["\'][^"\']*noindex', _re.I)
+
+
+def is_noindex(path: Path) -> bool:
+    """True if the page carries a noindex robots meta tag (must not be in sitemap)."""
+    try:
+        return bool(_NOINDEX_RE.search(path.read_text(encoding="utf-8", errors="ignore")))
+    except OSError:
+        return False
+
+
 def url_for(rel: Path) -> str:
     """Convert a relative file path to a clean, extensionless URL."""
     if rel.name == "index.html":
@@ -149,6 +161,9 @@ def write_sitemap(root: Path) -> None:
 
     for path in files:
         rel = path.relative_to(root)
+        if is_noindex(path):
+            excluded.append(rel)
+            continue
         result = classify(rel)
         if result is None:
             excluded.append(rel)

@@ -3,11 +3,8 @@
 
 User-agent: *
 Allow: /
-Disallow: /form-thankyou.html
-Disallow: /whats-next.html
-Disallow: /discovery-briefing.html
-Disallow: /initial-conversation-briefing.html
-Disallow: /benefits-review.html
+# Utility / funnel pages are kept out of the index via a noindex meta tag,
+# not disallowed here, so crawlers can reach them and honour the noindex.
 
 # Anthropic (Claude)
 User-agent: ClaudeBot

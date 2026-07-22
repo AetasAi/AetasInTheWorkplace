@@ -96,18 +96,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://workplace.aetas-wealth.com/data-processing-agreement</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://workplace.aetas-wealth.com/discovery-briefing</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://workplace.aetas-wealth.com/events</loc>
     <lastmod>2026-07-22</lastmod>
     <priority>0.5</priority>
@@ -148,12 +136,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://workplace.aetas-wealth.com/initial-conversation-briefing</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://workplace.aetas-wealth.com/partners</loc>
     <lastmod>2026-07-22</lastmod>
     <priority>0.5</priority>
@@ -173,12 +155,6 @@
     <loc>https://workplace.aetas-wealth.com/roei</loc>
     <lastmod>2026-07-22</lastmod>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://workplace.aetas-wealth.com/whats-next</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://workplace.aetas-wealth.com/who-we-work-with</loc>

@@ -12,6 +12,14 @@
 /business-journey/ / 301
 /business-journey/* / 301
 
+# Block developer source / tooling from being served publicly (return 404).
+# These files stay in the repo for local tooling and CI, but must not be
+# reachable on the production domain. Nothing on the site links to them.
+/scripts/*   /404.html  404
+/*.py        /404.html  404
+/*.ps1       /404.html  404
+/*.bat       /404.html  404
+
 # Splat redirect: any /*.html -> /* (strips extension)
 # Note: Cloudflare Pages processes rules top-to-bottom, first match wins.
 # The splat below handles all remaining .html -> clean URL redirects.
