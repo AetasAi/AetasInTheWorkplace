@@ -128,10 +128,13 @@ def find_html(root: Path) -> list[Path]:
 
 
 def url_for(rel: Path) -> str:
-    """Convert a relative file path to a URL."""
-    if rel == Path("index.html"):
-        return f"{SITE_ROOT}/"
-    return f"{SITE_ROOT}/{rel.as_posix()}"
+    """Convert a relative file path to a clean, extensionless URL."""
+    if rel.name == "index.html":
+        parent = rel.parent
+        if parent == Path("."):
+            return f"{SITE_ROOT}/"
+        return f"{SITE_ROOT}/{parent.as_posix()}/"
+    return f"{SITE_ROOT}/{rel.with_suffix('').as_posix()}"
 
 
 # ---------------------------------------------------------------
