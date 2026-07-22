@@ -3,12 +3,12 @@
 <head>
 <script defer src="/assets/js/analytics.js"></script>
 <meta charset="UTF-8">
-<meta name="ai-agent-summary" content="Employee benefits data capture form for Aetas Performance. Used during the Business Performance Review process to review existing pension and benefits arrangements.">
+<meta name="ai-agent-summary" content="Employee benefits data capture form for Aetas Workplace. Used during the Workplace Review process to review existing pension and benefits arrangements.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Matthew Steiner, Aetas Performance">
-<link rel="canonical" href="https://performance.aetas-wealth.com/benefits-review">
-<title>Employee Benefits Review | Aetas Performance</title>
-<meta name="description" content="Employee benefits and pension data capture form for the Aetas Performance Workplace Performance Review.">
+<meta name="author" content="Matthew Steiner, Aetas Workplace">
+<link rel="canonical" href="https://workplace.aetas-wealth.com/benefits-review">
+<title>Employee Benefits Review | Aetas Workplace</title>
+<meta name="description" content="Employee benefits and pension data capture form for the Aetas Workplace Workplace Performance Review.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
@@ -122,7 +122,7 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
 .benefits-table th:nth-child(4) { width: 20%; }
 .benefits-table td { padding: 0.5rem 0.5rem; vertical-align: top; }
 .benefits-table tr td:first-child { font-size: 0.9rem; font-weight: 600; color: var(--aetas-blue); padding-top: 1rem; }
-.benefits-table input, .benefits-table select { font-size: 0.88rem; padding: 0.55rem 0.7rem; }
+.benefits-table input.benefits-table select { font-size: 0.88rem; padding: 0.55rem 0.7rem; }
 .in-place-toggle { display: flex; gap: 6px; align-items: center; padding-top: 0.7rem; }
 .in-place-toggle label { display: inline-flex; align-items: center; gap: 4px; font-size: 0.85rem; cursor: pointer; color: var(--ink-soft); padding: 0.4rem 0.7rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--paper); }
 .in-place-toggle label:has(input:checked) { background: var(--aetas-blue-soft); border-color: var(--aetas-blue); color: var(--aetas-blue); font-weight: 600; }
@@ -164,7 +164,7 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
 
 .error-msg { font-size: 0.78rem; color: var(--error); margin-top: 0.25rem; display: none; }
 .field.error .error-msg { display: block; }
-.field.error input, .field.error select, .field.error textarea { border-color: var(--error); }
+.field.error input.field.error select.field.error textarea { border-color: var(--error); }
 
 .form-actions { margin-top: 2.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
 .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.02em; border-radius: 2px; border: 1px solid transparent; transition: all 220ms var(--ease); cursor: pointer; font-family: inherit; }
@@ -183,7 +183,7 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
 .page-footer a:hover { color: var(--aetas-gold-soft); }
 
 @media (max-width: 720px) {
-  .field-grid, .field-grid.three { grid-template-columns: 1fr; }
+  .field-grid.field-grid.three { grid-template-columns: 1fr; }
   .topbar-brand-name { font-size: 1rem; }
   .topbar-brand-tagline { font-size: 0.6rem; }
   .progress-bar { top: 73px; }
@@ -273,11 +273,11 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
 
 </style>
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Employee Benefits Review | Aetas Performance">
-  <meta property="og:description" content="Submit your current employee benefits information to Aetas Performance as part of the Business Performance Review process.">
-  <meta property="og:url" content="https://performance.aetas-wealth.com/benefits-review">
-  <meta property="og:site_name" content="Aetas Performance">
-  <meta property="og:image" content="https://performance.aetas-wealth.com/og-image.png">
+  <meta property="og:title" content="Employee Benefits Review | Aetas Workplace">
+  <meta property="og:description" content="Submit your current employee benefits information to Aetas Workplace as part of the Workplace Review process.">
+  <meta property="og:url" content="https://workplace.aetas-wealth.com/benefits-review">
+  <meta property="og:site_name" content="Aetas Workplace">
+  <meta property="og:image" content="https://workplace.aetas-wealth.com/og-image.png">
 
   <script type="application/ld+json">
   {
@@ -288,13 +288,13 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://performance.aetas-wealth.com/"
+      "item": "https://workplace.aetas-wealth.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Benefits Review",
-      "item": "https://performance.aetas-wealth.com/benefits-review"
+      "item": "https://workplace.aetas-wealth.com/benefits-review"
     }
   ]
 }
@@ -303,15 +303,15 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://performance.aetas-wealth.com/benefits-review#webpage",
-  "url": "https://performance.aetas-wealth.com/benefits-review",
-  "name": "Benefits and Pension Review for Employers | Aetas Performance",
+  "@id": "https://workplace.aetas-wealth.com/benefits-review#webpage",
+  "url": "https://workplace.aetas-wealth.com/benefits-review",
+  "name": "Benefits and Pension Review for Employers | Aetas Workplace",
   "description": "A structured review of your employee benefits and workplace pension arrangements. Identify gaps, inefficiencies and opportunities before any changes are proposed.",
   "isPartOf": {
-    "@id": "https://performance.aetas-wealth.com/#website"
+    "@id": "https://workplace.aetas-wealth.com/#website"
   },
   "about": {
-    "@id": "https://performance.aetas-wealth.com/#organization"
+    "@id": "https://workplace.aetas-wealth.com/#organization"
   },
   "inLanguage": "en-GB"
 }
@@ -320,19 +320,19 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://performance.aetas-wealth.com/benefits-review#service",
+  "@id": "https://workplace.aetas-wealth.com/benefits-review#service",
   "name": "Employee Benefits and Pension Review",
   "description": "A structured review of workplace pension and employee benefits arrangements for UK SME employers. Identifies gaps and opportunities before any changes are proposed.",
   "provider": {
-    "@id": "https://performance.aetas-wealth.com/#organization"
+    "@id": "https://workplace.aetas-wealth.com/#organization"
   },
-  "url": "https://performance.aetas-wealth.com/benefits-review",
+  "url": "https://workplace.aetas-wealth.com/benefits-review",
   "areaServed": {
     "@type": "Country",
     "name": "United Kingdom"
   },
   "isRelatedTo": {
-    "@id": "https://performance.aetas-wealth.com/#service"
+    "@id": "https://workplace.aetas-wealth.com/#service"
   },
   "serviceType": "Employee financial wellbeing consultancy",
   "offers": {
@@ -345,21 +345,21 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
 </script>
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Employee Benefits Review | Aetas Performance">
-  <meta name="twitter:description" content="Submit your benefits information to Aetas Performance as part of the Audit process.">
-  <meta name="twitter:image" content="https://performance.aetas-wealth.com/og-image.png">
+  <meta name="twitter:title" content="Employee Benefits Review | Aetas Workplace">
+  <meta name="twitter:description" content="Submit your benefits information to Aetas Workplace as part of the Audit process.">
+  <meta name="twitter:image" content="https://workplace.aetas-wealth.com/og-image.png">
 </head>
 <body>
 
 <header class="topbar">
-  <a href="https://performance.aetas-wealth.com/" class="topbar-brand" rel="noopener noreferrer">
+  <a href="https://workplace.aetas-wealth.com/" class="topbar-brand" rel="noopener noreferrer">
     <img src="/icons/favicon-32.png" alt="" class="topbar-brand-mark" width="32" height="32">
     <span class="topbar-brand-text">
-      <span class="topbar-brand-name">Aetas Performance</span>
+      <span class="topbar-brand-name">Aetas Workplace</span>
       <span class="topbar-brand-tagline">The Business Performance Solution</span>
     </span>
   </a>
-  <a href="https://performance.aetas-wealth.com/" class="topbar-link" rel="noopener noreferrer">&larr; Back to site</a>
+  <a href="https://workplace.aetas-wealth.com/" class="topbar-link" rel="noopener noreferrer">&larr; Back to site</a>
 </header>
 <main id="main-content">
 
@@ -633,7 +633,7 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
     </section>
 
     <div class="legal-note">
-      <strong>Confidentiality and legal note.</strong> Aetas Partners Limited is not authorised to provide regulated financial advice. This form is used solely for information-gathering and scoping purposes in connection with the Aetas Performance Workplace Performance Review. Regulated financial planning and advice is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (FCA registration 458421). Completion of this form does not constitute a commitment by either party to enter into any formal engagement.
+      <strong>Confidentiality and legal note.</strong> Aetas Partners Limited is not authorised to provide regulated financial advice. This form is used solely for information-gathering and scoping purposes in connection with the Aetas Workplace Workplace Performance Review. Regulated financial planning and advice is provided separately by Aetas Wealth, a trading style of Insight Financial Associates Limited, authorised and regulated by the Financial Conduct Authority (FCA registration 458421). Completion of this form does not constitute a commitment by either party to enter into any formal engagement.
     </div>
 
     <!-- Honeypot for spam protection -->
@@ -657,8 +657,8 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
 </div>
 
 <footer class="page-footer">
-  Aetas Performance &nbsp;&middot;&nbsp; A trading style of Aetas Wealth, Insight Financial Associates Limited &nbsp;&middot;&nbsp; FCA reg 458421 &nbsp;&middot;&nbsp;
-  <a href="https://performance.aetas-wealth.com/privacy" rel="noopener noreferrer">Privacy Policy</a>
+  Aetas Workplace &nbsp;&middot;&nbsp; A trading style of Aetas Wealth, Insight Financial Associates Limited &nbsp;&middot;&nbsp; FCA reg 458421 &nbsp;&middot;&nbsp;
+  <a href="https://workplace.aetas-wealth.com/privacy" rel="noopener noreferrer">Privacy Policy</a>
 </footer>
 
 <script>

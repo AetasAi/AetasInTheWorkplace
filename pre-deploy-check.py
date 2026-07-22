@@ -116,15 +116,15 @@ def check_llms():
 def check_redirects():
     r = ROOT / "_redirects"
     if not r.exists():
-        ERRORS.append("_redirects: missing — required for Cloudflare Pages clean URL enforcement")
+        ERRORS.append("_redirects: missing, required for Cloudflare Pages clean URL enforcement")
 
 def check_headers():
     h = ROOT / "_headers"
     if not h.exists():
-        WARNINGS.append("_headers: missing — recommended for security and caching headers")
+        WARNINGS.append("_headers: missing, recommended for security and caching headers")
 
 # --- RUN CHECKS ---
-print("\nPre-deploy check — Aetas/Finch Theory sites")
+print("\nPre-deploy check, Aetas/Finch Theory sites")
 print("=" * 50)
 
 html_files = collect_html_files()
@@ -140,19 +140,19 @@ check_headers()
 
 # --- REPORT ---
 if ERRORS:
-    print(f"\n✗ ERRORS ({len(ERRORS)}) — fix before deploying:\n")
+    print(f"\n✗ ERRORS ({len(ERRORS)}), fix before deploying:\n")
     for e in ERRORS:
         print(f"  ✗ {e}")
 
 if WARNINGS:
-    print(f"\n⚠  WARNINGS ({len(WARNINGS)}) — review before deploying:\n")
+    print(f"\n⚠  WARNINGS ({len(WARNINGS)}), review before deploying:\n")
     for w in WARNINGS:
         print(f"  ⚠  {w}")
 
 if not ERRORS and not WARNINGS:
     print("\n✓ All checks passed. Safe to deploy.")
 elif not ERRORS:
-    print(f"\n✓ No errors. {len(WARNINGS)} warning(s) — safe to deploy but review warnings.")
+    print(f"\n✓ No errors. {len(WARNINGS)} warning(s), safe to deploy but review warnings.")
 else:
     print(f"\n✗ {len(ERRORS)} error(s) found. Do not deploy until resolved.")
     sys.exit(1)

@@ -2,7 +2,7 @@
 # Security, performance, and agentic browsing headers
 # Applied consistently across all pages.
 #
-# Note: X-Frame-Options omitted from global rule — it would block third-party
+# Note: X-Frame-Options omitted from global rule, it would block third-party
 # iframe embeds (GoHighLevel forms, booking widgets). Framing protection is
 # handled via CSP frame-ancestors in individual page <head> tags where needed.
 

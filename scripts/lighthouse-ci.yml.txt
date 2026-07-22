@@ -16,9 +16,9 @@ jobs:
         uses: treosh/lighthouse-ci-action@v12
         with:
           urls: |
-            https://performance.aetas-wealth.com/
-            https://performance.aetas-wealth.com/limited-companies.html
-            https://performance.aetas-wealth.com/guides/generational-differences-in-the-workforce.html
+            https://workplace.aetas-wealth.com/
+            https://workplace.aetas-wealth.com/limited-companies.html
+            https://workplace.aetas-wealth.com/guides/generational-differences-in-the-workforce.html
           budgetPath: .github/lighthouse-budget.json
           uploadArtifacts: true
           temporaryPublicStorage: true

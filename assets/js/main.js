@@ -1,5 +1,5 @@
 /* ============================================================
-   Aetas Wealth — Site interactions
+   Aetas Wealth, Site interactions
    Mobile nav toggle, active link, scroll reveal
    ============================================================ */
 

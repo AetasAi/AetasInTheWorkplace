@@ -1,8 +1,8 @@
 """
 Build clean SVG versions of the three Aetas Partners logo lockups:
-  1. aetas-mark.svg          — three interlocking rings only (Borromean)
-  2. aetas-horizontal.svg    — mark + AETAS / PARTNERS stacked right
-  3. aetas-stacked.svg       — mark above + AETAS PARTNERS on one line
+  1. aetas-mark.svg, three interlocking rings only (Borromean)
+  2. aetas-horizontal.svg, mark + AETAS / PARTNERS stacked right
+  3. aetas-stacked.svg, mark above + AETAS PARTNERS on one line
 
 The wordmark is rendered as PATHS extracted from Poppins-Medium so the
 output renders identically anywhere, no font file required at view time.
@@ -92,7 +92,7 @@ def wordmark_path(text: str, *, tracking: int = 70) -> tuple[str, float]:
         d, adv = glyph(ch)
         if d:
             # Translate to (x, 0) then flip y so glyph sits on baseline at y=0
-            # SVG can transform a path indirectly — easiest is to compose: use
+            # SVG can transform a path indirectly, easiest is to compose: use
             # a wrapping <g transform="translate(x 0) scale(1 -1)">. We'll emit
             # the path text and let caller wrap it.
             parts.append((x, d))
@@ -201,7 +201,7 @@ def build_horizontal():
 def build_stacked():
     """Mark on top, AETAS PARTNERS on a single line beneath."""
     body, total_w, _ = wordmark_svg("AETAS PARTNERS", tracking=70)
-    # Original stacked PNG is 918x408 — roughly square-ish with text below
+    # Original stacked PNG is 918x408, roughly square-ish with text below
     # Target viewBox: width determined by text, height = mark_size + gap + text_h
     MARK_SIZE = 300
     GAP = 40

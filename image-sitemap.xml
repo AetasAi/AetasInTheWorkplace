@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://performance.aetas-wealth.com/</loc>
+    <loc>https://workplace.aetas-wealth.com/</loc>
     <lastmod>2026-07-04</lastmod>
     <image:image>
-      <image:loc>https://performance.aetas-wealth.com/og-image.png</image:loc>
-      <image:title>Aetas Performance</image:title>
-      <image:caption>Aetas Performance — Business Performance Consultancy for UK SMEs</image:caption>
+      <image:loc>https://workplace.aetas-wealth.com/og-image.png</image:loc>
+      <image:title>Aetas Workplace</image:title>
+      <image:caption>Aetas Workplace, Business Performance Consultancy for UK SMEs</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://performance.aetas-wealth.com/roei</loc>
+    <loc>https://workplace.aetas-wealth.com/roei</loc>
     <lastmod>2026-07-04</lastmod>
     <image:image>
-      <image:loc>https://performance.aetas-wealth.com/og-image.png</image:loc>
-      <image:title>ROEI Framework — Aetas Performance</image:title>
-      <image:caption>ROEI Framework — Return on Employee Investment, Aetas Performance</image:caption>
+      <image:loc>https://workplace.aetas-wealth.com/og-image.png</image:loc>
+      <image:title>ROEI Framework, Aetas Workplace</image:title>
+      <image:caption>ROEI Framework, Return on Employee Investment, Aetas Workplace</image:caption>
     </image:image>
   </url>
 </urlset>

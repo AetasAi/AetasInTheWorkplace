@@ -18,7 +18,7 @@ HOW TO USE:
 
 3. A black Command Prompt window opens, runs curl, and prints the response.
 
-4. Look for "HTTP Status: 200" or "HTTP Status: 202" — both mean success.
+4. Look for "HTTP Status: 200" or "HTTP Status: 202", both mean success.
 
 5. Press any key to close the window.
 

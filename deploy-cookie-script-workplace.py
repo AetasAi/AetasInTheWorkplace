@@ -34,7 +34,7 @@ OLD_SCRIPT = '''<script>
   document.getElementById('cookie-decline').addEventListener('click', function(){
     localStorage.setItem('aetas-cookie-consent', 'declined');
     notice.style.display = 'none';
-    // Note: GA4 already defers until interaction — declining just prevents future prompts
+    // Note: GA4 already defers until interaction, declining just prevents future prompts
   });
 })();
 </script>'''

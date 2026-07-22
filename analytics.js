@@ -1,12 +1,12 @@
 /* =====================================================================
-   Aetas in the Workplace — Analytics
+   Aetas in the Workplace, Analytics
    --------------------------------------------------------------------
    Defers GA4 load until first user interaction (click, scroll, keypress).
    This eliminates unused JS on initial page load, improving mobile LCP.
 
    GDPR / PECR compliance: GA4 will only load if the visitor has
    accepted cookies via the cookie notice. Declining suppresses all
-   analytics loading — including the 5-second fallback timer.
+   analytics loading, including the 5-second fallback timer.
 
    GA4 is initialised immediately on interaction so no sessions are missed.
    anonymize_ip: true applied for GDPR best practice.
@@ -41,7 +41,7 @@
   }
 
   // Only attach interaction listeners if consent already given (returning visitors)
-  // or consent is not yet decided (first-time visitors — listeners fire but loadGA4
+  // or consent is not yet decided (first-time visitors, listeners fire but loadGA4
   // will check consent state at the moment of execution).
   // If consent is explicitly 'declined', we skip even attaching the listeners.
   if (localStorage.getItem('aetas-cookie-consent') !== 'declined') {
@@ -49,7 +49,7 @@
       window.addEventListener(evt, loadGA4, { once: true, passive: true });
     });
 
-    // Fallback: load after 5 seconds — only fires if consent is accepted by then
+    // Fallback: load after 5 seconds, only fires if consent is accepted by then
     setTimeout(loadGA4, 5000);
   }
 })();

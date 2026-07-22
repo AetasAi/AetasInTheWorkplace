@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Aetas in the Workplace — Insights index auto-builder.
+Aetas in the Workplace, Insights index auto-builder.
 
 Scans insights/*.html, extracts metadata, and rebuilds the article
 grid in insights.html between markers:
@@ -71,7 +71,7 @@ def parse_articles(insights_dir):
         if pub_iso:
             pub_date = date.fromisoformat(pub_iso)
             if pub_date > today:
-                print(f"  Skipping (future): {path.name} — scheduled {pub_iso}")
+                print(f"  Skipping (future): {path.name}, scheduled {pub_iso}")
                 continue
         else:
             pub_iso  = today.isoformat()
@@ -123,14 +123,14 @@ def main():
         sys.stderr.write(f"Index not found: {index_path}\n")
         return 1
 
-    print("Aetas in the Workplace — Insights Index Builder")
+    print("Aetas in the Workplace, Insights Index Builder")
     print(f"Scanning: {insights_dir}")
     print()
 
     articles = parse_articles(insights_dir)
     print(f"Found {len(articles)} published article(s)")
     for a in articles:
-        print(f"  + {a['slug']} — {a['pub_display']}")
+        print(f"  + {a['slug']}, {a['pub_display']}")
 
     cards_html = build_cards(articles)
 
