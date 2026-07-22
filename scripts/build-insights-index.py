@@ -83,7 +83,7 @@ def parse_articles(insights_dir):
         author = extract_meta(html, "itw-author") or "Matthew Steiner"
 
         articles.append({
-            "slug":        path.name,
+            "slug":        path.stem,
             "title":       title,
             "desc":        desc,
             "tag":         tag,
