@@ -51,20 +51,9 @@ ROEI (Return on Employee Investment) is the Aetas framework for measuring and im
 - **Aetas Impact**, financial wellbeing, governance and resilience for charities and purpose-led organisations
 - **Competitive Edge**, specialist delivery partner network across leadership, HR, technology, legal and commercial strategy
 
-## Business Growth Journey
-
-Aetas Workplace organises its work around four stages of business growth. Each stage page covers the performance priorities, services and personal financial considerations for business owners at that point.
-
-- [Business Growth Journey hub](https://workplace.aetas-wealth.com/business-journey/)
-- [Stage 01: Starting Your Business](https://workplace.aetas-wealth.com/business-journey/starting-your-business/), Establishing strong foundations for sustainable growth
-- [Stage 02: Growing Your Business](https://workplace.aetas-wealth.com/business-journey/growing-your-business/), Building your team, systems and culture
-- [Stage 03: Scaling Your Business](https://workplace.aetas-wealth.com/business-journey/scaling-your-business/), Improving performance, productivity and leadership
-- [Stage 04: Planning Your Exit](https://workplace.aetas-wealth.com/business-journey/planning-your-exit/), Preparing your business, people and personal finances for the future
-
 ## Navigation
 
 - [Home](https://workplace.aetas-wealth.com/)
-- [Business Growth Journey](https://workplace.aetas-wealth.com/business-journey/)
 - [Services: Leadership & People](https://workplace.aetas-wealth.com/limited-companies)
 - [Services: Employee Wellbeing](https://workplace.aetas-wealth.com/llps)
 - [Services: Business Performance](https://workplace.aetas-wealth.com/roei)
